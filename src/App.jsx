@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { HomePage } from './components/consuming-app/page/home/HomePage';
+import { HomePage } from './components/consuming-app/page/home-page/HomePage';
 import {useWindowClass} from "./components/consuming-app/smart/window-class/WindowClass";
 
 const App = () => {
