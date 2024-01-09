@@ -3,6 +3,9 @@
    License: none (public domain)
 */
 
+*{
+  box-sizing: border-box; // Added by JL 1/5/23
+}
 html,
 body,
 div,

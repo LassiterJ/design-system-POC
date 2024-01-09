@@ -1,0 +1,17 @@
+:root {
+    &:where([data-scaling='90%']) {
+      --scaling-factor: 0.9;
+    }
+    &:where([data-scaling='95%']) {
+      --scaling-factor: 0.95;
+    }
+    &:where([data-scaling='100%']) {
+      --scaling-factor: 1;
+    }
+    &:where([data-scaling='105%']) {
+      --scaling-factor: 1.05;
+    }
+    &:where([data-scaling='110%']) {
+      --scaling-factor: 1.1;
+    }
+}

@@ -2,13 +2,14 @@ import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { HomePage } from './components/consuming-app/page/home-page/HomePage';
-import {useWindowClass} from "./components/consuming-app/smart/window-class/WindowClass";
+import {WindowClassProvider} from "./components/consuming-app/smart/window-class/WindowClass";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const windowClassData = useWindowClass();
+  const [headerHeight, setHeaderHeight] = useState(0);
   return (
-      <HomePage windowClass={windowClassData.windowClass}/>
+    <WindowClassProvider >
+      <HomePage />
+    </WindowClassProvider>
   );
 };
 
