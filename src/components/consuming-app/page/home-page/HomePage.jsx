@@ -7,7 +7,7 @@ export const HomePage = () => {
   const appData = useAppData();
   console.log(appData);
   return(
-     <MainLayout displayHeader={false}> {/*Not displaying header to make our own implementation with the Hero to dynamic size the hero image*/}
+     <MainLayout>
       <HomePageTemplateLayoutExample />
       {/*<HomePageTemplate />*/}
     </MainLayout>

@@ -1,13 +1,13 @@
 import React from 'react';
 import {AspectRatio} from '@radix-ui/react-aspect-ratio';
-import {useWindowClass} from "../../smart/window-class/WindowClass";
 import styles from "./HomePageTemplate.module.scss";
+import { useAppData } from '../../smart/app-data/AppData';
 export const HomePageTemplate = ({children}) => {
   // const {heroSection,findYourT5Section, communitySection, reviewsSection} = children;
   // const {heroImage} = heroSection;
-  const windowClassData = useWindowClass();
-  console.log("windowClassData: ", windowClassData);
-  const isTouchDevice = windowClassData.isPrimarilyATouchDevice? "true" : "false";
+  const appData = useAppData();
+  const {windowClass, isPrimarilyATouchDevice} = appData;
+  const isTouchDevice = isPrimarilyATouchDevice? "true" : "false";
   
   return(
     <div>

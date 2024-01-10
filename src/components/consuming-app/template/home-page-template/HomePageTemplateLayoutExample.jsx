@@ -1,6 +1,5 @@
 import React from 'react';
 import {AspectRatio} from '@radix-ui/react-aspect-ratio';
-import {useWindowClass} from "../../smart/window-class/WindowClass";
 import styles from "./HomePageTemplate.module.scss";
 
 
@@ -11,7 +10,7 @@ export const HomePageTemplateLayoutExample = ({children}) => {
   // const {heroSection,findYourT5Section, communitySection, reviewsSection} = children;
   // const {heroImage} = heroSection;
   return(
-    
+    <>
       <section className={styles.HeroSection} style={{ backgroundColor: "yellowgreen"}}>
         {/*<div className={styles.HeroContainer}> /!* Has background image. TODO: Make Container Component (Layout)*!/*/}
         {/*  <div className={'hero-box-spacer'}> /!* May not be necessary in code.*!/*/}
