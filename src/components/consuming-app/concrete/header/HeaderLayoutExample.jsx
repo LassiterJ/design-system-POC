@@ -1,8 +1,5 @@
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import styles from './Header.module.scss';
-import Logo from '/src/logo.svg?react';
-import { useAppData } from '../../smart/app-data/AppData';
-import useElementSize from '../../../../hooks/useElementSize';
 import useUpdateElementSize from '../../../../hooks/useUpdateElementSize';
 export const HeaderLayoutExample = () => {
   const headerRef = useUpdateElementSize("header");
@@ -22,8 +19,8 @@ export const HeaderLayoutExample = () => {
              style={{ height: "2rem", width: "100%", backgroundColor: 'aqua' }}>
         </div>
       </div>
+    {/*  Banners can be added here using portal for dynamic header content*/}
     </header>
-)
-};
+)};
 
 

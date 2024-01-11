@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import {debounce} from "../../../../utilities/debounce";
 import {getWindowClass} from "./windowClass";
 import {isTouchDevice} from "./deviceData";
+import { DirectionProvider } from '@radix-ui/react-direction';
 const AppDataContext = createContext({});
 export const AppDataProvider = ({ children }) => {
   const [appData, setAppData] = useState({
@@ -49,9 +50,11 @@ export const AppDataProvider = ({ children }) => {
   };
   
   return (
-    <AppDataContext.Provider value={{ appData, updateAppData, updateAppDataByKey }}>
-      {children}
-    </AppDataContext.Provider>
+    <DirectionProvider dir={'ltr'}>
+      <AppDataContext.Provider value={{ appData, updateAppData, updateAppDataByKey }}>
+        {children}
+      </AppDataContext.Provider>
+    </DirectionProvider>
   );
 };
 
