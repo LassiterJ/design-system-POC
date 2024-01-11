@@ -8,8 +8,8 @@ export const HomePage = () => {
   console.log("HomePage/appData: ",appData);
   return(
      <MainLayout>
-      <HomePageTemplateLayoutExample />
-      {/*<HomePageTemplate />*/}
+      {/*<HomePageTemplateLayoutExample />*/}
+      <HomePageTemplate />
     </MainLayout>
   )
 }
