@@ -1,24 +1,31 @@
 .headerLayoutExample {
     width:100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     //padding: var(--spacing-2) var(--spacing-4);
 
-  .linksAndLogosContainer {
-    //border: 2px solid blue;
-    width: 100%;
-    display: inline-flex;
-    //justify-content: flex-start;
-    align-items: center;
-    //gap: var(--spacing-2);
-    //height: 2rem;
-  }
+    .mainBar{
+      width:100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .weatherBanner{
+    .linksAndLogosContainer {
+      //border: 2px solid blue;
+      width: 100%;
+      display: inline-flex;
+      //justify-content: flex-start;
+      align-items: center;
+      //gap: var(--spacing-2);
+      //height: 2rem;
+    }
 
-  }
+    .weatherBanner{
+
+    }
 }
 
 
@@ -27,11 +34,17 @@
 .header {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
   //padding: var(--spacing-2) var(--spacing-4);
 
+  .mainBar{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .linksAndLogosContainer {
     //border: 2px solid blue;

@@ -14,7 +14,6 @@ export const useElementSize = () => {
   }, []);
   
   useLayoutEffect(() => {
-    console.log("useLayoutEffect");
     const debouncedUpdateSize = debounce(updateSize, 100); // Debounce with 100ms
     debouncedUpdateSize();
     const resizeObserver = new ResizeObserver(debouncedUpdateSize);

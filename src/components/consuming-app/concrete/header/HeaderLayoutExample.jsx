@@ -5,20 +5,23 @@ import { useAppData } from '../../smart/app-data/AppData';
 import useElementSize from '../../../../hooks/useElementSize';
 import useUpdateElementSize from '../../../../hooks/useUpdateElementSize';
 export const HeaderLayoutExample = () => {
-  const headerRef = useUpdateElementSize("headerSize");
+  const headerRef = useUpdateElementSize("header");
   return(
     <header ref={headerRef} className={styles.headerLayoutExample}>
-      <div className={styles.linksAndLogosContainer}>
-        <div className={styles.logoContainer} style={{ height: "2rem", width: "2rem", backgroundColor: 'indianred' }}></div>
-        <div className={styles.links} style={{
-          height: '2rem',
-          width: '100%',
-          backgroundColor: 'maroon'
-        }}> {/*TODO: Replace with Base implementation of Radix's Navigation Menu Component*/}
+      <div className={styles.mainBar}>
+        <div className={styles.linksAndLogosContainer}>
+          <div className={styles.logoContainer} style={{ height: "2rem", width: "2rem", backgroundColor: 'indianred' }}></div>
+          <div className={styles.links} style={{
+            height: '2rem',
+            width: '100%',
+            backgroundColor: 'maroon'
+          }}> {/*TODO: Replace with Base implementation of Radix's Navigation Menu Component*/}
+          </div>
+        </div>
+        <div className={styles.locationSearchContainer}
+             style={{ height: "2rem", width: "100%", backgroundColor: 'aqua' }}>
         </div>
       </div>
-      <div className={styles.locationSearchContainer}
-           style={{ height: "2rem", width: "100%", backgroundColor: 'aqua' }}></div>
     </header>
 )
 };

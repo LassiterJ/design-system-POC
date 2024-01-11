@@ -5,7 +5,6 @@ import {isTouchDevice} from "./deviceData";
 const AppDataContext = createContext({});
 export const AppDataProvider = ({ children }) => {
   const [appData, setAppData] = useState({
-    headerSize: {width:0, height: 0},
     windowClass: getWindowClass(),
     isPrimarilyATouchDevice: isTouchDevice()
   });
@@ -36,11 +35,12 @@ export const AppDataProvider = ({ children }) => {
   };
   
   const updateAppDataByKey = (key, value) => {
-    console.log("key: ", key);
     setAppData((prevData) => {
-      console.log("updateAppDataByKey/prevData: ", prevData);
-      if(!prevData){
+      if(!prevData || !key){
         return;
+      }
+      if(!prevData[key]){
+        return { ...prevData, [key]: value};
       }
       if((prevData[key] !== value)) {
        return { ...prevData, [key]: value};

@@ -4,20 +4,18 @@ import { Footer } from "../../concrete/footer/Footer";
 import styles from "./MainLayout.module.scss";
 import { HeaderLayoutExample } from '../../concrete/header/HeaderLayoutExample';
 import { WeatherBanner } from '../../concrete/weather-banner/WeatherBanner';
+import * as Portal from '@radix-ui/react-portal';
+import { useAppData } from '../../smart/app-data/AppData';
 export const MainLayout = ({ children, displayHeader }) => {
-  // const headerContent = displayHeader ? (<div>
-  //   <HeaderLayoutExample />
-  //   <WeatherBanner />
-  // </div>) : null;
-  //
+const {appData} = useAppData();
+const headerRef = appData?.header?.elementRef?.current;
   return (
     <div className={styles.mainLayout}>
-      <div>
-        {/*<Header />*/}
-        <HeaderLayoutExample />
+      {/*<Header />*/}
+      <HeaderLayoutExample />
+      <Portal.Root container={headerRef}>
         <WeatherBanner />
-      </div>
-      
+      </Portal.Root>
       <main className={styles.mainContent}>{children}</main>
       <Footer />
     </div>

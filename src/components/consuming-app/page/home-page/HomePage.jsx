@@ -5,7 +5,7 @@ import { HomePageTemplate } from '../../template/home-page-template/HomePageTemp
 import { useAppData } from '../../smart/app-data/AppData';
 export const HomePage = () => {
   const appData = useAppData();
-  console.log(appData);
+  console.log("HomePage/appData: ",appData);
   return(
      <MainLayout>
       <HomePageTemplateLayoutExample />
