@@ -11,6 +11,9 @@
     "lint": "yarn lint:format && yarn lint:fix "
   },
   "dependencies": {
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-direction": "^1.0.1",
+    "@radix-ui/react-portal": "^1.0.4",
     "eslint-plugin-prettier": "^4.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -21,7 +24,9 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
     "prettier": "^2.8.8",
+    "sass": "^1.69.6",
     "vite": "^4.2.1",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }

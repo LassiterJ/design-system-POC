@@ -1,0 +1,11 @@
+.mainLayout {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, content, footer */
+  min-height: 100vh;
+}
+
+.mainContent{
+    display: flex; /* Use flexbox to control the content inside main */
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Expand to fill the parent grid area */
+}
