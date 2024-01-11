@@ -14,7 +14,6 @@ export const HomePageTemplateLayoutExample = ({children}) => {
     <>
       <section className={styles.HeroSection} style={{ backgroundColor: "yellowgreen"}}>
         <HomePageHero />
-        
       </section>
       <section style={{height: "20rem",backgroundColor: "lightgray"}}>
         {/*<h4>Find Your T5 Section</h4>*/}
