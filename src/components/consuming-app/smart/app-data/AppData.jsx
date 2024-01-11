@@ -5,7 +5,7 @@ import {isTouchDevice} from "./deviceData";
 const AppDataContext = createContext({});
 export const AppDataProvider = ({ children }) => {
   const [appData, setAppData] = useState({
-    headerHeight: 0,
+    headerSize: {width:0, height: 0},
     windowClass: getWindowClass(),
     isPrimarilyATouchDevice: isTouchDevice()
   });
@@ -25,11 +25,28 @@ export const AppDataProvider = ({ children }) => {
   }, []);
   
   const updateAppData = (newData) => {
-    setAppData({ ...appData, ...newData });
+    setAppData((prevData) => {
+      if(!prevData){
+        return newData;
+      }
+      if((prevData !== newData)) {
+        return { ...prevData, ...newData};
+      }
+    });
   };
+  
   const updateAppDataByKey = (key, value) => {
-    setAppData({ ...appData, [key]: value });
-  }
+    console.log("key: ", key);
+    setAppData((prevData) => {
+      console.log("updateAppDataByKey/prevData: ", prevData);
+      if(!prevData){
+        return;
+      }
+      if((prevData[key] !== value)) {
+       return { ...prevData, [key]: value};
+      }
+    });
+  };
   
   return (
     <AppDataContext.Provider value={{ appData, updateAppData, updateAppDataByKey }}>

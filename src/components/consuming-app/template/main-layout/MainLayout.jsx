@@ -13,6 +13,7 @@ export const MainLayout = ({ children, displayHeader }) => {
   return (
     <div className={styles.mainLayout}>
       <div>
+        {/*<Header />*/}
         <HeaderLayoutExample />
         <WeatherBanner />
       </div>

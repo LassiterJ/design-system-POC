@@ -1,9 +1,13 @@
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import styles from './Header.module.scss';
 import Logo from '/src/logo.svg?react';
+import { useAppData } from '../../smart/app-data/AppData';
+import useElementSize from '../../../../hooks/useElementSize';
+import useUpdateElementSize from '../../../../hooks/useUpdateElementSize';
 export const HeaderLayoutExample = () => {
+  const headerRef = useUpdateElementSize("headerSize");
   return(
-    <header className={styles.headerLayoutExample}>
+    <header ref={headerRef} className={styles.headerLayoutExample}>
       <div className={styles.linksAndLogosContainer}>
         <div className={styles.logoContainer} style={{ height: "2rem", width: "2rem", backgroundColor: 'indianred' }}></div>
         <div className={styles.links} style={{
