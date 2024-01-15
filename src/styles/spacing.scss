@@ -2,46 +2,46 @@
 // We will use these units to create consistent spacing between elements.
 // We will also use these units to create consistent spacing within elements.
 // For example, we will use these units to create consistent spacing between the label and input of a form field.
-// These values are based off of the TailwindCSS spacing scale and implement scaling based on the scaling factor.
+// These values are based off of the TailwindCSS spacing scale and implement scaling based on the scaling factor based off of Radix-Themes scaling property..
 
 
 // TODO: Test using rem instead of px for spacing units. REM version commented out below for easy switching.
 :root{
-  --spacing-0: calc(var(--core-number-0) * var(--scaling-factor));
-  --spacing-px: calc(var(--core-number-px) * var(--scaling-factor));
-  --spacing-0_5: calc(var(--core-number-_5) * var(--scaling-factor));
-  --spacing-1: calc(var(--core-number-1) * var(--scaling-factor));
-  --spacing-1_5: calc(var(--core-number-1_5) * var(--scaling-factor));
-  --spacing-2: calc(var(--core-number-2) * var(--scaling-factor));
-  --spacing-2_5: calc(var(--core-number-2_5) * var(--scaling-factor));
-  --spacing-3: calc(var(--core-number-3) * var(--scaling-factor));
-  --spacing-3_5: calc(var(--core-number-3_5) * var(--scaling-factor));
-  --spacing-4: calc(var(--core-number-4) * var(--scaling-factor));
-  --spacing-5: calc(var(--core-number-5) * var(--scaling-factor));
-  --spacing-6: calc(var(--core-number-6) * var(--scaling-factor));
-  --spacing-7: calc(var(--core-number-7) * var(--scaling-factor));
-  --spacing-8: calc(var(--core-number-8) * var(--scaling-factor));
-  --spacing-9: calc(var(--core-number-9) * var(--scaling-factor));
-  --spacing-10: calc(var(--core-number-10) * var(--scaling-factor));
-  --spacing-11: calc(var(--core-number-11) * var(--scaling-factor));
-  --spacing-12: calc(var(--core-number-12) * var(--scaling-factor));
-  --spacing-14: calc(var(--core-number-14) * var(--scaling-factor));
-  --spacing-16: calc(var(--core-number-16) * var(--scaling-factor));
-  --spacing-20: calc(var(--core-number-20) * var(--scaling-factor));
-  --spacing-24: calc(var(--core-number-24) * var(--scaling-factor));
-  --spacing-28: calc(var(--core-number-28) * var(--scaling-factor));
-  --spacing-32: calc(var(--core-number-32) * var(--scaling-factor));
-  --spacing-36: calc(var(--core-number-36) * var(--scaling-factor));
-  --spacing-40: calc(var(--core-number-40) * var(--scaling-factor));
-  --spacing-44: calc(var(--core-number-44) * var(--scaling-factor));
-  --spacing-48: calc(var(--core-number-48) * var(--scaling-factor));
-  --spacing-52: calc(var(--core-number-52) * var(--scaling-factor));
-  --spacing-56: calc(var(--core-number-56) * var(--scaling-factor));
-  --spacing-60: calc(var(--core-number-60) * var(--scaling-factor));
-  --spacing-64: calc(var(--core-number-64) * var(--scaling-factor));
-  --spacing-72: calc(var(--core-number-72) * var(--scaling-factor));
-  --spacing-80: calc(var(--core-number-80) * var(--scaling-factor));
-  --spacing-96: calc(var(--core-number-96) * var(--scaling-factor));
+  --spacing-0: calc(var(--core-size-0) * var(--scaling-factor));
+  --spacing-px: calc(var(--core-size-px) * var(--scaling-factor));
+  --spacing-0_5: calc(var(--core-size-_5) * var(--scaling-factor));
+  --spacing-1: calc(var(--core-size-1) * var(--scaling-factor));
+  --spacing-1_5: calc(var(--core-size-1_5) * var(--scaling-factor));
+  --spacing-2: calc(var(--core-size-2) * var(--scaling-factor));
+  --spacing-2_5: calc(var(--core-size-2_5) * var(--scaling-factor));
+  --spacing-3: calc(var(--core-size-3) * var(--scaling-factor));
+  --spacing-3_5: calc(var(--core-size-3_5) * var(--scaling-factor));
+  --spacing-4: calc(var(--core-size-4) * var(--scaling-factor));
+  --spacing-5: calc(var(--core-size-5) * var(--scaling-factor));
+  --spacing-6: calc(var(--core-size-6) * var(--scaling-factor));
+  --spacing-7: calc(var(--core-size-7) * var(--scaling-factor));
+  --spacing-8: calc(var(--core-size-8) * var(--scaling-factor));
+  --spacing-9: calc(var(--core-size-9) * var(--scaling-factor));
+  --spacing-10: calc(var(--core-size-10) * var(--scaling-factor));
+  --spacing-11: calc(var(--core-size-11) * var(--scaling-factor));
+  --spacing-12: calc(var(--core-size-12) * var(--scaling-factor));
+  --spacing-14: calc(var(--core-size-14) * var(--scaling-factor));
+  --spacing-16: calc(var(--core-size-16) * var(--scaling-factor));
+  --spacing-20: calc(var(--core-size-20) * var(--scaling-factor));
+  --spacing-24: calc(var(--core-size-24) * var(--scaling-factor));
+  --spacing-28: calc(var(--core-size-28) * var(--scaling-factor));
+  --spacing-32: calc(var(--core-size-32) * var(--scaling-factor));
+  --spacing-36: calc(var(--core-size-36) * var(--scaling-factor));
+  --spacing-40: calc(var(--core-size-40) * var(--scaling-factor));
+  --spacing-44: calc(var(--core-size-44) * var(--scaling-factor));
+  --spacing-48: calc(var(--core-size-48) * var(--scaling-factor));
+  --spacing-52: calc(var(--core-size-52) * var(--scaling-factor));
+  --spacing-56: calc(var(--core-size-56) * var(--scaling-factor));
+  --spacing-60: calc(var(--core-size-60) * var(--scaling-factor));
+  --spacing-64: calc(var(--core-size-64) * var(--scaling-factor));
+  --spacing-72: calc(var(--core-size-72) * var(--scaling-factor));
+  --spacing-80: calc(var(--core-size-80) * var(--scaling-factor));
+  --spacing-96: calc(var(--core-size-96) * var(--scaling-factor));
 }
 //:root{
 //  --spacing-0: calc(0px * var(--scaling-factor));
