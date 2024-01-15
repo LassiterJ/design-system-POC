@@ -1,4 +1,4 @@
-import { withBreakpoints } from '../breakpoints';
+import { withBreakpoints } from './breakpoints';
 
 // prettier-ignore
 const marginValues = ['auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8', '-9'];
@@ -29,13 +29,13 @@ export const extractMarginProps = (props) =>{
 
 export const withMarginProps = (props) => {
   return [
-    withBreakpoints(props.m, 'compass-r-m'),
-    withBreakpoints(props.mx, 'compass-r-mx'),
-    withBreakpoints(props.my, 'compass-r-my'),
-    withBreakpoints(props.mt, 'compass-r-mt'),
-    withBreakpoints(props.me, 'compass-r-me'),
-    withBreakpoints(props.mb, 'compass-r-mb'),
-    withBreakpoints(props.ms, 'compass-r-ms'),
+    withBreakpoints(props.m, 'compass-m'),
+    withBreakpoints(props.mx, 'compass-mx'),
+    withBreakpoints(props.my, 'compass-my'),
+    withBreakpoints(props.mt, 'compass-mt'),
+    withBreakpoints(props.me, 'compass-me'),
+    withBreakpoints(props.mb, 'compass-mb'),
+    withBreakpoints(props.ms, 'compass-ms'),
   ]
     .filter(Boolean)
     .join(' ');

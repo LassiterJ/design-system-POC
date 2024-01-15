@@ -1,9 +1,10 @@
 
 import classNames from 'classnames';
-import { withBreakpoints, getResponsiveStyles } from './breakpoints';
+import { withBreakpoints} from './breakpoints';
 import { mergeStyles } from './mergeStyles';
+import {coreNumbers} from './coreNumbers';
 
-const paddingValues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const paddingValues = Object.keys(coreNumbers);
 
 const paddingPropDefs = {
   p: { type: 'enum', values: paddingValues, default: undefined, responsive: true },
@@ -31,13 +32,13 @@ export const extractPaddingProps = (props) => {
 
 export const withPaddingProps = (props) => {
   return [
-    withBreakpoints(props.p, 'compass-r-p'),
-    withBreakpoints(props.px, 'compass-r-px'),
-    withBreakpoints(props.py, 'compass-r-py'),
-    withBreakpoints(props.pt, 'compass-r-pt'),
-    withBreakpoints(props.pe, 'compass-r-pe'),
-    withBreakpoints(props.pb, 'compass-r-pb'),
-    withBreakpoints(props.ps, 'compass-r-ps'),
+    withBreakpoints(props.p, 'compass-p'),
+    withBreakpoints(props.px, 'compass-px'),
+    withBreakpoints(props.py, 'compass-py'),
+    withBreakpoints(props.pt, 'compass-pt'),
+    withBreakpoints(props.pe, 'compass-pe'),
+    withBreakpoints(props.pb, 'compass-pb'),
+    withBreakpoints(props.ps, 'compass-ps'),
   ]
     .filter(Boolean)
     .join(' ');
@@ -114,71 +115,71 @@ export const extractLayoutProps = (props) =>{
 export const getLayoutStyles = (props) => { // TODO: I want to say we can skip the "withBreakpoints" function if we use css variables for these values. Gonna try it out
   const baseLayoutClassNames = classNames(
     withPaddingProps(props),
-    withBreakpoints(props.position, 'compass-r-position'),
-    withBreakpoints(props.shrink, 'compass-r-fs'),
-    withBreakpoints(props.grow, 'compass-r-fg'),
-    withBreakpoints(props.width, 'compass-r-w'),
-    withBreakpoints(props.height, 'compass-r-h'),
-    withBreakpoints(props.inset, 'compass-r-inset'),
-    withBreakpoints(props.top, 'compass-r-top'),
-    withBreakpoints(props.bottom, 'compass-r-bottom'),
-    withBreakpoints(props.start, 'compass-r-start'),
-    withBreakpoints(props.end, 'compass-r-end')
+    withBreakpoints(props.position, 'compass-position'),
+    withBreakpoints(props.shrink, 'compass-fs'),
+    withBreakpoints(props.grow, 'compass-fg'),
+    withBreakpoints(props.width, 'compass-w'),
+    withBreakpoints(props.height, 'compass-h'),
+    withBreakpoints(props.inset, 'compass-inset'),
+    withBreakpoints(props.top, 'compass-top'),
+    withBreakpoints(props.bottom, 'compass-bottom'),
+    withBreakpoints(props.start, 'compass-start'),
+    withBreakpoints(props.end, 'compass-end')
   );
-  
-  const [gridColumnClassNames, gridColumnCustomProperties] = getResponsiveStyles({
-    className: 'compass-r-gc',
-    customProperty: '--grid-column',
-    value: props.gridColumn,
-  });
-  
-  const [gridColumnStartClassNames, gridColumnStartCustomProperties] = getResponsiveStyles({
-    className: 'compass-r-gcs',
-    customProperty: '--grid-column-start',
-    value: props.gridColumnStart,
-  });
-  
-  const [gridColumnEndClassNames, gridColumnEndCustomProperties] = getResponsiveStyles({
-    className: 'compass-r-gce',
-    customProperty: '--grid-column-end',
-    value: props.gridColumnEnd,
-  });
-  
-  const [gridRowClassNames, gridRowCustomProperties] = getResponsiveStyles({
-    className: 'compass-r-gr',
-    customProperty: '--grid-row',
-    value: props.gridRow,
-  });
-  
-  const [gridRowStartClassNames, gridRowStartCustomProperties] = getResponsiveStyles({
-    className: 'compass-r-grs',
-    customProperty: '--grid-row-start',
-    value: props.gridRowStart,
-  });
-  
-  const [gridRowEndClassNames, gridRowEndCustomProperties] = getResponsiveStyles({
-    className: 'compass-r-gre',
-    customProperty: '--grid-row-end',
-    value: props.gridRowEnd,
-  });
+  //
+  // const [gridColumnClassNames, gridColumnCustomProperties] = getResponsiveStyles({
+  //   className: 'compass-gc',
+  //   customProperty: '--grid-column',
+  //   value: props.gridColumn,
+  // });
+  //
+  // const [gridColumnStartClassNames, gridColumnStartCustomProperties] = getResponsiveStyles({
+  //   className: 'compass-gcs',
+  //   customProperty: '--grid-column-start',
+  //   value: props.gridColumnStart,
+  // });
+  //
+  // const [gridColumnEndClassNames, gridColumnEndCustomProperties] = getResponsiveStyles({
+  //   className: 'compass-gce',
+  //   customProperty: '--grid-column-end',
+  //   value: props.gridColumnEnd,
+  // });
+  //
+  // const [gridRowClassNames, gridRowCustomProperties] = getResponsiveStyles({
+  //   className: 'compass-gr',
+  //   customProperty: '--grid-row',
+  //   value: props.gridRow,
+  // });
+  //
+  // const [gridRowStartClassNames, gridRowStartCustomProperties] = getResponsiveStyles({
+  //   className: 'compass-grs',
+  //   customProperty: '--grid-row-start',
+  //   value: props.gridRowStart,
+  // });
+  //
+  // const [gridRowEndClassNames, gridRowEndCustomProperties] = getResponsiveStyles({
+  //   className: 'compass-gre',
+  //   customProperty: '--grid-row-end',
+  //   value: props.gridRowEnd,
+  // });
   
   return [
     classNames(
       baseLayoutClassNames,
-      gridColumnClassNames,
-      gridColumnStartClassNames,
-      gridColumnEndClassNames,
-      gridRowClassNames,
-      gridRowStartClassNames,
-      gridRowEndClassNames
+      // gridColumnClassNames,
+      // gridColumnStartClassNames,
+      // gridColumnEndClassNames,
+      // gridRowClassNames,
+      // gridRowStartClassNames,
+      // gridRowEndClassNames
     ),
     mergeStyles(
-      gridColumnCustomProperties,
-      gridColumnStartCustomProperties,
-      gridColumnEndCustomProperties,
-      gridRowCustomProperties,
-      gridRowStartCustomProperties,
-      gridRowEndCustomProperties
+      // gridColumnCustomProperties,
+      // gridColumnStartCustomProperties,
+      // gridColumnEndCustomProperties,
+      // gridRowCustomProperties,
+      // gridRowStartCustomProperties,
+      // gridRowEndCustomProperties
     ),
   ];
 }

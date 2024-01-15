@@ -1,5 +1,5 @@
 ---
-to: <%= componentLocation %>/<%= h.changeCase.param( componentName )%>/<%= h.changeCase.pascal( componentName )%>.js
+to: <%= componentLocation %>/<%= h.changeCase.param( componentName )%>/<%= h.changeCase.pascal( componentName )%>.jsx
 ---
 
 import React from 'react';

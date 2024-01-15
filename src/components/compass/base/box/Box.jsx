@@ -40,17 +40,25 @@ export const Box = React.forwardRef((props, forwardedRef) => {
     display = boxPropDefs.display.default,
     ...boxProps
   } = layoutRest;
-  
+  const validatedDisplay = boxPropDefs.display.values.includes(display)? display : boxPropDefs.display.default;
   const [layoutClassNames, layoutCustomProperties] = getLayoutStyles(layoutProps);
   const Comp = asChild ? Slot : 'div';
+  const finalBoxProps = {
+    class: classNames(`${styles["compass-box"]}`),
+    passedClassName: className,
+    classesWithBreakpoints: withBreakpoints(validatedDisplay, 'compass-display'),// TODO: Add Window Class implementation
+    withMarginProps: withMarginProps(marginProps),
+    layoutClassNames,
+  }
+  console.log("finalBoxProps: ", finalBoxProps);
   return (
     <Comp
       {...boxProps}
       ref={forwardedRef}
       className={classNames(
-        'compass-Box',
+        `${styles["compass-box"]}`,
         className,
-        withBreakpoints(display, 'compass-r-display'),// TODO: Add Window Class implementation
+        withBreakpoints(validatedDisplay, 'compass-display'),// TODO: Add Window Class implementation
         withMarginProps(marginProps),
         layoutClassNames,
       )}
