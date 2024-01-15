@@ -1,7 +1,9 @@
 import { withBreakpoints } from './breakpoints';
+import {coreNumbers} from './coreNumbers';
 
+// Created based off of Radix-Theme's margin.props.ts: https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/helpers/props/margin.props.ts
 // prettier-ignore
-const marginValues = ['auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8', '-9'];
+const marginValues = [...Object.keys(coreNumbers), "auto"];
 
 const marginPropDefs = {
   m: { type: 'enum', values: marginValues, default: undefined, responsive: true },
@@ -24,7 +26,15 @@ export const extractMarginProps = (props) =>{
     ms = marginPropDefs.ms.default,
     ...rest
   } = props;
-  return { m, mx, my, mt, me, mb, ms, rest };
+  // Validate that the props are correct.
+  const marginProps = { m, mx, my, mt, me, mb, ms, rest };
+  for (const [key, value] of Object.entries(marginProps)) {
+    if (value !== undefined && !marginPropDefs[key].values.includes(value)) {
+      console.error(`Invalid value for margin prop '${key}': ${value}`); // TODO: in the real project, we wouldn't let the value move on. We would default it and log the error.
+    }
+  }
+  
+  return marginProps;
 }
 
 export const withMarginProps = (props) => {
