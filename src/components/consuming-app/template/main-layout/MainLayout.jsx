@@ -5,7 +5,7 @@ import styles from "./MainLayout.module.scss";
 import { HeaderLayoutExample } from '../../concrete/header/HeaderLayoutExample';
 import { WeatherBanner } from '../../concrete/weather-banner/WeatherBanner';
 import * as Portal from '@radix-ui/react-portal';
-import { useAppData } from '../../smart/app-data/AppData';
+import { useAppData } from '../../smart/app-state/AppStateProvider';
 export const MainLayout = ({ children, displayHeader }) => {
 const {appData} = useAppData();
 const headerRef = appData?.header?.elementRef?.current;

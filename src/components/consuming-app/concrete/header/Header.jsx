@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import styles from './Header.module.scss';
 import Logo from '/src/logo.svg?react';
-import { useAppData } from '../../smart/app-data/AppData';
+import { useAppData } from '../../smart/app-state/AppStateProvider';
 import useElementSize from '../../../../hooks/useElementSize';
 import useUpdateElementSize from '../../../../hooks/useUpdateElementSize';
 
