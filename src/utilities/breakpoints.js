@@ -11,7 +11,7 @@
 // import { hasOwnProperty } from './has-own-property';
 // import type { StringOrValue } from './string-or-value';
 
-// type Breakpoints = 'initial' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+// type Breakpoints = 'initial' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // 'compact' | 'medium' | 'expanded';
 // type Responsive<T> = T | Partial<Record<Breakpoints, T>>;
 
 /**

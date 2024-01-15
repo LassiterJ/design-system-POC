@@ -27,12 +27,13 @@ export const extractMarginProps = (props) =>{
     ...rest
   } = props;
   // Validate that the props are correct.
-  const marginProps = { m, mx, my, mt, me, mb, ms, rest };
-  for (const [key, value] of Object.entries(marginProps)) {
-    if (value !== undefined && !marginPropDefs[key].values.includes(value)) {
-      console.error(`Invalid value for margin prop '${key}': ${value}`); // TODO: in the real project, we wouldn't let the value move on. We would default it and log the error.
-    }
-  }
+  const marginProps = { m, mx, my, mt, me, mb, ms, rest }; // TODO: Not validating currently. In Typescript the types would be enough.
+  // for (const [key, value] of Object.entries(marginProps)) {
+  //   console.log("value: ", value);
+  //   if (value !== undefined && !marginPropDefs[key]?.values?.includes(value)) {
+  //     console.error(`Invalid value for margin prop '${key}': ${value}`); // TODO: in the real project, we wouldn't let the value move on. We would default it and log the error.
+  //   }
+  // }
   
   return marginProps;
 }
