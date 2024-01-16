@@ -1,11 +1,8 @@
----
-to: <%= componentLocation %>/<%= h.changeCase.param( componentName )%>/<%= h.changeCase.pascal( componentName )%>.stories.js
----
-import {<%= h.changeCase.pascal(componentName)%>} from './<%= h.changeCase.pascal( componentName )%>';
+import {Box} from "./Box";
 
 export default {
-  title: "<%= h.changeCase.pascal(componentType)%>/<%= h.changeCase.pascal( componentName )%>",
-  component: <%= h.changeCase.pascal( componentName )%>,
+  title: 'Layout/Box',
+  component: Box,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -16,7 +13,6 @@ export default {
   argTypes: {
   },
 };
-
 export const Default = {
   args: {
   }

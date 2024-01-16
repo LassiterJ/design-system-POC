@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './LayoutComponentTestPage.module.scss'
-import {Box} from '../../../compass/base/box/Box';
+import {Box} from '../../layout/box/Box';
 export const LayoutComponentTestPage = () => {
   return (
     <div className={styles.test}>
