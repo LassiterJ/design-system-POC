@@ -1,4 +1,5 @@
 import {Box} from "./Box";
+import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
 
 export default {
   title: 'Layout/Box',
@@ -11,6 +12,9 @@ export default {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
+    ...marginArgTypes,
+    ...layoutArgTypes,
+    display:{control: "select", options:["none","inline","inline-block","block"]},
   },
 };
 export const Default = {

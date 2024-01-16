@@ -2,7 +2,6 @@
 to: <%= componentLocation %>/<%= h.changeCase.param( componentName )%>/<%= h.changeCase.pascal( componentName )%>.stories.js
 ---
 import {<%= h.changeCase.pascal(componentName)%>} from './<%= h.changeCase.pascal( componentName )%>';
-
 export default {
   title: "<%= h.changeCase.pascal(componentType)%>/<%= h.changeCase.pascal( componentName )%>",
   component: <%= h.changeCase.pascal( componentName )%>,
