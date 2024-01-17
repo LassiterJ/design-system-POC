@@ -9,8 +9,8 @@ import LayoutComponentTestPage
 const App = () => {
   return (
     <AppStateProvider  >
-      {/*<HomePage />*/}
-      <LayoutComponentTestPage />
+      <HomePage />
+      {/*<LayoutComponentTestPage />*/}
     </AppStateProvider>
   );
 };

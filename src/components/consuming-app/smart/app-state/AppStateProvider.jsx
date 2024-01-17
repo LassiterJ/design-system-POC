@@ -1,13 +1,15 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import {debounce} from "../../../../utilities/debounce";
-import {getWindowClass} from "./windowClass";
+import {getCurrentWindowClass} from "./windowClass";
 import {isTouchDevice} from "./deviceData";
 import { DirectionProvider } from '@radix-ui/react-direction';
 
 const AppStateContext = createContext({});
 export const AppStateProvider = ({ children }) => {
+
+  
   const [appData, setAppData] = useState({
-    windowClass: getWindowClass(),
+    windowClass: getCurrentWindowClass(),
     isPrimarilyATouchDevice: isTouchDevice()
   });
   
@@ -15,7 +17,7 @@ export const AppStateProvider = ({ children }) => {
     const debouncedHandleResize = debounce(() => {
       setAppData(prevData => ({
         ...prevData,
-        windowClass: getWindowClass(),
+        windowClass: getCurrentWindowClass(),
         isPrimarilyATouchDevice: isTouchDevice()
       }));
     }, 100);

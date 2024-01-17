@@ -1,3 +1,10 @@
+@import "src/styles/breakpoints";
+
 .compass-box{
 border: 2px solid red;
+}
+@media (--compact) {
+  .compass-box{
+    border: 2px solid blue;
+  }
 }
