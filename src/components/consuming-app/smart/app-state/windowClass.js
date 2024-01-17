@@ -1,24 +1,11 @@
-// export const windowSizeQueries = {
-//   'window-compact': '(max-width: 599px)',
-//   'window-medium': '(min-width: 600px) and (max-width: 1199px)',
-//   'window-expanded': '(min-width: 1200px)'
-// };
-//
-//
-//
-// export const getCurrentWindowClass = () => {
-//   return Object.keys(windowSizeQueries).find(key =>
-//     window.matchMedia(windowSizeQueries[key]).matches
-//   ) || 'window-expanded';
-// };
-// Testing css custom property and scss mixin solution. Both solutions have their pros and cons.
-export const getCurrentBreakpoint = () => {
+//Gets custom property from root element and returns it as a string
+// Custom window class property is set in src/styles/breakpoints.scss
+// And is added to state in src/components/consuming-app/smart/app-state/AppStateProvider.jsx
+
+export const getCurrentWindowClass = () => {
   const rootStyle = getComputedStyle(document.documentElement);
   const breakpoint = rootStyle.getPropertyValue('--current-breakpoint').trim();
   return breakpoint;
 };
 
-export const getCurrentWindowClass = () => {
-  return getCurrentBreakpoint();
-};
 
