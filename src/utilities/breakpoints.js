@@ -77,6 +77,7 @@ export const withBreakpoints = (
     classes.push(`${classPrefix}${delimiter}${suffix}`);
   }
   // console.log(`withBreakpoints(value:${value},classPrefix:${classPrefix},valueMap:${valueMap}): `, classes.join(' '))
+  console.log("classes: ", classes);
   return classes.join(' ');
 }
 

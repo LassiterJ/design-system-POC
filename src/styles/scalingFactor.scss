@@ -1,4 +1,5 @@
 :root {
+  --scaling-factor: 1;
     &:where([data-scaling='90%']) {
       --scaling-factor: 0.9;
     }

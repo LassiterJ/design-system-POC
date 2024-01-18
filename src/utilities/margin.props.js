@@ -3,8 +3,8 @@ import {coreNumbers} from './coreNumbers';
 
 // Created based off of Radix-Theme's margin.props.ts: https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/helpers/props/margin.props.ts
 // prettier-ignore
-const marginValues = [...Object.keys(coreNumbers), "auto"];
-
+const marginValues = [...Object.keys(coreNumbers).map((value) => value.replace(".", "_")), "auto"]; // TODO: Add negative values too
+console.log("marginValues: ", marginValues);
 const marginPropDefs = {
   m: { type: 'enum', values: marginValues, default: undefined, responsive: true },
   mx: { type: 'enum', values: marginValues, default: undefined, responsive: true },

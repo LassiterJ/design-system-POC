@@ -1,15 +1,15 @@
 import {coreNumbers} from '../src/utilities/coreNumbers';
-const coreNumberOptions = Object.keys(coreNumbers);
-const negativeCoreNumberOptions= coreNumberOptions.map(value => `-${value}`).filter((item) => item !== "-0"); //TODO: I think this includes -0. Lets remove that.
+const coreNumberOptions = Object.keys(coreNumbers).map((value) => value.replace(".", "_"));
+const negativeCoreNumberOptions= coreNumberOptions.map(value => `-${value}`).filter((item) => item !== "-0");
 
 export const layoutArgTypes = {
     p:{control: "select", options:[...coreNumberOptions]},
     px:{control: "select", options:[...coreNumberOptions]},
     py:{control: "select", options:[...coreNumberOptions]},
     pt:{control: "select", options:[...coreNumberOptions]},
-    pr:{control: "select", options:[...coreNumberOptions]},
+    pe:{control: "select", options:[...coreNumberOptions]},
     pb:{control: "select", options:[...coreNumberOptions]},
-    pl:{control: "select", options:[...coreNumberOptions]},
+    ps:{control: "select", options:[...coreNumberOptions]},
     position:{control: "select", options:["static", "relative", "absolute", "fixed", "sticky"]},
     inset:{control: "select", options:["auto", "0", "50%", "100%"]}, // TODO: Might add coreNumbers to the options for the positioning items
     top:{control: "select", options:["auto", "0", "50%", "100%"]},
@@ -27,7 +27,7 @@ export const marginArgTypes = {
   mx:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
   my:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
   mt:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
-  mr:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
+  me:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
   mb:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
-  ml:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
+  ms:{control: "select", options:["auto", ...coreNumberOptions,...negativeCoreNumberOptions]},
 }

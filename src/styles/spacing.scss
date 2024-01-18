@@ -3,13 +3,15 @@
 // We will also use these units to create consistent spacing within elements.
 // For example, we will use these units to create consistent spacing between the label and input of a form field.
 // These values are based off of the TailwindCSS spacing scale and implement scaling based on the scaling factor based off of Radix-Themes scaling property..
-
+@import "src/styles/scalingFactor";
+@import "src/styles/coreSizes";
 
 // TODO: Test using rem instead of px for spacing units. REM version commented out below for easy switching.
 :root{
+  --spacing-auto: auto;
   --spacing-0: calc(var(--core-size-0) * var(--scaling-factor));
   --spacing-px: calc(var(--core-size-px) * var(--scaling-factor));
-  --spacing-0_5: calc(var(--core-size-_5) * var(--scaling-factor));
+  --spacing-0_5: calc(var(--core-size-0_5) * var(--scaling-factor));
   --spacing-1: calc(var(--core-size-1) * var(--scaling-factor));
   --spacing-1_5: calc(var(--core-size-1_5) * var(--scaling-factor));
   --spacing-2: calc(var(--core-size-2) * var(--scaling-factor));
