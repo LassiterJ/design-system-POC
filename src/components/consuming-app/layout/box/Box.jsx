@@ -58,7 +58,7 @@ export const Box = React.forwardRef((props, forwardedRef) => {
       className={classNames(
         `${styles["compass-box"]}`,
         className,
-        withBreakpoints(validatedDisplay, 'compass-display'),// TODO: Add Window Class implementation
+        withBreakpoints(validatedDisplay, 'compass-display'), // TODO: Add Window Class implementation
         withMarginProps(marginProps),
         layoutClassNames,
       )}
