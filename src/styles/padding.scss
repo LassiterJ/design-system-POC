@@ -1,0 +1,54 @@
+@import "./coreSizes";
+@import "./spacing";
+$paddingValues: $coreScaleKeys;
+:root{
+  border: 2px solid red;
+}
+@each $size in $paddingValues {
+  // All sides
+  .compass-p-#{$size} {
+    --padding-top: var(--spacing-#{$size});
+    --padding-right: var(--spacing-#{$size});
+    --padding-bottom: var(--spacing-#{$size});
+    --padding-left: var(--spacing-#{$size});
+  }
+  .-compass-p-#{$size} {
+    --padding-top: calc(-1 * var(--spacing-#{$size}));
+    --padding-right: calc(-1 * var(--spacing-#{$size}));
+    --padding-bottom: calc(-1 * var(--spacing-#{$size}));
+    --padding-left: calc(-1 * var(--spacing-#{$size}));
+  }
+
+  // Horizontal (Left and Right)
+  .compass-px-#{$size} {
+    --padding-left: var(--spacing-#{$size});
+    --padding-right: var(--spacing-#{$size});
+  }
+  .-compass-px-#{$size} {
+    --padding-left: calc(-1 * var(--spacing-#{$size}));
+    --padding-right: calc(-1 * var(--spacing-#{$size}));
+  }
+
+  // Vertical (Top and Bottom)
+  .compass-py-#{$size} {
+    --padding-top: var(--spacing-#{$size});
+    --padding-bottom: var(--spacing-#{$size});
+  }
+  .-compass-py-#{$size} {
+    --padding-top: calc(-1 * var(--spacing-#{$size}));
+    --padding-bottom: calc(-1 * var(--spacing-#{$size}));
+  }
+
+  // Individual Sides
+  .compass-pt-#{$size} { --padding-top: var(--spacing-#{$size}); }
+  .-compass-pt-#{$size} { --padding-top: calc(-1 * var(--spacing-#{$size})); }
+
+  .compass--pe-#{$size} { --padding-right: var(--spacing-#{$size}); }
+  .-compass--pe-#{$size} { --padding-right: calc(-1 * var(--spacing-#{$size})); }
+
+  .compass-pb-#{$size} { --padding-bottom: var(--spacing-#{$size}); }
+  .-compass-pb-#{$size} { --padding-bottom: calc(-1 * var(--spacing-#{$size})); }
+
+  .compass--ps-#{$size} { --padding-left: var(--spacing-#{$size}); }
+  .-compass--ps-#{$size} { --padding-left: calc(-1 * var(--spacing-#{$size})); }
+}

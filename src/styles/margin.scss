@@ -3,10 +3,6 @@
 $auto: auto;
 $marginValues: append($coreScaleKeys, "auto", comma);
 
-:root{
-  border: 2px solid red;
-}
-
 @each $size in $marginValues {
   //// Initial Set
   //.compass-m-#{$size} {
