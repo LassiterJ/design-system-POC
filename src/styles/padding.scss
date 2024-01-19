@@ -6,7 +6,7 @@ $paddingValues: $coreScaleKeys;
 }
 @each $size in $paddingValues {
   // Set Initial Values
-  .compass-m-#{$size} {
+  .compass-p-#{$size} {
     //padding-top: var(--padding-top-override, var(--padding-top));
     //padding-right: var(--padding-right-override, var(--padding-right));
     //padding-bottom: var(--padding-bottom-override, var(--padding-bottom));
