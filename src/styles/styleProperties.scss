@@ -1,0 +1,22 @@
+
+
+
+// The core scale is used to generate the scale for the spacing and sizing utilities.
+// inherited by padding, margin, width, minWidth, maxWidth, height, minHeight, maxHeight, gap, inset, space, translate, scrollMargin, and scrollPadding styles.
+$coreSpacingScale: "0", "px", "0_5", "1", "1_5", "2", "2_5", "3", "3_5", "4", "5", "6", "7", "8", "9", "10", "11", "12", "14", "16", "20", "24", "28", "32", "36", "40", "44", "48", "52", "56", "60", "64", "72", "80", "96";
+
+// Layout
+$auto: auto;
+$fractionalUnits:(
+        "1/2": 50%,
+        "1/3": 33.333333%,
+        "2/3": 66.666667%,
+        "1/4": 25%,
+        "2/4": 50%,
+        "3/4": 75%,
+        "full": 100%
+);
+$positionValues: "static", "relative", "absolute", "fixed", "sticky";
+//const widthHeightValues = ['auto', 'min-content', 'max-content', '100%', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+//const flexShrinkValues = ['0', '1'];
+//const flexGrowValues = ['0', '1'];

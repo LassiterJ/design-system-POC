@@ -35,3 +35,25 @@ export const coreNumbers = {
   "80": 320,
   "96": 384
 }
+export const fractionalUnits = {
+  "1/2": "50%",
+  "1/3": "33.333333%",
+  "2/3": "66.666667%",
+  "1/4": "25%",
+  "2/4": "50%",
+  "3/4": "75%",
+  "full": "100%"
+}
+const createModifiedObject = (originalObject) => {
+  const modifiedObject = {};
+  
+  for (const key in originalObject) {
+    const modifiedKey = key.replace(/\//g, '--');
+    modifiedObject[key] = modifiedKey;
+  }
+  
+  return modifiedObject;
+}
+
+// Example usage
+export const fractionalUnitsKeyMap = createModifiedObject(fractionalUnits);

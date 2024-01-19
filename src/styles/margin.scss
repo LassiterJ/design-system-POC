@@ -1,7 +1,7 @@
-@import "./coreSizes";
+@import "./styleProperties";
 @import "./spacing";
 $auto: auto;
-$marginValues: append($coreScaleKeys, "auto", comma);
+$marginValues: append($coreSpacingScale, "auto", comma);
 
 @each $size in $marginValues {
   // Initial Set

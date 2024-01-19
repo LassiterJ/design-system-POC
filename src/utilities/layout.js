@@ -2,9 +2,10 @@
 import classNames from 'classnames';
 import { withBreakpoints} from './breakpoints';
 import { mergeStyles } from './mergeStyles';
-import {coreNumbers} from './coreNumbers';
+import {coreNumbers, fractionalUnits} from './coreNumbers';
 
 const paddingValues = Object.keys(coreNumbers);
+const fractionalValues = Object.keys(fractionalUnits);
 
 const paddingPropDefs = {
   p: { type: 'enum', values: paddingValues, default: undefined, responsive: true },
@@ -45,7 +46,7 @@ export const withPaddingProps = (props) => {
 }
 
 const positionValues = ['static', 'relative', 'absolute', 'fixed', 'sticky'];
-const positionEdgeValues = ['auto', '0', '50%', '100%'];
+const positionEdgeValues = ['auto', ...fractionalValues];
 const widthHeightValues = ['auto', 'min-content', 'max-content', '100%', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const flexShrinkValues = ['0', '1'];
 const flexGrowValues = ['0', '1'];

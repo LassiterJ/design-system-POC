@@ -1,0 +1,56 @@
+@import "./styleProperties";
+@import "./spacing";
+$insetValues: append($coreSpacingScale,$auto,comma);
+:root{
+  border: 2px solid red;
+}
+
+  // Set Initial Values
+  //.compass-p-#{$size} {
+  //  //padding-top: var(--padding-top-override, var(--padding-top));
+  //  //padding-right: var(--padding-right-override, var(--padding-right));
+  //  //padding-bottom: var(--padding-bottom-override, var(--padding-bottom));
+  //  //padding-left: var(--padding-left-override, var(--padding-left));
+  //  padding-top: var(--padding-top);
+  //  padding-right: var(--padding-right);
+  //  padding-bottom: var(--padding-bottom);
+  //  padding-left: var(--padding-left);
+  //}
+
+// Generate classes for size values
+@each $value in $insetValues {
+  .compass-inset-#{$value} { inset: var(--spacing-#{$value}); }
+  .compass-inset-x-#{$value} { left: var(--spacing-#{$value}); right: var(--spacing-#{$value}); }
+  .compass-inset-y-#{$value} { top: var(--spacing-#{$value}); bottom: var(--spacing-#{$value}); }
+  .compass-start-#{$value} { inset-inline-start: var(--spacing-#{$value}); }
+  .compass-end-#{$value} { inset-inline-end: var(--spacing-#{$value}); }
+  .compass-top-#{$value} { top: var(--spacing-#{$value}); }
+  .compass-right-#{$value} { right: var(--spacing-#{$value}); }
+  .compass-bottom-#{$value} { bottom: var(--spacing-#{$value}); }
+  .compass-left-#{$value} { left: var(--spacing-#{$value}); }
+}
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// Generate classes for fractional values
+@each $key, $value in $fractionalUnits {
+  $safe-key: str-replace($key, '/', '--'); // Replace / with --
+  .compass-inset-#{$safe-key} { inset: $value; }
+  .compass-inset-x-#{$safe-key} { left: $value; right: $value; }
+  .compass-inset-y-#{$safe-key} { top: $value; bottom: $value; }
+  .compass-start-#{$safe-key} { inset-inline-start: $value; }
+  .compass-end-#{$safe-key} { inset-inline-end: $value; }
+  .compass-top-#{$safe-key} { top: $value; }
+  .compass-right-#{$safe-key} { right: $value; }
+  .compass-bottom-#{$safe-key} { bottom: $value; }
+  .compass-left-#{$safe-key} { left: $value; }
+}
+

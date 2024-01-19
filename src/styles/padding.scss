@@ -1,6 +1,6 @@
-@import "./coreSizes";
+@import "./styleProperties";
 @import "./spacing";
-$paddingValues: $coreScaleKeys;
+$paddingValues: $coreSpacingScale;
 :root{
   border: 2px solid red;
 }
