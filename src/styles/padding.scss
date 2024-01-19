@@ -5,6 +5,18 @@ $paddingValues: $coreScaleKeys;
   border: 2px solid red;
 }
 @each $size in $paddingValues {
+  // Set Initial Values
+  .compass-m-#{$size} {
+    //padding-top: var(--padding-top-override, var(--padding-top));
+    //padding-right: var(--padding-right-override, var(--padding-right));
+    //padding-bottom: var(--padding-bottom-override, var(--padding-bottom));
+    //padding-left: var(--padding-left-override, var(--padding-left));
+    padding-top: var(--padding-top);
+    padding-right: var(--padding-right);
+    padding-bottom: var(--padding-bottom);
+    padding-left: var(--padding-left);
+  }
+
   // All sides
   .compass-p-#{$size} {
     --padding-top: var(--spacing-#{$size});

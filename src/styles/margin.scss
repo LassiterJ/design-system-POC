@@ -4,17 +4,17 @@ $auto: auto;
 $marginValues: append($coreScaleKeys, "auto", comma);
 
 @each $size in $marginValues {
-  //// Initial Set
-  //.compass-m-#{$size} {
-  //  //margin-top: var(--margin-top-override, var(--margin-top));
-  //  //margin-right: var(--margin-right-override, var(--margin-right));
-  //  //margin-bottom: var(--margin-bottom-override, var(--margin-bottom));
-  //  //margin-left: var(--margin-left-override, var(--margin-left));
-  //  margin-top: var(--margin-top);
-  //  margin-right: var(--margin-right);
-  //  margin-bottom: var(--margin-bottom);
-  //  margin-left: var(--margin-left);
-  //}
+  // Initial Set
+  .compass-m-#{$size} {
+    //margin-top: var(--margin-top-override, var(--margin-top));
+    //margin-right: var(--margin-right-override, var(--margin-right));
+    //margin-bottom: var(--margin-bottom-override, var(--margin-bottom));
+    //margin-left: var(--margin-left-override, var(--margin-left));
+    margin-top: var(--margin-top);
+    margin-right: var(--margin-right);
+    margin-bottom: var(--margin-bottom);
+    margin-left: var(--margin-left);
+  }
   // All sides
   .compass-m-#{$size} {
     --margin-top: var(--spacing-#{$size});
