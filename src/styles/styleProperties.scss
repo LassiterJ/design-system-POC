@@ -38,5 +38,4 @@ $fractionalUnits:(
 );
 $positionValues: "static", "relative", "absolute", "fixed", "sticky";
 $widthHeightValues: $auto, "min-content", "max-content";
-$flexShrinkValues: "0", "1";
-$flexGrowValues: "0", "1";
+$flexShrinkGrowValues: "0", "1";

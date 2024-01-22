@@ -3,10 +3,6 @@
 @import "./spacing";
 
 
-:root{
-  border: 2px solid red;
-}
-
 @each $size in $widthHeightValues {
   .compass-h-#{$size} {
     height: var(--height);
