@@ -1,24 +1,22 @@
 @import "./styleProperties";
+@import "./stringReplaceFunction";
 @import "./spacing";
 $insetValues: append($coreSpacingScale,$auto,comma);
-:root{
-  border: 2px solid red;
-}
 
-  // Set Initial Values
-  .compass-inset {
-    //padding-top: var(--padding-top-override, var(--padding-top));
-    //padding-right: var(--padding-right-override, var(--padding-right));
-    //padding-bottom: var(--padding-bottom-override, var(--padding-bottom));
-    //padding-left: var(--padding-left-override, var(--padding-left));
+
+
+// Generate classes for size values
+// TODO: Need to choose this way or by changing variables across all global style settings.
+
+@each $value in $insetValues {
+
+  .compass-inset-#{$value} {
+    inset: var(--inset);
     top: var(--top);
     right: var(--right);
     bottom: var(--bottom);
     left: var(--left);
   }
-
-// Generate classes for size values
-@each $value in $insetValues {
   .compass-inset-#{$value} { inset: var(--spacing-#{$value}); }
   .compass-inset-x-#{$value} { left: var(--spacing-#{$value}); right: var(--spacing-#{$value}); }
   .compass-inset-y-#{$value} { top: var(--spacing-#{$value}); bottom: var(--spacing-#{$value}); }
@@ -28,16 +26,6 @@ $insetValues: append($coreSpacingScale,$auto,comma);
   .compass-right-#{$value} { right: var(--spacing-#{$value}); }
   .compass-bottom-#{$value} { bottom: var(--spacing-#{$value}); }
   .compass-left-#{$value} { left: var(--spacing-#{$value}); }
-}
-
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
 }
 
 // Generate classes for fractional values

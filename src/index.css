@@ -8,6 +8,8 @@
 @import "./styles/padding.scss";
 @import "./styles/position.scss";
 @import "./styles/inset.scss";
+@import "./styles/width.scss";
+@import "./styles/height.scss";
 /*body {*/
 /*  margin: 0;*/
 /*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/

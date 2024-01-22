@@ -1,0 +1,36 @@
+@import "./styleProperties";
+@import "./stringReplaceFunction";
+@import "./spacing";
+
+
+:root{
+  border: 2px solid red;
+}
+
+@each $size in $widthHeightValues {
+  .compass-h-#{$size} {
+    height: var(--height);
+  }
+  .compass-h-#{$size} {
+    --height: #{$size};
+  }
+
+}
+
+@each $size in $coreSpacingScale {
+  // Initial Set
+  .compass-h-#{$size} {
+    height: var(--height);
+  }
+  // All sides
+  .compass-h-#{$size} {
+    --height: var(--spacing-#{$size});
+  }
+
+}
+
+// Generate classes for fractional values
+@each $key, $value in $fractionalUnits {
+    $safe-key: str-replace($key, '/', '--'); // Replace / with --
+    .compass-h-#{$safe-key} { --height: $value; }
+}
