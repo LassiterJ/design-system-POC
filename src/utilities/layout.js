@@ -123,7 +123,9 @@ export const getLayoutStyles = (props) => { // TODO: I want to say we can skip t
     withBreakpoints(props.height, 'compass-h'),
     withBreakpoints(props.inset, 'compass-inset'),
     withBreakpoints(props.top, 'compass-top'),
+    withBreakpoints(props.right, 'compass-right'),
     withBreakpoints(props.bottom, 'compass-bottom'),
+    withBreakpoints(props.left, 'compass-left'),
     withBreakpoints(props.start, 'compass-start'),
     withBreakpoints(props.end, 'compass-end')
   );

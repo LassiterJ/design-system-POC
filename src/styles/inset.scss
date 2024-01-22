@@ -6,16 +6,16 @@ $insetValues: append($coreSpacingScale,$auto,comma);
 }
 
   // Set Initial Values
-  //.compass-p-#{$size} {
-  //  //padding-top: var(--padding-top-override, var(--padding-top));
-  //  //padding-right: var(--padding-right-override, var(--padding-right));
-  //  //padding-bottom: var(--padding-bottom-override, var(--padding-bottom));
-  //  //padding-left: var(--padding-left-override, var(--padding-left));
-  //  padding-top: var(--padding-top);
-  //  padding-right: var(--padding-right);
-  //  padding-bottom: var(--padding-bottom);
-  //  padding-left: var(--padding-left);
-  //}
+  .compass-inset {
+    //padding-top: var(--padding-top-override, var(--padding-top));
+    //padding-right: var(--padding-right-override, var(--padding-right));
+    //padding-bottom: var(--padding-bottom-override, var(--padding-bottom));
+    //padding-left: var(--padding-left-override, var(--padding-left));
+    top: var(--top);
+    right: var(--right);
+    bottom: var(--bottom);
+    left: var(--left);
+  }
 
 // Generate classes for size values
 @each $value in $insetValues {

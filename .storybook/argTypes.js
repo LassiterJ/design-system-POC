@@ -1,8 +1,8 @@
-import { coreNumbers, fractionalUnits, fractionalUnitsKeyMap } from '../src/utilities/coreNumbers';
+import { coreNumbers, fractionalUnits, fractionalUnitsCSSMap } from '../src/utilities/coreNumbers';
 const coreNumberOptions = Object.keys(coreNumbers).map((value) => value.replace(".", "_"));
 const negativeCoreNumberOptions= coreNumberOptions.map(value => `-${value}`).filter((item) => item !== "-0");
 const fractionalKeys = Object.keys(fractionalUnits);
-console.log("fractionalUnitsKeyMap: ", fractionalUnitsKeyMap);
+console.log("fractionalUnitsCSSMap: ", fractionalUnitsCSSMap);
 export const layoutArgTypes = {
     p:{control: "select", options:[...coreNumberOptions]},
     px:{control: "select", options:[...coreNumberOptions]},
@@ -12,11 +12,11 @@ export const layoutArgTypes = {
     pb:{control: "select", options:[...coreNumberOptions]},
     ps:{control: "select", options:[...coreNumberOptions]},
     position:{control: "select", options:["static", "relative", "absolute", "fixed", "sticky"]},
-    inset:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys], mapping: fractionalUnitsKeyMap}, // TODO: Might add coreNumbers to the options for the positioning items
-    top:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsKeyMap},
-    right:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsKeyMap},
-    bottom:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsKeyMap},
-    left:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsKeyMap},
+    inset:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys], mapping: fractionalUnitsCSSMap},
+    top:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
+    right:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
+    bottom:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
+    left:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
     width:{control:"select", options:["auto","min-content","max-content","100%", ...coreNumberOptions]},
     height:{control:"select", options:["auto","min-content","max-content","100%", ...coreNumberOptions]},
     shrink:{control:"select", options:["0","1"]},
