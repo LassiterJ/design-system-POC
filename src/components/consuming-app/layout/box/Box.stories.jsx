@@ -17,7 +17,13 @@ export default {
     display:{control: "select", options:["none","inline","inline-block","block"]},
   },
 };
-export const Default = {
-  args: {
-  }
-}
+export const Basic = {};
+export const InFlexContainer = {
+  decorators: [
+    (Story) => (
+      <div style={{display: 'flex', width: "100%", padding:"3rem"}}>
+        <Story />
+      </div>
+    ),
+  ],
+};

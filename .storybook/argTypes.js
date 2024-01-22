@@ -17,8 +17,8 @@ export const layoutArgTypes = {
     right:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
     bottom:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
     left:{control: "select", options:["auto", ...coreNumberOptions, ...fractionalKeys],mapping: fractionalUnitsCSSMap},
-    width:{control:"select", options:["auto","min-content","max-content","100%", ...coreNumberOptions]},
-    height:{control:"select", options:["auto","min-content","max-content","100%", ...coreNumberOptions]},
+    width:{control:"select", options:["auto","min-content","max-content","100%", ...coreNumberOptions, ...fractionalKeys], mapping: fractionalUnitsCSSMap},
+    height:{control:"select", options:["auto","min-content","max-content","100%", ...coreNumberOptions, ...fractionalKeys], mapping: fractionalUnitsCSSMap},
     shrink:{control:"select", options:["0","1"]},
     grow:{control:"select", options:["0", "1"]}
 };

@@ -24,7 +24,7 @@ import { Slot } from '@radix-ui/react-slot';
 
 const boxPropDefs = {
 display: {
-    default: 'block',
+    default: undefined,
     values: ['block', 'inline-block', 'inline', 'none'],
   },
 };

@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-*:before, *:after{
+*:before, *:after{ //TODO: Double check best practice for this
   box-sizing: border-box; // Added by JL 1/5/23
 }
 
