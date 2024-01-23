@@ -1,6 +1,7 @@
 import React from 'react';
-import {useAppData} from '../../smart/app-data/AppData';
+import {useAppData} from '../../smart/app-state/AppStateProvider';
 import styles from './HomePageTemplate.module.scss';
+import Box from '../../layout/box/Box';
 export const HomePageHero = () => {
   const { appData } = useAppData();
   
@@ -9,7 +10,9 @@ export const HomePageHero = () => {
   }:{};
   
   return (
-    <div className={styles.HeroContainer} style={heroStyle}> {/* Has background image. TODO: Make Container Component (Layout)*/}
+    <div className={styles.HeroContainer} style={heroStyle}>
+      <Box m={"1"} />
+      {/* Has background image. TODO: Make Container Component (Layout)*/}
       {/*<div className={'hero-box-spacer'}> /!* May not be necessary in code.*!/*/}
       {/*</div>*/}
       {/*<div className={'hero-overlayed-content'}>*/}

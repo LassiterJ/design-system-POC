@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import useElementSize from './useElementSize'; // This hook would get both width and height
-import { useAppData } from '../components/consuming-app/smart/app-data/AppData';
+import { useAppData } from '../components/consuming-app/smart/app-state/AppStateProvider';
 
 export const useUpdateElementSize = (elementKey) => {
   const [elementSize, elementRef] = useElementSize();

@@ -1,0 +1,17 @@
+@import "src/styles/breakpoints";
+
+.compass-box {
+  border: 2px solid red;
+
+  // An example of Breakpoint usage. Not relevant really here.
+  @include compact {
+    border: 2px solid blue;
+  }
+  @include medium {
+    border: 2px solid palevioletred;
+  }
+  @include expanded {
+    border: 2px solid greenyellow;
+  }
+}
+

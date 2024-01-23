@@ -1,5 +1,5 @@
 import { useState, useCallback, useLayoutEffect, useRef } from 'react';
-import debounce from '../utilities/debounce';
+import debounce from '../utilities/js/debounce';
 
 export const useElementSize = () => {
   const [height, setHeight] = useState(0);

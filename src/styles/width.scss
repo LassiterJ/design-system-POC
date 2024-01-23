@@ -1,0 +1,31 @@
+@import "./styleProperties";
+@import "./stringReplaceFunction";
+@import "./spacing";
+
+@each $size in $widthHeightValues {
+  .compass-w-#{$size} {
+    width: var(--width);
+  }
+  .compass-w-#{$size} {
+    --width: #{$size};
+  }
+
+}
+
+@each $size in $coreSpacingScale {
+  // Initial Set
+  .compass-w-#{$size} {width: var(--width);} // Initial Set custom property
+
+  // All sides
+  .compass-w-#{$size} {
+    --width: var(--spacing-#{$size});
+  }
+
+}
+
+// Generate classes for fractional values
+@each $key, $value in $fractionalUnits {
+    $safe-key: str-replace($key, '/', '--'); // Replace / with --
+    .compass-w-#{$safe-key} { width: var(--width) } // Initial Set custom property
+    .compass-w-#{$safe-key} { --width: #{$value}; }
+}

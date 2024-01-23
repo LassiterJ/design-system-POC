@@ -1,5 +1,5 @@
 import React from 'react';
-import {useAppData} from '../../smart/app-data/AppData';
+import {useAppData} from '../../smart/app-state/AppStateProvider';
 
 export const LocationSearchSection = () => {
   const { appData } = useAppData();

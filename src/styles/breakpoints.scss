@@ -1,0 +1,26 @@
+$breakpoint-compact: 599px;
+$breakpoint-medium: 839px;
+
+@mixin compact {
+  @media (max-width: $breakpoint-compact) { @content; }
+}
+
+@mixin medium {
+  @media (min-width: $breakpoint-compact + 1) and (max-width: $breakpoint-medium) { @content; }
+}
+
+@mixin expanded {
+  @media (min-width: $breakpoint-medium + 1) { @content; }
+}
+
+:root {
+  --current-breakpoint: expanded;
+
+  @include compact {
+    --current-breakpoint: compact;
+  }
+
+  @include medium {
+    --current-breakpoint: medium;
+  }
+}
