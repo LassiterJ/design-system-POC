@@ -1,4 +1,4 @@
-import { coreNumbers, fractionalUnits, fractionalUnitsCSSMap } from '../src/utilities/coreNumbers';
+import { coreNumbers, fractionalUnits, fractionalUnitsCSSMap } from '../src/utilities/js/coreNumbers';
 const coreNumberOptions = Object.keys(coreNumbers).map((value) => value.replace(".", "_"));
 const negativeCoreNumberOptions= coreNumberOptions.map(value => `-${value}`).filter((item) => item !== "-0");
 const fractionalKeys = Object.keys(fractionalUnits);

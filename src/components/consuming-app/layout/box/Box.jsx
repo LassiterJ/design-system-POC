@@ -3,22 +3,22 @@ import styles from './Box.module.scss';
 import classNames from 'classnames';
 import {
   extractLayoutProps,
-} from '../../../../utilities/layout';
+} from '../../../../utilities/js/layout';
 import {
   extractMarginProps,
-} from '../../../../utilities/margin.props';
+} from '../../../../utilities/js/margin.props';
 import {
   getLayoutStyles,
-} from '../../../../utilities/layout';
+} from '../../../../utilities/js/layout';
 import {
   mergeStyles,
-} from '../../../../utilities/mergeStyles';
+} from '../../../../utilities/js/mergeStyles';
 import {
   withBreakpoints,
-} from '../../../../utilities/breakpoints';
+} from '../../../../utilities/js/breakpoints';
 import {
   withMarginProps,
-} from '../../../../utilities/margin.props';
+} from '../../../../utilities/js/margin.props';
 import { Slot } from '@radix-ui/react-slot';
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/box.tsx
 

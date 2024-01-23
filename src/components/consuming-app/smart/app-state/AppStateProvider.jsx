@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import {debounce} from "../../../../utilities/debounce";
+import {debounce} from "../../../../utilities/js/debounce";
 import {getCurrentWindowClass} from "./windowClass";
 import {isTouchDevice} from "./deviceData";
 import { DirectionProvider } from '@radix-ui/react-direction';
