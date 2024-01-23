@@ -41,6 +41,7 @@
     "prop-types": "^15.8.1",
     "sass": "^1.69.6",
     "storybook": "^7.6.10",
+    "style-dictionary": "^3.9.2",
     "vite": "^4.2.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svgr": "^4.2.0"
