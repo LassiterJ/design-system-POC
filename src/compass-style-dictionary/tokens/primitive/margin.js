@@ -1,5 +1,5 @@
 // import {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} from './spacing.js';
-// import { buildToken, buildTokensFromScale } from '../../../utilities/js/buildTokenDefinition.mjs';
+// import { buildToken, buildTokensFromScale } from '../../../utilities/js/buildTokenDefinition.js';
 //
 // console.log("coreSpacingTokens: ", coreSpacingTokens);
 // // exports marginTokens that look like:

@@ -10,7 +10,8 @@
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" ",
     "lint": "yarn lint:format && yarn lint:fix ",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "style-dictionary-build": "node ./src/compass-style-dictionary/config.js"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.3",

@@ -1,9 +1,8 @@
-const buildTokensFromScale = require( '../../../utilities/js/buildTokenDefinition.mjs');
-
-export const coreSpacingScale = {
+const {buildTokensFromScale} = require( '../../buildTokenDefinition.js');
+const coreSpacingScale = {
   "0": "0px",
   "px": "1px",
-  ".5": "0.125rem",
+  "0.5": "0.125rem",
   "1": "0.25rem",
   "1.5": "0.375rem",
   "2": "0.5rem",
@@ -37,7 +36,7 @@ export const coreSpacingScale = {
   "80": "20rem",
   "96": "24rem"
 };
-export const fractionalSpacingScale = {
+const fractionalSpacingScale = {
   "1/2": "50%",
   "1/3": "33.333333%",
   "2/3": "66.666667%",
@@ -76,7 +75,32 @@ export const fractionalSpacingScale = {
 //   "compass-spacing-1.5": { value: "0.375rem" },
 //   "compass-spacing-2": { value: "0.5rem" },
 //   ...
-export const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, keyFormatter: (key)=>key.replace(".","_"), prefix: "compass-spacing"});
-export const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, keyFormatter: (key)=>key.replace("/","--"), prefix: "compass-spacing"});
 
+// const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, keyFormatter: (key)=>key.replace(".","_"), prefix: "compass-spacing"});
+// // // const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, keyFormatter: (key)=>key.replace("/","--"), prefix: "compass-spacing"});const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, keyFormatter: (key)=>key.replace(".","_"), prefix: "compass-spacing"});
+const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, prefix: "compass-spacing"});
+const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, prefix: "compass-spacing-f"});
+console.log("coreSpacingTokens: ", coreSpacingTokens);
+console.log("fractionalSpacingTokens: ", fractionalSpacingTokens);
 module.exports = {...coreSpacingTokens, ...fractionalSpacingTokens};
+// //
+// module.exports = {
+//   "compass": {
+//     "spacing": {
+//       "f": {
+//         "11/22" : { "value": "#CCCCCC" },
+//         "12.22": { "value": { value: "{compass.spacing.f.11/22}", comment: "testingJL"} },
+//       },
+//     }
+//   }
+  // "compass-spacing-f(11_12)": {
+  //   value: {
+  //     value: '91.666667%',
+  //     key: '11/12',
+  //     prefix: 'compass-spacing',
+  //     suffix: '',
+  //   },
+  //   // transform: ['skipNameTransform'],
+  //   attributes: {}
+  // },
+// }

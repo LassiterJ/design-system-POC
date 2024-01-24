@@ -8,15 +8,16 @@
 //   name:	String (optional)	Usually the name for a design token is generated with a name transform, but you can write your own if you choose. By default Style Dictionary will add a default name which is the key of the design token object.
 //   attributes:	Object (optional)
 
-export const buildTokenName = ({key="", keyFormatter=(key)=>key, prefix="", suffix=""}) => {
+const buildTokenName = ({key="", keyFormatter=(key)=>key, prefix="", suffix=""}) => {
   const formattedKey = keyFormatter(key);
   return `${prefix}${prefix && "-"}${formattedKey}${suffix && "-"}${suffix}`;
 }
-export const buildToken = ({key="", value="", keyFormatter=(key)=>key, valueFormatter=(value)=>value, prefix="", suffix="", attributes= {}}) => {
+const buildToken = ({key="", value="", keyFormatter=(key)=>key, valueFormatter=(value)=>value, prefix="", suffix=""}) => {
   const tokenName = buildTokenName({key, keyFormatter, prefix, suffix});
-  return {[tokenName]: {value: valueFormatter({ value, key, prefix, suffix, attributes }), attributes}};
+  const formattedValue = valueFormatter({value});
+  return {[tokenName]: formattedValue};
 };
-export const buildTokensFromScale = ({ scale= null , keyFormatter=(key)=>key, valueFormatter=(value)=>value, prefix="", suffix="", exclude: excludeKey = []}) => {
+const buildTokensFromScale = ({ scale= null , keyFormatter=(key)=>key, valueFormatter=(value)=>value, prefix="", suffix="", exclude: excludeKey = []}) => {
   if(!scale){
     console.error("buildTokensFromScale: scale is undefined");
     return null;
@@ -28,4 +29,4 @@ export const buildTokensFromScale = ({ scale= null , keyFormatter=(key)=>key, va
   }, {});
 };
 
-
+module.exports = {buildToken, buildTokensFromScale, buildTokenName};
