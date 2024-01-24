@@ -1,4 +1,4 @@
-import { buildTokensFromScale } from '../../../utilities/js/buildTokenDefinition.mjs';
+const buildTokensFromScale = require( '../../../utilities/js/buildTokenDefinition.mjs');
 
 export const coreSpacingScale = {
   "0": "0px",
@@ -76,5 +76,7 @@ export const fractionalSpacingScale = {
 //   "compass-spacing-1.5": { value: "0.375rem" },
 //   "compass-spacing-2": { value: "0.5rem" },
 //   ...
-const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, keyFormatter: (key)=>key.replace(".","_"), prefix: "compass-spacing"});
-const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, keyFormatter: (key)=>key.replace("/","--"), prefix: "compass-spacing"});
+export const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, keyFormatter: (key)=>key.replace(".","_"), prefix: "compass-spacing"});
+export const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, keyFormatter: (key)=>key.replace("/","--"), prefix: "compass-spacing"});
+
+module.exports = {...coreSpacingTokens, ...fractionalSpacingTokens};
