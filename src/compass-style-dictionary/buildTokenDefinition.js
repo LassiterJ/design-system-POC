@@ -32,9 +32,10 @@ const {ThemeMerger} = require("../utilities/js/ThemeMerge");
 
 
 const splitNonAlphanumeric = (str) => {
-  const matchAllNonAlphanumericExceptDecimalFraction = /(?<!\d)[^a-zA-Z0-9]+(?!\/?\d)/g;
+  const matchAllNonAlphanumericExceptDecimalFraction = /(?<!\d)[^a-zA-Z0-9.\/]+|(?<=\d)[^a-zA-Z0-9\/]+(?=[^a-zA-Z0-9\/])/g;
   return str.split(matchAllNonAlphanumericExceptDecimalFraction);
 }
+
 
 
 const buildToken = (path, value) => {

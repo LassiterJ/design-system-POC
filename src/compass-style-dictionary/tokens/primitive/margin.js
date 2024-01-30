@@ -63,9 +63,9 @@ const marginPropDefs = {
 // // Values are wrong. Should be corresponding spacing token reference. not raw values.
 // console.log("marginTokens: ", marginTokens);
 //
-
+//
 // module.exports = {
-//   'm-f-1-2': { value: '{compass.spacing.f.1.2}' },
+//   'm-f-1-2': { value: '{compass.spacing.f.1-2}' },
 // // ...marginTokens
 // };
 //
