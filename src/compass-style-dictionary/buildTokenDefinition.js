@@ -1,4 +1,4 @@
-
+const {ThemeMerger} = require("../utilities/js/ThemeMerge");
 
 
 // Attribute	Type	Description
@@ -30,77 +30,70 @@
 //   }, {});
 // };
 
-const deepMerge = (...objects) => {
-  const isObject = obj => obj && typeof obj === 'object';
-  
-  return objects.reduce((prev, obj) => {
-    Object.keys(obj).forEach(key => {
-      const pVal = prev[key];
-      const oVal = obj[key];
-      
-      if (Array.isArray(pVal) && Array.isArray(oVal)) {
-        prev[key] = pVal.concat(...oVal);
-      }
-      else if (isObject(pVal) && isObject(oVal)) {
-        prev[key] = deepMerge(pVal, oVal);
-      }
-      else {
-        prev[key] = oVal;
-      }
-    });
-    
-    return prev;
-  }, {});
+
+const splitNonAlphanumeric = (str) => {
+  const matchAllNonAlphanumericExceptDecimalFraction = /(?<!\d)[^a-zA-Z0-9]+(?!\/?\d)/g;
+  return str.split(matchAllNonAlphanumericExceptDecimalFraction);
 }
-const splitAndFormatKey = (key, prefix) => {
-  let parts = key.includes('/') ? key.split('/').map(k => k.trim()) : [key];
-  return [...prefix.split('-'), ...parts].filter(Boolean);
+
+
+const buildToken = (path, value) => {
+  const buildNested = (path, val, obj) => {
+    let key = path.shift();
+    obj[key] = path.length ? buildNested(path, val, {}) : { value: val };
+    return obj;
+  };
+  
+  return buildNested(path, value, {});
 };
 
-const buildNestedObject = (path, value, obj) => {
-  path.reduce((acc, part, index) => {
-    if (index === path.length - 1) {
-      acc[part] = { value };
-    } else {
-      acc[part] = acc[part] || {};
+const mergeToken = (obj, path, value) => {
+  let current = obj;
+  for (let i = 0; i < path.length - 1; i++) {
+    const key = path[i];
+    if (!current[key]) {
+      current[key] = {};
     }
-    return acc[part];
-  }, obj);
+    current = current[key];
+  }
+  current[path[path.length - 1]] = { value: value };
+  return obj;
 };
 
 const buildTokensFromScale = ({scale, keyFormatter = (key) => key, valueFormatter = (value) => value, prefix, exclude = []}) => {
-  console.log("buildTokensFromScale");
+  // console.log("buildTokensFromScale");
   if (!scale) {
     throw new Error("buildTokensFromScale: scale is undefined");
   }
-  
-  const formattedPrefix = `compass-${prefix}`;
+  const libraryPrefix = "compass";
+  // const formattedPrefix = `${libraryPrefix}-${prefix}`;
   
   const scaleKeys = Object.keys(scale);
-  console.log("scaleKeys: ", scaleKeys);
+  // console.log("scaleKeys: ", scaleKeys);
   const tokens = {};
   
   // iterate through each key in the scale and build a token for it
   for(const keys of scaleKeys) {
     // if the key is in the exclude list, skip it
     if (exclude.includes(keys)) continue;
-  // otherwise, format the key and value and add it to the tokens object
+    // otherwise, format the key and value and add it to the tokens object
+    const formattedPrefix = `${libraryPrefix}-${prefix}`;
     const formattedKey = keyFormatter(keys);
     const formattedValue = valueFormatter(scale[keys]);
-    const tokenPath = splitAndFormatKey(formattedKey, formattedPrefix);
+    const tokenKeyStructure = splitNonAlphanumeric(`${formattedPrefix}-${formattedKey}`);
+    if(formattedKey.includes(".")){
+    console.log("tokenKeyStructure: ", tokenKeyStructure);
+    }
+   // Add token to tokens object
+    mergeToken(tokens, tokenKeyStructure, formattedValue);
+   //  const token = buildToken(tokenKeyStructure, formattedValue);
+   //  console.log("new token: ", token);
+    // add token to tokens object
+    // TODO: add logic to add new token to existing tokens object in the correct place
   };
   
-  
-  
-  return Object.keys(scale).reduce((tokens, key) => {
-    if (exclude.includes(key)) return tokens;
-    
-    const formattedKey = keyFormatter(key);
-    const tokenPath = splitAndFormatKey(formattedKey, formattedPrefix);
-    const formattedValue = valueFormatter(scale[key]);
-    buildNestedObject(tokenPath, formattedValue, tokens);
-    return tokens;
-  }, {});
+  // console.log("tokens: ", tokens);
+  return tokens;
 };
 
 

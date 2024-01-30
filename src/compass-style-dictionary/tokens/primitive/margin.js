@@ -1,4 +1,4 @@
-// // const {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} = require('./spacing.js');
+// // const {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} = require('./coreSpacing.js');
 const {coreSpacingScale, fractionalSpacingScale} = require('./scales.js');
 const { buildToken, buildTokensFromScale } = require( '../../buildTokenDefinition.js');
 //
@@ -61,11 +61,11 @@ const marginPropDefs = {
     ...marginEndTokens
 };
 // // Values are wrong. Should be corresponding spacing token reference. not raw values.
-console.log("marginTokens: ", marginTokens);
+// console.log("marginTokens: ", marginTokens);
 //
 
-module.exports = {
-  'm-f-1-2': { value: '{compass.spacing.f.1.2}' },
-// ...marginTokens
-};
+// module.exports = {
+//   'm-f-1-2': { value: '{compass.spacing.f.1.2}' },
+// // ...marginTokens
+// };
 //
