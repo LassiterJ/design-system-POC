@@ -8,6 +8,8 @@ const { fractionalSpacingScale } = require('./scales');
 //   "compass-spacing-f-3-4": { value: "75%" },
 //   ...,
 //   "compass-spacing-f-full": { value: "100% },
-
-const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, prefix: "spacing-f"});
-module.exports = fractionalSpacingTokens;
+//
+// const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, prefix: "spacing-f"});
+// // console.log("fractionalSpacingTokens: ", fractionalSpacingTokens);
+// // console.log("fractionalSpacingTokens: ", fractionalSpacingTokens.compass.spacing);
+// module.exports = fractionalSpacingTokens;

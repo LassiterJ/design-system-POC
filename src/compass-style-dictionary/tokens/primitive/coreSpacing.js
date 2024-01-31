@@ -13,8 +13,8 @@ const {coreSpacingScale} = require( './scales.js');
 //   ...
 
 const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, prefix: "spacing"});
-console.log("coreSpacingTokens: ", coreSpacingTokens);
-console.log("coreSpacingTokens.compass.spacing[1]: ", coreSpacingTokens.compass.spacing[1]);
+// console.log("coreSpacingTokens: ", JSON.stringify(coreSpacingTokens, null, 4));
+console.log("coreSpacingTokens.spacing: ", coreSpacingTokens);
 
 module.exports = coreSpacingTokens
 // module.exports = {
