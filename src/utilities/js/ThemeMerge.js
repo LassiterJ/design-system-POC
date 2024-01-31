@@ -1,7 +1,31 @@
-import * as fs from 'fs';
-import { NewTheme as theme2, OldTheme as theme1 } from './sampleThemes.js';
-import path from "path";
-import { open } from "fs/promises";
+const   fs = require( 'fs');
+// const  { NewTheme as theme2, OldTheme as theme1 } = require( './sampleThemes.js');
+const  path = require( "path");
+const  { open } = require( "fs/promises");
+
+// /* ========== Usage Demo ========== */
+// const __dirnamePage = path.resolve();
+// console.log("working directory Page", __dirnamePage);
+// const useDemoData = false;
+// const NewTheme = useDemoData ? theme2 : ThemeMerger.readJSONFile("/themes/theme2.json");
+// const OldTheme = useDemoData ? theme1 : ThemeMerger.readJSONFile("/themes/theme1.json");
+// // Instantiate the ThemeMerger class with the options
+// const themeMergeInstance = new ThemeMerger({
+//   target: OldTheme,
+//   source: NewTheme,
+//   createFile: true,
+//   outputPath: "themes",
+//   outputFileName: "mergedTheme",
+// });
+// // Call the createNewTheme method to merge the themes and optionally output to a file
+// const newTheme = themeMergeInstance.composeNewTheme();
+// const mergedTheme = ThemeMerger.mergeThemes(OldTheme, NewTheme); // Or use the static method directly to return a new theme object
+// Notes:
+// Only updates the theme deeply with the values that have changed. Like what a Virtual DOM does.
+// Allows for updating the theme with new values that are not present in the original theme.
+
+
+
 class ThemeMerger {
   options;
   static readJSONFile(filePath) {
@@ -143,26 +167,4 @@ class ThemeMerger {
     }
   }
 }
-//
-//
-//
-// /* ========== Usage Demo ========== */
-// const __dirnamePage = path.resolve();
-// console.log("working directory Page", __dirnamePage);
-// const useDemoData = false;
-// const NewTheme = useDemoData ? theme2 : ThemeMerger.readJSONFile("/themes/theme2.json");
-// const OldTheme = useDemoData ? theme1 : ThemeMerger.readJSONFile("/themes/theme1.json");
-// // Instantiate the ThemeMerger class with the options
-// const themeMergeInstance = new ThemeMerger({
-//   target: OldTheme,
-//   source: NewTheme,
-//   createFile: true,
-//   outputPath: "themes",
-//   outputFileName: "mergedTheme",
-// });
-// // Call the createNewTheme method to merge the themes and optionally output to a file
-// const newTheme = themeMergeInstance.composeNewTheme();
-// const mergedTheme = ThemeMerger.mergeThemes(OldTheme, NewTheme); // Or use the static method directly to return a new theme object
-// Notes:
-// Only updates the theme deeply with the values that have changed. Like what a Virtual DOM does.
-// Allows for updating the theme with new values that are not present in the original theme.
+module.exports = {default: ThemeMerger, ThemeMerger};

@@ -1,10 +1,16 @@
+import { isObjectWithValidation } from '../utilities/js/isObjectWithValidation.js';
 
+// Turn the following comment into JSDocs
+// @param {Object} args
+// @param {Object} args.scale - The scale object to build tokens from
 // Attribute	Type	Description
 //   value:	Any	The value of the design token. This can be any type of data, a hex string, an integer, a file path to a file, even an object or array.
 //   comment:	String (optional)	The comment attribute will show up in a code comment in output files if the format supports it.
 //   themeable:	Boolean (optional)	This is used in formats that support override-able or themeable values like the !default flag in Sass.
 //   name:	String (optional)	Usually the name for a design token is generated with a name transform, but you can write your own if you choose. By default, Style Dictionary will add a default name which is the key of the design token object.
 //   attributes:	Object (optional)
+
+
 
 
 // const buildTokenName = ({key="", keyFormatter=(key)=>key, prefix="", suffix=""}) => {
@@ -57,17 +63,21 @@ const mergeToken = (obj, path, value) => {
   return obj;
 };
 
-const buildTokensFromScale = (args) => {
+export const buildTokensFromScale = (args) => {
+  const customValidations = [({scale}) => isObjectWithValidation(scale, { allowCustomConstructors: true })];
+  const argsAreValid = isObjectWithValidation(args, { allowCustomConstructors: true, customValidations});
+  
   // Validate args before processing
-  if (!args || typeof args !== 'object') {
-    console.error("buildTokensFromScale: args must be an object");
+  if(!argsAreValid) {
+    console.error("buildTokensFromScale: args are invalid");
     return null;
   }
-  
-  if (!args.scale) {
+  if (!args.scale || typeof args.scale !== 'object' || args.scale.length === 0) {
     console.error("buildTokensFromScale: 'scale' property is missing in args");
     return null;
   }
+  // const argsAreValid = isObjectWithValidation(args, { allowCustomConstructors: true});
+  
   
   const {
     scale,
@@ -79,15 +89,16 @@ const buildTokensFromScale = (args) => {
   const tokens = {};
   
   for (const key of Object.keys(scale)) {
+    
     // Skip keys in the exclude list
     if (exclude.includes(key)) continue;
-    const isValueObject = () => typeof scale[key] === 'object' && scale[key] !== null;
-    const valueIsObject = isValueObject();
+    
+    const isValidObject = isObjectWithValidation(scale[key],{ allowCustomConstructors: true } );
     try {
-      const rawValue = valueIsObject ? scale[key].value : scale[key];
-      const valueObject = valueIsObject ? scale[key] : null;
+      const rawValue = isValidObject ? scale[key].value : scale[key];
+      const valueObject = isValidObject ? scale[key] : null;
       
-      const formattingData = { scale, prefix, exclude, rawValue, valueObject };
+      const formattingData = { scale, prefix, exclude, rawValue, valueObject, key };
       const formattedKey = keyFormatter(key);
       const formattedValue = valueFormatter({ ...formattingData});
       const tokenKeyStructure = splitNonAlphanumeric(`${prefix}-${formattedKey}`);
@@ -106,4 +117,4 @@ const buildTokensFromScale = (args) => {
 // Ensure that the helper functions splitNonAlphanumeric and mergeToken are defined
 
 
-module.exports = {buildTokensFromScale};
+// module.exports = {buildTokensFromScale};

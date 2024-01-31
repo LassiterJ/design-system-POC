@@ -1,5 +1,5 @@
-const {buildTokensFromScale} = require( '../../buildTokenDefinition.js');
-const {coreSpacingScale} = require( './scales.js');
+import {buildTokensFromScale} from  '../../buildTokenDefinition.js';
+import {coreSpacingScale} from  './scales.js';
 
 // Make tokens for each value of the coreSpacingScale
 // Should look like this:
@@ -12,11 +12,11 @@ const {coreSpacingScale} = require( './scales.js');
 //   "compass-spacing-2": { value: "0.5rem" },
 //   ...
 
-const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, prefix: "spacing"});
+export const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, prefix: "spacing"});
 // console.log("coreSpacingTokens: ", JSON.stringify(coreSpacingTokens, null, 4));
-console.log("coreSpacingTokens.spacing: ", coreSpacingTokens);
+// console.log("coreSpacingTokens.spacing: ", coreSpacingTokens);
 
-module.exports = coreSpacingTokens
+// module.exports = coreSpacingTokens
 // module.exports = {
 //     "compass": {
 //       "spacing": {

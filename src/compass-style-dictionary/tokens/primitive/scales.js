@@ -1,4 +1,4 @@
-const coreSpacingScale = {
+export const coreSpacingScale = {
   "0": "0px",
   "px": "1px",
   "0.5": "0.125rem",
@@ -38,7 +38,7 @@ const coreSpacingScale = {
 // const coreSpacingScale = {
 //   "0": "0",
 // }
-const fractionalSpacingScale = {
+export const fractionalSpacingScale = {
   "1/2": "50%",
   "1/3": "33.333333%",
   "2/3": "66.666667%",
@@ -67,7 +67,7 @@ const fractionalSpacingScale = {
   "11/12": "91.666667%",
   "full": "100%"};
 
-module.exports = {
-  coreSpacingScale,
-  fractionalSpacingScale
-}
+// module.exports = {
+//   coreSpacingScale,
+//   fractionalSpacingScale
+// }

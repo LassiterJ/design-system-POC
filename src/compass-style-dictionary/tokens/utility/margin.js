@@ -1,4 +1,4 @@
-// // // const {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} = require('./coreSpacing.js');
+// // // const {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} = require('./coreSpacingTokens.js');
 // const {coreSpacingScale, fractionalSpacingScale} = require('./scales.js');
 // const { buildTokensFromScale } = require( '../../buildTokenDefinition.js');
 // //
@@ -71,9 +71,11 @@
 // // };
 //
 
-const coreSpacingTokens = require("./coreSpacing");
-const fractionalSpacingTokens = require("./fractionalSpacing");
-const { buildTokensFromScale } = require('../../buildTokenDefinition');
+import { coreSpacingTokens }  from "../primitive/coreSpacing.js";
+import { fractionalSpacingTokens }  from "../primitive/fractionalSpacing.js";
+import { buildTokensFromScale }  from '../../buildTokenDefinition.js';
+import { isObjectWithValidation }  from '../../../utilities/js/isObjectWithValidation.js';
+
 // const marginKeys = ["m", "mx", "my", "mt", "me", "mb", "ms"];
 const marginKeys = ["m"];
 //
@@ -117,7 +119,7 @@ const marginKeys = ["m"];
 // const testScale = {compass: {spacing: {...Object.fromEntries(Object.entries(coreSpacingTokens))}}};
 // console.log("coreSpacingTokens: ", JSON.stringify(coreSpacingTokens, null, 4));
 //
-// const testScale = Object.fromEntries(Object.entries(coreSpacingTokens.spacing).slice(0,3));
+
 // console.log("testScale: ", JSON.stringify(testScale, null, 4));
 // console.log("coreSpacingToken: ", JSON.stringify(coreSpacingTokens.spacing[1], null, 4));
 
@@ -128,20 +130,40 @@ const marginKeys = ["m"];
 //     "prefix",
 //     "exclude",
 //     "value"
+//     "key"
 // ]
+const logs = [];
+const generateAliasReference = (args) => {
+  // console.log("generateAliasReference | args: ", args);
+  // console.log("generateAliasReference | Object.keys(args): ", Object.keys(args));
+  
+  const { scale, prefix, exclude, rawValue, valueObject, key } = args;
+  // console.log("rawValue: ", rawValue);
+  // console.log("generateAliasReference | valueObject: ", valueObject);
 
-// const generateAliasReference = (args) => {
-//   console.log("args: ", args);
-//   console.log("Object.keys(args): ", Object.keys(args));
+  const isValidObject = isObjectWithValidation(valueObject);
+  if(!isValidObject) return null;
+  const pathMinusKey = valueObject.attributes?.path?.slice(0, -1);
+  const alias = `${valueObject.attributes?.path?.join(".")}`;
+  if(alias.includes(".5")) {
+    logs.push({ alias, valueObject, key, rawValue, prefix });
+    console.log("generateAliasReference | alias.includes('.5') | alias: ", alias);
+  }
+  // console.log("generateAliasReference | valueFormatter args: ", JSON.stringify({ ...args }, null, 2));
+  return `{${alias}}`;
+};
+
+
+const generateTestScaleFromFullScaleSet = (scale, range=[0,3]) => {
+  return Object.fromEntries(Object.entries(scale).slice(range[0], range[1]));
+}
+// console.log("coreSpacingTokens.spacing.length: ", Object.keys(coreSpacingTokens.spacing).length, coreSpacingTokens.spacing);
+const testScale = generateTestScaleFromFullScaleSet(coreSpacingTokens.spacing, [0, 5]);
+export const marginTokens = buildTokensFromScale({scale: testScale, prefix: "m", valueFormatter: generateAliasReference});
+// console.log("generateAliasReference | marginTokens: ", marginTokens);
+// console.log("generateAliasReference | marginTokens: ", JSON.stringify(marginTokens, null, 4));
+console.log("coreSpacingTokens: ", coreSpacingTokens);
+console.log("generateAliasReference | logs: ", logs);
+// module.exports = marginTokens;
 //
-//   const { scale, prefix, exclude, rawValue, valueObject } = args;
-//   // console.log("rawValue: ", rawValue);
-//   // console.log("valueObject: ", valueObject);
-//   // console.log("generateAliasReference | valueFormatter args: ", JSON.stringify({ ...args }, null, 2));
-//   return rawValue;
-// }
-//
-// const marginTokens = buildTokensFromScale({scale: testScale, prefix: "m", valueFormatter: generateAliasReference});
-// console.log("marginTokens: ", JSON.stringify(marginTokens, null, 4));
-// // module.exports = marginTokens;
-// //
+
