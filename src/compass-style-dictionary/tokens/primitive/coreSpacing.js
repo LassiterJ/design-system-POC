@@ -13,6 +13,7 @@ import {coreSpacingScale} from  './scales.js';
 //   ...
 
 export const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale, prefix: "spacing"});
+export default coreSpacingTokens;
 // console.log("coreSpacingTokens: ", JSON.stringify(coreSpacingTokens, null, 4));
 // console.log("coreSpacingTokens.spacing: ", coreSpacingTokens);
 

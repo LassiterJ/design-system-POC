@@ -71,8 +71,8 @@
 // // };
 //
 
-import { coreSpacingTokens }  from "../primitive/coreSpacing.js";
-import { fractionalSpacingTokens }  from "../primitive/fractionalSpacing.js";
+import { coreSpacingTokens }  from '../primitive/index.js';
+import { fractionalSpacingTokens }  from '../primitive/index.js';
 import { buildTokensFromScale }  from '../../buildTokenDefinition.js';
 import { isObjectWithValidation }  from '../../../utilities/js/isObjectWithValidation.js';
 
@@ -166,4 +166,4 @@ console.log("coreSpacingTokens: ", coreSpacingTokens);
 console.log("generateAliasReference | logs: ", logs);
 // module.exports = marginTokens;
 //
-
+export default marginTokens;

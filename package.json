@@ -12,7 +12,7 @@
     "lint": "yarn lint:format && yarn lint:fix ",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "style-dictionary-build": "node ./src/compass-style-dictionary/config.js"
+    "build-style-dictionary": "pwd && node src/compass-style-dictionary/config.mjs"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -43,11 +43,10 @@
     "prop-types": "^15.8.1",
     "sass": "^1.69.6",
     "storybook": "^7.6.10",
-    "style-dictionary": "^3.9.2",
     "style-dictionary-esm": "^1.9.2",
     "vite": "^4.2.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svgr": "^4.2.0"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.0"
 }

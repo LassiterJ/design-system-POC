@@ -1,13 +1,16 @@
-// const StyleDictionary = require('style-dictionary');
+// const StyleDictionary = require('style-dictionary-esm');
 // const { customTransformGroupName } = require('./transformations');
-import StyleDictionary from 'style-dictionary';
+import StyleDictionary from 'style-dictionary-esm';
 // import { customTransformGroupName } from './transformations';
+
 import * as tokens  from './tokens/index.js';
+
 // module.exports = {
 //   "source": ["tokens/**/*.{js,mjs,cjs,json}"],
 //   "platforms": {
 //     "scss": {
-//       "transformGroup": customTransformGroupName, // Use the custom transform group
+//       // "transformGroup": customTransformGroupName
+//       "transformGroup": "scss", // Use the custom transform group
 //       "buildPath": "build/scss/",
 //       "files": [{
 //         "destination": "_variables.scss",
@@ -24,8 +27,8 @@ import * as tokens  from './tokens/index.js';
 // TODO: trying this out because referencing the namespace for tokens with decimals or fractions in keys is not working as I had hoped. StyleDictionary's alias references are dot notation. Keys with decimals are treated as nested objects by default. This is not what we want.
 // const tokens = require('./tokens');
 
-const buildPath = 'dist/';
-
+// const buildPath = '/dist/';
+//
 // --- You can still add custom transforms and formats like you
 // normally would and reference them in the config below.
 
@@ -48,7 +51,7 @@ StyleDictionary.registerFormat({
 
 // --- You can export a plain JS object and point the Style Dictionary CLI to it,
 // similar to webpack.
-  export const config = {
+export const config = {
     // We are relying on node modules to merge all the objects together
     // thus we only want to reference top level node modules that export
     // the whole objects.
@@ -106,16 +109,15 @@ StyleDictionary.registerFormat({
         // This works, we can create new transform arrays on the fly and edit built-ins
         // transforms: StyleDictionary.transformGroup.scss.concat('color/rgb'),
         transformGroup: "scss",
-        transforms:
-          ['attribute/cti', 'color/hex', 'attribute/color'],
+        // transforms:
+        //   ['attribute/cti', 'color/hex', 'attribute/color'],
         buildPath: buildPath,
         files:
           [{
             destination: 'variables.scss',
             format: 'scss/variables'
           }]
-      }
-      ,
+      },
       //
       // js: {
       //   transforms: StyleDictionary.transformGroup.js.concat('myRegisteredTransform'),
@@ -148,4 +150,9 @@ StyleDictionary.registerFormat({
     }
   }
 
-  export default config;
+  // Had to do programatically because the Style Dictionary CLI does not support the use of node modules.
+  // We are using style-dictionary-esm to allow for the use of node modules until Style Dictionary 4.0 is released adding the necessary support.
+const MyStyleDictionary = StyleDictionary.extend(config);
+
+MyStyleDictionary.buildAllPlatforms();
+ 

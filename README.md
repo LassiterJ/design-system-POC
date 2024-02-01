@@ -18,7 +18,7 @@ vite-template-react
 ├── index.html
 ├── package.json
 ├── README.md
-├── vite.config.js
+├── vite.config.mjs
 ```
 ## Hygen code generation template for React
 Use `npx hygen component new` in your cli to start component generation. You will be prompted for component name and component location. After responding to prompts, your component and it's related directories/files will be generated with the name and location specified.
