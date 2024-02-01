@@ -1,4 +1,7 @@
 // module.exports = {
 //   marginTokens: require('./margin'),
 // }
-export { marginTokens } from './margin.js';
+
+import {marginTokens} from './margin.js';
+
+export const utilityTokens = {marginTokens};

@@ -101,7 +101,8 @@ export const buildTokensFromScale = (args) => {
       const formattingData = { scale, prefix, exclude, rawValue, valueObject, key };
       const formattedKey = keyFormatter(key);
       const formattedValue = valueFormatter({ ...formattingData});
-      const tokenKeyStructure = splitNonAlphanumeric(`${prefix}-${formattedKey}`);
+      const buildKeyString = prefix ? `${prefix}-${formattedKey}` : formattedKey;
+      const tokenKeyStructure = splitNonAlphanumeric(buildKeyString);
       
       mergeToken(tokens, tokenKeyStructure, formattedValue);
     } catch (e) {

@@ -9,7 +9,8 @@ import { fractionalSpacingScale } from './scales.js';
 //   ...,
 //   "compass-spacing-f-full": { value: "100% },
 
-export const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, prefix: "spacing-f"});
+export const fractionalSpacingTokens = buildTokensFromScale({scale: fractionalSpacingScale, prefix: "f"});
+// export default fractionalSpacingTokens;
 // console.log("fractionalSpacingTokens: ", fractionalSpacingTokens);
 // console.log("fractionalSpacingTokens.spacing: ", fractionalSpacingTokens.spacing);
 // module.exports = fractionalSpacingTokens;

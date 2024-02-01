@@ -1,17 +1,17 @@
 // const StyleDictionary = require('style-dictionary-esm');
-// const { customTransformGroupName } = require('./transformations');
+// const { scssWithPrefix } = require('./transformations');
 import StyleDictionary from 'style-dictionary-esm';
-// import { customTransformGroupName } from './transformations';
-
-import * as tokens  from './tokens/index.js';
+import { scssWithPrefix } from './transformations.js';
+//
+import {tokens}  from './tokens/index.js';
 
 // module.exports = {
 //   "source": ["tokens/**/*.{js,mjs,cjs,json}"],
 //   "platforms": {
 //     "scss": {
-//       // "transformGroup": customTransformGroupName
+//       // "transformGroup": scssWithPrefix
 //       "transformGroup": "scss", // Use the custom transform group
-//       "buildPath": "build/scss/",
+//       "buildPath": "build/scss/",c
 //       "files": [{
 //         "destination": "_variables.scss",
 //         "format": "scss/variables"
@@ -27,7 +27,7 @@ import * as tokens  from './tokens/index.js';
 // TODO: trying this out because referencing the namespace for tokens with decimals or fractions in keys is not working as I had hoped. StyleDictionary's alias references are dot notation. Keys with decimals are treated as nested objects by default. This is not what we want.
 // const tokens = require('./tokens');
 
-// const buildPath = '/dist/';
+const buildPath = './src/compass-style-dictionary/dist/';
 //
 // --- You can still add custom transforms and formats like you
 // normally would and reference them in the config below.
@@ -48,6 +48,7 @@ StyleDictionary.registerFormat({
 })
 
  */
+console.log("tokens: ", JSON.stringify(tokens, null, 2));
 
 // --- You can export a plain JS object and point the Style Dictionary CLI to it,
 // similar to webpack.
@@ -83,7 +84,7 @@ export const config = {
     // You can also bypass the merging of files Style Dictionary does
     // by adding a 'tokens' object directly like this:
     //
-    tokens: tokens,
+    tokens: {...tokens},
     platforms: {
       // custom: {
       //   // Using the custom transforms we defined above
@@ -108,7 +109,7 @@ export const config = {
       scss: {
         // This works, we can create new transform arrays on the fly and edit built-ins
         // transforms: StyleDictionary.transformGroup.scss.concat('color/rgb'),
-        transformGroup: "scss",
+        transformGroup: "scss/withPrefix",
         // transforms:
         //   ['attribute/cti', 'color/hex', 'attribute/color'],
         buildPath: buildPath,

@@ -146,24 +146,23 @@ const generateAliasReference = (args) => {
   const pathMinusKey = valueObject.attributes?.path?.slice(0, -1);
   const alias = `${valueObject.attributes?.path?.join(".")}`;
   if(alias.includes(".5")) {
-    logs.push({ alias, valueObject, key, rawValue, prefix });
-    console.log("generateAliasReference | alias.includes('.5') | alias: ", alias);
+    console.log("alias includes .5",{ alias, valueObject, key, rawValue, prefix });
+    // console.log("generateAliasReference | alias.includes('.5') | alias: ", alias);
   }
   // console.log("generateAliasReference | valueFormatter args: ", JSON.stringify({ ...args }, null, 2));
-  return `{${alias}}`;
+  return `{spacing.${alias}}`;
 };
 
 
-const generateTestScaleFromFullScaleSet = (scale, range=[0,3]) => {
+const generateTestScaleFromFullScaleSet = (scale, range=[0,-1]) => {
   return Object.fromEntries(Object.entries(scale).slice(range[0], range[1]));
 }
 // console.log("coreSpacingTokens.spacing.length: ", Object.keys(coreSpacingTokens.spacing).length, coreSpacingTokens.spacing);
-const testScale = generateTestScaleFromFullScaleSet(coreSpacingTokens.spacing, [0, 5]);
-export const marginTokens = buildTokensFromScale({scale: testScale, prefix: "m", valueFormatter: generateAliasReference});
+const testScale = generateTestScaleFromFullScaleSet(coreSpacingTokens, [0, 5]);
+export const marginTokens = buildTokensFromScale({scale: coreSpacingTokens, prefix: "m", valueFormatter: generateAliasReference});
 // console.log("generateAliasReference | marginTokens: ", marginTokens);
 // console.log("generateAliasReference | marginTokens: ", JSON.stringify(marginTokens, null, 4));
-console.log("coreSpacingTokens: ", coreSpacingTokens);
-console.log("generateAliasReference | logs: ", logs);
+// console.log("coreSpacingTokens: ", coreSpacingTokens);
+// console.log("generateAliasReference | logs: ", logs);
 // module.exports = marginTokens;
 //
-export default marginTokens;
