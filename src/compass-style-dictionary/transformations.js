@@ -34,11 +34,15 @@ export const customPxToRem = {
   matcher: (token) => {
     const {type, path} = token;
     const pathDestination = token.path.at(-1);
-    // if (path.includes("auto")){
-    //   console.log("pathDestination IS auto");
-    // }
-    const blacklistedPaths = ['px', 'em', 'rem','%', 'fractional', 'full', "auto"];
-    const isBlacklistedPath = !!blacklistedPaths.find(element => path.includes(element));
+    if (pathDestination.includes("px")){
+      console.log("{");
+      console.log("pathDestination Includes px: ", pathDestination);
+      console.log("AND path includes px: ", path.toString().includes("px"));
+      console.log("}");
+
+    }
+    const blacklistedPaths = ['px','em', 'rem','%', 'fractional', 'full', "auto"];
+    const isBlacklistedPath = !!blacklistedPaths.find(element => path.toString().includes(element));
     
     const isMatch = type === 'size' && !isBlacklistedPath;
     return isMatch;
