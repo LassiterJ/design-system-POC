@@ -12,7 +12,7 @@
     "lint": "yarn lint:format && yarn lint:fix ",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build-style-dictionary": "pwd && node src/compass-style-dictionary/config.mjs"
+    "build-style-dictionary": "pwd && node src/compass-style-dictionary/index.js"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.3",

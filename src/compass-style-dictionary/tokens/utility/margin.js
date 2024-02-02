@@ -87,7 +87,7 @@ function generateMarginTokens(spacingTokens) {
     margin: {
       "auto": {
         value: "auto",
-        type: "margin"
+        type: "spacing"
       }
     }
   };
@@ -101,18 +101,22 @@ function generateMarginTokens(spacingTokens) {
   const coreTokenKeys = Object.keys(coreTokens);
   
   for (let index = 0; index < coreTokenKeys.length; index++) {
-    console.log("index: ", index);
     const key = coreTokenKeys[index];
     const value = coreTokens[key];
     marginKeys.forEach(marginKey => {
       // Creating positive core tokens
-      marginTokens[marginKey][key] = { ...value, type: "size" };
+      marginTokens[marginKey][key] = {
+        ...value,
+        type: "spacing",
+        description: `Margin tokens are used to create margin utility classes that reference spacing custom properties.`
+      };
       
       // Creating negative core tokens
       marginTokens[marginKey][`negative-${key}`] = {
         ...value,
-        type: "size",
-        value: `-${value.value}`
+        type: "spacing",
+        value: `-${value.value}`,
+        description: `Negative value of ${key} tokens. Margin tokens are used to create margin utility classes that reference spacing custom properties.`
       };
     });
   }

@@ -1,6 +1,8 @@
 import {buildTokensFromScale} from  '../../buildTokenDefinition.js';
 import {coreSpacingScale} from  './scales.js';
 
+// TODO: This might not be necessary anymore since we are using tokens from spacingTokens.json that is made with TokenStudio Plugin.
+
 // Make tokens for each value of the coreSpacingScale
 // Should look like this:
 // {
@@ -12,20 +14,5 @@ import {coreSpacingScale} from  './scales.js';
 //   "compass-spacing-2": { value: "0.5rem" },
 //   ...
 
-export const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale});
+// export const coreSpacingTokens = buildTokensFromScale({scale: coreSpacingScale});
 // export default coreSpacingTokens;
-// console.log("coreSpacingTokens: ", JSON.stringify(coreSpacingTokens, null, 4));
-// console.log("coreSpacingTokens.spacing: ", coreSpacingTokens);
-
-// module.exports = coreSpacingTokens
-// module.exports = {
-//     "compass": {
-//       "spacing": {
-//         "f": {
-//           "1" : {
-//             "2":{ "value": "50%" },
-//         },
-//       }
-//     }
-//   }
-// }

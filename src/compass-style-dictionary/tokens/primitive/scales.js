@@ -1,4 +1,9 @@
-export const coreSpacingScale = {
+
+// TODO: This should be used as reference only
+// We are using tokens from spacingTokens.json that is made with TokenStudio Plugin.
+
+
+const coreSpacingScale = {
   "0": "0px",
   "px": "1px",
   "0.5": "0.125rem",
@@ -35,10 +40,8 @@ export const coreSpacingScale = {
   "80": "20rem",
   "96": "24rem"
 };
-// const coreSpacingScale = {
-//   "0": "0",
-// }
-export const fractionalSpacingScale = {
+
+const fractionalSpacingScale = {
   "1/2": "50%",
   "1/3": "33.333333%",
   "2/3": "66.666667%",
@@ -65,9 +68,5 @@ export const fractionalSpacingScale = {
   "9/12": "75%",
   "10/12": "83.333333%",
   "11/12": "91.666667%",
-  "full": "100%"};
-
-// module.exports = {
-//   coreSpacingScale,
-//   fractionalSpacingScale
-// }
+  "full": "100%"
+};
