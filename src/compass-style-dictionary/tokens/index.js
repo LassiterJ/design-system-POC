@@ -1,8 +1,8 @@
-// import { spacingTokens } from './primitive/index.js';
-// import { utilityTokens } from './utility/index.js';
-import tokens from './primitive/spacingTokens.json' assert { type: 'json' };
+ import { spacingTokens } from './primitive/index.js';
+import { utilityTokens } from './utility/index.js';
 
-export { tokens };
+
+export const tokens = {...spacingTokens, ...utilityTokens};
 // console.log("spacingTokens: ", spacingTokens);
 // const {marginTokens} = utilityTokens;
 // export const tokens = {spacing:{...spacingTokens}, margin:{...marginTokens}};

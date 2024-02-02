@@ -1,13 +1,16 @@
 import StyleDictionary from 'style-dictionary-esm';
 // //
 // // // Custom name transformation
-// // const addPrefixNameTransform = {
-// //   name: 'name/prefix',
-// //   type: 'name',
-// //   transformer: (prop) => {
-// //     return `compass-${prop.name}`;
-// //   }
-// // };
+
+const prefix = 'compass'; // TODO: get this from a token or configuration
+export const addPrefixNameTransform = {
+  name: 'name/prefix',
+  type: 'name',
+  transformer: (prop) => {
+    return `${prefix}-${prop.name}`;
+  }
+};
+
 // //
 // // Custom transform group for SCSS with the new name transformation
 // const customScss = {
@@ -31,7 +34,10 @@ export const customPxToRem = {
   matcher: (token) => {
     const {type, path} = token;
     const pathDestination = token.path.at(-1);
-    const blacklistedPaths = ['px', 'em', 'rem', 'fractional', 'full', '_'];
+    // if (path.includes("auto")){
+    //   console.log("pathDestination IS auto");
+    // }
+    const blacklistedPaths = ['px', 'em', 'rem','%', 'fractional', 'full', "auto"];
     const isBlacklistedPath = !!blacklistedPaths.find(element => path.includes(element));
     
     const isMatch = type === 'size' && !isBlacklistedPath;
@@ -49,11 +55,12 @@ export const customPxToRem = {
 
 const customScss = {
   name: 'scss/custom',
-  transforms: StyleDictionary.transformGroup['scss'].concat(['size/customPxToRem'])
+  transforms: StyleDictionary.transformGroup['scss'].concat(['size/customPxToRem', 'name/prefix'])
 };
 
 // // // Register the custom transformation and transform group
 StyleDictionary.registerTransform(customPxToRem);
+StyleDictionary.registerTransform(addPrefixNameTransform);
 StyleDictionary.registerTransformGroup(customScss);
 
 export const customScssGroup = customScss.name;

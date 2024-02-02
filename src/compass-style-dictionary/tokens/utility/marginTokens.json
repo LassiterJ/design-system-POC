@@ -1,0 +1,2774 @@
+{
+  "margin": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  },
+  "mx": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  },
+  "my": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  },
+  "mt": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  },
+  "me": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  },
+  "mb": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  },
+  "ms": {
+    "0": {
+      "value": "0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1": {
+      "value": "4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2": {
+      "value": "8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3": {
+      "value": "12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "4": {
+      "value": "16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "5": {
+      "value": "2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "6": {
+      "value": "24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "7": {
+      "value": "28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "8": {
+      "value": "32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "9": {
+      "value": "36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "10": {
+      "value": "40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "11": {
+      "value": "44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "12": {
+      "value": "48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "14": {
+      "value": "56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "16": {
+      "value": "64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "20": {
+      "value": "80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "24": {
+      "value": "96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "28": {
+      "value": "112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "32": {
+      "value": "128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "36": {
+      "value": "144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "40": {
+      "value": "160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "44": {
+      "value": "176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "48": {
+      "value": "192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "52": {
+      "value": "208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "60": {
+      "value": "240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "64": {
+      "value": "256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "72": {
+      "value": "288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "80": {
+      "value": "320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "96": {
+      "value": "384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-0": {
+      "value": "-0",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1": {
+      "value": "-4",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2": {
+      "value": "-8",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3": {
+      "value": "-12",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-4": {
+      "value": "-16",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-5": {
+      "value": "-2",
+      "type": "size",
+      "parent": "primitive"
+    },
+    "negative-6": {
+      "value": "-24",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-7": {
+      "value": "-28",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-8": {
+      "value": "-32",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-9": {
+      "value": "-36",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-10": {
+      "value": "-40",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-11": {
+      "value": "-44",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-12": {
+      "value": "-48",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-14": {
+      "value": "-56",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-16": {
+      "value": "-64",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-20": {
+      "value": "-80",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-24": {
+      "value": "-96",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-28": {
+      "value": "-112",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-32": {
+      "value": "-128",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-36": {
+      "value": "-144",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-40": {
+      "value": "-160",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-44": {
+      "value": "-176",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-48": {
+      "value": "-192",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-52": {
+      "value": "-208",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-60": {
+      "value": "-240",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-64": {
+      "value": "-256",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-72": {
+      "value": "-288",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-80": {
+      "value": "-320",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-96": {
+      "value": "-384",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "px": {
+      "value": "1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-px": {
+      "value": "-1",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "1,5": {
+      "value": "6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-1,5": {
+      "value": "-6",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "2,5": {
+      "value": "10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-2,5": {
+      "value": "-10",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "3,5": {
+      "value": "14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    },
+    "negative-3,5": {
+      "value": "-14",
+      "type": "size",
+      "parent": "primitive",
+      "description": ""
+    }
+  }
+}

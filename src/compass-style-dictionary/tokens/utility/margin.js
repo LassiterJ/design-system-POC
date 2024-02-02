@@ -1,3 +1,7 @@
+import { spacingTokens } from '../primitive/index.js';
+import { open } from 'fs/promises';
+import { writeJSONStringToFile } from '../../../utilities/js/writeTokensToFile.js';
+
 // // // const {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} = require('./coreSpacingTokens.js');
 // const {coreSpacingScale, fractionalSpacingScale} = require('./scales.js');
 // const { buildTokensFromScale } = require( '../../buildTokenDefinition.js');
@@ -5,7 +9,7 @@
 // // console.log("coreSpacingTokens: ", coreSpacingTokens);
 // // // exports marginTokens that look like:
 // // // {
-// // //  "m-0": {value: {compass.spacing.0.value}},
+// // //  "margin-0": {value: {compass.spacing.0.value}},
 // //
 // // // Need to find way to map references to other tokens.
 // const buildMarginTokens = ({ prefix }) => {
@@ -45,7 +49,7 @@
 //     // ...autoToken
 //   }
 // };
-// const marginTokens = buildMarginTokens({ prefix: "m" });
+// const marginTokens = buildMarginTokens({ prefix: "margin" });
 // const marginXTokens = buildMarginTokens({ prefix: "mx" });
 // const marginYTokens = buildMarginTokens({ prefix: "my" });
 // const marginTopTokens = buildMarginTokens({ prefix: "mt" });
@@ -66,19 +70,79 @@
 // //
 // module.exports = marginTokens;
 // // module.exports = {
-// //   'm-f-1-2': { value: '{compass.spacing.f.1/2}' },
+// //   'margin-f-1-2': { value: '{compass.spacing.f.1/2}' },
 // // // ...marginTokens
 // // };
 //
 
-import { coreSpacingTokens }  from '../primitive/index.js';
-import { fractionalSpacingTokens }  from '../primitive/index.js';
-import { buildTokensFromScale }  from '../../buildTokenDefinition.js';
-import { isObjectWithValidation }  from '../../../utilities/js/isObjectWithValidation.js';
-import { tokens } from '../index.js';
+// import { coreSpacingTokens }  from '../primitive/index.js';
+// import { fractionalSpacingTokens }  from '../primitive/index.js';
+// import { buildTokensFromScale }  from '../../buildTokenDefinition.js';
+// import { isObjectWithValidation }  from '../../../utilities/js/isObjectWithValidation.js';
+// import { tokens } from '../index.js';
+const marginKeys = ["margin", "mx", "my", "mt", "me", "mb", "ms"];
 
-// const marginKeys = ["m", "mx", "my", "mt", "me", "mb", "ms"];
-const marginKeys = ["m"];
+function generateMarginTokens(spacingTokens) {
+  const marginTokens = {
+    margin: {
+      "auto": {
+        value: "auto",
+        type: "margin"
+      }
+    }
+  };
+  
+  marginKeys.forEach(marginKey => {
+    marginTokens[marginKey] = {}; // Initialize each marginKey object
+  });
+  
+  // Process core spacing tokens
+  const coreTokens = spacingTokens.spacing.core;
+  const coreTokenKeys = Object.keys(coreTokens);
+  
+  for (let index = 0; index < coreTokenKeys.length; index++) {
+    console.log("index: ", index);
+    const key = coreTokenKeys[index];
+    const value = coreTokens[key];
+    marginKeys.forEach(marginKey => {
+      // Creating positive core tokens
+      marginTokens[marginKey][key] = { ...value, type: "size" };
+      
+      // Creating negative core tokens
+      marginTokens[marginKey][`negative-${key}`] = {
+        ...value,
+        type: "size",
+        value: `-${value.value}`
+      };
+    });
+  }
+  
+  return marginTokens;
+}
+
+
+export const marginTokens = generateMarginTokens(spacingTokens);
+// Create or replace json file with marginTokens in this same directory
+
+try {
+  // src/compass-style-dictionary/tokens/utility/margin.js
+  
+  const fileDirectoryFromRoot = "src/compass-style-dictionary/tokens/utility";
+  const currentFilePath = process.cwd();
+  console.log("currentFilePath: ", currentFilePath);
+  
+  writeJSONStringToFile({ jsonString: JSON.stringify(marginTokens, null, 2), fileName: "marginTokens", path: fileDirectoryFromRoot });
+}catch (error) {
+  console.error("Error writing marginTokens to file: ", error);
+}
+
+
+
+
+// console.log(JSON.stringify(marginTokens, null, 2));
+//
+
+
 //
 // const extractValues = ({ obj, path = [], exclude = [] }) => {
 //   let values = [];
@@ -133,44 +197,44 @@ const marginKeys = ["m"];
 //     "value"
 //     "key"
 // ]
-function* getAllKeys(obj, prefix = '') {
-  for (let key in obj) {
-    const currentKey = prefix ? `${prefix}.${key}` : key;
-    if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
-      yield* getAllKeys(obj[key], currentKey);
-    } else {
-      yield currentKey;
-    }
-  }
-}
-
-const logs = [];
-const generateAliasReference = (args) => {
-  console.log("generateAliasReference | args: ", args);
-  // Need to generate tokens that reference other tokens.
-  // StyleDictionary doesn't support decimals in token names
-  // So we need to use a different method to grab the reference values.
-  // Will probably need to customize a transformer or format method to handle this.
-  
-  // console.log("generateAliasReference | args: ", args);
-  // console.log("generateAliasReference | Object.keys(args): ", Object.keys(args));
-  //
-  // const {scale, prefix, exclude, rawValue, valueObject, key, type, description} = args;
-  // // console.log("rawValue: ", rawValue);
-  // // console.log("generateAliasReference | valueObject: ", valueObject);
-  //
-  // const isValidObject = isObjectWithValidation(valueObject);
-  // if(!isValidObject) return null;
-  // const pathMinusKey = valueObject.attributes?.path?.slice(0, -1);
-  // const alias = `${valueObject.attributes?.path?.join(".")}`;
-  // // if(alias.includes(".5")) {
-  // //   console.log("alias includes .5",{ alias, valueObject, key, rawValue, prefix, path: valueObject.attributes?.path, pathMinusKey, type, description });
-  // //   // console.log("generateAliasReference | alias.includes('.5') | alias: ", alias);
-  // // }
-  // // console.log("generateAliasReference | valueFormatter args: ", JSON.stringify({ ...args }, null, 2));
-  // return `{spacing.${alias}}`;
-  return args.rawValue;
-};
+// function* getAllKeys(obj, prefix = '') {
+//   for (let key in obj) {
+//     const currentKey = prefix ? `${prefix}.${key}` : key;
+//     if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+//       yield* getAllKeys(obj[key], currentKey);
+//     } else {
+//       yield currentKey;
+//     }
+//   }
+// }
+//
+// const logs = [];
+// const generateAliasReference = (args) => {
+//   console.log("generateAliasReference | args: ", args);
+//   // Need to generate tokens that reference other tokens.
+//   // StyleDictionary doesn't support decimals in token names
+//   // So we need to use a different method to grab the reference values.
+//   // Will probably need to customize a transformer or format method to handle this.
+//
+//   // console.log("generateAliasReference | args: ", args);
+//   // console.log("generateAliasReference | Object.keys(args): ", Object.keys(args));
+//   //
+//   // const {scale, prefix, exclude, rawValue, valueObject, key, type, description} = args;
+//   // // console.log("rawValue: ", rawValue);
+//   // // console.log("generateAliasReference | valueObject: ", valueObject);
+//   //
+//   // const isValidObject = isObjectWithValidation(valueObject);
+//   // if(!isValidObject) return null;
+//   // const pathMinusKey = valueObject.attributes?.path?.slice(0, -1);
+//   // const alias = `${valueObject.attributes?.path?.join(".")}`;
+//   // // if(alias.includes(".5")) {
+//   // //   console.log("alias includes .5",{ alias, valueObject, key, rawValue, prefix, path: valueObject.attributes?.path, pathMinusKey, type, description });
+//   // //   // console.log("generateAliasReference | alias.includes('.5') | alias: ", alias);
+//   // // }
+//   // // console.log("generateAliasReference | valueFormatter args: ", JSON.stringify({ ...args }, null, 2));
+//   // return `{spacing.${alias}}`;
+//   return args.rawValue;
+// };
 
 
 // const generateTestScaleFromFullScaleSet = (scale, range=[0,-1]) => {
@@ -178,7 +242,7 @@ const generateAliasReference = (args) => {
 // }
 // // console.log("coreSpacingTokens.spacing.length: ", Object.keys(coreSpacingTokens.spacing).length, coreSpacingTokens.spacing);
 // const testScale = generateTestScaleFromFullScaleSet(coreSpacingTokens, [0, 5]);
-// export const marginTokens = buildTokensFromScale({type: "margin", description: "tokens to apply standard margins to layout components", scale: testScale, prefix: "m", valueFormatter: generateAliasReference});
+// export const marginTokens = buildTokensFromScale({type: "margin", description: "tokens to apply standard margins to layout components", scale: testScale, prefix: "margin", valueFormatter: generateAliasReference});
 // const marginTokensKeys = [];
 // for(const key of getAllKeys(marginTokens)) {
 //   marginTokensKeys.push(key);
