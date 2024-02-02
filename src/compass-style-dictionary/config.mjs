@@ -146,15 +146,15 @@ export const config = {
       //     format: 'myFormat'
       //   }]
       // },
-      // css: {
-      //   transformGroup: 'css',
-      //   transforms:[ 'addPathToToken', 'color/hex', 'attribute/color'],
-      //   buildPath: buildPath,
-      //   files: [{
-      //     destination: 'custom-properties.css',
-      //     format: 'css/variables'
-      //   }]
-      // },
+      css: {
+        transformGroup: 'css/custom',
+        // transforms:[ 'addPathToToken', 'color/hex', 'attribute/color'],
+        buildPath: buildPath,
+        files: [{
+          destination: 'custom-properties.css',
+          format: 'css/variables'
+        }]
+      },
       
       scss: {
         // This works, we can create new transform arrays on the fly and edit built-ins

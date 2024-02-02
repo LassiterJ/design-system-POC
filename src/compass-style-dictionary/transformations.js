@@ -61,11 +61,17 @@ const customScss = {
   name: 'scss/custom',
   transforms: StyleDictionary.transformGroup['scss'].concat(['size/customPxToRem', 'name/prefix'])
 };
+const customCss = {
+  name: 'css/custom',
+  transforms: StyleDictionary.transformGroup['css'].concat(['size/customPxToRem', 'name/prefix'])
+};
 
 // // // Register the custom transformation and transform group
 StyleDictionary.registerTransform(customPxToRem);
 StyleDictionary.registerTransform(addPrefixNameTransform);
 StyleDictionary.registerTransformGroup(customScss);
+StyleDictionary.registerTransformGroup(customCss);
 
 export const customScssGroup = customScss.name;
+export const customCssGroup = customCss.name;
 export default customScss
