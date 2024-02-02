@@ -1,9 +1,10 @@
 // const StyleDictionary = require('style-dictionary-esm');
-// const { scssWithPrefix } = require('./transformations');
+// import customPxToRem from './transformations.js';
 import StyleDictionary from 'style-dictionary-esm';
-import { scssWithPrefix } from './transformations.js';
+import { customScssGroup } from './transformations.js';
 //
 import {tokens}  from './tokens/index.js';
+// console.log("tokens: ", JSON.stringify(tokens, null, 2));
 
 // module.exports = {
 //   "source": ["tokens/**/*.{js,mjs,cjs,json}"],
@@ -48,7 +49,23 @@ StyleDictionary.registerFormat({
 })
 
  */
-console.log("tokens: ", JSON.stringify(tokens, null, 2));
+// Helper function to get all keys from an object. Mainly for testing/debugging
+// function* getAllKeys(obj, prefix = '') {
+//   for (let key in obj) {
+//     const currentKey = prefix ? `${prefix}.${key}` : key;
+//     if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+//       yield* getAllKeys(obj[key], currentKey);
+//     } else {
+//       yield currentKey;
+//     }
+//   }
+// }
+// const tokensKeys = [];
+//
+//   tokensKeys.push(getAllKeys(tokens).next().value);
+
+// console.log("tokensKeys: ", JSON.stringify(tokensKeys, null, 2));
+
 
 // --- You can export a plain JS object and point the Style Dictionary CLI to it,
 // similar to webpack.
@@ -65,20 +82,53 @@ export const config = {
     // to protect from accidentally overriding nested attributes.
     transform:
       {
-        // Now we can use the transform 'myTransform' below
-        addPathToToken: {
-          type: 'name',
-          transformer:
-            (token) => token.path.join('_').toUpperCase()
-        }
+        // Now we can use the transform 'addPathToToken' below
+        // addPathToToken: {
+        //   type: 'value',
+        //   transformer:
+        //     (token) => {
+        //       token.attributes.path = token.attributes.path.join('_').toUpperCase();
+        //       console.log("addPathToToken | newTokenWithPath: ", JSON.stringify(token, null, 2));
+        //     }
+        // },
+        // customPxToRem:{
+        //   name: 'size/customPxToRem',
+        //   type: 'value',
+        //   matcher: (token) => {
+        //     // Exclude tokens based on specific conditions
+        //     return token.type === 'size' && token.value.includes('px') && token.name !== 'px' && !token.name.includes('_');
+        //   },
+        //   transformer: (token, options) => {
+        //     console.log("size/customPxToRem | token: ", token);
+        //
+        //     // Directly use pixel value for 'px' token or fractional values
+        //     if (token.name === 'px' || token.name.includes(',')) {
+        //       return token.value;
+        //     }
+        //     // Utilize the built-in 'size/pxToRem' logic for other tokens
+        //     const pixelValue = parseFloat(token.value);
+        //     return `${pixelValue / options.basePxFontSize}rem`;
+        //   }
+        // },
+        // CTITransform: {
+        //   type: 'attribute',
+        //   transformer:
+        //     (prop) => {
+        //       // console.log("CTITransform | prop: ", prop);
+        //       return prop;
+        //       // const {path} = token.attributes;
+        //       // console.log("addPathToToken | token: ", token);
+        //       // return {category:"margin", type: path[path -1]};
+        //     }
+        // }
       }
     ,
     // Same with formats, you can now write them directly to this config
     // object. The name of the format is the key.
     format: {
-      myFormat: ({ dictionary }) => {
-        return dictionary.allTokens.map(token => `${token.name}: ${token.value}`).join('\n');
-      }
+      // myFormat: ({ dictionary }) => {
+      //   return dictionary.allTokens.map(token => `${token.name}: ${token.value}`).join('\n');
+      // }
     }
     ,
     // You can also bypass the merging of files Style Dictionary does
@@ -109,9 +159,9 @@ export const config = {
       scss: {
         // This works, we can create new transform arrays on the fly and edit built-ins
         // transforms: StyleDictionary.transformGroup.scss.concat('color/rgb'),
-        transformGroup: "scss/withPrefix",
-        // transforms:
-        //   ['attribute/cti', 'color/hex', 'attribute/color'],
+        // transformGroup: "scss", // Use the custom transform group
+        transformGroup: 'scss/custom',
+        // transforms: ['customPxToRem'],
         buildPath: buildPath,
         files:
           [{
@@ -151,9 +201,9 @@ export const config = {
     }
   }
 
-  // Had to do programatically because the Style Dictionary CLI does not support the use of node modules.
+  //  Had to do programatically because the Style Dictionary CLI does not support the use of node modules.
   // We are using style-dictionary-esm to allow for the use of node modules until Style Dictionary 4.0 is released adding the necessary support.
 const MyStyleDictionary = StyleDictionary.extend(config);
 
 MyStyleDictionary.buildAllPlatforms();
- 
+

@@ -1,0 +1,340 @@
+{
+  "spacing": {
+    "core": {
+      "0": {
+        "value": "0",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "1": {
+        "value": "4",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "2": {
+        "value": "8",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "3": {
+        "value": "12",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "4": {
+        "value": "16",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "5": {
+        "value": "2",
+        "type": "size",
+        "parent": "primitive"
+      },
+      "6": {
+        "value": "24",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "7": {
+        "value": "28",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "8": {
+        "value": "32",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "9": {
+        "value": "36",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "10": {
+        "value": "40",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "11": {
+        "value": "44",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "12": {
+        "value": "48",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "14": {
+        "value": "56",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "16": {
+        "value": "64",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "20": {
+        "value": "80",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "24": {
+        "value": "96",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "28": {
+        "value": "112",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "32": {
+        "value": "128",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "36": {
+        "value": "144",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "40": {
+        "value": "160",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "44": {
+        "value": "176",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "48": {
+        "value": "192",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "52": {
+        "value": "208",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "60": {
+        "value": "240",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "64": {
+        "value": "256",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "72": {
+        "value": "288",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "80": {
+        "value": "320",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "96": {
+        "value": "384",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "px": {
+        "value": "1",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "1,5": {
+        "value": "6",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "2,5": {
+        "value": "10",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      },
+      "3,5": {
+        "value": "14",
+        "type": "size",
+        "parent": "primitive",
+        "description": ""
+      }
+    },
+    "fractional": {
+      "1_2": {
+        "value": ".5%",
+        "type": "size",
+        "description": "\"1/2\" fractional spacing value"
+      },
+      "1_3": {
+        "value": "33.333333%",
+        "type": "size",
+        "description": "\"1/3\" fractional spacing value"
+      },
+      "2_3": {
+        "value": "66.666667%",
+        "type": "size",
+        "description": "\"2/3\" fractional spacing value"
+      },
+      "1_4": {
+        "value": "25%",
+        "type": "size",
+        "description": "\"1/4\" fractional spacing value"
+      },
+      "2_4": {
+        "value": "50%",
+        "type": "size",
+        "description": "\"2/4\" fractional spacing value"
+      },
+      "3_4": {
+        "value": "75%",
+        "type": "size",
+        "description": "\"3/4\" fractional spacing value"
+      },
+      "1_5": {
+        "value": "20%",
+        "type": "size",
+        "description": "\"1/5\" fractional spacing value"
+      },
+      "2_5": {
+        "value": "40%",
+        "type": "size",
+        "description": "\"2/5\" fractional spacing value"
+      },
+      "3_5": {
+        "value": "60%",
+        "type": "size",
+        "description": "\"3/5\" fractional spacing value"
+      },
+      "4_5": {
+        "value": "80%",
+        "type": "size",
+        "description": "\"4/5\" fractional spacing value"
+      },
+      "1_6": {
+        "value": "16.666667%",
+        "type": "size",
+        "description": "\"1/6\" fractional spacing value"
+      },
+      "2_6": {
+        "value": "33.333333%",
+        "type": "size",
+        "description": "\"2/6\" fractional spacing value"
+      },
+      "3_6": {
+        "value": "50%",
+        "type": "size",
+        "description": "\"3/6\" fractional spacing value"
+      },
+      "4_6": {
+        "value": "66.666667%",
+        "type": "size",
+        "description": "\"4/6\" fractional spacing value"
+      },
+      "5_6": {
+        "value": "83.333333%",
+        "type": "size",
+        "description": "\"5/6\" fractional spacing value"
+      },
+      "1_12": {
+        "value": "8.333333%",
+        "type": "size",
+        "description": "\"1/12\" fractional spacing value"
+      },
+      "2_12": {
+        "value": "16.666667%",
+        "type": "size",
+        "description": "\"2/12\" fractional spacing value"
+      },
+      "3_12": {
+        "value": "25%",
+        "type": "size",
+        "description": "\"2/12\" fractional spacing value"
+      },
+      "4_12": {
+        "value": "33.333333%",
+        "type": "size",
+        "description": "\"4/12\" fractional spacing value"
+      },
+      "5_12": {
+        "value": "41.666667%",
+        "type": "size",
+        "description": "\"5/12\" fractional spacing value"
+      },
+      "6_12": {
+        "value": "50%",
+        "type": "size",
+        "description": "\"6/12\" fractional spacing value"
+      },
+      "7_12": {
+        "value": "58.333333%",
+        "type": "size",
+        "description": "\"7/12\" fractional spacing value"
+      },
+      "8_12": {
+        "value": "66.666667%",
+        "type": "size",
+        "description": "\"8/12\" fractional spacing value"
+      },
+      "9_12": {
+        "value": "75%",
+        "type": "size",
+        "description": "\"9/12\" fractional spacing value"
+      },
+      "10_12": {
+        "value": "83.333333%",
+        "type": "size",
+        "description": "\"10/12\" fractional spacing value"
+      },
+      "11_12": {
+        "value": "91.666667%",
+        "type": "size",
+        "description": "\"11/12\" fractional spacing value"
+      },
+      "full": {
+        "value": "100%",
+        "type": "size",
+        "description": "\"full\" or 100% for fractional spacing value"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { isObjectWithValidation } from '../utilities/js/isObjectWithValidation.js';
 
-// Turn the following comment into JSDocs
+// TODO: Turn the following comment into JSDocs
 // @param {Object} args
 // @param {Object} args.scale - The scale object to build tokens from
 // Attribute	Type	Description
@@ -50,17 +50,23 @@ const splitNonAlphanumeric = (str) => {
 }
 
 
-const mergeToken = (obj, path, value) => {
-  let current = obj;
+const mergeToken = ({ tokens, value, attributes, attributes:{path, description, type} }) => {
+  let current = tokens;
   for (let i = 0; i < path.length - 1; i++) {
+    if(i === 1) {
+      console.log("mergeToken| path[i]: ", path[i]);
+      console.log("mergeToken| current: ", current);
+      console.log("mergeToken| current[path[i]]: ", current[path[i]]);
+    }
     const key = path[i];
     if (!current[key]) {
       current[key] = {};
     }
     current = current[key];
   }
-  current[path[path.length - 1]] = { value: value, attributes: {path} };
-  return obj;
+  
+  current[path[path.length - 1]] = { value, attributes};
+  return tokens;
 };
 
 export const buildTokensFromScale = (args) => {
@@ -81,6 +87,8 @@ export const buildTokensFromScale = (args) => {
   
   const {
     scale,
+    type,
+    description,
     keyFormatter = (key) => (key),
     valueFormatter = (valueObject) => (valueObject.rawValue),
     prefix = '', // Assuming a default value for prefix if not provided
@@ -95,16 +103,33 @@ export const buildTokensFromScale = (args) => {
     
     const isValidObject = isObjectWithValidation(scale[key],{ allowCustomConstructors: true } );
     try {
+     
       const rawValue = isValidObject ? scale[key].value : scale[key];
       const valueObject = isValidObject ? scale[key] : null;
       
-      const formattingData = { scale, prefix, exclude, rawValue, valueObject, key };
+      const formattingData = { scale, prefix, exclude, rawValue, valueObject, key,type, description };
       const formattedKey = keyFormatter(key);
       const formattedValue = valueFormatter({ ...formattingData});
-      const buildKeyString = prefix ? `${prefix}-${formattedKey}` : formattedKey;
-      const tokenKeyStructure = splitNonAlphanumeric(buildKeyString);
+      const keyString = prefix ? `${prefix}-${formattedKey}` : formattedKey;
+      const tokenKeyStructure = splitNonAlphanumeric(keyString);
       
-      mergeToken(tokens, tokenKeyStructure, formattedValue);
+      const generatedDescription = typeof description === 'function' ? description({path: tokenKeyStructure, rawValue, valueObject, formattedKey, formattedValue, type, description}) : description;
+      const attributes = { path: tokenKeyStructure, type, description: generatedDescription };
+      const tokenData ={
+        type,
+        rawValue,
+        valueObject,
+        key,
+        scale,
+        prefix,
+        formattedKey,
+        formattedValue,
+        keyString,
+        tokenKeyStructure,
+        generatedDescription,
+        attributes
+      };
+      mergeToken({ tokens, value: formattedValue, attributes });
     } catch (e) {
       console.error(`buildTokensFromScale: Error processing key '${key}': ${e.message}`);
       // Decide whether to continue processing other keys or return null/empty object
