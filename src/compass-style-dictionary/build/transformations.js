@@ -1,11 +1,14 @@
 import StyleDictionary from 'style-dictionary-esm';
+import { registerTransforms } from '@tokens-studio/sd-transforms';
 
-/* Custom Transfomers */
+// Registering token studio transforms
+registerTransforms(StyleDictionary);
+/* Custom Transformers */
 export const customPxToRemTransformer = {
   name: 'size/customPxToRem',
   type: 'value',
   matcher: (token) => {
-    const {type, path} = token;
+    const { type, path } = token;
     const pathDestination = token.path.at(-1);
     // if (pathDestination.includes("px")){
     //   console.log("{");
@@ -14,35 +17,40 @@ export const customPxToRemTransformer = {
     //   console.log("}");
     //
     // }
-    const blacklistedPaths = ['em', 'rem','%', 'fractional', 'full', "auto"];
+    const blacklistedPaths = ['em', 'rem', '%', 'fractional', 'full', 'auto'];
     const whitelistedTypes = ['size', 'primitive/size'];
-    const isBlacklistedPath = !!blacklistedPaths.find(element => path.toString().includes(element));
-    
+    const isBlacklistedPath = !!blacklistedPaths.find((element) =>
+      path.toString().includes(element)
+    );
+
     const isMatch = whitelistedTypes.includes(type) && !isBlacklistedPath;
     return isMatch;
-},
+  },
   transformer: (token, options) => {
-    if(token.path.includes("px")){
-      return `${token.value}px`
+    if (token.path.includes('px')) {
+      return `${token.value}px`;
     }
-  // Utilize the built-in 'size/pxToRem' logic for other tokens
-  const pixelValue = parseFloat(token.value);
-  const basePxFontSize = 16; //TODO: get this from a token or configuration
-  
-  const transformedValue = `${pixelValue / basePxFontSize}rem`;
-  return transformedValue;
-}
+    // Utilize the built-in 'size/pxToRem' logic for other tokens
+    const pixelValue = parseFloat(token.value);
+    const basePxFontSize = 16; //TODO: get this from a token or configuration
+
+    const transformedValue = `${pixelValue / basePxFontSize}rem`;
+    return transformedValue;
+  },
 };
 
 const customScssTransformGroup = {
   name: 'scss/custom',
-  transforms: StyleDictionary.transformGroup['scss'].concat(['size/customPxToRem'])
+  transforms: StyleDictionary.transformGroup['scss'].concat([
+    'size/customPxToRem',
+  ]),
 };
 const customCssTransformGroup = {
   name: 'css/custom/variables',
-  transforms: StyleDictionary.transformGroup['css'].concat(['size/customPxToRem'])
+  transforms: StyleDictionary.transformGroup['css'].concat([
+    'size/customPxToRem',
+  ]),
 };
-
 
 /* Register the custom transformers and transform group*/
 StyleDictionary.registerTransform(customPxToRemTransformer);

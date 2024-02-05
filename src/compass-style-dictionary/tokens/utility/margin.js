@@ -1,6 +1,7 @@
 import { spacingTokens } from '../primitive/index.js';
 import { open } from 'fs/promises';
 import { writeJSONStringToFile } from '../../../utilities/js/writeTokensToFile.js';
+import { generateStyleDictionaryToken } from '../../build/generateToken.js';
 
 // // // const {coreSpacingScale, fractionalSpacingScale, coreSpacingTokens, fractionalSpacingTokens} = require('./coreSpacingTokens.js');
 // const {coreSpacingScale, fractionalSpacingScale} = require('./scales.js');
@@ -80,35 +81,54 @@ import { writeJSONStringToFile } from '../../../utilities/js/writeTokensToFile.j
 // import { buildTokensFromScale }  from '../../buildTokenDefinition.js';
 // import { isObjectWithValidation }  from '../../../utilities/js/isObjectWithValidation.js';
 // import { tokens } from '../index.js';
-const marginKeys = ["margin", "mx", "my", "mt", "me", "mb", "ms"];
+
+/* Generating Margin Tokens For each margin utility type from coreTokens. */
+const marginTypes = ["margin", "mx", "my", "mt", "me", "mb", "ms"];
 
 function generateMarginTokens(spacingTokens) {
   const marginTokens = {
     margin: {
       "auto": {
         value: "auto",
-        type: "spacing"
+        type: "spacing",
+        description: " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     }
   };
-  
-  marginKeys.forEach(marginKey => {
-    marginTokens[marginKey] = {}; // Initialize each marginKey object
+  // Initialize each marginKey object
+  marginTypes.forEach(marginType => {
+    marginTokens[marginType] = {};
   });
   
-  // Process core spacing tokens
+  // Process core spacing tokens to create margin tokens
   const coreTokens = spacingTokens.spacing.core;
   const coreTokenKeys = Object.keys(coreTokens);
   
   for (let index = 0; index < coreTokenKeys.length; index++) {
     const key = coreTokenKeys[index];
     const value = coreTokens[key];
-    marginKeys.forEach(marginKey => {
+    console.log("coreTokens[index]: ", coreTokens[index]);
+    console.log("coreTokenKeys: ", coreTokenKeys);
+    const coreTokenPath = `{spacing.core.${key}}`;
+    // const coreTokenPath = coreTokens[index].attributes.path.join(".");
+    
+    //
+    marginTypes.forEach(marginKey => {
+      const token = generateStyleDictionaryToken({
+        name: `${marginKey}-${key}`,
+        value: coreTokenPath,
+        type: "spacing",
+        description: ` The ${marginKey}-${key} margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties.`
+        attributes: {}
+      });
+      
+      })
       // Creating positive core tokens
       marginTokens[marginKey][key] = {
         ...value,
         type: "spacing",
-        description: `Margin tokens are used to create margin utility classes that reference spacing custom properties.`
+        value: coreTokenPath,
+        description: ` The ${key} margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties.`
       };
       
       // Creating negative core tokens
@@ -116,7 +136,7 @@ function generateMarginTokens(spacingTokens) {
         ...value,
         type: "spacing",
         value: `-${value.value}`,
-        description: `Negative value of ${key} tokens. Margin tokens are used to create margin utility classes that reference spacing custom properties.`
+        description: `The margin token represents the negative value of ${key} margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties.`
       };
     });
   }
