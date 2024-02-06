@@ -7,6 +7,7 @@
     "dev": "vite --port 3000 --open",
     "build": "vite build",
     "serve": "vite preview",
+    "test": "vitest",
     "lint:fix": "eslint ./src --ext .jsx,.js, --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" ",
     "lint": "yarn lint:format && yarn lint:fix ",
@@ -19,6 +20,7 @@
     "@radix-ui/react-direction": "^1.0.1",
     "@radix-ui/react-portal": "^1.0.4",
     "@radix-ui/react-slot": "^1.0.2",
+    "@testing-library/jest-dom": "^6.4.2",
     "classnames": "^2.5.1",
     "eslint-plugin-prettier": "^4.2.1",
     "react": "^18.2.0",
@@ -34,6 +36,7 @@
     "@storybook/react": "^7.6.10",
     "@storybook/react-vite": "^7.6.10",
     "@storybook/test": "^7.6.10",
+    "@testing-library/react": "^14.2.1",
     "@tokens-studio/sd-transforms": "^0.14.2",
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.43.0",
@@ -47,7 +50,8 @@
     "style-dictionary-esm": "^1.9.2",
     "vite": "^4.2.1",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "vitest": "^1.2.2"
   },
   "packageManager": "yarn@4.1.0"
 }

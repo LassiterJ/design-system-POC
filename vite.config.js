@@ -6,4 +6,9 @@ import eslint from 'vite-plugin-eslint';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
+  test: {
+    setupFiles: ['./tests.config.js'],
+    testMatch: ['./tests/**/*.test.js', './tests/**/*.spec.js'],
+    // globals: true,
+  },
 });
