@@ -13,9 +13,6 @@ export const generateCSSClasses = {
       );
     };
 
-    // Get Margin Tokens
-    const tokens = dictionary.allTokens.filter(marginFilter);
-
     const validateToken = (token) => {
       if (!token.name) {
         console.error('validateToken: Token does not have a name', token);
@@ -40,77 +37,91 @@ export const generateCSSClasses = {
       // }
       return token;
     };
+
+    const generateCSSValue = (validatedToken) => {
+      // check if token uses a reference
+      const tokenUsesReference = dictionary.usesReference(
+        validatedToken.original.value
+      );
+      // if it does, get the references and replace the value with the reference name
+      const references = dictionary.getReferences(
+        validatedToken.original.value
+      );
+
+      let value = JSON.stringify(validatedToken.value);
+      let reference = '';
+      if (tokenUsesReference) {
+        references.forEach((ref) => {
+          value = value.replace(ref.value, function () {
+            return `${ref.name}`;
+          });
+          reference = ref.name;
+        });
+      }
+
+      // const mathSymbols = ['+', '-', '*', '/'];
+      // This regex looks for arithmetic operators (+, -, *, /) that are not part of a kebab-case string.
+      // It avoids matching a hyphen that is directly followed by a lowercase letter (which is common in kebab-case).
+      // const mathRegex = /[\+\*\/]|\-(?![a-z])/;
+      // const tokenUsesMath = mathRegex.test(value);
+      value = value.replace(/['"]+/g, '');
+      const trailingMath = value.slice(reference.length);
+      const formattedValue = !!trailingMath
+        ? `calc( var( --${reference} ) ${trailingMath} )`
+        : `var( --${reference} )`;
+      return formattedValue;
+    };
+
+    const marginProperties = {
+      m: ['margin'],
+      mx: ['margin-left', 'margin-right'],
+      my: ['margin-top', 'margin-bottom'],
+      mt: ['margin-top'],
+      mb: ['margin-bottom'],
+      ms: ['margin-left'], // TODO: implement rtl
+      me: ['margin-right'], // TODO: implement rtl
+    };
+
+    const getMarginKeyFromPath = (token) => {
+      const marginKeyLocation = token.path.indexOf('margin') + 1;
+      const marginPropertyKeys = Object.keys(marginProperties);
+      const elementThatMatchesKey = (element) => {
+        const elementMatchesKey = token.path[marginKeyLocation] === element;
+
+        return elementMatchesKey;
+      };
+      const marginKey = marginPropertyKeys.find(elementThatMatchesKey);
+      return marginKey || 'm';
+    };
+
     // Map through tokens and format them
     const formatToken = (token) => {
       // Validate token and get token name, category, value, original value, type, and item;
       const validatedToken = validateToken(token);
+      const value = generateCSSValue(validatedToken);
 
-      // Determine the value
-      const getValue = (validatedToken) => {
-        // check if token uses a reference
-        const tokenUsesReference = dictionary.usesReference(
-          validatedToken.original.value
-        );
-        // if it does, get the references and replace the value with the reference name
-        const references = dictionary.getReferences(
-          validatedToken.original.value
-        );
-
-        let value = JSON.stringify(validatedToken.value);
-        let reference = '';
-        if (tokenUsesReference) {
-          references.forEach((ref) => {
-            value = value.replace(ref.value, function () {
-              return `${ref.name}`;
-            });
-            reference = ref.name;
-          });
-        }
-
-        // const mathSymbols = ['+', '-', '*', '/'];
-        // This regex looks for arithmetic operators (+, -, *, /) that are not part of a kebab-case string.
-        // It avoids matching a hyphen that is directly followed by a lowercase letter (which is common in kebab-case).
-        // const mathRegex = /[\+\*\/]|\-(?![a-z])/;
-        // const tokenUsesMath = mathRegex.test(value);
-        value = value.replace(/['"]+/g, '');
-        const trailingMath = value.slice(reference.length);
-        const formattedValue = !!trailingMath
-          ? `calc( var( --${reference} ) ${trailingMath} )`
-          : `var( --${reference} )`;
-        return formattedValue;
-      };
-
-      const marginProperties = {
-        m: ['margin'],
-        mx: ['margin-left', 'margin-right'],
-        my: ['margin-top', 'margin-bottom'],
-        mt: ['margin-top'],
-        mb: ['margin-bottom'],
-        ms: ['margin-left'], // TODO: implement rtl
-        me: ['margin-right'], // TODO: implement rtl
-      };
-      const value = getValue(validatedToken);
-      const marginKeyLocation = validatedToken.path.indexOf('margin') + 1;
-      const marginKey = Object.keys(marginProperties).find(
-        (element) => validatedToken.path[marginKeyLocation] === element
-      )
-        ? validatedToken.path[marginKeyLocation]
-        : 'm';
+      // Get the margin key from the token path
+      const marginKey = getMarginKeyFromPath(validatedToken);
       const applicableProperties = marginProperties[marginKey];
       const precedingSpace = '   '; // 3 spaces to indent according to the class name
+
+      // Format the properties
       const formattedProperties = applicableProperties
         .map((property) => {
           return `${precedingSpace}${property}: ${value};`;
         })
         .join('\n ');
+
       // Determine the class name
       const className = `.${validatedToken.name.replace('_', '-')}`;
 
       // Finally building the class
       const formattedClass = `${className} { \n ${formattedProperties} \n}`;
-      // console.log('formattedClass: ', formattedClass);
+
       return formattedClass;
     };
+    // Get Margin Tokens
+    const tokens = dictionary.allTokens.filter(marginFilter);
 
     const formattedTokens = tokens.map(formatToken);
     return formattedTokens.join('\n');
