@@ -691,6 +691,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "mx": {
@@ -1018,6 +1023,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "my": {
@@ -1345,6 +1355,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "mt": {
@@ -1672,6 +1687,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "me": {
@@ -1999,6 +2019,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "mb": {
@@ -2326,6 +2351,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "ms": {
@@ -2653,6 +2683,11 @@
         "value": "{spacing.core.3,5} * -1",
         "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+      },
+      "auto": {
+        "value": "{auto}",
+        "type": "spacing",
+        "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     }
   }

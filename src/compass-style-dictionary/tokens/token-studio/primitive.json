@@ -369,5 +369,10 @@
       "type": "number",
       "description": "The base unit of our design system. This unit is used to generate spacing scales."
     }
+  },
+  "auto": {
+    "value": "auto",
+    "type": "spacing",
+    "description": "Used for margins and layout utilities in code. Padding and gap in Figma"
   }
 }
