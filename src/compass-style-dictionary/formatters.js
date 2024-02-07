@@ -59,11 +59,6 @@ export const generateCSSClasses = {
         });
       }
 
-      // const mathSymbols = ['+', '-', '*', '/'];
-      // This regex looks for arithmetic operators (+, -, *, /) that are not part of a kebab-case string.
-      // It avoids matching a hyphen that is directly followed by a lowercase letter (which is common in kebab-case).
-      // const mathRegex = /[\+\*\/]|\-(?![a-z])/;
-      // const tokenUsesMath = mathRegex.test(value);
       value = value.replace(/['"]+/g, '');
       const trailingMath = value.slice(reference.length);
       const formattedValue = !!trailingMath
@@ -82,12 +77,11 @@ export const generateCSSClasses = {
       me: ['margin-right'], // TODO: implement rtl
     };
 
-    const getMarginKeyFromPath = (token) => {
+    const getMarginKeyFromToken = (token) => {
       const marginKeyLocation = token.path.indexOf('margin') + 1;
       const marginPropertyKeys = Object.keys(marginProperties);
       const elementThatMatchesKey = (element) => {
         const elementMatchesKey = token.path[marginKeyLocation] === element;
-
         return elementMatchesKey;
       };
       const marginKey = marginPropertyKeys.find(elementThatMatchesKey);
@@ -96,12 +90,12 @@ export const generateCSSClasses = {
 
     // Map through tokens and format them
     const formatToken = (token) => {
-      // Validate token and get token name, category, value, original value, type, and item;
+      // Validate token generate the CSS value
       const validatedToken = validateToken(token);
       const value = generateCSSValue(validatedToken);
 
       // Get the margin key from the token path
-      const marginKey = getMarginKeyFromPath(validatedToken);
+      const marginKey = getMarginKeyFromToken(validatedToken);
       const applicableProperties = marginProperties[marginKey];
       const precedingSpace = '   '; // 3 spaces to indent according to the class name
 
