@@ -30,24 +30,54 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'variables.css',
+          destination: 'primitive-variables.css',
           format: 'css/variables',
-          filter: (token) =>
-            token.type === 'spacing' &&
-            !['margin', 'mx', 'my', 'mt', 'me', 'mb', 'ms'].includes(
-              token.path[0]
-            ),
+          filter: (token) => {
+            const isAuto = token.attributes.category === 'auto';
+            const isScale = ['core', 'fractional'].includes(
+              token.attributes.type
+            );
+            const isNotNumberCategory = token.attributes.category !== 'numbers';
+            return (isAuto || isScale) && isNotNumberCategory;
+          },
         },
       ],
     },
-    customMarginUtilities: {
+    customUtilityClasses: {
       transformGroup: 'custom/margin/utility-classes',
       buildPath,
       files: [
         {
           destination: 'margin.css',
           format: 'custom/css/css-classes',
-          // filter: (token) => token.type === "spacing" && ["margin", "mx", "my", "mt", "me", "mb", "ms"].includes(token.path[0]),
+          /* Filtering throws error because Style Dictionary needs the
+           referenced tokens even though they are not included in the output.
+           */
+          options: {
+            outputReferences: true,
+            includeInOutput: { type: 'margin' },
+          },
+        },
+        {
+          destination: 'padding.css',
+          format: 'custom/css/css-classes',
+          /* Filtering throws error because Style Dictionary needs the
+           referenced tokens even though they are not included in the output.
+           */
+          options: {
+            outputReferences: true,
+            includeInOutput: { type: 'padding' },
+          },
+        },
+      ],
+    },
+    transformedTokens: {
+      transformGroup: 'custom/transformation/test',
+      buildPath,
+      files: [
+        {
+          destination: 'testingTokens.json',
+          format: 'json',
           options: {
             outputReferences: true,
           },

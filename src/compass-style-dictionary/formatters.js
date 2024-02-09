@@ -1,16 +1,42 @@
 import StyleDictionary from 'style-dictionary-esm';
-
+import { writeJSONStringToFile } from '../utilities/js/writeTokensToFile.js';
+const { sortByReference, sortByName } = StyleDictionary.formatHelpers;
 let count = 0;
+
 export const generateCSSClasses = {
   name: 'custom/css/css-classes',
   formatter: ({ dictionary, options }) => {
-    const marginFilter = (token) => {
-      return (
-        token.attributes.type === 'spacing' &&
-        ['margin', 'm', 'mx', 'my', 'mt', 'mb', 'ms', 'me'].includes(
-          token.attributes.category
-        )
-      );
+    console.log('custom/css/css-classes | options: ', options);
+    const marginProperties = {
+      m: ['margin'],
+      mx: ['margin-left', 'margin-right'],
+      my: ['margin-top', 'margin-bottom'],
+      mt: ['margin-top'],
+      mb: ['margin-bottom'],
+      ms: ['margin-left'], // TODO: implement rtl
+      me: ['margin-right'], // TODO: implement rtl
+    };
+    const paddingProperties = {
+      p: ['padding'],
+      px: ['padding-left', 'padding-right'],
+      py: ['padding-top', 'padding-bottom'],
+      pt: ['padding-top'],
+      pb: ['padding-bottom'],
+      ps: ['padding-left'], // TODO: implement rtl
+      pe: ['padding-right'], // TODO: implement rtl
+    };
+
+    const getCSSPropertiesByType = (type, key) => {
+      if (!key || !type) {
+        console.log('getPropertiesToApply: key is undefined');
+        return null;
+      }
+      if (type === 'margin') {
+        return marginProperties[key];
+      }
+      if (type === 'padding') {
+        return paddingProperties[key];
+      }
     };
 
     const validateToken = (token) => {
@@ -29,12 +55,7 @@ export const generateCSSClasses = {
           token
         );
       }
-      if (!token.type) {
-        console.error('validateToken: Token does not have a type', token);
-      }
-      // if (!token.item) {
-      //   console.warn('validateToken: Token does not have an item', token);
-      // }
+
       return token;
     };
 
@@ -67,36 +88,23 @@ export const generateCSSClasses = {
       return formattedValue;
     };
 
-    const marginProperties = {
-      m: ['margin'],
-      mx: ['margin-left', 'margin-right'],
-      my: ['margin-top', 'margin-bottom'],
-      mt: ['margin-top'],
-      mb: ['margin-bottom'],
-      ms: ['margin-left'], // TODO: implement rtl
-      me: ['margin-right'], // TODO: implement rtl
-    };
-
-    const getMarginKeyFromToken = (token) => {
-      const marginKeyLocation = token.path.indexOf('margin') + 1;
-      const marginPropertyKeys = Object.keys(marginProperties);
-      const elementThatMatchesKey = (element) => {
-        const elementMatchesKey = token.path[marginKeyLocation] === element;
-        return elementMatchesKey;
-      };
-      const marginKey = marginPropertyKeys.find(elementThatMatchesKey);
-      return marginKey || 'm';
-    };
-
     // Map through tokens and format them
     const formatToken = (token) => {
+      console.log('formatToken: ', token);
+      // if (count < 4) {
+
+      // }
       // Validate token generate the CSS value
       const validatedToken = validateToken(token);
+      const { type, item } = validatedToken.attributes;
+      // if (!item) {
+      //   console.log('validatedToken without item: ', validatedToken);
+      // }
       const value = generateCSSValue(validatedToken);
+      // console.log('item: ', item);
 
-      // Get the margin key from the token path
-      const marginKey = getMarginKeyFromToken(validatedToken);
-      const applicableProperties = marginProperties[marginKey];
+      // Get css properties to apply by token attribute "type"
+      const applicableProperties = getCSSPropertiesByType(type, item);
       const precedingSpace = '   '; // 3 spaces to indent according to the class name
 
       // Format the properties
@@ -107,16 +115,48 @@ export const generateCSSClasses = {
         .join('\n ');
 
       // Determine the class name
-      const className = `.${validatedToken.name.replace('_', '-')}`;
+      const className = `${validatedToken.name.replace('_', '-')}`
+        .replace('spacing-margin-', '.')
+        .replace('spacing-padding-', '.');
 
       // Finally building the class
       const formattedClass = `${className} { \n ${formattedProperties} \n}`;
 
       return formattedClass;
     };
-    // Get Margin Tokens
-    const tokens = dictionary.allTokens.filter(marginFilter);
+    // Get Tokens
+    const tokenFilter = (token) => {
+      // TODO rename
+      // iterate over the options.includeInOutput object
+      // if token[key] === options.includeInOutput[key] return true
+      // if (!options.includeInOutput) return true;
+      for (const key in options.includeInOutput) {
+        if (!options.includeInOutput[key]) return true;
+        if (token.attributes[key] === options.includeInOutput[key]) {
+          return true;
+        }
+      }
+      return false;
+    };
+    const tokens = dictionary.allTokens
+      .sort(sortByReference) // TODO: make a custom sort function so that output is consistent with the core scale tokens
+      .filter(tokenFilter);
 
+    try {
+      const fileDirectoryFromRoot =
+        'src/compass-style-dictionary/tokens/utility';
+      const currentFilePath = process.cwd();
+      console.log('currentFilePath: ', currentFilePath);
+
+      writeJSONStringToFile({
+        jsonString: JSON.stringify(tokens, null, 2),
+        fileName: 'marginAndPaddingTokens',
+        path: fileDirectoryFromRoot,
+      });
+    } catch (error) {
+      console.error('Error writing marginTokens to file: ', error);
+    }
+    console.log('tokens.length: ', tokens.length);
     const formattedTokens = tokens.map(formatToken);
     return formattedTokens.join('\n');
   },
