@@ -26,14 +26,14 @@ export const config = {
   source: tokensPath,
   platforms: {
     css: {
-      transformGroup: 'custom/spacing/properties',
+      transformGroup: 'custom/css/properties',
       buildPath,
       files: [
         {
-          destination: 'primitive-variables.css',
+          destination: 'primitive-spacing-variables.css',
           format: 'css/variables',
           filter: (token) => {
-            const isAuto = token.attributes.category === 'auto';
+            const isAuto = token.attributes.item === 'auto';
             const isScale = ['core', 'fractional'].includes(
               token.attributes.type
             );
@@ -43,8 +43,24 @@ export const config = {
         },
       ],
     },
+    primitiveLayoutCSSProperties: {
+      transformGroup: 'custom/css/layout/properties',
+      buildPath,
+      files: [
+        {
+          destination: 'primitive-layout-variables.css',
+          format: 'css/variables',
+          filter: (token) => {
+            const isPosition =
+              token.attributes.type === 'position' &&
+              token.attributes.category === 'css-properties';
+            return isPosition;
+          },
+        },
+      ],
+    },
     customUtilityClasses: {
-      transformGroup: 'custom/margin/utility-classes',
+      transformGroup: 'custom/spacing/utility-classes',
       buildPath,
       files: [
         {
@@ -55,7 +71,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            includeInOutput: { type: 'margin' },
+            includeInOutput: { type: 'margin' }, // Uses token.attributes to match tokens to
           },
         },
         {
@@ -69,6 +85,17 @@ export const config = {
             includeInOutput: { type: 'padding' },
           },
         },
+        // {
+        //   destination: 'layout.css',
+        //   format: 'custom/css/css-classes',
+        //   /* Filtering throws error because Style Dictionary needs the
+        //    referenced tokens even though they are not included in the output.
+        //    */
+        //   options: {
+        //     outputReferences: true,
+        //     includeInOutput: { type: ['position'] },
+        //   },
+        // },
       ],
     },
     transformedTokens: {

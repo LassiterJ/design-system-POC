@@ -36,16 +36,12 @@ export const transformCTIAttribute = (token, options) => {
   // return newAttributes;
 };
 
-export const customNamesTransform = {
+export const customNamesTransformer = {
   name: 'name/cti/custom-names',
   type: 'name',
   transitive: true,
   transformer: (token, options) => {
-    // if (count < 2) {
-    //   console.log('options: ', options);
-    //   count++;
-    // }
-    // return token.name;
+    // TODO: instead of using the path, use the cti attributes to generate the name. Possibly trying to pass options to the transformer to determine what part of the cti should be the name
     const { name, path } = token;
     const { category } = token.attributes;
     const { prefix } = options;
@@ -61,6 +57,22 @@ export const customNamesTransform = {
     return finalName;
   },
 };
+export const customLayoutNamesTransformer = {
+  name: 'name/cti/custom/layout-names',
+  type: 'name',
+  transitive: true,
+  transformer: (token, options) => {
+    // TODO: instead of using the path, use the cti attributes to generate the name. Possibly trying to pass options to the transformer to determine what part of the cti should be the name
+    const { name } = token;
+    const { type, item } = token.attributes;
+    // Our name will be comprised of the
+    console.log('originalName: ', name);
+
+    const transformedName = `${type}-${item}`;
+    console.log('transformedName: ', transformedName);
+    return transformedName;
+  },
+};
 // Convert pixel values to rem
 // do not convert values that are already in rem, em, %, full, auto
 // do not convert single pixel values
@@ -70,15 +82,17 @@ export const customPxToRemTransformer = {
   type: 'value',
   transitive: true,
   matcher: (token) => {
-    const { type, path } = token;
+    const { type, path, attributes } = token;
 
     const blacklistedPaths = ['em', 'rem', '%', 'full', 'auto', 'margin'];
-    const whitelistedTypes = ['spacing'];
+    const whitelistedCategories = ['spacing'];
     const isBlacklistedPath = !!blacklistedPaths.find((element) =>
       path.toString().includes(element)
     );
 
-    const isMatch = whitelistedTypes.includes(type) && !isBlacklistedPath;
+    const isMatch =
+      whitelistedCategories.includes(attributes?.category) &&
+      !isBlacklistedPath;
     return isMatch;
   },
   transformer: (token, options) => {
@@ -102,7 +116,7 @@ export const customPxToRemTransformer = {
 /* Transform Groups */
 
 export const customSpacingPropertiesTransformGroup = {
-  name: 'custom/spacing/properties',
+  name: 'custom/css/properties',
   transforms: [
     // 'ts/descriptionToComment',
     'attribute/cti',
@@ -112,8 +126,19 @@ export const customSpacingPropertiesTransformGroup = {
   // transforms: [ 'size/customPxToRem'].filter(transform => transform !== 'ts/size/px' && transform !== 'ts/resolveMath')
 };
 
+export const customCSSLayoutPropertiesTransformGroup = {
+  name: 'custom/css/layout/properties',
+  transforms: [
+    // 'ts/descriptionToComment',
+    'attribute/cti',
+    'size/customPxToRem',
+    'name/cti/custom/layout-names',
+  ],
+  // transforms: [ 'size/customPxToRem'].filter(transform => transform !== 'ts/size/px' && transform !== 'ts/resolveMath')
+};
+
 export const customMarginUtilityClassesTransformGroup = {
-  name: 'custom/margin/utility-classes',
+  name: 'custom/spacing/utility-classes',
   transitive: true,
   transforms: [
     // 'ts/descriptionToComment',
@@ -141,9 +166,13 @@ export const registerCustomTransforms = () => {
   // Registering token studio transforms
   registerTransforms(StyleDictionary);
   StyleDictionary.registerTransform(customPxToRemTransformer);
-  StyleDictionary.registerTransform(customNamesTransform);
+  StyleDictionary.registerTransform(customNamesTransformer);
+  StyleDictionary.registerTransform(customLayoutNamesTransformer);
   StyleDictionary.registerTransformGroup(customSpacingPropertiesTransformGroup);
   StyleDictionary.registerTransformGroup(customTestTransformGroup);
+  StyleDictionary.registerTransformGroup(
+    customCSSLayoutPropertiesTransformGroup
+  );
   StyleDictionary.registerTransformGroup(
     customMarginUtilityClassesTransformGroup
   );

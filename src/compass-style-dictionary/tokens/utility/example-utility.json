@@ -3,25 +3,21 @@
     "core": {
       "0": {
         "value": "0",
-        "type": "spacing",
         "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "1": {
         "value": "1",
-        "type": "spacing",
         "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "px": {
         "value": "px",
-        "type": "spacing",
         "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value represents a single pixel and should always equal 1px."
       },
       "1,5": {
         "value": "1,5",
-        "type": "spacing",
         "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       }
@@ -29,126 +25,106 @@
     "fractional": {
       "1_2": {
         "value":"1_2",
-        "type": "spacing",
         "parent": "utility",
         "description": "\"1/2\" fractional spacing value"
       },
       "full": {
         "value":"full",
-        "type": "spacing",
         "parent": "utility",
         "description": "\"full\" or 100% for fractional spacing value"
       }
     }
   },
   "margin": {
+    "type": "spacing",
     "m": {
       "0": {
         "value": "0",
-        "type": "spacing",
         "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "1": {
         "value": "4",
-        "type": "spacing",
         "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "-1": {
         "value": "-4",
-        "type": "spacing",
         "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "px": {
         "value": "1",
-        "type": "spacing",
         "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "-3,5": {
         "value": "-3.5",
-        "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "3,5": {
         "value": "3.5",
-        "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "auto": {
         "value": "{auto}",
-        "type": "spacing",
         "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     },
     "mx": {
       "0": {
         "value": "0",
-        "type": "spacing",
         "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "1": {
         "value": "4",
-        "type": "spacing",
         "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "-1": {
         "value": "-4",
-        "type": "spacing",
         "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "px": {
         "value": "1",
-        "type": "spacing",
         "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "-3,5": {
         "value": "-3.5",
-        "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "3,5": {
         "value": "3.5",
-        "type": "spacing",
         "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       },
       "auto": {
         "value": "{auto}",
-        "type": "spacing",
         "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
       }
     }
   },
   "padding": {
+    "type": "spacing",
     "p": {
       "0": {
         "value": "0",
-        "type": "spacing",
         "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
       },
       "px": {
         "value": "1",
-        "type": "spacing",
         "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
       },
       "1,5": {
         "value": "1.5",
-        "type": "spacing",
         "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
       }
     },
     "px": {
       "0": {
         "value": "0",
-        "type": "spacing",
         "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
       },
       "px": {
         "value": "1",
-        "type": "spacing",
         "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
       },
       "1,5": {
         "value": "1.5",
-        "type": "spacing",
         "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
       }
     }
