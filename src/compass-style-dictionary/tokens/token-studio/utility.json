@@ -4489,6 +4489,30 @@
         "value": "{css-properties.position.sticky}",
         "description": "\"sticky\" value used with the css Position property"
       }
+    },
+    "flex-shrink": {
+      "0": {
+        "value": "{numbers.core.0}",
+        "type": "other",
+        "description": "the ability to shrink when given apace and it's parent is a flex container"
+      },
+      "1": {
+        "value": "{numbers.core.1}",
+        "type": "other",
+        "description": "the ability to shrink when given apace and it's parent is a flex container"
+      }
+    },
+    "flex-grow": {
+      "0": {
+        "value": "{numbers.core.0}",
+        "type": "other",
+        "description": "the ability to grow when given apace and it's parent is a flex container"
+      },
+      "1": {
+        "value": "{numbers.core.1}",
+        "type": "other",
+        "description": "the ability to grow when given apace and it's parent is a flex container"
+      }
     }
   }
 }
