@@ -46,10 +46,13 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'primitive-layout-variables.css',
+          destination: 'primitive-misc-variables.css',
           format: 'css/variables',
           filter: (token) => {
-            return token.attributes.category === 'css-properties';
+            return (
+              token.attributes.category === 'css-properties' ||
+              token.attributes.category === 'boolean'
+            );
           },
         },
       ],

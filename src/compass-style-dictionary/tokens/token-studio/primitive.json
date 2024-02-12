@@ -659,5 +659,16 @@
         "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
       }
     }
+  },
+  "boolean": {
+    "type": "boolean",
+    "true": {
+      "value": "{numbers.core.1}",
+      "description": "These Boolean token represents true. In code, this value will be 1, meaning true"
+    },
+    "false": {
+      "value": "{numbers.core.0}",
+      "description": "These Boolean token represents false. In code, this value will be 0, meaning false"
+    }
   }
 }

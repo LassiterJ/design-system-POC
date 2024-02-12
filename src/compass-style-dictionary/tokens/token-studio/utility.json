@@ -4492,24 +4492,24 @@
     },
     "flex-shrink": {
       "0": {
-        "value": "{numbers.core.0}",
+        "value": "{boolean.false}",
         "type": "other",
         "description": "the ability to shrink when given apace and it's parent is a flex container"
       },
       "1": {
-        "value": "{numbers.core.1}",
+        "value": "{boolean.true}",
         "type": "other",
         "description": "the ability to shrink when given apace and it's parent is a flex container"
       }
     },
     "flex-grow": {
       "0": {
-        "value": "{numbers.core.0}",
+        "value": "{boolean.false}",
         "type": "other",
         "description": "the ability to grow when given apace and it's parent is a flex container"
       },
       "1": {
-        "value": "{numbers.core.1}",
+        "value": "{boolean.true}",
         "type": "other",
         "description": "the ability to grow when given apace and it's parent is a flex container"
       }

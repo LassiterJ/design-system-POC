@@ -103,92 +103,100 @@
       "position",
       "sticky"
     ]
+  },
+  {
+    "value": "0",
+    "type": "other",
+    "description": "the ability to shrink when given apace and it's parent is a flex container",
+    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
+    "isSource": true,
+    "original": {
+      "value": "{boolean.false}",
+      "type": "other",
+      "description": "the ability to shrink when given apace and it's parent is a flex container"
+    },
+    "name": "flex-shrink-0",
+    "attributes": {
+      "category": "css-layout-properties",
+      "type": "flex-shrink",
+      "item": "0"
+    },
+    "path": [
+      "css-layout-properties",
+      "flex-shrink",
+      "0"
+    ]
+  },
+  {
+    "value": "1",
+    "type": "other",
+    "description": "the ability to shrink when given apace and it's parent is a flex container",
+    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
+    "isSource": true,
+    "original": {
+      "value": "{boolean.true}",
+      "type": "other",
+      "description": "the ability to shrink when given apace and it's parent is a flex container"
+    },
+    "name": "flex-shrink-1",
+    "attributes": {
+      "category": "css-layout-properties",
+      "type": "flex-shrink",
+      "item": "1"
+    },
+    "path": [
+      "css-layout-properties",
+      "flex-shrink",
+      "1"
+    ]
+  },
+  {
+    "value": "0",
+    "type": "other",
+    "description": "the ability to grow when given apace and it's parent is a flex container",
+    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
+    "isSource": true,
+    "original": {
+      "value": "{boolean.false}",
+      "type": "other",
+      "description": "the ability to grow when given apace and it's parent is a flex container"
+    },
+    "name": "flex-grow-0",
+    "attributes": {
+      "category": "css-layout-properties",
+      "type": "flex-grow",
+      "item": "0"
+    },
+    "path": [
+      "css-layout-properties",
+      "flex-grow",
+      "0"
+    ]
+  },
+  {
+    "value": "1",
+    "type": "other",
+    "description": "the ability to grow when given apace and it's parent is a flex container",
+    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
+    "isSource": true,
+    "original": {
+      "value": "{boolean.true}",
+      "type": "other",
+      "description": "the ability to grow when given apace and it's parent is a flex container"
+    },
+    "name": "flex-grow-1",
+    "attributes": {
+      "category": "css-layout-properties",
+      "type": "flex-grow",
+      "item": "1"
+    },
+    "path": [
+      "css-layout-properties",
+      "flex-grow",
+      "1"
+    ]
   }
-]ken. height tokens are used to create height utility classes that reference spacing custom properties."
-    },
-    "name": "height-4",
-    "attributes": {
-      "category": "sizing",
-      "type": "height",
-      "item": "4"
-    },
-    "path": [
-      "sizing",
-      "height",
-      "4"
-    ]
-  },
-  {
-    "value": "5 * 4",
-    "description": " The 5 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.core.5}",
-      "description": " The 5 height token. height tokens are used to create height utility classes that reference spacing custom properties."
-    },
-    "name": "height-5",
-    "attributes": {
-      "category": "sizing",
-      "type": "height",
-      "item": "5"
-    },
-    "path": [
-      "sizing",
-      "height",
-      "5"
-    ]
-  },
-  {
-    "value": "6 * 4",
-    "description": " The 6 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.core.6}",
-      "description": " The 6 height token. height tokens are used to create height utility classes that reference spacing custom properties."
-    },
-    "name": "height-6",
-    "attributes": {
-      "category": "sizing",
-      "type": "height",
-      "item": "6"
-    },
-    "path": [
-      "sizing",
-      "height",
-      "6"
-    ]
-  },
-  {
-    "value": "7 * 4",
-    "description": " The 7 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.core.7}",
-      "description": " The 7 height token. height tokens are used to create height utility classes that reference spacing custom properties."
-    },
-    "name": "height-7",
-    "attributes": {
-      "category": "sizing",
-      "type": "height",
-      "item": "7"
-    },
-    "path": [
-      "sizing",
-      "height",
-      "7"
-    ]
-  },
-  {
-    "value": "8 * 4",
-    "description": " The 8 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.core.8}",
-      "description": " The 8 height token. height tokens are used to create height utility classes that reference spacing custom properties."
+]      "description": " The 8 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
     "name": "height-8",
     "attributes": {

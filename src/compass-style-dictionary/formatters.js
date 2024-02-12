@@ -73,6 +73,12 @@ export const generateCSSClasses = {
       if (type === 'height') {
         return [type];
       }
+      if (type === 'flex-shrink') {
+        return [type];
+      }
+      if (type === 'flex-grow') {
+        return [type];
+      }
       // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
     };
 

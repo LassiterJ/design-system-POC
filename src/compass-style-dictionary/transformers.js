@@ -22,6 +22,8 @@ const tokenTypeCTINameStart = {
   left: 'type',
   width: 'type',
   height: 'type',
+  'flex-shrink': 'type',
+  'flex-grow': 'type',
 };
 
 const getFormattedCTIListFromStartCTI = (ctiStart, CTIs) => {
