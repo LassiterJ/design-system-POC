@@ -4171,6 +4171,155 @@
       }
     }
   },
+  "sizing": {
+    "type": "sizing",
+    "width": {
+      "0": {
+        "value": "{spacing.core.0}",
+        "description": " The 0 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "1": {
+        "value": "{spacing.core.1}",
+        "description": " The 1 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "2": {
+        "value": "{spacing.core.2}",
+        "description": " The 2 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "3": {
+        "value": "{spacing.core.3}",
+        "description": " The 3 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "4": {
+        "value": "{spacing.core.4}",
+        "description": " The 4 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "5": {
+        "value": "{spacing.core.5}",
+        "description": " The 5 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "6": {
+        "value": "{spacing.core.6}",
+        "description": " The 6 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "7": {
+        "value": "{spacing.core.7}",
+        "description": " The 7 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "8": {
+        "value": "{spacing.core.8}",
+        "description": " The 8 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "9": {
+        "value": "{spacing.core.9}",
+        "description": " The 9 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "10": {
+        "value": "{spacing.core.10}",
+        "description": " The 10 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "11": {
+        "value": "{spacing.core.11}",
+        "description": " The 11 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "12": {
+        "value": "{spacing.core.12}",
+        "description": " The 12 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "14": {
+        "value": "{spacing.core.14}",
+        "description": " The 14 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "16": {
+        "value": "{spacing.core.16}",
+        "description": " The 16 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "20": {
+        "value": "{spacing.core.20}",
+        "description": " The 20 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "24": {
+        "value": "{spacing.core.24}",
+        "description": " The 24 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "28": {
+        "value": "{spacing.core.28}",
+        "description": " The 28 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "32": {
+        "value": "{spacing.core.32}",
+        "description": " The 32 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "36": {
+        "value": "{spacing.core.36}",
+        "description": " The 36 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "40": {
+        "value": "{spacing.core.40}",
+        "description": " The 40 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "44": {
+        "value": "{spacing.core.44}",
+        "description": " The 44 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "48": {
+        "value": "{spacing.core.48}",
+        "description": " The 48 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "52": {
+        "value": "{spacing.core.52}",
+        "description": " The 52 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "60": {
+        "value": "{spacing.core.60}",
+        "description": " The 60 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "64": {
+        "value": "{spacing.core.64}",
+        "description": " The 64 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "72": {
+        "value": "{spacing.core.72}",
+        "description": " The 72 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "80": {
+        "value": "{spacing.core.80}",
+        "description": " The 80 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "96": {
+        "value": "{spacing.core.96}",
+        "description": " The 96 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "max-content": {
+        "value": "{css-properties.width.max-content}",
+        "description": " The max-content width token. Width tokens are used to create width utility classes that reference sizing custom properties."
+      },
+      "min-content": {
+        "value": "{css-properties.width.min-content}",
+        "description": " The min-content width token. Width tokens are used to create width utility classes that reference sizing custom properties."
+      },
+      "auto": {
+        "value": "{spacing.special.auto}",
+        "description": " The auto width token. Width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "px": {
+        "value": "{spacing.core.px}",
+        "description": " The px width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "1,5": {
+        "value": "{spacing.core.1,5}",
+        "description": " The 1,5 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "2,5": {
+        "value": "{spacing.core.2,5}",
+        "description": " The 2,5 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      },
+      "3,5": {
+        "value": "{spacing.core.3,5}",
+        "description": " The 3,5 width token. width tokens are used to create width utility classes that reference spacing custom properties."
+      }
+    }
+  },
   "css-layout-properties": {
     "position": {
       "type": "other",

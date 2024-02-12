@@ -646,6 +646,18 @@
         "value": "sticky",
         "description": "\"sticky\" value used with the css Position property"
       }
+    },
+    "width": {
+      "max-content": {
+        "value": "max-content",
+        "type": "other",
+        "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
+      },
+      "min-content": {
+        "value": "min-content",
+        "type": "other",
+        "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
+      }
     }
   }
 }
