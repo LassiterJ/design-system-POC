@@ -1,12 +1,14 @@
 import StyleDictionary from 'style-dictionary-esm';
 import { writeJSONStringToFile } from '../utilities/js/writeTokensToFile.js';
-const { sortByReference, sortByName } = StyleDictionary.formatHelpers;
+import { customPropertyFormatters } from './tokens/utility/createPropertyFormatter.js';
+const { sortByReference, sortByName, createPropertyFormatter } = StyleDictionary.formatHelpers;
 let count = 0;
 
 export const generateCSSClasses = {
   name: 'custom/css/css-classes',
   formatter: ({ dictionary, options }) => {
     console.log('custom/css/css-classes | options: ', options);
+
     const marginProperties = {
       m: ['margin'],
       mx: ['margin-left', 'margin-right'],
@@ -25,10 +27,20 @@ export const generateCSSClasses = {
       ps: ['padding-left'], // TODO: implement rtl
       pe: ['padding-right'], // TODO: implement rtl
     };
+    // const insetProperties = {
+    //   inset: ['inset'],
+    //   insetx: ['left', 'right'],
+    //   insety: ['top', 'bottom'],
+    //   top: ['top'],
+    //   bottom: ['bottom'],
+    //   left: ['left'], // TODO: implement rtl
+    //   right: ['right'], // TODO: implement rtl
+    // };
 
     const getCSSPropertiesByType = (type, key) => {
+      //TODO: I have settings for various types in various places. I should consolidate them.
       if (!key || !type) {
-        console.log('getPropertiesToApply: key is undefined');
+        console.log('getCSSPropertiesByType: key is undefined');
         return null;
       }
       if (type === 'margin') {
@@ -37,6 +49,25 @@ export const generateCSSClasses = {
       if (type === 'padding') {
         return paddingProperties[key];
       }
+      if (type === 'position') {
+        return [type];
+      }
+      if (type === 'inset') {
+        return [type];
+      }
+      if (type === 'top') {
+        return [type];
+      }
+      if (type === 'right') {
+        return [type];
+      }
+      if (type === 'bottom') {
+        return [type];
+      }
+      if (type === 'left') {
+        return [type];
+      }
+      // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
     };
 
     const validateToken = (token) => {
@@ -50,10 +81,7 @@ export const generateCSSClasses = {
         console.error('validateToken: Token does not have a value', token);
       }
       if (!token.original) {
-        console.error(
-          'validateToken: Token does not have an original object',
-          token
-        );
+        console.error('validateToken: Token does not have an original object', token);
       }
 
       return token;
@@ -61,13 +89,9 @@ export const generateCSSClasses = {
 
     const generateCSSValue = (validatedToken) => {
       // check if token uses a reference
-      const tokenUsesReference = dictionary.usesReference(
-        validatedToken.original.value
-      );
+      const tokenUsesReference = dictionary.usesReference(validatedToken.original.value);
       // if it does, get the references and replace the value with the reference name
-      const references = dictionary.getReferences(
-        validatedToken.original.value
-      );
+      const references = dictionary.getReferences(validatedToken.original.value);
 
       let value = JSON.stringify(validatedToken.value);
       let reference = '';
@@ -85,15 +109,12 @@ export const generateCSSClasses = {
       const formattedValue = !!trailingMath
         ? `calc( var( --${reference} ) ${trailingMath} )`
         : `var( --${reference} )`;
+
       return formattedValue;
     };
 
     // Map through tokens and format them
     const formatToken = (token) => {
-      console.log('formatToken: ', token);
-      // if (count < 4) {
-
-      // }
       // Validate token generate the CSS value
       const validatedToken = validateToken(token);
       const { type, item } = validatedToken.attributes;
@@ -103,48 +124,52 @@ export const generateCSSClasses = {
       const value = generateCSSValue(validatedToken);
       // console.log('item: ', item);
 
-      // Get css properties to apply by token attribute "type"
+      // Get css properties by token attribute "type"
       const applicableProperties = getCSSPropertiesByType(type, item);
+
       const precedingSpace = '   '; // 3 spaces to indent according to the class name
 
       // Format the properties
       const formattedProperties = applicableProperties
-        .map((property) => {
+        ?.map((property) => {
           return `${precedingSpace}${property}: ${value};`;
         })
         .join('\n ');
-
-      // Determine the class name
-      const className = `${validatedToken.name.replace('_', '-')}`
-        .replace('spacing-margin-', '.')
-        .replace('spacing-padding-', '.');
-
+      const { name } = validatedToken;
       // Finally building the class
-      const formattedClass = `${className} { \n ${formattedProperties} \n}`;
+      const formattedClass = `.${name} { \n ${formattedProperties} \n}`;
 
       return formattedClass;
     };
     // Get Tokens
-    const tokenFilter = (token) => {
-      // TODO rename
-      // iterate over the options.includeInOutput object
-      // if token[key] === options.includeInOutput[key] return true
-      // if (!options.includeInOutput) return true;
-      for (const key in options.includeInOutput) {
-        if (!options.includeInOutput[key]) return true;
-        if (token.attributes[key] === options.includeInOutput[key]) {
+    const tokenAttributesFilter = (token) => {
+      const { includeInOutput = undefined } = options;
+
+      if (!includeInOutput) return true;
+
+      for (const key in includeInOutput) {
+        const valueIsArray = Array.isArray(includeInOutput[key]);
+        const isEmptyArray = valueIsArray && includeInOutput[key].length <= 0;
+
+        if (!includeInOutput[key] || isEmptyArray) {
+          return true;
+        }
+        if (valueIsArray) {
+          return includeInOutput[key].includes(token.attributes[key]);
+        }
+        if (token.attributes[key] === includeInOutput[key]) {
           return true;
         }
       }
       return false;
     };
+
     const tokens = dictionary.allTokens
       .sort(sortByReference) // TODO: make a custom sort function so that output is consistent with the core scale tokens
-      .filter(tokenFilter);
+      .filter(tokenAttributesFilter);
 
     try {
-      const fileDirectoryFromRoot =
-        'src/compass-style-dictionary/tokens/utility';
+      const fileDirectoryFromRoot = 'src/compass-style-dictionary/tokens/utility';
       const currentFilePath = process.cwd();
       console.log('currentFilePath: ', currentFilePath);
 

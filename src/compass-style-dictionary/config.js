@@ -34,9 +34,7 @@ export const config = {
           format: 'css/variables',
           filter: (token) => {
             const isAuto = token.attributes.item === 'auto';
-            const isScale = ['core', 'fractional'].includes(
-              token.attributes.type
-            );
+            const isScale = ['core', 'fractional'].includes(token.attributes.type);
             const isNotNumberCategory = token.attributes.category !== 'numbers';
             return (isAuto || isScale) && isNotNumberCategory;
           },
@@ -85,17 +83,29 @@ export const config = {
             includeInOutput: { type: 'padding' },
           },
         },
-        // {
-        //   destination: 'layout.css',
-        //   format: 'custom/css/css-classes',
-        //   /* Filtering throws error because Style Dictionary needs the
-        //    referenced tokens even though they are not included in the output.
-        //    */
-        //   options: {
-        //     outputReferences: true,
-        //     includeInOutput: { type: ['position'] },
-        //   },
-        // },
+        {
+          destination: 'inset.css',
+          format: 'custom/css/css-classes',
+          /* Filtering throws error because Style Dictionary needs the
+           referenced tokens even though they are not included in the output.
+           */
+          options: {
+            outputReferences: true,
+            includeInOutput: { type: ['inset', 'top', 'right', 'bottom', 'left'] },
+          },
+        },
+        {
+          destination: 'layout.css',
+          format: 'custom/css/css-classes',
+          /* Filtering throws error because Style Dictionary needs the
+           referenced tokens even though they are not included in the output.
+           */
+          options: {
+            outputReferences: true,
+            includeInOutput: { category: ['css-layout-properties'] },
+            startNameAtCTI: 'type',
+          },
+        },
       ],
     },
     transformedTokens: {

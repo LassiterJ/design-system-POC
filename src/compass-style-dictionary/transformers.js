@@ -1,9 +1,5 @@
 import StyleDictionary from 'style-dictionary-esm';
-import {
-  registerTransforms,
-  transforms,
-  checkAndEvaluateMath,
-} from '@tokens-studio/sd-transforms';
+import { registerTransforms, transforms, checkAndEvaluateMath } from '@tokens-studio/sd-transforms';
 
 /* Index:
  * Helper Functions
@@ -14,65 +10,63 @@ import {
 
 /* Helper Functions */
 
-// Custom filter generators for specific or partial type matching
-
-/* Custom Transformers */
-let count = 0; //TODO remove this
-
-export const transformCTIAttribute = (token, options) => {
-  const { type, path } = token;
-  // const { prefix } = options;
-  // if (count < 2) {
-  //   console.log('token: ', token);
-  //   count++;
-  // }
-  return token.attributes;
-
-  // const newAttributes = {
-  //   ...token.attributes,
-  //   category: token.attributes.type, // Map 'type' to 'category'
-  //
-  // };
-  // return newAttributes;
+// list of token types and the cti their names should start with;
+const tokenTypeCTINameStart = {
+  position: 'type',
+  padding: 'item',
+  margin: 'item',
+  inset: 'type',
+  top: 'type',
+  right: 'type',
+  bottom: 'type',
+  left: 'type',
 };
 
+const getFormattedCTIListFromStartCTI = (ctiStart, CTIs) => {
+  // TODO: Probably need to split this up into smaller functions if we need to.
+  const CTIKeys = ['category', 'type', 'item', 'subitem', 'state'];
+  const CTIKeysToUseList = CTIKeys.slice(CTIKeys.indexOf(ctiStart));
+  const ctiList = CTIKeysToUseList.map((key) => {
+    const ctiValue = CTIs[key];
+    if (!ctiValue) {
+      return;
+    }
+    const processNegative = ctiValue.startsWith('-') ? `n${ctiValue.substring(1)}` : ctiValue;
+    const formattedCTIValue = processNegative.replace(',', '-');
+
+    return [key, formattedCTIValue];
+  }).filter(Boolean); // List of CTI tuples to use in the name.
+
+  return ctiList;
+};
+
+let count = 0; //TODO remove this
+/* Custom Transformers */
 export const customNamesTransformer = {
   name: 'name/cti/custom-names',
   type: 'name',
   transitive: true,
   transformer: (token, options) => {
-    // TODO: instead of using the path, use the cti attributes to generate the name. Possibly trying to pass options to the transformer to determine what part of the cti should be the name
-    const { name, path } = token;
-    const { category } = token.attributes;
-    const { prefix } = options;
-    // Check for negative values and prepend 'n'
-    const isNegative = name.startsWith('-');
-    const subName = name.substring(1).replace(',', '-');
-    const negName = `n${subName}`;
-    const newName = isNegative ? negName : name.replace(',', '-');
-    const pathToPrepend = path.slice(0, path.length - 1);
-    pathToPrepend.push(newName);
-
-    const finalName = pathToPrepend.join('-');
-    return finalName;
+    // const { name } = token;
+    const exceptionCategories = ['css-properties'];
+    const { category, type, item, subitem, state } = token.attributes;
+    const ctiStart = exceptionCategories.includes(category)
+      ? 'category'
+      : tokenTypeCTINameStart[type] || 'category';
+    const ctiList = getFormattedCTIListFromStartCTI(ctiStart, {
+      // TODO: Might not want all CTIs after start. Might want to filter out some. Ex. "spacing-special-auto" to "spacing-auto". Either rename or filter.
+      category,
+      type,
+      item,
+      subitem,
+      state,
+    });
+    const ctiName = ctiList.map((cti) => cti[1]).join('-');
+    // console.log('ctiName: ', ctiName);
+    return ctiName;
   },
 };
-export const customLayoutNamesTransformer = {
-  name: 'name/cti/custom/layout-names',
-  type: 'name',
-  transitive: true,
-  transformer: (token, options) => {
-    // TODO: instead of using the path, use the cti attributes to generate the name. Possibly trying to pass options to the transformer to determine what part of the cti should be the name
-    const { name } = token;
-    const { type, item } = token.attributes;
-    // Our name will be comprised of the
-    console.log('originalName: ', name);
 
-    const transformedName = `${type}-${item}`;
-    console.log('transformedName: ', transformedName);
-    return transformedName;
-  },
-};
 // Convert pixel values to rem
 // do not convert values that are already in rem, em, %, full, auto
 // do not convert single pixel values
@@ -90,9 +84,7 @@ export const customPxToRemTransformer = {
       path.toString().includes(element)
     );
 
-    const isMatch =
-      whitelistedCategories.includes(attributes?.category) &&
-      !isBlacklistedPath;
+    const isMatch = whitelistedCategories.includes(attributes?.category) && !isBlacklistedPath;
     return isMatch;
   },
   transformer: (token, options) => {
@@ -115,6 +107,11 @@ export const customPxToRemTransformer = {
 
 /* Transform Groups */
 
+export const customCSSClassTransformGroup = {
+  name: 'custom/css/classes',
+  transforms: ['attribute/cti', 'name/cti/custom-names'],
+};
+
 export const customSpacingPropertiesTransformGroup = {
   name: 'custom/css/properties',
   transforms: [
@@ -132,7 +129,7 @@ export const customCSSLayoutPropertiesTransformGroup = {
     // 'ts/descriptionToComment',
     'attribute/cti',
     'size/customPxToRem',
-    'name/cti/custom/layout-names',
+    'name/cti/custom-names',
   ],
   // transforms: [ 'size/customPxToRem'].filter(transform => transform !== 'ts/size/px' && transform !== 'ts/resolveMath')
 };
@@ -167,14 +164,10 @@ export const registerCustomTransforms = () => {
   registerTransforms(StyleDictionary);
   StyleDictionary.registerTransform(customPxToRemTransformer);
   StyleDictionary.registerTransform(customNamesTransformer);
-  StyleDictionary.registerTransform(customLayoutNamesTransformer);
+  // StyleDictionary.registerTransform(customLayoutNamesTransformer);
   StyleDictionary.registerTransformGroup(customSpacingPropertiesTransformGroup);
   StyleDictionary.registerTransformGroup(customTestTransformGroup);
-  StyleDictionary.registerTransformGroup(
-    customCSSLayoutPropertiesTransformGroup
-  );
-  StyleDictionary.registerTransformGroup(
-    customMarginUtilityClassesTransformGroup
-  );
+  StyleDictionary.registerTransformGroup(customCSSLayoutPropertiesTransformGroup);
+  StyleDictionary.registerTransformGroup(customMarginUtilityClassesTransformGroup);
   // StyleDictionary.registerTransformGroup(cssVariablesTransformGroup);
 };
