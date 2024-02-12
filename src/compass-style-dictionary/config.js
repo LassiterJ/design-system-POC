@@ -33,7 +33,7 @@ export const config = {
           destination: 'primitive-spacing-variables.css',
           format: 'css/variables',
           filter: (token) => {
-            const isAuto = token.attributes.item === 'auto';
+            const isAuto = token.attributes.item === 'auto' && token.attributes.type === 'special';
             const isScale = ['core', 'fractional'].includes(token.attributes.type);
             const isNotNumberCategory = token.attributes.category !== 'numbers';
             return (isAuto || isScale) && isNotNumberCategory;
@@ -49,10 +49,7 @@ export const config = {
           destination: 'primitive-layout-variables.css',
           format: 'css/variables',
           filter: (token) => {
-            const isPosition =
-              token.attributes.type === 'position' &&
-              token.attributes.category === 'css-properties';
-            return isPosition;
+            return token.attributes.category === 'css-properties';
           },
         },
       ],
@@ -69,7 +66,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            includeInOutput: { type: 'margin' }, // Uses token.attributes to match tokens to
+            matchAttributes: { type: 'margin' }, // Uses token.attributes to match tokens to
           },
         },
         {
@@ -80,7 +77,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            includeInOutput: { type: 'padding' },
+            matchAttributes: { type: 'padding' },
           },
         },
         {
@@ -91,7 +88,29 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            includeInOutput: { type: ['inset', 'top', 'right', 'bottom', 'left'] },
+            matchAttributes: { type: ['inset', 'top', 'right', 'bottom', 'left'] },
+          },
+        },
+        {
+          destination: 'width.css',
+          format: 'custom/css/css-classes',
+          /* Filtering throws error because Style Dictionary needs the
+           referenced tokens even though they are not included in the output.
+           */
+          options: {
+            outputReferences: true,
+            matchAttributes: { category: ['sizing'], type: ['width'] },
+          },
+        },
+        {
+          destination: 'height.css',
+          format: 'custom/css/css-classes',
+          /* Filtering throws error because Style Dictionary needs the
+           referenced tokens even though they are not included in the output.
+           */
+          options: {
+            outputReferences: true,
+            matchAttributes: { category: ['sizing'], type: ['height'] },
           },
         },
         {
@@ -102,7 +121,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            includeInOutput: { category: ['css-layout-properties'] },
+            matchAttributes: { category: ['css-layout-properties'] },
             startNameAtCTI: 'type',
           },
         },

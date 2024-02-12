@@ -104,688 +104,672 @@
       "sticky"
     ]
   }
-]eate inset utility classes that reference spacing custom properties."
+]ken. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-4",
+    "name": "height-4",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "4"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "4"
     ]
   },
   {
     "value": "5 * 4",
-    "description": " The 5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 5 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.5}",
-      "description": " The 5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 5 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-5",
+    "name": "height-5",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "5"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "5"
     ]
   },
   {
     "value": "6 * 4",
-    "description": " The 6 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 6 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.6}",
-      "description": " The 6 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 6 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-6",
+    "name": "height-6",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "6"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "6"
     ]
   },
   {
     "value": "7 * 4",
-    "description": " The 7 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 7 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.7}",
-      "description": " The 7 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 7 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-7",
+    "name": "height-7",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "7"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "7"
     ]
   },
   {
     "value": "8 * 4",
-    "description": " The 8 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 8 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.8}",
-      "description": " The 8 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 8 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-8",
+    "name": "height-8",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "8"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "8"
     ]
   },
   {
     "value": "9 * 4",
-    "description": " The 9 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 9 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.9}",
-      "description": " The 9 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 9 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-9",
+    "name": "height-9",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "9"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "9"
     ]
   },
   {
     "value": "10 * 4",
-    "description": " The 10 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 10 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.10}",
-      "description": " The 10 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 10 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-10",
+    "name": "height-10",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "10"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "10"
     ]
   },
   {
     "value": "11 * 4",
-    "description": " The 11 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 11 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.11}",
-      "description": " The 11 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 11 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-11",
+    "name": "height-11",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "11"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "11"
     ]
   },
   {
     "value": "12 * 4",
-    "description": " The 12 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 12 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.12}",
-      "description": " The 12 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 12 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-12",
+    "name": "height-12",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "12"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "12"
     ]
   },
   {
     "value": "14 * 4",
-    "description": " The 14 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 14 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.14}",
-      "description": " The 14 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 14 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-14",
+    "name": "height-14",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "14"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "14"
     ]
   },
   {
     "value": "16 * 4",
-    "description": " The 16 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 16 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.16}",
-      "description": " The 16 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 16 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-16",
+    "name": "height-16",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "16"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "16"
     ]
   },
   {
     "value": "20 * 4",
-    "description": " The 20 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 20 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.20}",
-      "description": " The 20 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 20 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-20",
+    "name": "height-20",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "20"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "20"
     ]
   },
   {
     "value": "24 * 4",
-    "description": " The 24 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 24 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.24}",
-      "description": " The 24 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 24 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-24",
+    "name": "height-24",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "24"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "24"
     ]
   },
   {
     "value": "28 * 4",
-    "description": " The 28 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 28 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.28}",
-      "description": " The 28 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 28 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-28",
+    "name": "height-28",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "28"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "28"
     ]
   },
   {
     "value": "32 * 4",
-    "description": " The 32 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 32 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.32}",
-      "description": " The 32 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 32 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-32",
+    "name": "height-32",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "32"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "32"
     ]
   },
   {
     "value": "36 * 4",
-    "description": " The 36 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 36 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.36}",
-      "description": " The 36 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 36 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-36",
+    "name": "height-36",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "36"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "36"
     ]
   },
   {
     "value": "40 * 4",
-    "description": " The 40 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 40 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.40}",
-      "description": " The 40 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 40 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-40",
+    "name": "height-40",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "40"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "40"
     ]
   },
   {
     "value": "44 * 4",
-    "description": " The 44 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 44 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.44}",
-      "description": " The 44 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 44 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-44",
+    "name": "height-44",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "44"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "44"
     ]
   },
   {
     "value": "48 * 4",
-    "description": " The 48 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 48 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.48}",
-      "description": " The 48 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 48 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-48",
+    "name": "height-48",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "48"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "48"
     ]
   },
   {
     "value": "52 * 4",
-    "description": " The 52 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 52 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.52}",
-      "description": " The 52 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 52 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-52",
+    "name": "height-52",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "52"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "52"
     ]
   },
   {
     "value": "60 * 4",
-    "description": " The 60 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 60 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.60}",
-      "description": " The 60 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 60 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-60",
+    "name": "height-60",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "60"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "60"
     ]
   },
   {
     "value": "64 * 4",
-    "description": " The 64 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 64 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.64}",
-      "description": " The 64 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 64 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-64",
+    "name": "height-64",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "64"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "64"
     ]
   },
   {
     "value": "72 * 4",
-    "description": " The 72 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 72 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.72}",
-      "description": " The 72 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 72 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-72",
+    "name": "height-72",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "72"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "72"
     ]
   },
   {
     "value": "80 * 4",
-    "description": " The 80 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 80 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.80}",
-      "description": " The 80 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 80 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-80",
+    "name": "height-80",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "80"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "80"
     ]
   },
   {
     "value": "96 * 4",
-    "description": " The 96 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 96 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.96}",
-      "description": " The 96 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 96 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-96",
+    "name": "height-96",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "96"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "96"
     ]
   },
   {
+    "value": "max-content",
+    "description": " The max-content height token. Height tokens are used to create height utility classes that reference sizing custom properties.",
+    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
+    "isSource": true,
+    "original": {
+      "value": "{css-properties.width-height.max-content}",
+      "description": " The max-content height token. Height tokens are used to create height utility classes that reference sizing custom properties."
+    },
+    "name": "height-max-content",
+    "attributes": {
+      "category": "sizing",
+      "type": "height",
+      "item": "max-content"
+    },
+    "path": [
+      "sizing",
+      "height",
+      "max-content"
+    ]
+  },
+  {
+    "value": "min-content",
+    "description": " The min-content height token. Height tokens are used to create height utility classes that reference sizing custom properties.",
+    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
+    "isSource": true,
+    "original": {
+      "value": "{css-properties.width-height.min-content}",
+      "description": " The min-content height token. Height tokens are used to create height utility classes that reference sizing custom properties."
+    },
+    "name": "height-min-content",
+    "attributes": {
+      "category": "sizing",
+      "type": "height",
+      "item": "min-content"
+    },
+    "path": [
+      "sizing",
+      "height",
+      "min-content"
+    ]
+  },
+  {
     "value": "auto",
-    "description": " The auto inset token. Inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The auto height token. Height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.special.auto}",
-      "description": " The auto inset token. Inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The auto height token. Height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-auto",
+    "name": "height-auto",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "auto"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "auto"
     ]
   },
   {
     "value": "4 / 4",
-    "description": " The px inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The px height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.px}",
-      "description": " The px inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The px height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-px",
+    "name": "height-px",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "px"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "px"
     ]
   },
   {
     "value": "1.5 * 4",
-    "description": " The 1,5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 1,5 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.1,5}",
-      "description": " The 1,5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 1,5 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-1-5",
+    "name": "height-1-5",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "1,5"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "1,5"
     ]
   },
   {
     "value": "2.5 * 4",
-    "description": " The 2,5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 2,5 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.2,5}",
-      "description": " The 2,5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 2,5 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-2-5",
+    "name": "height-2-5",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "2,5"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "2,5"
     ]
   },
   {
     "value": "3.5 * 4",
-    "description": " The 3,5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties.",
+    "description": " The 3,5 height token. height tokens are used to create height utility classes that reference spacing custom properties.",
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
       "value": "{spacing.core.3,5}",
-      "description": " The 3,5 inset token. inset tokens are used to create inset utility classes that reference spacing custom properties."
+      "description": " The 3,5 height token. height tokens are used to create height utility classes that reference spacing custom properties."
     },
-    "name": "inset-3-5",
+    "name": "height-3-5",
     "attributes": {
-      "category": "spacing",
-      "type": "inset",
+      "category": "sizing",
+      "type": "height",
       "item": "3,5"
     },
     "path": [
-      "spacing",
-      "inset",
+      "sizing",
+      "height",
       "3,5"
     ]
-  },
-  {
-    "value": "1/2",
-    "parent": "utility",
-    "description": "\"1/2\" to set \"inset\" to the corresponding fractional spacing value",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.fractional.1_2}",
-      "parent": "utility",
-      "description": "\"1/2\" to set \"inset\" to the corresponding fractional spacing value"
-    },
-    "name": "inset-1_2",
-    "attributes": {
-      "category": "spacing",
-      "type": "inset",
-      "item": "1_2"
-    },
-    "path": [
-      "spacing",
-      "inset",
-      "1_2"
-    ]
-  },
-  {
-    "value": "1/3",
-    "parent": "utility",
-    "description": "\"1/3\" to set \"inset\" to the corresponding fractional spacing value",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.fractional.1_3}",
-      "parent": "utility",
-      "description": "\"1/3\" to set \"inset\" to the corresponding fractional spacing value"
-    },
-    "name": "inset-1_3",
-    "attributes": {
-      "category": "spacing",
-      "type": "inset",
-      "item": "1_3"
-    },
-    "path": [
-      "spacing",
-      "inset",
-      "1_3"
-    ]
-  },
-  {
-    "value": "2/3",
-    "parent": "utility",
-    "description": "\"2/3\" to set \"inset\" to the corresponding fractional spacing value",
-    "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
-    "isSource": true,
-    "original": {
-      "value": "{spacing.fractional.2_3}",
-      "parent": "utility",
-      "description": "\"2/3\" to set \"inset\" to the corresponding fractional spacing value"
-    },
-    "name": "inset-2_3",
-    "attributes": {
+  }
+]   "attributes": {
       "category": "spacing",
       "type": "inset",
       "item": "2_3"

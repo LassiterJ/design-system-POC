@@ -67,6 +67,12 @@ export const generateCSSClasses = {
       if (type === 'left') {
         return [type];
       }
+      if (type === 'width') {
+        return [type];
+      }
+      if (type === 'height') {
+        return [type];
+      }
       // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
     };
 
@@ -143,25 +149,26 @@ export const generateCSSClasses = {
     };
     // Get Tokens
     const tokenAttributesFilter = (token) => {
-      const { includeInOutput = undefined } = options;
+      const { matchAttributes = undefined } = options;
 
-      if (!includeInOutput) return true;
-
-      for (const key in includeInOutput) {
-        const valueIsArray = Array.isArray(includeInOutput[key]);
-        const isEmptyArray = valueIsArray && includeInOutput[key].length <= 0;
-
-        if (!includeInOutput[key] || isEmptyArray) {
-          return true;
+      if (!matchAttributes) return true;
+      let returnValue = false;
+      for (const key in matchAttributes) {
+        const valueIsArray = Array.isArray(matchAttributes[key]);
+        const isEmptyArray = valueIsArray && matchAttributes[key].length <= 0;
+        let tempValue = false;
+        if (!matchAttributes[key] || isEmptyArray) {
+          tempValue = true;
         }
         if (valueIsArray) {
-          return includeInOutput[key].includes(token.attributes[key]);
+          tempValue = matchAttributes[key].includes(token.attributes[key]);
         }
-        if (token.attributes[key] === includeInOutput[key]) {
-          return true;
+        if (token.attributes[key] === matchAttributes[key]) {
+          tempValue = true;
         }
+        returnValue = tempValue;
       }
-      return false;
+      return returnValue;
     };
 
     const tokens = dictionary.allTokens

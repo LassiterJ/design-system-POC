@@ -15,11 +15,13 @@ const tokenTypeCTINameStart = {
   position: 'type',
   padding: 'item',
   margin: 'item',
-  inset: 'type',
+  inset: 'type', // TODO: Consider adding x and y insets
   top: 'type',
   right: 'type',
   bottom: 'type',
   left: 'type',
+  width: 'type',
+  height: 'type',
 };
 
 const getFormattedCTIListFromStartCTI = (ctiStart, CTIs) => {

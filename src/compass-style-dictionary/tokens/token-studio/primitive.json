@@ -647,7 +647,7 @@
         "description": "\"sticky\" value used with the css Position property"
       }
     },
-    "width": {
+    "width-height": {
       "max-content": {
         "value": "max-content",
         "type": "other",
