@@ -1,13 +1,14 @@
 import StyleDictionary from 'style-dictionary-esm';
-import { writeJSONStringToFile } from '../utilities/js/writeTokensToFile.js';
+import { writeJSONStringToFile } from '../utilities/js/fileSystemHelpers.js';
 import { customPropertyFormatters } from './tokens/utility/createPropertyFormatter.js';
-const { sortByReference, sortByName, createPropertyFormatter } = StyleDictionary.formatHelpers;
+const { sortByReference, sortByName, createPropertyFormatter, fileHeader } =
+  StyleDictionary.formatHelpers;
 let count = 0;
 
 export const generateCSSClasses = {
   name: 'custom/css/css-classes',
   formatter: ({ dictionary, options }) => {
-    console.log('custom/css/css-classes | options: ', options);
+    // console.log('custom/css/css-classes | options: ', options);
 
     const marginProperties = {
       m: ['margin'],
@@ -38,7 +39,7 @@ export const generateCSSClasses = {
     // };
 
     const getCSSPropertiesByType = (type, key) => {
-      //TODO: I have settings for various types in various places. I should consolidate them.
+      //TODO: I have configSettings for various types in various places. I should consolidate them.
       if (!key || !type) {
         console.log('getCSSPropertiesByType: key is undefined');
         return null;
@@ -181,25 +182,39 @@ export const generateCSSClasses = {
       .sort(sortByReference) // TODO: make a custom sort function so that output is consistent with the core scale tokens
       .filter(tokenAttributesFilter);
 
-    try {
-      const fileDirectoryFromRoot = 'src/compass-style-dictionary/tokens/utility';
-      const currentFilePath = process.cwd();
-      console.log('currentFilePath: ', currentFilePath);
-
-      writeJSONStringToFile({
-        jsonString: JSON.stringify(tokens, null, 2),
-        fileName: 'marginAndPaddingTokens',
-        path: fileDirectoryFromRoot,
-      });
-    } catch (error) {
-      console.error('Error writing marginTokens to file: ', error);
-    }
-    console.log('tokens.length: ', tokens.length);
+    // try {
+    //   const fileDirectoryFromRoot = 'src/compass-style-dictionary/tokens/utility';
+    //   const currentFilePath = process.cwd();
+    //   console.log('currentFilePath: ', currentFilePath);
+    //
+    //   writeJSONStringToFile({
+    //     jsonString: JSON.stringify(tokens, null, 2),
+    //     fileName: 'marginAndPaddingTokens',
+    //     path: fileDirectoryFromRoot,
+    //   });
+    // } catch (error) {
+    //   console.error('Error writing marginTokens to file: ', error);
+    // }
+    // console.log('tokens.length: ', tokens.length);
     const formattedTokens = tokens.map(formatToken);
     return formattedTokens.join('\n');
   },
 };
 
+export const indexBarrelFormatter = {
+  name: 'custom/css/indexBarrel',
+  formatter: function (options) {
+    const { file } = options;
+    console.log('Object.keys(options): ', Object.keys(options));
+    return `
+			${fileHeader({ file, commentStyle: 'short' })}export * from 'src/compass-style-dictionary/dist/${
+      file.name
+    }';
+		`;
+  },
+};
+
 export const registerCustomFormats = () => {
+  StyleDictionary.registerFormat(indexBarrelFormatter);
   StyleDictionary.registerFormat(generateCSSClasses);
 };

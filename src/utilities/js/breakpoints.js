@@ -33,7 +33,7 @@
 export const withBreakpoints = (
   value, //Responsive<string | boolean> | undefined, // Value to check
   classPrefix = '', // CSS class prefix, e.g. "px" in "px-1" class
-  valueMap = undefined// Record<string, string> // Optionally, an object to map prop values to a different CSS suffix
+  valueMap = undefined // Record<string, string> // Optionally, an object to map prop values to a different CSS suffix
 ) => {
   const classes = [];
   if (typeof value === 'object') {
@@ -42,25 +42,25 @@ export const withBreakpoints = (
         const str = value[bp]?.toString();
         const isNegative = str?.startsWith('-');
         const delimiter = classPrefix === '' ? '' : '-';
-        const prefix = isNegative ? `-${classPrefix}` : classPrefix;
+        const prefix = isNegative ? `n${classPrefix}` : classPrefix;
         const matchedValue = isNegative ? str?.substring(1) : str;
-        
+
         if (matchedValue === undefined) {
           continue;
         }
-        
+
         const suffix = valueMap?.[matchedValue] ?? matchedValue;
-        
+
         const className =
           bp === 'initial'
             ? `${prefix}${delimiter}${suffix}`
             : `${bp}:${prefix}${delimiter}${suffix}`;
-        
+
         classes.push(className);
       }
     }
   }
-  
+
   if (typeof value === 'string') {
     const isNegative = value.startsWith('-');
     const delimiter = classPrefix === '' ? '' : '-';
@@ -69,7 +69,7 @@ export const withBreakpoints = (
     const suffix = valueMap?.[matchedValue] ?? matchedValue;
     classes.push(`${prefix}${delimiter}${suffix}`);
   }
-  
+
   if (typeof value === 'boolean') {
     const delimiter = classPrefix === '' ? '' : '-';
     const matchedValue = value.toString();
@@ -77,9 +77,9 @@ export const withBreakpoints = (
     classes.push(`${classPrefix}${delimiter}${suffix}`);
   }
   // console.log(`withBreakpoints(value:${value},classPrefix:${classPrefix},valueMap:${valueMap}): `, classes.join(' '))
-  console.log("classes: ", classes);
+  console.log('classes: ', classes);
   return classes.join(' ');
-}
+};
 
 // export const  getResponsiveStyles =({
 //                                allowArbitraryValues = true,

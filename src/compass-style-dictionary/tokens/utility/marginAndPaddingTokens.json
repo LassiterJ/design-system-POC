@@ -636,7 +636,7 @@
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
-      "value": "{css-properties.width-height.max-content}",
+      "value": "{css-properties.max-content}",
       "description": " The max-content height token. Height tokens are used to create height utility classes that reference sizing custom properties."
     },
     "name": "height-max-content",
@@ -657,7 +657,7 @@
     "filePath": "./src/compass-style-dictionary/tokens/token-studio/utility.json",
     "isSource": true,
     "original": {
-      "value": "{css-properties.width-height.min-content}",
+      "value": "{css-properties.min-content}",
       "description": " The min-content height token. Height tokens are used to create height utility classes that reference sizing custom properties."
     },
     "name": "height-min-content",
@@ -777,7 +777,8 @@
       "3,5"
     ]
   }
-]   "attributes": {
+]    "name": "inset-2_3",
+    "attributes": {
       "category": "spacing",
       "type": "inset",
       "item": "2_3"

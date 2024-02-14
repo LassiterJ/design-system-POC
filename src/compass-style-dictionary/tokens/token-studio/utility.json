@@ -4291,11 +4291,11 @@
         "description": " The 96 width token. width tokens are used to create width utility classes that reference spacing custom properties."
       },
       "max-content": {
-        "value": "{css-properties.width-height.max-content}",
+        "value": "{css-properties.max-content}",
         "description": " The max-content width token. Width tokens are used to create width utility classes that reference sizing custom properties."
       },
       "min-content": {
-        "value": "{css-properties.width-height.min-content}",
+        "value": "{css-properties.min-content}",
         "description": " The min-content width token. Width tokens are used to create width utility classes that reference sizing custom properties."
       },
       "auto": {
@@ -4437,11 +4437,11 @@
         "description": " The 96 height token. height tokens are used to create height utility classes that reference spacing custom properties."
       },
       "max-content": {
-        "value": "{css-properties.width-height.max-content}",
+        "value": "{css-properties.max-content}",
         "description": " The max-content height token. Height tokens are used to create height utility classes that reference sizing custom properties."
       },
       "min-content": {
-        "value": "{css-properties.width-height.min-content}",
+        "value": "{css-properties.min-content}",
         "description": " The min-content height token. Height tokens are used to create height utility classes that reference sizing custom properties."
       },
       "auto": {

@@ -110,6 +110,10 @@ export const customPxToRemTransformer = {
 };
 
 /* Transform Groups */
+export const customCSSTransformGroup = {
+  name: 'custom/css/standard',
+  transforms: ['attribute/cti', 'name/cti/custom-names'],
+};
 
 export const customCSSClassTransformGroup = {
   name: 'custom/css/classes',
@@ -168,10 +172,9 @@ export const registerCustomTransforms = () => {
   registerTransforms(StyleDictionary);
   StyleDictionary.registerTransform(customPxToRemTransformer);
   StyleDictionary.registerTransform(customNamesTransformer);
-  // StyleDictionary.registerTransform(customLayoutNamesTransformer);
+  StyleDictionary.registerTransformGroup(customCSSTransformGroup);
   StyleDictionary.registerTransformGroup(customSpacingPropertiesTransformGroup);
   StyleDictionary.registerTransformGroup(customTestTransformGroup);
   StyleDictionary.registerTransformGroup(customCSSLayoutPropertiesTransformGroup);
   StyleDictionary.registerTransformGroup(customMarginUtilityClassesTransformGroup);
-  // StyleDictionary.registerTransformGroup(cssVariablesTransformGroup);
 };

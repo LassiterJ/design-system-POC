@@ -647,16 +647,49 @@
         "description": "\"sticky\" value used with the css Position property"
       }
     },
-    "width-height": {
-      "max-content": {
-        "value": "max-content",
-        "type": "other",
-        "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
+    "max-content": {
+      "value": "max-content",
+      "type": "other",
+      "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
+    },
+    "min-content": {
+      "value": "min-content",
+      "type": "other",
+      "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
+    },
+    "type": "other",
+    "display": {
+      "none": {
+        "value": "none",
+        "description": "This value is used to set the CSS display property to 'none'."
       },
-      "min-content": {
-        "value": "min-content",
-        "type": "other",
-        "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
+      "inline": {
+        "value": "inline",
+        "description": "This value is used to set the CSS display property to 'inline'."
+      },
+      "block": {
+        "value": "block",
+        "description": "This value is used to set the CSS display property to 'block'."
+      },
+      "inline-block": {
+        "value": "inline-block",
+        "description": "This value is used to set the CSS display property to 'inline-block'."
+      },
+      "grid": {
+        "value": "grid",
+        "description": "This value is used to set the CSS display property to 'grid'."
+      },
+      "inline-grid": {
+        "value": "inline-grid",
+        "description": "This value is used to set the CSS display property to 'inline-grid'."
+      },
+      "flex": {
+        "value": "flex",
+        "description": "This value is used to set the CSS display property to 'flex'."
+      },
+      "inline-flex": {
+        "value": "inline-flex",
+        "description": "This value is used to set the CSS display property to 'inline-flex'."
       }
     }
   },

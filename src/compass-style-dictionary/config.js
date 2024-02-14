@@ -14,13 +14,13 @@ primitive, semantic, and token categories
 * motion:  tokens for animations and transitions
 * */
 
-// TODO: Implement a way to set these settings. Possibly through design tokens or a configuration file.
-const settings = {
+// TODO: Implement a way to set these configSettings. Possibly through design tokens or a configuration file.
+export const configSettings = {
   designSystemPrefix: 'compass',
   buildPath: './src/compass-style-dictionary/dist/',
   tokensPath: ['./src/compass-style-dictionary/tokens/token-studio/*.json'],
 };
-const { designSystemPrefix, buildPath, tokensPath } = settings;
+const { designSystemPrefix, buildPath, tokensPath } = configSettings;
 
 export const config = {
   source: tokensPath,
@@ -30,7 +30,7 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'primitive-spacing-variables.css',
+          destination: 'primitive-spacing-variables.module.css',
           format: 'css/variables',
           filter: (token) => {
             const isAuto = token.attributes.item === 'auto' && token.attributes.type === 'special';
@@ -46,7 +46,7 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'primitive-misc-variables.css',
+          destination: 'primitive-misc-variables.module.css',
           format: 'css/variables',
           filter: (token) => {
             return (
@@ -62,7 +62,7 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'margin.css',
+          destination: 'margin.module.css',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -73,7 +73,7 @@ export const config = {
           },
         },
         {
-          destination: 'padding.css',
+          destination: 'padding.module.css',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -84,7 +84,7 @@ export const config = {
           },
         },
         {
-          destination: 'inset.css',
+          destination: 'inset.module.css',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -95,7 +95,7 @@ export const config = {
           },
         },
         {
-          destination: 'width.css',
+          destination: 'width.module.css',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -106,7 +106,7 @@ export const config = {
           },
         },
         {
-          destination: 'height.css',
+          destination: 'height.module.css',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -117,7 +117,7 @@ export const config = {
           },
         },
         {
-          destination: 'layout.css',
+          destination: 'layout.module.css',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -125,7 +125,7 @@ export const config = {
           options: {
             outputReferences: true,
             matchAttributes: { category: ['css-layout-properties'] },
-            startNameAtCTI: 'type',
+            // startNameAtCTI: 'type',
           },
         },
       ],
@@ -142,6 +142,11 @@ export const config = {
           },
         },
       ],
+    },
+    indexBarrel: {
+      transformGroup: 'custom/css/standard',
+      buildPath,
+      actions: ['custom/css/generateIndexBarrel'],
     },
   },
 };

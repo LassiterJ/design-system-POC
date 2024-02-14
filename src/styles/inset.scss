@@ -6,7 +6,7 @@ $insetValues: append($coreSpacingScale,$auto,comma);
 
 
 // Generate classes for size values
-// TODO: Need to choose this way or by changing variables across all global style settings.
+// TODO: Need to choose this way or by changing variables across all global style configSettings.
 
 @each $value in $insetValues {
 

@@ -1,7 +1,7 @@
-const   fs = require( 'fs');
+const fs = require('fs');
 // const  { NewTheme as theme2, OldTheme as theme1 } = require( './sampleThemes.js');
-const  path = require( "path");
-const  { open } = require( "fs/promises");
+const path = require('path');
+const { open } = require('fs/promises');
 
 // /* ========== Usage Demo ========== */
 // const __dirnamePage = path.resolve();
@@ -24,20 +24,17 @@ const  { open } = require( "fs/promises");
 // Only updates the theme deeply with the values that have changed. Like what a Virtual DOM does.
 // Allows for updating the theme with new values that are not present in the original theme.
 
-
-
 class ThemeMerger {
   options;
   static readJSONFile(filePath) {
     try {
       const __dirname = path.resolve();
-      console.log("readJSONFile directory", __dirname);
+      console.log('readJSONFile directory', __dirname);
       const fPath = `${__dirname}/${filePath}`;
-      const file = fs.readFileSync(fPath, "utf8");
+      const file = fs.readFileSync(fPath, 'utf8');
       return JSON.parse(file);
-    }
-    catch (error) {
-      console.error("readJSONFile ERROR: ", error);
+    } catch (error) {
+      console.error('readJSONFile ERROR: ', error);
       throw error;
     }
   }
@@ -46,11 +43,11 @@ class ThemeMerger {
       target: {},
       source: [{}],
       createFile: false,
-      outputFormat: "jsonString",
-      newThemeName: "newTheme",
+      outputFormat: 'jsonString',
+      newThemeName: 'newTheme',
     };
     if (!initialOptions) {
-      throw new Error("Initial Options are required");
+      throw new Error('Initial Options are required');
     }
     this.options = this.buildOptions(defaultOptions, initialOptions);
   }
@@ -59,9 +56,8 @@ class ThemeMerger {
       const { target, source, newThemeName } = this.options;
       const newTheme = { ...ThemeMerger.mergeThemes(target, source), name: newThemeName };
       return this.outputNewTheme(newTheme);
-    }
-    catch (error) {
-      console.error("composeNewTheme ERROR: ", error);
+    } catch (error) {
+      console.error('composeNewTheme ERROR: ', error);
       throw error;
     }
   }
@@ -69,9 +65,9 @@ class ThemeMerger {
     // Recursively traverse the sources Array and merge each source into the target
     // Only merge items that have changed or is not present in target
     // if no sources, return target
-    console.log("sources.length ", sources.length);
+    console.log('sources.length ', sources.length);
     if (!sources.length || !this.isObject(target)) {
-      console.log("sources: ", sources);
+      console.log('sources: ', sources);
       return target;
     }
     const source = sources.shift();
@@ -79,10 +75,9 @@ class ThemeMerger {
       return this.mergeThemes(target, ...sources);
     // if source is an Array, map over it and merge each item into the target
     if (Array.isArray(source)) {
-      if (source.length < 1)
-        return this.mergeThemes(target, ...sources);
-      console.count("source is an Array");
-      console.log("source: ", source);
+      if (source.length < 1) return this.mergeThemes(target, ...sources);
+      console.count('source is an Array');
+      console.log('source: ', source);
       return source.map((item, index) => {
         if (this.isObject(item)) {
           return this.mergeThemes(target[index] || {}, item);
@@ -94,8 +89,7 @@ class ThemeMerger {
     for (const key in source) {
       if (this.isObject(source[key])) {
         target[key] = this.mergeThemes(target[key] || {}, source[key]);
-      }
-      else {
+      } else {
         target[key] = source[key];
       }
     }
@@ -103,7 +97,7 @@ class ThemeMerger {
   }
   // private Methods TODO: we may want some of these to be publicly available or moved to Utils file/folder
   static isObject(item) {
-    return item && typeof item === "object"; // && !Array.isArray(item) supporting arrays for extended colors in theme;
+    return item && typeof item === 'object'; // && !Array.isArray(item) supporting arrays for extended colors in theme;
   }
   optionsAreValid(options) {
     //  TODO: add other conditions for options and refine current ones:
@@ -112,47 +106,52 @@ class ThemeMerger {
     // createFile,
     return !(!options?.target || !options?.source);
   }
-  async writeJSONStringToFile(jsonString, path = ".", fileName) {
+  async writeJSONStringToFile(jsonString, path = '.', fileName) {
     const filePath = `${path}/${fileName}.json`;
-    console.log("writeJSONStringToFile filePath: ", filePath);
+    console.log('writeJSONStringToFile filePath: ', filePath);
     const filehandle = await open(`${path}/${fileName}.json`, 'w');
     filehandle?.writeFile(jsonString);
     filehandle?.close();
   }
   jsonToThemeObj(theme) {
     if (!theme) {
-      throw new Error("The input theme is falsy");
+      throw new Error('The input theme is falsy');
     }
     try {
       return JSON.parse(theme);
-    }
-    catch (error) {
+    } catch (error) {
       throw new Error(`Failed to parse the JSON string: ${error.message}`, error);
     }
   }
   buildOptions(defaultOptions, initialOptions) {
     const options = { ...defaultOptions, ...initialOptions };
     if (!this.optionsAreValid(options)) {
-      throw new Error("Input Options are not Valid.");
+      throw new Error('Input Options are not Valid.');
     }
-    const { target, source, createFile, outputFormat, outputPath, outputFileName, ...restOptions } = options;
+    const { target, source, createFile, outputFormat, outputPath, outputFileName, ...restOptions } =
+      options;
     // format target and source as necessary
-    const formattedTarget = ThemeMerger.isObject(options.target) ? options.target : this.jsonToThemeObj(options.target);
-    const formattedSource = ThemeMerger.isObject(options.source) ? options.source : this.jsonToThemeObj(options.source);
-    if (createFile) { // TODO: I don't like assigning to the restOptions object rather than composing a new object.
+    const formattedTarget = ThemeMerger.isObject(options.target)
+      ? options.target
+      : this.jsonToThemeObj(options.target);
+    const formattedSource = ThemeMerger.isObject(options.source)
+      ? options.source
+      : this.jsonToThemeObj(options.source);
+    if (createFile) {
+      // TODO: I don't like assigning to the restOptions object rather than composing a new object.
       Object.assign(restOptions, { createFile, outputPath, outputFileName });
     }
     return { target: formattedTarget, source: formattedSource, ...restOptions };
   }
-  ;
   async outputNewTheme(themeObject) {
     try {
-      const { createFile, outputFormat, outputPath, outputFileName = "newTheme", } = this.options;
+      const { createFile, outputFormat, outputPath, outputFileName = 'newTheme' } = this.options;
       const jsonTheme = JSON.stringify(themeObject, null, 4);
-      const formattedTheme = outputFormat === "jsonString" ? jsonTheme : themeObject;
+      const formattedTheme = outputFormat === 'jsonString' ? jsonTheme : themeObject;
       if (createFile) {
-        console.log("outputNewTheme createFile");
+        console.log('outputNewTheme createFile');
         // delete existing file if it exists TODO: add option to overwrite or append
+
         if (fs.existsSync(`${outputPath}/${outputFileName}.json`)) {
           const filehandle = await open(`${outputPath}/${outputFileName}.json`, 'w');
           const writeFileResponse = await filehandle?.writeFile(jsonTheme);
@@ -160,11 +159,10 @@ class ThemeMerger {
         await this.writeJSONStringToFile(jsonTheme, outputPath, outputFileName);
       }
       return formattedTheme;
-    }
-    catch (error) {
-      console.error("outputNewTheme ERROR: ", error);
+    } catch (error) {
+      console.error('outputNewTheme ERROR: ', error);
       throw error;
     }
   }
 }
-module.exports = {default: ThemeMerger, ThemeMerger};
+module.exports = { default: ThemeMerger, ThemeMerger };
