@@ -1,0 +1,3501 @@
+{
+  "spacing": {
+    "margin": {
+      "m": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      },
+      "mx": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      },
+      "my": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      },
+      "mt": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      },
+      "me": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      },
+      "mb": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      },
+      "ms": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1": {
+          "value": "{spacing.core.1} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2": {
+          "value": "{spacing.core.2} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3": {
+          "value": "{spacing.core.3} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-4": {
+          "value": "{spacing.core.4} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 4 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-5": {
+          "value": "{spacing.core.5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-6": {
+          "value": "{spacing.core.6} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 6 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-7": {
+          "value": "{spacing.core.7} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 7 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-8": {
+          "value": "{spacing.core.8} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 8 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-9": {
+          "value": "{spacing.core.9} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 9 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-10": {
+          "value": "{spacing.core.10} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 10 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-11": {
+          "value": "{spacing.core.11} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 11 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-12": {
+          "value": "{spacing.core.12} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 12 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-14": {
+          "value": "{spacing.core.14} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 14 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-16": {
+          "value": "{spacing.core.16} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 16 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-20": {
+          "value": "{spacing.core.20} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 20 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-24": {
+          "value": "{spacing.core.24} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 24 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-28": {
+          "value": "{spacing.core.28} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 28 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-32": {
+          "value": "{spacing.core.32} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 32 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-36": {
+          "value": "{spacing.core.36} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 36 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-40": {
+          "value": "{spacing.core.40} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 40 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-44": {
+          "value": "{spacing.core.44} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 44 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-48": {
+          "value": "{spacing.core.48} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 48 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-52": {
+          "value": "{spacing.core.52} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 52 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-60": {
+          "value": "{spacing.core.60} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 60 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-64": {
+          "value": "{spacing.core.64} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 64 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-72": {
+          "value": "{spacing.core.72} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 72 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-80": {
+          "value": "{spacing.core.80} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 80 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-96": {
+          "value": "{spacing.core.96} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 96 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-px": {
+          "value": "{spacing.core.px} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of px margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-1,5": {
+          "value": "{spacing.core.1,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 1,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-2,5": {
+          "value": "{spacing.core.2,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 2,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "-3,5": {
+          "value": "{spacing.core.3,5} * -1",
+          "type": "spacing",
+          "description": "The margin token represents the negative value of 3,5 margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        },
+        "auto": {
+          "value": "{auto}",
+          "type": "spacing",
+          "description": " The auto margin token. Margin tokens are used to create margin utility classes that reference spacing custom properties."
+        }
+      }
+    },
+    "padding": {
+      "p": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      },
+      "px": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      },
+      "py": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      },
+      "pt": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      },
+      "pe": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      },
+      "pb": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      },
+      "ps": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "type": "spacing",
+          "description": " The 0 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "type": "spacing",
+          "description": " The 1 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "type": "spacing",
+          "description": " The 2 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "type": "spacing",
+          "description": " The 3 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "type": "spacing",
+          "description": " The 4 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "type": "spacing",
+          "description": " The 5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "type": "spacing",
+          "description": " The 6 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "type": "spacing",
+          "description": " The 7 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "type": "spacing",
+          "description": " The 8 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "type": "spacing",
+          "description": " The 9 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "type": "spacing",
+          "description": " The 10 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "type": "spacing",
+          "description": " The 11 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "type": "spacing",
+          "description": " The 12 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "type": "spacing",
+          "description": " The 14 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "type": "spacing",
+          "description": " The 16 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "type": "spacing",
+          "description": " The 20 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "type": "spacing",
+          "description": " The 24 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "type": "spacing",
+          "description": " The 28 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "type": "spacing",
+          "description": " The 32 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "type": "spacing",
+          "description": " The 36 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "type": "spacing",
+          "description": " The 40 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "type": "spacing",
+          "description": " The 44 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "type": "spacing",
+          "description": " The 48 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "type": "spacing",
+          "description": " The 52 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "type": "spacing",
+          "description": " The 60 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "type": "spacing",
+          "description": " The 64 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "type": "spacing",
+          "description": " The 72 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "type": "spacing",
+          "description": " The 80 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "type": "spacing",
+          "description": " The 96 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "type": "spacing",
+          "description": " The px padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "type": "spacing",
+          "description": " The 1,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "type": "spacing",
+          "description": " The 2,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "type": "spacing",
+          "description": " The 3,5 padding token. padding tokens are used to create padding utility classes that reference spacing custom properties."
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ const config = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
-    '@storybook/addon-mdx-gfm'
+    '@storybook/addon-console',
   ],
   framework: {
     name: '@storybook/react-vite',

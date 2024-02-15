@@ -1,11 +1,11 @@
-
 import classNames from 'classnames';
-import { withBreakpoints} from './breakpoints';
+import { withBreakpoints } from './breakpoints';
 import { mergeStyles } from './mergeStyles';
-import {coreNumbers, fractionalUnits} from './coreNumbers';
+import { coreNumbers, fractionalUnits } from './coreNumbers';
 
 const paddingValues = Object.keys(coreNumbers);
-const fractionalValues = Object.keys(fractionalUnits);
+const fractionalKeys = Object.keys(fractionalUnits);
+const coreKeys = Object.keys(coreNumbers);
 
 const paddingPropDefs = {
   p: { type: 'enum', values: paddingValues, default: undefined, responsive: true },
@@ -29,27 +29,26 @@ export const extractPaddingProps = (props) => {
     ...rest
   } = props;
   return { p, px, py, pt, pe, pb, ps, rest };
-}
+};
 
 export const withPaddingProps = (props) => {
   return [
-    withBreakpoints(props.p, 'compass-p'),
-    withBreakpoints(props.px, 'compass-px'),
-    withBreakpoints(props.py, 'compass-py'),
-    withBreakpoints(props.pt, 'compass-pt'),
-    withBreakpoints(props.pe, 'compass-pe'),
-    withBreakpoints(props.pb, 'compass-pb'),
-    withBreakpoints(props.ps, 'compass-ps'),
+    withBreakpoints(props.p, 'p'),
+    withBreakpoints(props.px, 'px'),
+    withBreakpoints(props.py, 'py'),
+    withBreakpoints(props.pt, 'pt'),
+    withBreakpoints(props.pe, 'pe'),
+    withBreakpoints(props.pb, 'pb'),
+    withBreakpoints(props.ps, 'ps'),
   ]
     .filter(Boolean)
     .join(' ');
-}
+};
 
 const positionValues = ['static', 'relative', 'absolute', 'fixed', 'sticky'];
-const positionEdgeValues = ['auto', ...fractionalValues];
-const widthHeightValues = ['auto', 'min-content', 'max-content', '100%', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-const flexShrinkValues = ['0', '1'];
-const flexGrowValues = ['0', '1'];
+const positionEdgeValues = ['auto', ...fractionalKeys, ...coreKeys];
+const widthHeightValues = ['auto', 'min-content', 'max-content', ...coreKeys];
+const booleanValues = ['false', 'true'];
 
 const layoutPropDefs = {
   ...paddingPropDefs,
@@ -61,8 +60,8 @@ const layoutPropDefs = {
   start: { type: 'enum', values: positionEdgeValues, default: undefined, responsive: true },
   width: { type: 'enum', values: widthHeightValues, default: undefined, responsive: true },
   height: { type: 'enum', values: widthHeightValues, default: undefined, responsive: true },
-  shrink: { type: 'enum', values: flexShrinkValues, default: undefined, responsive: true },
-  grow: { type: 'enum', values: flexGrowValues, default: undefined, responsive: true },
+  shrink: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
+  grow: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
   gridColumn: { type: 'string', default: undefined, responsive: true },
   gridColumnStart: { type: 'string', default: undefined, responsive: true },
   gridColumnEnd: { type: 'string', default: undefined, responsive: true },
@@ -70,7 +69,7 @@ const layoutPropDefs = {
   gridRowStart: { type: 'string', default: undefined, responsive: true },
   gridRowEnd: { type: 'string', default: undefined, responsive: true },
 };
-export const extractLayoutProps = (props) =>{
+export const extractLayoutProps = (props) => {
   const { rest: paddingRest, ...paddingProps } = extractPaddingProps(props);
   const {
     position = layoutPropDefs.position.default,
@@ -111,23 +110,24 @@ export const extractLayoutProps = (props) =>{
     gridRowEnd,
     rest,
   };
-}
+};
 
-export const getLayoutStyles = (props) => { // TODO: I want to say we can skip the "withBreakpoints" function if we use css variables for these values. Gonna try it out
+export const getLayoutStyles = (props) => {
+  // TODO: I want to say we can skip the "withBreakpoints" function if we use css variables for these values. Gonna try it out
   const baseLayoutClassNames = classNames(
     withPaddingProps(props),
-    withBreakpoints(props.position, 'compass-position'),
-    withBreakpoints(props.shrink, 'compass-fs'),
-    withBreakpoints(props.grow, 'compass-fg'),
-    withBreakpoints(props.width, 'compass-w'),
-    withBreakpoints(props.height, 'compass-h'),
-    withBreakpoints(props.inset, 'compass-inset'),
-    withBreakpoints(props.top, 'compass-top'),
-    withBreakpoints(props.right, 'compass-right'),
-    withBreakpoints(props.bottom, 'compass-bottom'),
-    withBreakpoints(props.left, 'compass-left'),
-    withBreakpoints(props.start, 'compass-start'),
-    withBreakpoints(props.end, 'compass-end')
+    withBreakpoints(props.position, 'position'),
+    withBreakpoints(props.shrink, 'flex-shrink'),
+    withBreakpoints(props.grow, 'flex-grow'),
+    withBreakpoints(props.width, 'width'),
+    withBreakpoints(props.height, 'height'),
+    withBreakpoints(props.inset, 'inset'),
+    withBreakpoints(props.top, 'top'),
+    withBreakpoints(props.right, 'right'),
+    withBreakpoints(props.bottom, 'bottom'),
+    withBreakpoints(props.left, 'left'),
+    withBreakpoints(props.start, 'start'),
+    withBreakpoints(props.end, 'end')
   );
   //
   // const [gridColumnClassNames, gridColumnCustomProperties] = getResponsiveStyles({
@@ -165,10 +165,10 @@ export const getLayoutStyles = (props) => { // TODO: I want to say we can skip t
   //   customProperty: '--grid-row-end',
   //   value: props.gridRowEnd,
   // });
-  
+
   return [
     classNames(
-      baseLayoutClassNames,
+      baseLayoutClassNames
       // gridColumnClassNames,
       // gridColumnStartClassNames,
       // gridColumnEndClassNames,
@@ -176,13 +176,12 @@ export const getLayoutStyles = (props) => { // TODO: I want to say we can skip t
       // gridRowStartClassNames,
       // gridRowEndClassNames
     ),
-    mergeStyles(
-      // gridColumnCustomProperties,
-      // gridColumnStartCustomProperties,
-      // gridColumnEndCustomProperties,
-      // gridRowCustomProperties,
-      // gridRowStartCustomProperties,
-      // gridRowEndCustomProperties
-    ),
+    mergeStyles(),
+    // gridColumnCustomProperties,
+    // gridColumnStartCustomProperties,
+    // gridColumnEndCustomProperties,
+    // gridRowCustomProperties,
+    // gridRowStartCustomProperties,
+    // gridRowEndCustomProperties
   ];
-}
+};

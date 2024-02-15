@@ -29,39 +29,76 @@
  * withBreakpoints(justifyContent, 'jc', { 'space-between': 'sb' }) // returns 'jc-start md:jc-sb'
  * ```
  */
-
+/* Helper Functions */
+const handleDecimal = (value) => {
+  if (!value || !value.toString().includes('.')) {
+    return value;
+  }
+  return value.toString().replace('.', '-');
+};
+const handleNegative = (value) => {
+  if (!value || !value.toString().startsWith('-')) {
+    return value;
+  }
+  return `n${value}`;
+};
+const handleFraction = (value) => {
+  if (!value || !value.toString().includes('/')) {
+    return value;
+  }
+  const [numerator, denominator] = value.toString().split('/');
+  return `${numerator}_${denominator}`;
+};
+const formattingFunctions = {
+  handleDecimal,
+  handleNegative,
+  handleFraction,
+};
 export const withBreakpoints = (
   value, //Responsive<string | boolean> | undefined, // Value to check
   classPrefix = '', // CSS class prefix, e.g. "px" in "px-1" class
-  valueMap = undefined// Record<string, string> // Optionally, an object to map prop values to a different CSS suffix
+  valueMap = undefined // Record<string, string> // Optionally, an object to map prop values to a different CSS suffix
 ) => {
   const classes = [];
+
+  const formatValue = (value) => {
+    // using a reduce function, iterate over an object of formatting functions. Each function is called with the value and returns the value. The next function is called with the returned value.
+    const formattedValue = Object.entries(formattingFunctions).reduce(
+      (acc, [key, fn]) => fn(acc),
+      value
+    );
+    return formattedValue;
+  };
   if (typeof value === 'object') {
     for (const bp of Object.keys(value)) {
       if (bp in value) {
+        const testFormattedValue = formatValue(value[bp]);
+        console.log('withBreakpoints | value = object | testFormattedValue: ', testFormattedValue);
         const str = value[bp]?.toString();
         const isNegative = str?.startsWith('-');
         const delimiter = classPrefix === '' ? '' : '-';
-        const prefix = isNegative ? `-${classPrefix}` : classPrefix;
+        const prefix = isNegative ? `n${classPrefix}` : classPrefix;
         const matchedValue = isNegative ? str?.substring(1) : str;
-        
+
         if (matchedValue === undefined) {
           continue;
         }
-        
+
         const suffix = valueMap?.[matchedValue] ?? matchedValue;
-        
+
         const className =
           bp === 'initial'
             ? `${prefix}${delimiter}${suffix}`
             : `${bp}:${prefix}${delimiter}${suffix}`;
-        
+
         classes.push(className);
       }
     }
   }
-  
+
   if (typeof value === 'string') {
+    const testFormattedValue = formatValue(value);
+    console.log('withBreakpoints | value === string | testFormattedValue: ', testFormattedValue);
     const isNegative = value.startsWith('-');
     const delimiter = classPrefix === '' ? '' : '-';
     const prefix = isNegative ? `-${classPrefix}` : classPrefix;
@@ -69,17 +106,18 @@ export const withBreakpoints = (
     const suffix = valueMap?.[matchedValue] ?? matchedValue;
     classes.push(`${prefix}${delimiter}${suffix}`);
   }
-  
+
   if (typeof value === 'boolean') {
+    const testFormattedValue = formatValue(value);
+    console.log('withBreakpoints | value === boolean | testFormattedValue: ', testFormattedValue);
     const delimiter = classPrefix === '' ? '' : '-';
     const matchedValue = value.toString();
     const suffix = valueMap?.[matchedValue] ?? matchedValue;
     classes.push(`${classPrefix}${delimiter}${suffix}`);
   }
   // console.log(`withBreakpoints(value:${value},classPrefix:${classPrefix},valueMap:${valueMap}): `, classes.join(' '))
-  console.log("classes: ", classes);
   return classes.join(' ');
-}
+};
 
 // export const  getResponsiveStyles =({
 //                                allowArbitraryValues = true,

@@ -21,7 +21,7 @@ module.exports = {
   },
 
   settings: {
-    // Add any shared settings for rules here
+    // Add any shared configSettings for rules here
   },
 
   extends: ["plugin:storybook/recommended"]
