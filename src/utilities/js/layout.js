@@ -4,7 +4,8 @@ import { mergeStyles } from './mergeStyles';
 import { coreNumbers, fractionalUnits } from './coreNumbers';
 
 const paddingValues = Object.keys(coreNumbers);
-const fractionalValues = Object.keys(fractionalUnits);
+const fractionalKeys = Object.keys(fractionalUnits);
+const coreKeys = Object.keys(coreNumbers);
 
 const paddingPropDefs = {
   p: { type: 'enum', values: paddingValues, default: undefined, responsive: true },
@@ -45,25 +46,9 @@ export const withPaddingProps = (props) => {
 };
 
 const positionValues = ['static', 'relative', 'absolute', 'fixed', 'sticky'];
-const positionEdgeValues = ['auto', ...fractionalValues];
-const widthHeightValues = [
-  'auto',
-  'min-content',
-  'max-content',
-  '100%',
-  '0',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-];
-const flexShrinkValues = ['0', '1'];
-const flexGrowValues = ['0', '1'];
+const positionEdgeValues = ['auto', ...fractionalKeys, ...coreKeys];
+const widthHeightValues = ['auto', 'min-content', 'max-content', ...coreKeys];
+const booleanValues = ['false', 'true'];
 
 const layoutPropDefs = {
   ...paddingPropDefs,
@@ -75,8 +60,8 @@ const layoutPropDefs = {
   start: { type: 'enum', values: positionEdgeValues, default: undefined, responsive: true },
   width: { type: 'enum', values: widthHeightValues, default: undefined, responsive: true },
   height: { type: 'enum', values: widthHeightValues, default: undefined, responsive: true },
-  shrink: { type: 'enum', values: flexShrinkValues, default: undefined, responsive: true },
-  grow: { type: 'enum', values: flexGrowValues, default: undefined, responsive: true },
+  shrink: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
+  grow: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
   gridColumn: { type: 'string', default: undefined, responsive: true },
   gridColumnStart: { type: 'string', default: undefined, responsive: true },
   gridColumnEnd: { type: 'string', default: undefined, responsive: true },

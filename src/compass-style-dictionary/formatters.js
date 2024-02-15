@@ -38,7 +38,8 @@ export const generateCSSClasses = {
     //   right: ['right'], // TODO: implement rtl
     // };
 
-    const getCSSPropertiesByType = (type, key) => {
+    const getCSSPropertiesByType = (token, key) => {
+      const { type } = token.attributes;
       //TODO: I have configSettings for various types in various places. I should consolidate them.
       if (!key || !type) {
         console.log('getCSSPropertiesByType: key is undefined');
@@ -78,6 +79,9 @@ export const generateCSSClasses = {
         return [type];
       }
       if (type === 'flex-grow') {
+        return [type];
+      }
+      if (type === 'display') {
         return [type];
       }
       // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
@@ -138,7 +142,7 @@ export const generateCSSClasses = {
       // console.log('item: ', item);
 
       // Get css properties by token attribute "type"
-      const applicableProperties = getCSSPropertiesByType(type, item);
+      const applicableProperties = getCSSPropertiesByType(validatedToken, item);
 
       const precedingSpace = '   '; // 3 spaces to indent according to the class name
 
@@ -201,20 +205,45 @@ export const generateCSSClasses = {
   },
 };
 
-export const indexBarrelFormatter = {
-  name: 'custom/css/indexBarrel',
-  formatter: function (options) {
-    const { file } = options;
-    console.log('Object.keys(options): ', Object.keys(options));
-    return `
-			${fileHeader({ file, commentStyle: 'short' })}export * from 'src/compass-style-dictionary/dist/${
-      file.name
-    }';
-		`;
+export const generateJSPrimitiveScales = {
+  name: 'custom/js/primitive-scales',
+  formatter: function (dictionary, options) {
+    const coreObj = {};
+    const fractionalObj = {};
+    dictionary.allTokens.forEach((token) => {
+      const { name, attributes } = token;
+      const { category, type, item } = attributes;
+      if (category !== 'spacing' || !['core', 'fractional'].includes(type)) {
+        console.log('filter not working');
+        return;
+      }
+
+      const obj = type === 'core' ? coreObj : fractionalObj;
+      const formattedName = name.replace('_', '/').replace(',', '.');
+      const key = `${formattedName}`;
+
+      obj[key] = token.value.replace(/['"]+/g, '');
+      console.log('key: ', key);
+      console.log('token:', token);
+    });
+
+    // Convert obj to JS export string
+    const coreScaleExport = `export const primitiveCoreScale = ${JSON.stringify(
+      coreObj,
+      null,
+      2
+    )};`;
+    const fractionalScaleExport = `export const primitiveFractionalScale = ${JSON.stringify(
+      fractionalObj,
+      null,
+      2
+    )};`;
+
+    return `${coreScaleExport}\n\n${fractionalScaleExport}`;
   },
 };
 
 export const registerCustomFormats = () => {
-  StyleDictionary.registerFormat(indexBarrelFormatter);
   StyleDictionary.registerFormat(generateCSSClasses);
+  StyleDictionary.registerFormat(generateJSPrimitiveScales);
 };

@@ -30,7 +30,7 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'primitive-spacing-variables.module.css',
+          destination: 'primitive-spacing-properties.module.css',
           format: 'css/variables',
           filter: (token) => {
             const isAuto = token.attributes.item === 'auto' && token.attributes.type === 'special';
@@ -42,11 +42,11 @@ export const config = {
       ],
     },
     primitiveLayoutCSSProperties: {
-      transformGroup: 'custom/css/layout/properties',
+      transformGroup: 'custom/css/layout-properties',
       buildPath,
       files: [
         {
-          destination: 'primitive-misc-variables.module.css',
+          destination: 'primitive-misc-properties.module.css',
           format: 'css/variables',
           filter: (token) => {
             return (
@@ -131,7 +131,7 @@ export const config = {
       ],
     },
     transformedTokens: {
-      transformGroup: 'custom/transformation/test',
+      transformGroup: 'custom/utility/transformed-tokens',
       buildPath,
       files: [
         {
@@ -143,10 +143,24 @@ export const config = {
         },
       ],
     },
+    js: {
+      transformGroup: 'custom/js/standard',
+      buildPath,
+      files: [
+        {
+          destination: 'primitiveScales.js',
+          format: 'custom/js/primitive-scales',
+          filter: (token) => {
+            const { category, type } = token?.attributes;
+            return category === 'spacing' && ['core', 'fractional'].includes(type);
+          },
+        },
+      ],
+    },
     indexBarrel: {
       transformGroup: 'custom/css/standard',
       buildPath,
-      actions: ['custom/css/generateIndexBarrel'],
+      actions: ['custom/css/index-barrel'],
     },
   },
 };

@@ -4,304 +4,244 @@
     "core": {
       "0": {
         "value": "0",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "1": {
         "value": "1",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "2": {
         "value": "2",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "3": {
         "value": "3",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "4": {
         "value": "4",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "5": {
         "value": "5",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "6": {
         "value": "6",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "7": {
         "value": "7",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "8": {
         "value": "8",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "9": {
         "value": "9",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "10": {
         "value": "10",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "11": {
         "value": "11",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "12": {
         "value": "12",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "14": {
         "value": "14",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "16": {
         "value": "16",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "20": {
         "value": "20",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "24": {
         "value": "24",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "28": {
         "value": "28",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "32": {
         "value": "32",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "36": {
         "value": "36",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "40": {
         "value": "40",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "44": {
         "value": "44",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "48": {
         "value": "48",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "52": {
         "value": "52",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "60": {
         "value": "60",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "64": {
         "value": "64",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "72": {
         "value": "72",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "80": {
         "value": "80",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "96": {
         "value": "96",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "px": {
         "value": "{numbers.baseUnit} / {numbers.baseUnit}",
-        "parent": "primitives",
         "description": "One of out Core Spacing Tokens. This value represents a single pixel and should always equal 1px."
       },
       "1,5": {
         "value": "1.5",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "2,5": {
         "value": "2.5",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       },
       "3,5": {
         "value": "3.5",
-        "parent": "primitives",
         "description": "One of out core numbers. This value is the number that is represented by the key."
       }
     },
     "fractional": {
       "1_2": {
         "value": "1/2",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "1_3": {
         "value": "1/3",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "2_3": {
         "value": "2/3",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "1_4": {
         "value": "1/4",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "2_4": {
         "value": "2/4",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "3_4": {
         "value": "3/4",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "1_5": {
         "value": "1/5",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "2_5": {
         "value": "2/5",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "3_5": {
         "value": "3/5",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "4_5": {
         "value": "4/5",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "1_6": {
         "value": "1/6",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "2_6": {
         "value": "2/6",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "3_6": {
         "value": "3/6",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "4_6": {
         "value": "4/6",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "5_6": {
         "value": "5/6",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "1_12": {
         "value": "1/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "2_12": {
         "value": "2/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "3_12": {
         "value": "3/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "4_12": {
         "value": "4/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "5_12": {
         "value": "5/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "6_12": {
         "value": "6/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "7_12": {
         "value": "7/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "8_12": {
         "value": "8/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "9_12": {
         "value": "9/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "10_12": {
         "value": "10/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "11_12": {
         "value": "11/12",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key."
       },
       "full": {
         "value": "100%",
-        "parent": "primitives",
         "description": "One of out fractional numbers. This value is the number that is represented by the key. 'full' will represent 100%."
       }
     },
@@ -315,304 +255,244 @@
     "core": {
       "0": {
         "value": "{numbers.core.0} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "1": {
         "value": "{numbers.core.1} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "2": {
         "value": "{numbers.core.2} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "3": {
         "value": "{numbers.core.3} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "4": {
         "value": "{numbers.core.4} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "5": {
         "value": "{numbers.core.5} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "6": {
         "value": "{numbers.core.6} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "7": {
         "value": "{numbers.core.7} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "8": {
         "value": "{numbers.core.8} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "9": {
         "value": "{numbers.core.9} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "10": {
         "value": "{numbers.core.10} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "11": {
         "value": "{numbers.core.11} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "12": {
         "value": "{numbers.core.12} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "14": {
         "value": "{numbers.core.14} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "16": {
         "value": "{numbers.core.16} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "20": {
         "value": "{numbers.core.20} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "24": {
         "value": "{numbers.core.24} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "28": {
         "value": "{numbers.core.28} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "32": {
         "value": "{numbers.core.32} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "36": {
         "value": "{numbers.core.36} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "40": {
         "value": "{numbers.core.40} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "44": {
         "value": "{numbers.core.44} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "48": {
         "value": "{numbers.core.48} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "52": {
         "value": "{numbers.core.52} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "60": {
         "value": "{numbers.core.60} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "64": {
         "value": "{numbers.core.64} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "72": {
         "value": "{numbers.core.72} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "80": {
         "value": "{numbers.core.80} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "96": {
         "value": "{numbers.core.96} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "px": {
         "value": "{numbers.baseUnit} / {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value represents a single pixel and should always equal 1px."
       },
       "1,5": {
         "value": "{numbers.core.1,5} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "2,5": {
         "value": "{numbers.core.2,5} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       },
       "3,5": {
         "value": "{numbers.core.3,5} * {numbers.baseUnit}",
-        "parent": "utility",
         "description": "One of out Core Spacing Tokens. This value is in px and is generated from the key and the numbers.baseUnit.\n\nkey * numbers.baseUnit = value"
       }
     },
     "fractional": {
       "1_2": {
         "value": "{numbers.fractional.1_2}",
-        "parent": "utility",
         "description": "\"1/2\" fractional spacing value"
       },
       "1_3": {
         "value": "{numbers.fractional.1_3}",
-        "parent": "utility",
         "description": "\"1/3\" fractional spacing value"
       },
       "2_3": {
         "value": "{numbers.fractional.2_3}",
-        "parent": "utility",
         "description": "\"2/3\" fractional spacing value"
       },
       "1_4": {
         "value": "{numbers.fractional.1_4}",
-        "parent": "utility",
         "description": "\"1/4\" fractional spacing value"
       },
       "2_4": {
         "value": "{numbers.fractional.2_4}",
-        "parent": "utility",
         "description": "\"2/4\" fractional spacing value"
       },
       "3_4": {
         "value": "{numbers.fractional.3_4}",
-        "parent": "utility",
         "description": "\"3/4\" fractional spacing value"
       },
       "1_5": {
         "value": "{numbers.fractional.1_5}",
-        "parent": "utility",
         "description": "\"1/5\" fractional spacing value"
       },
       "2_5": {
         "value": "{numbers.fractional.2_5}",
-        "parent": "utility",
         "description": "\"2/5\" fractional spacing value"
       },
       "3_5": {
         "value": "{numbers.fractional.3_5}",
-        "parent": "utility",
         "description": "\"3/5\" fractional spacing value"
       },
       "4_5": {
         "value": "{numbers.fractional.4_5}",
-        "parent": "utility",
         "description": "\"4/5\" fractional spacing value"
       },
       "1_6": {
         "value": "{numbers.fractional.1_6}",
-        "parent": "utility",
         "description": "\"1/6\" fractional spacing value"
       },
       "2_6": {
         "value": "{numbers.fractional.2_6}",
-        "parent": "utility",
         "description": "\"2/6\" fractional spacing value"
       },
       "3_6": {
         "value": "{numbers.fractional.3_6}",
-        "parent": "utility",
         "description": "\"3/6\" fractional spacing value"
       },
       "4_6": {
         "value": "{numbers.fractional.4_6}",
-        "parent": "utility",
         "description": "\"4/6\" fractional spacing value"
       },
       "5_6": {
         "value": "{numbers.fractional.5_6}",
-        "parent": "utility",
         "description": "\"5/6\" fractional spacing value"
       },
       "1_12": {
         "value": "{numbers.fractional.1_12}",
-        "parent": "utility",
         "description": "\"1/12\" fractional spacing value"
       },
       "2_12": {
         "value": "{numbers.fractional.2_12}",
-        "parent": "utility",
         "description": "\"2/12\" fractional spacing value"
       },
       "3_12": {
         "value": "{numbers.fractional.3_12}",
-        "parent": "utility",
         "description": "\"2/12\" fractional spacing value"
       },
       "4_12": {
         "value": "{numbers.fractional.4_12}",
-        "parent": "utility",
         "description": "\"4/12\" fractional spacing value"
       },
       "5_12": {
         "value": "{numbers.fractional.5_12}",
-        "parent": "utility",
         "description": "\"5/12\" fractional spacing value"
       },
       "6_12": {
         "value": "{numbers.fractional.6_12}",
-        "parent": "utility",
         "description": "\"6/12\" fractional spacing value"
       },
       "7_12": {
         "value": "{numbers.fractional.7_12}",
-        "parent": "utility",
         "description": "\"7/12\" fractional spacing value"
       },
       "8_12": {
         "value": "{numbers.fractional.8_12}",
-        "parent": "utility",
         "description": "\"8/12\" fractional spacing value"
       },
       "9_12": {
         "value": "{numbers.fractional.9_12}",
-        "parent": "utility",
         "description": "\"9/12\" fractional spacing value"
       },
       "10_12": {
         "value": "{numbers.fractional.10_12}",
-        "parent": "utility",
         "description": "\"10/12\" fractional spacing value"
       },
       "11_12": {
         "value": "{numbers.fractional.11_12}",
-        "parent": "utility",
         "description": "\"11/12\" fractional spacing value"
       },
       "full": {
         "value": "{numbers.fractional.full}",
-        "parent": "utility",
         "description": "\"full\" or 100% for fractional spacing value"
       }
     },
@@ -624,8 +504,8 @@
     }
   },
   "css-properties": {
+    "type": "other",
     "position": {
-      "type": "other",
       "static": {
         "value": "static",
         "description": "\"static\" value used with the css Position property"
@@ -649,15 +529,12 @@
     },
     "max-content": {
       "value": "max-content",
-      "type": "other",
       "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
     },
     "min-content": {
       "value": "min-content",
-      "type": "other",
       "description": "The value of this token is to be used to generate utility classes for the \"width\" property"
     },
-    "type": "other",
     "display": {
       "none": {
         "value": "none",
@@ -697,11 +574,11 @@
     "type": "boolean",
     "true": {
       "value": "{numbers.core.1}",
-      "description": "These Boolean token represents true. In code, this value will be 1, meaning true"
+      "description": "Thes Boolean token represents true. In code, this value will be 1, meaning true"
     },
     "false": {
       "value": "{numbers.core.0}",
-      "description": "These Boolean token represents false. In code, this value will be 0, meaning false"
+      "description": "Thes Boolean token represents false. In code, this value will be 0, meaning false"
     }
   }
 }

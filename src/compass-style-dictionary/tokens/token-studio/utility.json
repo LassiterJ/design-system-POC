@@ -4467,8 +4467,8 @@
     }
   },
   "css-layout-properties": {
+    "type": "other",
     "position": {
-      "type": "other",
       "static": {
         "value": "{css-properties.position.static}",
         "description": "\"static\" value used with the css Position property"
@@ -4491,28 +4491,58 @@
       }
     },
     "flex-shrink": {
-      "0": {
+      "false": {
         "value": "{boolean.false}",
-        "type": "other",
         "description": "the ability to shrink when given apace and it's parent is a flex container"
       },
-      "1": {
+      "true": {
         "value": "{boolean.true}",
-        "type": "other",
         "description": "the ability to shrink when given apace and it's parent is a flex container"
       }
     },
     "flex-grow": {
-      "0": {
+      "false": {
         "value": "{boolean.false}",
-        "type": "other",
         "description": "the ability to grow when given apace and it's parent is a flex container"
       },
-      "1": {
+      "true": {
         "value": "{boolean.true}",
-        "type": "other",
         "description": "the ability to grow when given apace and it's parent is a flex container"
       }
+    },
+    "display": {
+      "block": {
+        "value": "{css-properties.display.block}",
+        "description": "Display property used by the layout components. Matches the display css property"
+      },
+      "inline-block": {
+          "value": "{css-properties.display.inline-block}",
+          "description": "Display property used by the layout components. Matches the display css property"
+      },
+      "inline": {
+          "value": "{css-properties.display.inline}",
+          "description": "Display property used by the layout components. Matches the display css property"
+      },
+      "flex": {
+          "value": "{css-properties.display.flex}",
+          "description": "Display property used by the layout components. Matches the display css property"
+      },
+      "inline-flex": {
+        "value": "{css-properties.display.inline-flex}",
+        "description": "Display property used by the layout components. Matches the display css property"
+      },
+        "grid": {
+            "value": "{css-properties.display.grid}",
+            "description": "Display property used by the layout components. Matches the display css property"
+        },
+      "inline-grid": {
+        "value": "{css-properties.display.inline-grid}",
+        "description": "Display property used by the layout components. Matches the display css property"
+      },
+        "none": {
+            "value": "{css-properties.display.none}",
+            "description": "Display property used by the layout components. Matches the display css property"
+        }
     }
   }
 }

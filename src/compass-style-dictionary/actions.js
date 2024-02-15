@@ -4,7 +4,7 @@ import path from 'path';
 
 // Define the custom action
 export const generateIndexBarrelAction = {
-  name: 'custom/css/generateIndexBarrel',
+  name: 'custom/css/index-barrel',
   do: function (dictionary, config) {
     const { buildPath } = config;
     const files = fs.readdirSync(buildPath);
