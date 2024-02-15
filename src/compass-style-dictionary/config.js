@@ -91,7 +91,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            matchAttributes: { type: ['inset', 'top', 'right', 'bottom', 'left'] },
+            matchAttributes: { type: ['inset', 'top', 'end', 'bottom', 'start'] },
           },
         },
         {

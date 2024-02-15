@@ -17,9 +17,9 @@ const tokenTypeCTINameStart = {
   margin: 'item',
   inset: 'type', // TODO: Consider adding x and y insets
   top: 'type',
-  right: 'type',
+  end: 'type',
   bottom: 'type',
-  left: 'type',
+  start: 'type',
   width: 'type',
   height: 'type',
   'flex-shrink': 'type',

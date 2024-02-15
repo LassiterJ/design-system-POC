@@ -60,14 +60,14 @@ export const generateCSSClasses = {
       if (type === 'top') {
         return [type];
       }
-      if (type === 'right') {
-        return [type];
+      if (type === 'end') {
+        return ['right'];
       }
       if (type === 'bottom') {
         return [type];
       }
-      if (type === 'left') {
-        return [type];
+      if (type === 'start') {
+        return ['left'];
       }
       if (type === 'width') {
         return [type];

@@ -23,10 +23,8 @@ const normalizingFunctions = {
   prefixWithDoubleHyphens: (str) => str.replace(/\//g, '--'),
 };
 const normalizeString = (str) => {
-  console.log('normalizeString | str: ', str);
   const normalizers = Object.values(normalizingFunctions);
   const normalizedString = normalizers.reduce((acc, normalizer) => normalizer(acc), str);
-  console.log('normalizedString: ', normalizedString);
   return normalizedString;
 };
 const createMappingObject = (keysArray) => {
@@ -58,7 +56,7 @@ export const layoutArgTypes = {
     options: layoutComponentEnums.top,
     mapping: keyValueMap,
   },
-  right: {
+  end: {
     control: 'select',
     options: layoutComponentEnums.right,
     mapping: keyValueMap,
@@ -68,7 +66,7 @@ export const layoutArgTypes = {
     options: layoutComponentEnums.bottom,
     mapping: keyValueMap,
   },
-  left: {
+  start: {
     control: 'select',
     options: layoutComponentEnums.left,
     mapping: keyValueMap,

@@ -2944,137 +2944,137 @@
       },
       "1_2": {
         "value": "{spacing.fractional.1_2}",
-        "parent": "utility",
+       
         "description": "\"1/2\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "1_3": {
         "value": "{spacing.fractional.1_3}",
-        "parent": "utility",
+       
         "description": "\"1/3\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "2_3": {
         "value": "{spacing.fractional.2_3}",
-        "parent": "utility",
+       
         "description": "\"2/3\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "1_4": {
         "value": "{spacing.fractional.1_4}",
-        "parent": "utility",
+       
         "description": "\"1/4\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "2_4": {
         "value": "{spacing.fractional.2_4}",
-        "parent": "utility",
+       
         "description": "\"2/4\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "3_4": {
         "value": "{spacing.fractional.3_4}",
-        "parent": "utility",
+       
         "description": "\"3/4\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "1_5": {
         "value": "{spacing.fractional.1_5}",
-        "parent": "utility",
+       
         "description": "\"1/5\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "2_5": {
         "value": "{spacing.fractional.2_5}",
-        "parent": "utility",
+       
         "description": "\"2/5\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "3_5": {
         "value": "{spacing.fractional.3_5}",
-        "parent": "utility",
+       
         "description": "\"3/5\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "4_5": {
         "value": "{spacing.fractional.4_5}",
-        "parent": "utility",
+       
         "description": "\"4/5\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "1_6": {
         "value": "{spacing.fractional.1_6}",
-        "parent": "utility",
+       
         "description": "\"1/6\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "2_6": {
         "value": "{spacing.fractional.2_6}",
-        "parent": "utility",
+       
         "description": "\"2/6\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "3_6": {
         "value": "{spacing.fractional.3_6}",
-        "parent": "utility",
+       
         "description": "\"3/6\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "4_6": {
         "value": "{spacing.fractional.4_6}",
-        "parent": "utility",
+       
         "description": "\"4/6\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "5_6": {
         "value": "{spacing.fractional.5_6}",
-        "parent": "utility",
+       
         "description": "\"5/6\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "1_12": {
         "value": "{spacing.fractional.1_12}",
-        "parent": "utility",
+       
         "description": "\"1/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "2_12": {
         "value": "{spacing.fractional.2_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "3_12": {
         "value": "{spacing.fractional.3_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "4_12": {
         "value": "{spacing.fractional.4_12}",
-        "parent": "utility",
+       
         "description": "\"4/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "5_12": {
         "value": "{spacing.fractional.5_12}",
-        "parent": "utility",
+       
         "description": "\"5/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "6_12": {
         "value": "{spacing.fractional.6_12}",
-        "parent": "utility",
+       
         "description": "\"6/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "7_12": {
         "value": "{spacing.fractional.7_12}",
-        "parent": "utility",
+       
         "description": "\"7/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "8_12": {
         "value": "{spacing.fractional.8_12}",
-        "parent": "utility",
+       
         "description": "\"8/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "9_12": {
         "value": "{spacing.fractional.9_12}",
-        "parent": "utility",
+       
         "description": "\"9/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "10_12": {
         "value": "{spacing.fractional.10_12}",
-        "parent": "utility",
+       
         "description": "\"10/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "11_12": {
         "value": "{spacing.fractional.11_12}",
-        "parent": "utility",
+       
         "description": "\"11/12\" to set \"inset\" to the corresponding fractional spacing value"
       },
       "full": {
         "value": "{spacing.fractional.full}",
-        "parent": "utility",
+       
         "description": "\"full\" or 100% for to set \"inset\" to the corresponding fractional spacing value"
       }
     },
@@ -3217,141 +3217,141 @@
       },
       "1_2": {
         "value": "{spacing.fractional.1_2}",
-        "parent": "utility",
+       
         "description": "\"1/2\" to set \"top\" to the corresponding fractional spacing value"
       },
       "1_3": {
         "value": "{spacing.fractional.1_3}",
-        "parent": "utility",
+       
         "description": "\"1/3\" to set \"top\" to the corresponding fractional spacing value"
       },
       "2_3": {
         "value": "{spacing.fractional.2_3}",
-        "parent": "utility",
+       
         "description": "\"2/3\" to set \"top\" to the corresponding fractional spacing value"
       },
       "1_4": {
         "value": "{spacing.fractional.1_4}",
-        "parent": "utility",
+       
         "description": "\"1/4\" to set \"top\" to the corresponding fractional spacing value"
       },
       "2_4": {
         "value": "{spacing.fractional.2_4}",
-        "parent": "utility",
+       
         "description": "\"2/4\" to set \"top\" to the corresponding fractional spacing value"
       },
       "3_4": {
         "value": "{spacing.fractional.3_4}",
-        "parent": "utility",
+       
         "description": "\"3/4\" to set \"top\" to the corresponding fractional spacing value"
       },
       "1_5": {
         "value": "{spacing.fractional.1_5}",
-        "parent": "utility",
+       
         "description": "\"1/5\" to set \"top\" to the corresponding fractional spacing value"
       },
       "2_5": {
         "value": "{spacing.fractional.2_5}",
-        "parent": "utility",
+       
         "description": "\"2/5\" to set \"top\" to the corresponding fractional spacing value"
       },
       "3_5": {
         "value": "{spacing.fractional.3_5}",
-        "parent": "utility",
+       
         "description": "\"3/5\" to set \"top\" to the corresponding fractional spacing value"
       },
       "4_5": {
         "value": "{spacing.fractional.4_5}",
-        "parent": "utility",
+       
         "description": "\"4/5\" to set \"top\" to the corresponding fractional spacing value"
       },
       "1_6": {
         "value": "{spacing.fractional.1_6}",
-        "parent": "utility",
+       
         "description": "\"1/6\" to set \"top\" to the corresponding fractional spacing value"
       },
       "2_6": {
         "value": "{spacing.fractional.2_6}",
-        "parent": "utility",
+       
         "description": "\"2/6\" to set \"top\" to the corresponding fractional spacing value"
       },
       "3_6": {
         "value": "{spacing.fractional.3_6}",
-        "parent": "utility",
+       
         "description": "\"3/6\" to set \"top\" to the corresponding fractional spacing value"
       },
       "4_6": {
         "value": "{spacing.fractional.4_6}",
-        "parent": "utility",
+       
         "description": "\"4/6\" to set \"top\" to the corresponding fractional spacing value"
       },
       "5_6": {
         "value": "{spacing.fractional.5_6}",
-        "parent": "utility",
+       
         "description": "\"5/6\" to set \"top\" to the corresponding fractional spacing value"
       },
       "1_12": {
         "value": "{spacing.fractional.1_12}",
-        "parent": "utility",
+       
         "description": "\"1/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "2_12": {
         "value": "{spacing.fractional.2_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "3_12": {
         "value": "{spacing.fractional.3_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "4_12": {
         "value": "{spacing.fractional.4_12}",
-        "parent": "utility",
+       
         "description": "\"4/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "5_12": {
         "value": "{spacing.fractional.5_12}",
-        "parent": "utility",
+       
         "description": "\"5/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "6_12": {
         "value": "{spacing.fractional.6_12}",
-        "parent": "utility",
+       
         "description": "\"6/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "7_12": {
         "value": "{spacing.fractional.7_12}",
-        "parent": "utility",
+       
         "description": "\"7/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "8_12": {
         "value": "{spacing.fractional.8_12}",
-        "parent": "utility",
+       
         "description": "\"8/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "9_12": {
         "value": "{spacing.fractional.9_12}",
-        "parent": "utility",
+       
         "description": "\"9/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "10_12": {
         "value": "{spacing.fractional.10_12}",
-        "parent": "utility",
+       
         "description": "\"10/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "11_12": {
         "value": "{spacing.fractional.11_12}",
-        "parent": "utility",
+       
         "description": "\"11/12\" to set \"top\" to the corresponding fractional spacing value"
       },
       "full": {
         "value": "{spacing.fractional.full}",
-        "parent": "utility",
+       
         "description": "\"full\" or 100% for to set \"top\" to the corresponding fractional spacing value"
       }
     },
-    "right": {
+    "end": {
       "0": {
         "value": "{spacing.core.0}",
         "description": " The 0 right token. right tokens are used to create right utility classes that reference spacing custom properties."
@@ -3490,137 +3490,137 @@
       },
       "1_2": {
         "value": "{spacing.fractional.1_2}",
-        "parent": "utility",
+       
         "description": "\"1/2\" to set \"right\" to the corresponding fractional spacing value"
       },
       "1_3": {
         "value": "{spacing.fractional.1_3}",
-        "parent": "utility",
+       
         "description": "\"1/3\" to set \"right\" to the corresponding fractional spacing value"
       },
       "2_3": {
         "value": "{spacing.fractional.2_3}",
-        "parent": "utility",
+       
         "description": "\"2/3\" to set \"right\" to the corresponding fractional spacing value"
       },
       "1_4": {
         "value": "{spacing.fractional.1_4}",
-        "parent": "utility",
+       
         "description": "\"1/4\" to set \"right\" to the corresponding fractional spacing value"
       },
       "2_4": {
         "value": "{spacing.fractional.2_4}",
-        "parent": "utility",
+       
         "description": "\"2/4\" to set \"right\" to the corresponding fractional spacing value"
       },
       "3_4": {
         "value": "{spacing.fractional.3_4}",
-        "parent": "utility",
+       
         "description": "\"3/4\" to set \"right\" to the corresponding fractional spacing value"
       },
       "1_5": {
         "value": "{spacing.fractional.1_5}",
-        "parent": "utility",
+       
         "description": "\"1/5\" to set \"right\" to the corresponding fractional spacing value"
       },
       "2_5": {
         "value": "{spacing.fractional.2_5}",
-        "parent": "utility",
+       
         "description": "\"2/5\" to set \"right\" to the corresponding fractional spacing value"
       },
       "3_5": {
         "value": "{spacing.fractional.3_5}",
-        "parent": "utility",
+       
         "description": "\"3/5\" to set \"right\" to the corresponding fractional spacing value"
       },
       "4_5": {
         "value": "{spacing.fractional.4_5}",
-        "parent": "utility",
+       
         "description": "\"4/5\" to set \"right\" to the corresponding fractional spacing value"
       },
       "1_6": {
         "value": "{spacing.fractional.1_6}",
-        "parent": "utility",
+       
         "description": "\"1/6\" to set \"right\" to the corresponding fractional spacing value"
       },
       "2_6": {
         "value": "{spacing.fractional.2_6}",
-        "parent": "utility",
+       
         "description": "\"2/6\" to set \"right\" to the corresponding fractional spacing value"
       },
       "3_6": {
         "value": "{spacing.fractional.3_6}",
-        "parent": "utility",
+       
         "description": "\"3/6\" to set \"right\" to the corresponding fractional spacing value"
       },
       "4_6": {
         "value": "{spacing.fractional.4_6}",
-        "parent": "utility",
+       
         "description": "\"4/6\" to set \"right\" to the corresponding fractional spacing value"
       },
       "5_6": {
         "value": "{spacing.fractional.5_6}",
-        "parent": "utility",
+       
         "description": "\"5/6\" to set \"right\" to the corresponding fractional spacing value"
       },
       "1_12": {
         "value": "{spacing.fractional.1_12}",
-        "parent": "utility",
+       
         "description": "\"1/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "2_12": {
         "value": "{spacing.fractional.2_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "3_12": {
         "value": "{spacing.fractional.3_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "4_12": {
         "value": "{spacing.fractional.4_12}",
-        "parent": "utility",
+       
         "description": "\"4/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "5_12": {
         "value": "{spacing.fractional.5_12}",
-        "parent": "utility",
+       
         "description": "\"5/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "6_12": {
         "value": "{spacing.fractional.6_12}",
-        "parent": "utility",
+       
         "description": "\"6/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "7_12": {
         "value": "{spacing.fractional.7_12}",
-        "parent": "utility",
+       
         "description": "\"7/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "8_12": {
         "value": "{spacing.fractional.8_12}",
-        "parent": "utility",
+       
         "description": "\"8/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "9_12": {
         "value": "{spacing.fractional.9_12}",
-        "parent": "utility",
+       
         "description": "\"9/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "10_12": {
         "value": "{spacing.fractional.10_12}",
-        "parent": "utility",
+       
         "description": "\"10/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "11_12": {
         "value": "{spacing.fractional.11_12}",
-        "parent": "utility",
+       
         "description": "\"11/12\" to set \"right\" to the corresponding fractional spacing value"
       },
       "full": {
         "value": "{spacing.fractional.full}",
-        "parent": "utility",
+       
         "description": "\"full\" or 100% for to set \"right\" to the corresponding fractional spacing value"
       }
     },
@@ -3763,141 +3763,141 @@
       },
       "1_2": {
         "value": "{spacing.fractional.1_2}",
-        "parent": "utility",
+       
         "description": "\"1/2\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "1_3": {
         "value": "{spacing.fractional.1_3}",
-        "parent": "utility",
+       
         "description": "\"1/3\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "2_3": {
         "value": "{spacing.fractional.2_3}",
-        "parent": "utility",
+       
         "description": "\"2/3\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "1_4": {
         "value": "{spacing.fractional.1_4}",
-        "parent": "utility",
+       
         "description": "\"1/4\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "2_4": {
         "value": "{spacing.fractional.2_4}",
-        "parent": "utility",
+       
         "description": "\"2/4\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "3_4": {
         "value": "{spacing.fractional.3_4}",
-        "parent": "utility",
+       
         "description": "\"3/4\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "1_5": {
         "value": "{spacing.fractional.1_5}",
-        "parent": "utility",
+       
         "description": "\"1/5\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "2_5": {
         "value": "{spacing.fractional.2_5}",
-        "parent": "utility",
+       
         "description": "\"2/5\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "3_5": {
         "value": "{spacing.fractional.3_5}",
-        "parent": "utility",
+       
         "description": "\"3/5\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "4_5": {
         "value": "{spacing.fractional.4_5}",
-        "parent": "utility",
+       
         "description": "\"4/5\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "1_6": {
         "value": "{spacing.fractional.1_6}",
-        "parent": "utility",
+       
         "description": "\"1/6\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "2_6": {
         "value": "{spacing.fractional.2_6}",
-        "parent": "utility",
+       
         "description": "\"2/6\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "3_6": {
         "value": "{spacing.fractional.3_6}",
-        "parent": "utility",
+       
         "description": "\"3/6\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "4_6": {
         "value": "{spacing.fractional.4_6}",
-        "parent": "utility",
+       
         "description": "\"4/6\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "5_6": {
         "value": "{spacing.fractional.5_6}",
-        "parent": "utility",
+       
         "description": "\"5/6\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "1_12": {
         "value": "{spacing.fractional.1_12}",
-        "parent": "utility",
+       
         "description": "\"1/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "2_12": {
         "value": "{spacing.fractional.2_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "3_12": {
         "value": "{spacing.fractional.3_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "4_12": {
         "value": "{spacing.fractional.4_12}",
-        "parent": "utility",
+       
         "description": "\"4/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "5_12": {
         "value": "{spacing.fractional.5_12}",
-        "parent": "utility",
+       
         "description": "\"5/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "6_12": {
         "value": "{spacing.fractional.6_12}",
-        "parent": "utility",
+       
         "description": "\"6/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "7_12": {
         "value": "{spacing.fractional.7_12}",
-        "parent": "utility",
+       
         "description": "\"7/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "8_12": {
         "value": "{spacing.fractional.8_12}",
-        "parent": "utility",
+       
         "description": "\"8/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "9_12": {
         "value": "{spacing.fractional.9_12}",
-        "parent": "utility",
+       
         "description": "\"9/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "10_12": {
         "value": "{spacing.fractional.10_12}",
-        "parent": "utility",
+       
         "description": "\"10/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "11_12": {
         "value": "{spacing.fractional.11_12}",
-        "parent": "utility",
+       
         "description": "\"11/12\" to set \"bottom\" to the corresponding fractional spacing value"
       },
       "full": {
         "value": "{spacing.fractional.full}",
-        "parent": "utility",
+       
         "description": "\"full\" or 100% for to set \"bottom\" to the corresponding fractional spacing value"
       }
     },
-    "left": {
+    "start": {
       "0": {
         "value": "{spacing.core.0}",
         "description": " The 0 left token. left tokens are used to create left utility classes that reference spacing custom properties."
@@ -4036,137 +4036,137 @@
       },
       "1_2": {
         "value": "{spacing.fractional.1_2}",
-        "parent": "utility",
+       
         "description": "\"1/2\" to set \"left\" to the corresponding fractional spacing value"
       },
       "1_3": {
         "value": "{spacing.fractional.1_3}",
-        "parent": "utility",
+       
         "description": "\"1/3\" to set \"left\" to the corresponding fractional spacing value"
       },
       "2_3": {
         "value": "{spacing.fractional.2_3}",
-        "parent": "utility",
+       
         "description": "\"2/3\" to set \"left\" to the corresponding fractional spacing value"
       },
       "1_4": {
         "value": "{spacing.fractional.1_4}",
-        "parent": "utility",
+       
         "description": "\"1/4\" to set \"left\" to the corresponding fractional spacing value"
       },
       "2_4": {
         "value": "{spacing.fractional.2_4}",
-        "parent": "utility",
+       
         "description": "\"2/4\" to set \"left\" to the corresponding fractional spacing value"
       },
       "3_4": {
         "value": "{spacing.fractional.3_4}",
-        "parent": "utility",
+       
         "description": "\"3/4\" to set \"left\" to the corresponding fractional spacing value"
       },
       "1_5": {
         "value": "{spacing.fractional.1_5}",
-        "parent": "utility",
+       
         "description": "\"1/5\" to set \"left\" to the corresponding fractional spacing value"
       },
       "2_5": {
         "value": "{spacing.fractional.2_5}",
-        "parent": "utility",
+       
         "description": "\"2/5\" to set \"left\" to the corresponding fractional spacing value"
       },
       "3_5": {
         "value": "{spacing.fractional.3_5}",
-        "parent": "utility",
+       
         "description": "\"3/5\" to set \"left\" to the corresponding fractional spacing value"
       },
       "4_5": {
         "value": "{spacing.fractional.4_5}",
-        "parent": "utility",
+       
         "description": "\"4/5\" to set \"left\" to the corresponding fractional spacing value"
       },
       "1_6": {
         "value": "{spacing.fractional.1_6}",
-        "parent": "utility",
+       
         "description": "\"1/6\" to set \"left\" to the corresponding fractional spacing value"
       },
       "2_6": {
         "value": "{spacing.fractional.2_6}",
-        "parent": "utility",
+       
         "description": "\"2/6\" to set \"left\" to the corresponding fractional spacing value"
       },
       "3_6": {
         "value": "{spacing.fractional.3_6}",
-        "parent": "utility",
+       
         "description": "\"3/6\" to set \"left\" to the corresponding fractional spacing value"
       },
       "4_6": {
         "value": "{spacing.fractional.4_6}",
-        "parent": "utility",
+       
         "description": "\"4/6\" to set \"left\" to the corresponding fractional spacing value"
       },
       "5_6": {
         "value": "{spacing.fractional.5_6}",
-        "parent": "utility",
+       
         "description": "\"5/6\" to set \"left\" to the corresponding fractional spacing value"
       },
       "1_12": {
         "value": "{spacing.fractional.1_12}",
-        "parent": "utility",
+       
         "description": "\"1/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "2_12": {
         "value": "{spacing.fractional.2_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "3_12": {
         "value": "{spacing.fractional.3_12}",
-        "parent": "utility",
+       
         "description": "\"2/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "4_12": {
         "value": "{spacing.fractional.4_12}",
-        "parent": "utility",
+       
         "description": "\"4/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "5_12": {
         "value": "{spacing.fractional.5_12}",
-        "parent": "utility",
+       
         "description": "\"5/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "6_12": {
         "value": "{spacing.fractional.6_12}",
-        "parent": "utility",
+       
         "description": "\"6/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "7_12": {
         "value": "{spacing.fractional.7_12}",
-        "parent": "utility",
+       
         "description": "\"7/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "8_12": {
         "value": "{spacing.fractional.8_12}",
-        "parent": "utility",
+       
         "description": "\"8/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "9_12": {
         "value": "{spacing.fractional.9_12}",
-        "parent": "utility",
+       
         "description": "\"9/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "10_12": {
         "value": "{spacing.fractional.10_12}",
-        "parent": "utility",
+       
         "description": "\"10/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "11_12": {
         "value": "{spacing.fractional.11_12}",
-        "parent": "utility",
+       
         "description": "\"11/12\" to set \"left\" to the corresponding fractional spacing value"
       },
       "full": {
         "value": "{spacing.fractional.full}",
-        "parent": "utility",
+       
         "description": "\"full\" or 100% for to set \"left\" to the corresponding fractional spacing value"
       }
     }
@@ -4516,33 +4516,33 @@
         "description": "Display property used by the layout components. Matches the display css property"
       },
       "inline-block": {
-          "value": "{css-properties.display.inline-block}",
-          "description": "Display property used by the layout components. Matches the display css property"
+        "value": "{css-properties.display.inline-block}",
+        "description": "Display property used by the layout components. Matches the display css property"
       },
       "inline": {
-          "value": "{css-properties.display.inline}",
-          "description": "Display property used by the layout components. Matches the display css property"
+        "value": "{css-properties.display.inline}",
+        "description": "Display property used by the layout components. Matches the display css property"
       },
       "flex": {
-          "value": "{css-properties.display.flex}",
-          "description": "Display property used by the layout components. Matches the display css property"
+        "value": "{css-properties.display.flex}",
+        "description": "Display property used by the layout components. Matches the display css property"
       },
       "inline-flex": {
         "value": "{css-properties.display.inline-flex}",
         "description": "Display property used by the layout components. Matches the display css property"
       },
-        "grid": {
-            "value": "{css-properties.display.grid}",
-            "description": "Display property used by the layout components. Matches the display css property"
-        },
+      "grid": {
+        "value": "{css-properties.display.grid}",
+        "description": "Display property used by the layout components. Matches the display css property"
+      },
       "inline-grid": {
         "value": "{css-properties.display.inline-grid}",
         "description": "Display property used by the layout components. Matches the display css property"
       },
-        "none": {
-            "value": "{css-properties.display.none}",
-            "description": "Display property used by the layout components. Matches the display css property"
-        }
+      "none": {
+        "value": "{css-properties.display.none}",
+        "description": "Display property used by the layout components. Matches the display css property"
+      }
     }
   }
 }
