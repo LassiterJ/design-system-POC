@@ -73,7 +73,7 @@ export const withBreakpoints = (
     for (const bp of Object.keys(value)) {
       if (bp in value) {
         const testFormattedValue = formatValue(value[bp]);
-        console.log('withBreakpoints | value = object | testFormattedValue: ', testFormattedValue);
+        // console.log('withBreakpoints | value = object | testFormattedValue: ', testFormattedValue);
         const str = value[bp]?.toString();
         const isNegative = str?.startsWith('-');
         const delimiter = classPrefix === '' ? '' : '-';
@@ -98,7 +98,7 @@ export const withBreakpoints = (
 
   if (typeof value === 'string') {
     const testFormattedValue = formatValue(value);
-    console.log('withBreakpoints | value === string | testFormattedValue: ', testFormattedValue);
+    // console.log('withBreakpoints | value === string | testFormattedValue: ', testFormattedValue);
     const isNegative = value.startsWith('-');
     const delimiter = classPrefix === '' ? '' : '-';
     const prefix = isNegative ? `-${classPrefix}` : classPrefix;
@@ -109,7 +109,7 @@ export const withBreakpoints = (
 
   if (typeof value === 'boolean') {
     const testFormattedValue = formatValue(value);
-    console.log('withBreakpoints | value === boolean | testFormattedValue: ', testFormattedValue);
+    // console.log('withBreakpoints | value === boolean | testFormattedValue: ', testFormattedValue);
     const delimiter = classPrefix === '' ? '' : '-';
     const matchedValue = value.toString();
     const suffix = valueMap?.[matchedValue] ?? matchedValue;

@@ -4,8 +4,6 @@
 
 export const getCurrentWindowClass = () => {
   const rootStyle = getComputedStyle(document.documentElement);
-  const breakpoint = rootStyle.getPropertyValue('--current-breakpoint').trim();
-  return breakpoint;
+  const windowClass = rootStyle.getPropertyValue('--current-breakpoint').trim();
+  return windowClass;
 };
-
-

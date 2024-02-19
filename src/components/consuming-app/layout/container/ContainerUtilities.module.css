@@ -1,0 +1,111 @@
+.container-size-1 { 
+ max-width: 28rem; 
+}
+.container-size-2 { 
+ max-width: 43rem; 
+}
+.container-size-3 { 
+ max-width: 55rem; 
+}
+.container-size-4 { 
+ max-width: 71rem; 
+}
+.container-size-5 { 
+ max-width: 84rem; 
+}
+.container-size-6 { 
+ max-width: 90rem; 
+}
+.container-size-7 { 
+ max-width: 100rem; 
+}
+.container-size-8 { 
+ max-width: 120rem; 
+}
+.container-size-9 { 
+ max-width: 160rem; 
+}
+.container-size-10 { 
+ max-width: 180rem; 
+}
+.container-size-1_2 { 
+ max-width: var( --spacing-fractional-1_2 ); 
+}
+.container-size-1_3 { 
+ max-width: var( --spacing-fractional-1_3 ); 
+}
+.container-size-2_3 { 
+ max-width: var( --spacing-fractional-2_3 ); 
+}
+.container-size-1_4 { 
+ max-width: var( --spacing-fractional-1_4 ); 
+}
+.container-size-2_4 { 
+ max-width: var( --spacing-fractional-2_4 ); 
+}
+.container-size-3_4 { 
+ max-width: var( --spacing-fractional-3_4 ); 
+}
+.container-size-1_5 { 
+ max-width: var( --spacing-fractional-1_5 ); 
+}
+.container-size-2_5 { 
+ max-width: var( --spacing-fractional-2_5 ); 
+}
+.container-size-3_5 { 
+ max-width: var( --spacing-fractional-3_5 ); 
+}
+.container-size-4_5 { 
+ max-width: var( --spacing-fractional-4_5 ); 
+}
+.container-size-1_6 { 
+ max-width: var( --spacing-fractional-1_6 ); 
+}
+.container-size-2_6 { 
+ max-width: var( --spacing-fractional-2_6 ); 
+}
+.container-size-3_6 { 
+ max-width: var( --spacing-fractional-3_6 ); 
+}
+.container-size-4_6 { 
+ max-width: var( --spacing-fractional-4_6 ); 
+}
+.container-size-5_6 { 
+ max-width: var( --spacing-fractional-5_6 ); 
+}
+.container-size-1_12 { 
+ max-width: var( --spacing-fractional-1_12 ); 
+}
+.container-size-2_12 { 
+ max-width: var( --spacing-fractional-2_12 ); 
+}
+.container-size-3_12 { 
+ max-width: var( --spacing-fractional-3_12 ); 
+}
+.container-size-4_12 { 
+ max-width: var( --spacing-fractional-4_12 ); 
+}
+.container-size-5_12 { 
+ max-width: var( --spacing-fractional-5_12 ); 
+}
+.container-size-6_12 { 
+ max-width: var( --spacing-fractional-6_12 ); 
+}
+.container-size-7_12 { 
+ max-width: var( --spacing-fractional-7_12 ); 
+}
+.container-size-8_12 { 
+ max-width: var( --spacing-fractional-8_12 ); 
+}
+.container-size-9_12 { 
+ max-width: var( --spacing-fractional-9_12 ); 
+}
+.container-size-10_12 { 
+ max-width: var( --spacing-fractional-10_12 ); 
+}
+.container-size-11_12 { 
+ max-width: var( --spacing-fractional-11_12 ); 
+}
+.container-size-full { 
+ max-width: var( --spacing-fractional-full ); 
+}

@@ -1,5 +1,7 @@
 import StyleDictionary from 'style-dictionary-esm';
 import { registerTransforms, transforms, checkAndEvaluateMath } from '@tokens-studio/sd-transforms';
+import { formatString } from '../utilities/js/formatString.js';
+import isObjectWithValidation from '../utilities/js/isObjectWithValidation.js';
 
 /* Index:
  * Helper Functions
@@ -108,20 +110,8 @@ export const customHumanReadableNameTransformer = {
     const { category, type, item, subitem, state } = token.attributes;
     const ctiList = [category, type, item, subitem, state];
     const structuredName = ctiList.filter(Boolean).join(' ');
-    const normalizingFunctions = {
-      commasToDecimals: (str) => str.replace(/,/g, '.'),
-      underscoreToFractions: (str) => str.replace(/_/g, '/'),
-    };
-    // console.log('token.name: ', token.name);
-    const normalizeString = (str) => {
-      // console.log('normalizeString | str: ', str);
-      const normalizers = Object.values(normalizingFunctions);
-      return normalizers.reduce((acc, normalizer) => normalizer(acc), str);
-    };
-    // console.log('normalizeString(name): ', normalizeString(name));
-    // const ctiName = ctiList.map((cti) => normalizeString(cti[1]));
-    // console.log('ctiName: ', ctiName);
-    return normalizeString(structuredName);
+
+    return formatString(structuredName, 'formatToHumanReadable');
   },
 };
 
@@ -137,7 +127,7 @@ export const customPxToRemTransformer = {
     const { type, path, attributes } = token;
 
     const blacklistedPaths = ['em', 'rem', '%', 'full', 'auto', 'margin'];
-    const whitelistedCategories = ['spacing'];
+    const whitelistedCategories = ['spacing', 'components'];
     const isBlacklistedPath = !!blacklistedPaths.find((element) =>
       path.toString().includes(element)
     );
@@ -146,20 +136,46 @@ export const customPxToRemTransformer = {
     return isMatch;
   },
   transformer: (token, options) => {
-    const resolvedValue = checkAndEvaluateMath(token.value);
-
-    if (token.attributes.item === 'px') {
-      return `${resolvedValue}px`;
+    if (!token) {
+      console.error("customPxToRemTransformer: first argument is required. 'token' is undefined");
+      return;
     }
-    if (token.attributes.type === 'fractional') {
-      return `${resolvedValue * 100}%`;
+    const transformValue = (value) => {
+      const resolvedValue = checkAndEvaluateMath(value);
+
+      if (token.attributes.item === 'px') {
+        return `${resolvedValue}px`;
+      }
+      if (token.attributes.type === 'fractional') {
+        return `${resolvedValue * 100}%`;
+      }
+
+      const pixelValue = parseFloat(resolvedValue);
+      const basePxFontSize = 16; //TODO: get this from a token or configuration
+
+      const transformedValue = `${pixelValue / basePxFontSize}rem`;
+      return transformedValue;
+    };
+    // if value is an object, transform the values
+    if (!isObjectWithValidation(token.value)) {
+      return transformValue(token.value);
     }
-
-    const pixelValue = parseFloat(resolvedValue);
-    const basePxFontSize = 16; //TODO: get this from a token or configuration
-
-    const transformedValue = `${pixelValue / basePxFontSize}rem`;
-    return transformedValue;
+    if (!isObjectWithValidation(token.value)) {
+      console.log('customPxToRemTransformer: tokenValue is object: ');
+    }
+    // return the object with the values transformed
+    const transformedObject = {};
+    for (const key in token.value) {
+      const value = token.value[key];
+      if (typeof value !== 'string') {
+        console.error(
+          'customPxToRemTransformer: value object is nested. Check to make sure its correct. If this is expected, refactor the transformer to handle nested objects'
+        );
+        return;
+      }
+      transformedObject[key] = transformValue(value);
+    }
+    return transformedObject;
   },
 };
 
@@ -171,12 +187,7 @@ export const customCSSTransformGroup = {
 
 export const customCSSPropertiesTransformGroup = {
   name: 'custom/css/properties',
-  transforms: [
-    // 'ts/descriptionToComment',
-    'attribute/cti',
-    'size/custom/px-to-rem',
-    'name/custom/cti/kebab-case',
-  ],
+  transforms: ['attribute/cti', 'size/custom/px-to-rem', 'name/custom/cti/kebab-case'],
   // transforms: [ 'size/custom/px-to-rem'].filter(transform => transform !== 'ts/size/px' && transform !== 'ts/resolveMath')
 };
 

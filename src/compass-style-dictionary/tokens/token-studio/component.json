@@ -1,0 +1,231 @@
+{
+  "components": {
+    "type": "composition",
+    "container": {
+      "size": {
+        "1": {
+          "value": {
+            "maxWidth": "448"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "2": {
+          "value": {
+            "maxWidth": "688"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "3": {
+          "value": {
+            "maxWidth": "880"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "4": {
+          "value": {
+            "maxWidth": "1136"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "5": {
+          "value": {
+            "maxWidth": "1344"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "6": {
+          "value": {
+            "maxWidth": "1440"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "7": {
+          "value": {
+            "maxWidth": "1600"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "8": {
+          "value": {
+            "maxWidth": "1920"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "9": {
+          "value": {
+            "maxWidth": "2560"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "10": {
+          "value": {
+            "maxWidth": "2880"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "1_2": {
+          "value": {
+            "maxWidth": "{spacing.fractional.1_2}"
+          },
+          "description": "These are values used by the Container component to constrain the size of child elements. They relate to the max-width property"
+        },
+        "1_3": {
+          "value": {
+            "maxWidth": "{spacing.fractional.1_3}"
+          },
+          "description": "\"1/3\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "2_3": {
+          "value": {
+            "maxWidth": "{spacing.fractional.2_3}"
+          },
+          "description": "\"2/3\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "1_4": {
+          "value": {
+            "maxWidth": "{spacing.fractional.1_4}"
+          },
+          "description": "\"1/4\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "2_4": {
+          "value": {
+            "maxWidth": "{spacing.fractional.2_4}"
+          },
+          "description": "\"2/4\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "3_4": {
+          "value": {
+            "maxWidth": "{spacing.fractional.3_4}"
+          },
+          "description": "\"3/4\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "1_5": {
+          "value": {
+            "maxWidth": "{spacing.fractional.1_5}"
+          },
+          "description": "\"1/5\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "2_5": {
+          "value": {
+            "maxWidth": "{spacing.fractional.2_5}"
+          },
+          "description": "\"2/5\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "3_5": {
+          "value": {
+            "maxWidth": "{spacing.fractional.3_5}"
+          },
+          "description": "\"3/5\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "4_5": {
+          "value": {
+            "maxWidth": "{spacing.fractional.4_5}"
+          },
+          "description": "\"4/5\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "1_6": {
+          "value": {
+            "maxWidth": "{spacing.fractional.1_6}"
+          },
+          "description": "\"1/6\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "2_6": {
+          "value": {
+            "maxWidth": "{spacing.fractional.2_6}"
+          },
+          "description": "\"2/6\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "3_6": {
+          "value": {
+            "maxWidth": "{spacing.fractional.3_6}"
+          },
+          "description": "\"3/6\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "4_6": {
+          "value": {
+            "maxWidth": "{spacing.fractional.4_6}"
+          },
+          "description": "\"4/6\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "5_6": {
+          "value": {
+            "maxWidth": "{spacing.fractional.5_6}"
+          },
+          "description": "\"5/6\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "1_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.1_12}"
+          },
+          "description": "\"1/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "2_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.2_12}"
+          },
+          "description": "\"2/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "3_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.3_12}"
+          },
+          "description": "\"2/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "4_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.4_12}"
+          },
+          "description": "\"4/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "5_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.5_12}"
+          },
+          "description": "\"5/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "6_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.6_12}"
+          },
+          "description": "\"6/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "7_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.7_12}"
+          },
+          "description": "\"7/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "8_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.8_12}"
+          },
+          "description": "\"8/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "9_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.9_12}"
+          },
+          "description": "\"9/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "10_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.10_12}"
+          },
+          "description": "\"10/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "11_12": {
+          "value": {
+            "maxWidth": "{spacing.fractional.11_12}"
+          },
+          "description": "\"11/12\" to set \"inset\" to the corresponding fractional spacing value"
+        },
+        "full": {
+          "value": {
+            "maxWidth": "{spacing.fractional.full}"
+          },
+          "description": "\"full\" or 100% for to set \"inset\" to the corresponding fractional spacing value"
+        }
+      }
+    }
+  }
+}

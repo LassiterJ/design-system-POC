@@ -60,8 +60,8 @@ const layoutPropDefs = {
   start: { type: 'enum', values: positionEdgeValues, default: undefined, responsive: true },
   width: { type: 'enum', values: widthHeightValues, default: undefined, responsive: true },
   height: { type: 'enum', values: widthHeightValues, default: undefined, responsive: true },
-  shrink: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
-  grow: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
+  flexShrink: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
+  flexGrow: { type: 'enum', values: booleanValues, default: undefined, responsive: true },
   gridColumn: { type: 'string', default: undefined, responsive: true },
   gridColumnStart: { type: 'string', default: undefined, responsive: true },
   gridColumnEnd: { type: 'string', default: undefined, responsive: true },
@@ -69,48 +69,48 @@ const layoutPropDefs = {
   gridRowStart: { type: 'string', default: undefined, responsive: true },
   gridRowEnd: { type: 'string', default: undefined, responsive: true },
 };
-export const extractLayoutProps = (props) => {
-  const { rest: paddingRest, ...paddingProps } = extractPaddingProps(props);
-  const {
-    position = layoutPropDefs.position.default,
-    width = layoutPropDefs.width.default,
-    height = layoutPropDefs.height.default,
-    inset = layoutPropDefs.inset.default,
-    top = layoutPropDefs.top.default,
-    bottom = layoutPropDefs.bottom.default,
-    start = layoutPropDefs.start.default,
-    end = layoutPropDefs.end.default,
-    shrink = layoutPropDefs.shrink.default,
-    grow = layoutPropDefs.grow.default,
-    gridColumn = layoutPropDefs.gridColumn.default,
-    gridColumnStart = layoutPropDefs.gridColumnStart.default,
-    gridColumnEnd = layoutPropDefs.gridColumnEnd.default,
-    gridRow = layoutPropDefs.gridRow.default,
-    gridRowStart = layoutPropDefs.gridRowStart.default,
-    gridRowEnd = layoutPropDefs.gridRowEnd.default,
-    ...rest
-  } = paddingRest;
-  return {
-    ...paddingProps,
-    position,
-    width,
-    height,
-    inset,
-    top,
-    bottom,
-    start,
-    end,
-    shrink,
-    grow,
-    gridColumn,
-    gridColumnStart,
-    gridColumnEnd,
-    gridRow,
-    gridRowStart,
-    gridRowEnd,
-    rest,
-  };
-};
+// export const extractLayoutProps = (props) => {
+//   const { rest: paddingRest, ...paddingProps } = extractPaddingProps(props);
+//   const {
+//     position = layoutPropDefs.position.default,
+//     width = layoutPropDefs.width.default,
+//     height = layoutPropDefs.height.default,
+//     inset = layoutPropDefs.inset.default,
+//     top = layoutPropDefs.top.default,
+//     bottom = layoutPropDefs.bottom.default,
+//     start = layoutPropDefs.start.default,
+//     end = layoutPropDefs.end.default,
+//     shrink = layoutPropDefs.shrink.default,
+//     grow = layoutPropDefs.grow.default,
+//     gridColumn = layoutPropDefs.gridColumn.default,
+//     gridColumnStart = layoutPropDefs.gridColumnStart.default,
+//     gridColumnEnd = layoutPropDefs.gridColumnEnd.default,
+//     gridRow = layoutPropDefs.gridRow.default,
+//     gridRowStart = layoutPropDefs.gridRowStart.default,
+//     gridRowEnd = layoutPropDefs.gridRowEnd.default,
+//     ...rest
+//   } = paddingRest;
+//   return {
+//     ...paddingProps,
+//     position,
+//     width,
+//     height,
+//     inset,
+//     top,
+//     bottom,
+//     start,
+//     end,
+//     shrink,
+//     grow,
+//     gridColumn,
+//     gridColumnStart,
+//     gridColumnEnd,
+//     gridRow,
+//     gridRowStart,
+//     gridRowEnd,
+//     rest,
+//   };
+// };
 
 export const getLayoutStyles = (props) => {
   // TODO: I want to say we can skip the "withBreakpoints" function if we use css variables for these values. Gonna try it out

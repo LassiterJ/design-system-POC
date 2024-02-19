@@ -19,8 +19,9 @@ export const configSettings = {
   designSystemPrefix: 'compass',
   buildPath: './src/compass-style-dictionary/dist/',
   tokensPath: ['./src/compass-style-dictionary/tokens/token-studio/*.json'],
+  componentsPath: './src/components/',
 };
-const { designSystemPrefix, buildPath, tokensPath } = configSettings;
+const { designSystemPrefix, buildPath, tokensPath, componentsPath } = configSettings;
 
 export const config = {
   source: tokensPath,
@@ -53,6 +54,27 @@ export const config = {
               token.attributes.category === 'css-properties' ||
               token.attributes.category === 'boolean'
             );
+          },
+        },
+      ],
+    },
+    customComponents: {
+      // Should we generate a css file in the component folder?
+      // Should we only generate a css file in the dist folder?
+      // Should the file be scoped to the component or a global?
+      transformGroup: 'custom/css/properties',
+      buildPath: componentsPath,
+      files: [
+        {
+          destination: '/consuming-app/layout/container/ContainerUtilities.module.css',
+          format: 'custom/css/component/css-utility-classes',
+          // format: 'custom/css/css-classes',
+          // filter: (token) => {
+          //   return token.attributes.category === 'components';
+          // },
+          options: {
+            outputReferences: true,
+            matchAttributes: { category: 'components' },
           },
         },
       ],

@@ -1,6 +1,8 @@
 {
   "tokenSetOrder": [
     "primitive",
-    "utility"
+    "utility",
+    "semantic",
+    "component"
   ]
 }

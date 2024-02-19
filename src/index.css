@@ -1,5 +1,20 @@
 @import "./styles/reset.scss";
 @import "./compass-style-dictionary/dist/index.css";
+
+:root {
+    --container-1: 448px;
+    --container-2: 688px;
+    --container-3: 880px;
+    --container-4: 1136px;
+    --container-5: 1344px;
+    --container-6: 1440px;
+    --container-7: 1600px;
+    --container-8: 1920px;
+    --container-9: 2560px;
+    --container-10: 2880px;
+}
+
+
 /*@import "./styles/breakpoints.scss";*/
 /*@import "./styles/scalingFactor.scss";*/
 /*@import "./styles/spacing.scss";*/

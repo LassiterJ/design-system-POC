@@ -1,19 +1,19 @@
 import React from 'react';
-import styles from './LayoutComponentTestPage.module.scss'
-import {Box} from '../../layout/box/Box';
+import styles from './LayoutComponentTestPage.module.scss';
+import { Box } from '../../layout/box/Box';
+import { Container } from '../../layout/container/Container';
 export const LayoutComponentTestPage = () => {
   return (
     <div className={styles.test}>
       LayoutComponentTestPage
-      <Box p={"2"} ms={{md:"-3", lg: "start"}} width={"1"} className={"TestBox"} start={"50%"} display={"none"}>
-        <span>This is a Box</span>
-      </Box>
+      {/*<Box inset={'1/3'} p={'2'} width={'1'} className={'TestBox'}>*/}
+      {/*  <span>This is a Box</span>*/}
+      {/*</Box>*/}
+      <Container>
+        <div>Container</div>
+      </Container>
     </div>
   );
 };
 
-
 export default LayoutComponentTestPage;
-
-
-

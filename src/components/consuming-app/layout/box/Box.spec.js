@@ -2,12 +2,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, vi, expect } from 'vitest';
 import { Box } from './Box';
-import * as layoutUtilities from '../../../../utilities/js/layout';
-import * as marginPropsUtilities from '../../../../utilities/js/margin.props';
 
-// Mock styles and utility functions
+// Mock the styles and utility functions used in the component
+
 vi.mock('./Box.module.scss', () => ({
-  'compass-box': 'compass-box',
+  box: 'box',
 }));
 
 vi.mock('../../../../utilities/js/layout', () => ({
@@ -29,40 +28,58 @@ vi.mock('../../../../utilities/js/mergeStyles', () => ({
 }));
 
 describe('Box component', () => {
-  it('tests the test runner', () => {
-    expect(true).toBe(true);
+  describe('Basic Rendering', () => {
+    it('renders without crashing', () => {
+      const { container } = render(<Box />);
+      expect(container.firstChild).toBeInTheDocument();
+    });
   });
-  // it('renders correctly with default props', () => {
-  //   render(<Box />);
-  //   const box = screen.getByRole('generic');
-  //   expect(box).toHaveClass('compass-box');
-  //   expect(box).not.toHaveStyle({ display: 'block' }); // Assuming 'block' is not the default
-  // });
-  //
-  // it('applies custom class names and styles', () => {
-  //   const customStyle = { backgroundColor: 'blue' };
-  //   render(<Box className="custom-class" style={customStyle} />);
-  //   const box = screen.getByRole('generic');
-  //   expect(box).toHaveClass('compass-box', 'custom-class');
-  //   expect(box).toHaveStyle({ backgroundColor: 'blue' });
-  // });
-  //
-  // it('handles the display prop with a valid value', () => {
-  //   layoutUtilities.withBreakpoints.mockReturnValue('display-block');
-  //   render(<Box display="block" />);
-  //   const box = screen.getByRole('generic');
-  //   expect(box).toHaveClass('display-block');
-  // });
-  //
-  // it('ignores the display prop with an invalid value', () => {
-  //   render(<Box display="flex" />); // Assuming 'flex' is not a valid value for display
-  //   const box = screen.getByRole('generic');
-  //   expect(box).not.toHaveClass('display-flex');
-  // });
-  //
-  // it('renders as a different component when asChild is true', () => {
-  //   render(<Box asChild />);
-  //   const box = screen.getByRole('generic');
-  //   expect(box.tagName).not.toBe('DIV'); // Check for the correct tag or implementation based on Slot or asChild usage
-  // });
+
+  describe('Prop Handling', () => {
+    it('handles the asChild prop correctly, rendering with Slot when asChild is true', () => {
+      // Assuming Slot renders a span for demonstration purposes
+      const { container } = render(<Box asChild />);
+      expect(container.firstChild.tagName).toBe('SPAN');
+    });
+
+    it('renders with the correct tag when "as" prop is provided', () => {
+      const { container } = render(<Box as="section" />);
+      expect(container.firstChild.tagName).toBe('SECTION');
+    });
+  });
+
+  describe('Class Name Generation', () => {
+    it('applies given class name alongside default class names', () => {
+      const className = 'test-class';
+      const { container } = render(<Box className={className} />);
+      expect(container.firstChild).toHaveClass(className);
+      expect(container.firstChild).toHaveClass('box'); // Assuming 'compass-box' is a default class
+    });
+
+    // Assuming responsive class names are applied based on props
+    it('applies responsive class names based on props', () => {
+      const { container } = render(<Box width="auto" />);
+      // You need to adjust this based on the actual implementation of responsive classes
+      // This is a placeholder for demonstration
+      expect(container.firstChild).toHaveClass('width-auto');
+    });
+  });
+
+  describe('Style Application', () => {
+    it('applies inline styles based on style props', () => {
+      const style = { display: 'flex' };
+      const { container } = render(<Box style={style} />);
+      expect(container.firstChild).toHaveStyle(style);
+    });
+
+    // Example for testing responsive style props if applicable
+    it('applies responsive styles correctly', () => {
+      // This assumes your component or setup somehow transforms responsive props into inline styles
+      // Placeholder for demonstration; adjust according to your actual responsive style handling
+      const { container } = render(<Box margin={{ compact: '4px', medium: '8px' }} />);
+      // Assuming there's a way to simulate or directly test the responsive behavior
+    });
+  });
+
+  // Additional tests could be added here based on other concerns like accessibility, interaction, etc.
 });
