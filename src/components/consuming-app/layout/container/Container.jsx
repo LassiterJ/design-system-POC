@@ -1,4 +1,5 @@
 import React from 'react';
+import './ContainerUtilities.module.css';
 import styles from './Container.module.css';
 import classNames from 'classnames';
 import { marginPropDefs } from '../../../../props/marginPropDefs.js';
@@ -6,26 +7,8 @@ import { Slot } from '@radix-ui/react-slot';
 import { extractProps } from '../../../../utilities/js/extractProps.js';
 import { layoutPropDefs, widthPropDefs, heightPropDefs } from '../../../../props/layoutPropDefs.js';
 import { getRoot } from '../../../../utilities/js/getRoot.jsx';
-
+import { containerPropDefs, innerPropDefs, sizePropValueEnum } from './ContainerPropDef.js';
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/container.tsx
-
-const containerPropDefs = {
-  display: {
-    type: 'enum',
-    className: 'display',
-    default: undefined,
-    values: ['block', 'none'],
-  },
-};
-
-const innerPropDefs = {
-  size: {
-    type: 'enum',
-    className: 'size',
-    default: '4',
-    values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], // correspond to the max-width property
-  },
-};
 
 export const Container = React.forwardRef((props, forwardedRef) => {
   const { width = 'full', minWidth, maxWidth, size = '4', ...restProps } = props;
@@ -51,14 +34,17 @@ export const Container = React.forwardRef((props, forwardedRef) => {
     parent: asChild ? Slot : 'div',
   });
 
-  console.log('inner-class-name', innerClassName);
+  const sizeClass = sizePropValueEnum.includes(size) ? styles[`container-size-${size}`] : '';
   return (
     <ContainerRoot
       {...containerProps}
       ref={forwardedRef}
       className={classNames(`${styles['container']}`, className)}
     >
-      <div className={classNames(styles['container-inner'], innerClassName)} style={innerStyle}>
+      <div
+        className={classNames(styles['container-inner'], innerClassName, sizeClass)}
+        style={innerStyle}
+      >
         {children}
       </div>
     </ContainerRoot>

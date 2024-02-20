@@ -1,9 +1,9 @@
 @import "../../../../../src/styles/breakpoints.scss";
-
+@import './ContainerUtilities.module.css';
 
 
 .container {
-  border: 2px solid red;
+  background-color: lavender;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,48 +12,9 @@
 }
 
 .container-inner {
-    border: 2px solid blue;
-    & .size-1 {
-        background-color: lightblue;
-        max-width: var(--container-1);
-    }
+    background-color: lightpink;
 }
-    .container-inner.size-2{
-        background-color: lightblue;
-        max-width: var(--container-2);
-    }
-    .container-inner.size-3{
-        background-color: lightblue;
-        max-width: var(--container-3);
-    }
-    .container-inner.size-4{
-        background-color: lightblue;
-        max-width: var(--container-4);
-    }
-    .container-inner.size-5{
-        background-color: lightblue;
-        max-width: var(--container-5);
-    }
-    .container-inner.size-6{
-        background-color: lightblue;
-        max-width: var(--container-6);
-    }
-    .container-inner.size-7{
-        background-color: lightblue;
-        max-width: var(--container-7);
-    }
-    .container-inner.size-8{
-        background-color: lightblue;
-        max-width: var(--container-8);
-    }
-    .container-inner.size-9{
-        background-color: lightblue;
-        max-width: var(--container-9);
-    }
-    .container-inner.size-10{
-        background-color: lightblue;
-        max-width: var(--container-10);
-    }
+
 
 /*//.container.size-1 > .container-inner {*/
 /*//  max-width: var(--container-1);*/
@@ -79,15 +40,15 @@
 /*  //}*/
 /*//*/
 /*//  // An example of Breakpoint usage. Not relevant really here.*/
-/*//  @include compact {*/
-/*//    border: 2px solid blue;*/
-/*//  }*/
-/*//  @include medium {*/
-/*//    border: 2px solid palevioletred;*/
-/*//  }*/
-/*//  @include expanded {*/
-/*//    border: 2px solid greenyellow;*/
-/*//  }*/
+/*  @include compact {*/
+/*    border: 2px solid blue;*/
+/*  }*/
+/*  @include medium {*/
+/*    border: 2px solid palevioletred;*/
+/*  }*/
+/*  @include expanded {*/
+/*    border: 2px solid greenyellow;*/
+/*  }*/
 /*//}*/
 /*//*/
 /*//.size-1 > .container-inner {*/

@@ -1,5 +1,7 @@
 import { Container } from './Container.jsx';
+import { sizePropValueEnum } from './ContainerPropDef.js';
 import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
+import Box from '../box/Box.jsx';
 
 export default {
   title: 'Layout/Container',
@@ -15,10 +17,21 @@ export default {
     ...marginArgTypes,
     ...layoutArgTypes,
     display: { control: 'select', options: ['none', 'block'] },
-    size: { control: 'select', options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] },
+    size: { control: 'select', options: sizePropValueEnum },
   },
 };
-export const Basic = {};
+const singleBoxAsChild = (
+  <Box p={'4'} className={'TestBox'} style={{ backgroundColor: 'lightsalmon' }}>
+    <span>This is a Box inside a Container</span>
+  </Box>
+);
+
+export const Basic = {
+  args: {
+    children: singleBoxAsChild,
+    style: { border: '2px solid black' },
+  },
+};
 export const InFlexContainer = {
   decorators: [
     (Story) => (
@@ -27,4 +40,7 @@ export const InFlexContainer = {
       </div>
     ),
   ],
+  args: {
+    children: singleBoxAsChild,
+  },
 };
