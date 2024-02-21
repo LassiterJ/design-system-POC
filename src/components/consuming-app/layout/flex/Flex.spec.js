@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, vi, expect } from 'vitest';
-import { Box } from './Box';
+import { Flex } from './Flex.jsx';
 
 // Mock the styles and utility functions used in the component
 
@@ -30,7 +30,7 @@ vi.mock('../../../../utilities/js/mergeStyles', () => ({
 describe('Flex component', () => {
   describe('Basic Rendering', () => {
     it('renders without crashing', () => {
-      const { container } = render(<Box />);
+      const { container } = render(<Flex />);
       expect(container.firstChild).toBeInTheDocument();
     });
   });
@@ -38,12 +38,12 @@ describe('Flex component', () => {
   describe('Prop Handling', () => {
     it('handles the asChild prop correctly, rendering with Slot when asChild is true', () => {
       // Assuming Slot renders a span for demonstration purposes
-      const { container } = render(<Box asChild />);
+      const { container } = render(<Flex asChild />);
       expect(container.firstChild.tagName).toBe('SPAN');
     });
 
     it('renders with the correct tag when "as" prop is provided', () => {
-      const { container } = render(<Box as="section" />);
+      const { container } = render(<Flex as="section" />);
       expect(container.firstChild.tagName).toBe('SECTION');
     });
   });
@@ -51,14 +51,14 @@ describe('Flex component', () => {
   describe('Class Name Generation', () => {
     it('applies given class name alongside default class names', () => {
       const className = 'test-class';
-      const { container } = render(<Box className={className} />);
+      const { container } = render(<Flex className={className} />);
       expect(container.firstChild).toHaveClass(className);
       expect(container.firstChild).toHaveClass('box'); // Assuming 'compass-box' is a default class
     });
 
     // Assuming responsive class names are applied based on props
     it('applies responsive class names based on props', () => {
-      const { container } = render(<Box width="auto" />);
+      const { container } = render(<Flex width="auto" />);
       // You need to adjust this based on the actual implementation of responsive classes
       // This is a placeholder for demonstration
       expect(container.firstChild).toHaveClass('width-auto');
@@ -68,7 +68,7 @@ describe('Flex component', () => {
   describe('Style Application', () => {
     it('applies inline styles based on style props', () => {
       const style = { display: 'flex' };
-      const { container } = render(<Box style={style} />);
+      const { container } = render(<Flex style={style} />);
       expect(container.firstChild).toHaveStyle(style);
     });
 
@@ -76,7 +76,7 @@ describe('Flex component', () => {
     it('applies responsive styles correctly', () => {
       // This assumes your component or setup somehow transforms responsive props into inline styles
       // Placeholder for demonstration; adjust according to your actual responsive style handling
-      const { container } = render(<Box margin={{ compact: '4px', medium: '8px' }} />);
+      const { container } = render(<Flex margin={{ compact: '4px', medium: '8px' }} />);
       // Assuming there's a way to simulate or directly test the responsive behavior
     });
   });

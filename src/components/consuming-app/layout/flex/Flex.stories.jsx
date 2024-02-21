@@ -1,9 +1,10 @@
-import { Box } from './Box';
+import { Flex } from './Flex.jsx';
 import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
+import { flexPropDefs } from './FlexPropDef.js';
 
 export default {
   title: 'Layout/Flex',
-  component: Box,
+  component: Flex,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -14,16 +15,18 @@ export default {
   argTypes: {
     ...marginArgTypes,
     ...layoutArgTypes,
-    display: { control: 'select', options: ['none', 'inline', 'inline-block', 'block'] },
+    display: { control: 'select', options: flexPropDefs.display.options },
   },
 };
-export const Basic = {};
-export const InFlexBox = {
-  decorators: [
-    (Story) => (
-      <div style={{ display: 'flex', width: '100%', padding: '3rem' }}>
-        <Story />
-      </div>
-    ),
-  ],
+
+const singleBoxAsChild = (
+  <Box width="10" height="10" className={'TestBox'} style={{ backgroundColor: 'lightsalmon' }}>
+    <span>This is a Box inside a Flex component</span>
+  </Box>
+);
+export const Basic = {
+  args: {
+    children: singleBoxAsChild,
+    gap: '4',
+  },
 };

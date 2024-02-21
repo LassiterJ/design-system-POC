@@ -4552,5 +4552,18 @@
         "description": "Display property used by the layout components. Matches the display css property"
       }
     }
+  },
+  "common-react-props": {
+    "asChild": {
+      "type": "boolean",
+      "true": {
+        "value": "{boolean.true}",
+        "description": "The boolean 'true' value for the asChild prop. Used to pass a child component to a parent component"
+      },
+      "false": {
+        "value": "{boolean.false}",
+        "description": "The boolean 'false' value for the asChild prop. Used to pass a child component to a parent component"
+      }
+    }
   }
 }

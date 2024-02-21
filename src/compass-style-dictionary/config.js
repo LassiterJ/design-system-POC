@@ -74,7 +74,19 @@ export const config = {
           // },
           options: {
             outputReferences: true,
-            matchAttributes: { category: 'components' },
+            matchAttributes: { category: 'components', type: 'container' },
+          },
+        },
+        {
+          destination: '/consuming-app/layout/flex/FlexUtilities.module.scss',
+          format: 'custom/css/component/css-utility-classes',
+          // format: 'custom/css/css-classes',
+          // filter: (token) => {
+          //   return token.attributes.category === 'components';
+          // },
+          options: {
+            outputReferences: true,
+            matchAttributes: { category: 'components', type: 'flex' },
           },
         },
       ],

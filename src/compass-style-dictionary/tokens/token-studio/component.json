@@ -225,6 +225,256 @@
           },
           "description": "\"full\" or 100% for to set \"inset\" to the corresponding fractional spacing value"
         }
+      },
+      "asChild": {
+        "true": {
+          "value": {
+            "visibility": "{common-react-props.asChild.true}"
+          },
+          "description": "The boolean 'true' value for the asChild prop. Used to pass a child component to a parent component"
+        },
+        "false": {
+          "value": {
+            "visibility": "{common-react-props.asChild.false}"
+          },
+          "description": "The boolean 'true' value for the asChild prop. Used to pass a child component to a parent component"
+        }
+      }
+    },
+    "flex": {
+      "display": {
+        "flex": {
+          "value": "flex",
+          "description": "Sets the Flex container to a block-level flex container."
+        },
+        "inlineFlex": {
+          "value": "inline-flex",
+          "description": "Sets the Flex container to an inline-level flex container."
+        },
+        "none": {
+          "value": "none",
+          "description": "Sets the Flex container's 'display' property to 'none'."
+        }
+      },
+      "direction": {
+        "row": {
+          "value": "row",
+          "description": "Lays out the Flex items in a row."
+        },
+        "column": {
+          "value": "column",
+          "description": "Lays out the Flex items in a column."
+        },
+        "rowReverse": {
+          "value": "row-reverse",
+          "description": "Lays out the Flex items in a row in reverse order."
+        },
+        "columnReverse": {
+          "value": "column-reverse",
+          "description": "Lays out the Flex items in a column in reverse order."
+        }
+      },
+      "align": {
+        "start": {
+          "value": "flex-start",
+          "description": "Aligns Flex items at the start of the flex line."
+        },
+        "center": {
+          "value": "center",
+          "description": "Aligns Flex items at the center of the flex line."
+        },
+        "end": {
+          "value": "flex-end",
+          "description": "Aligns Flex items at the end of the flex line."
+        },
+        "baseline": {
+          "value": "baseline",
+          "description": "Aligns Flex items along the baseline."
+        },
+        "stretch": {
+          "value": "stretch",
+          "description": "Stretches Flex items to fill the container."
+        }
+      },
+      "justify": {
+        "start": {
+          "value": "flex-start",
+          "description": "Justifies Flex items at the start of the container."
+        },
+        "center": {
+          "value": "center",
+          "description": "Justifies Flex items at the center of the container."
+        },
+        "end": {
+          "value": "flex-end",
+          "description": "Justifies Flex items at the end of the container."
+        },
+        "between": {
+          "value": "space-between",
+          "description": "Distributes Flex items evenly, with the first item at the start and the last item at the end."
+        }
+      },
+      "wrap": {
+        "nowrap": {
+          "value": "nowrap",
+          "description": "Prevents Flex items from wrapping."
+        },
+        "wrap": {
+          "value": "wrap",
+          "description": "Allows Flex items to wrap as needed."
+        },
+        "wrapReverse": {
+          "value": "wrap-reverse",
+          "description": "Allows Flex items to wrap in reverse order."
+        }
+      },
+      "gap": {
+        "0": {
+          "value": "{spacing.core.0}",
+          "description": "Sets the space between flex items in the Flex Component. 0 * basePxUnit"
+        },
+        "1": {
+          "value": "{spacing.core.1}",
+          "description": "Sets the space between flex items in the Flex Component. 1 * basePxUnit"
+        },
+        "2": {
+          "value": "{spacing.core.2}",
+          "description": "Sets the space between flex items in the Flex Component. 2 * basePxUnit"
+        },
+        "3": {
+          "value": "{spacing.core.3}",
+          "description": "Sets the space between flex items in the Flex Component. 3 * basePxUnit"
+        },
+        "4": {
+          "value": "{spacing.core.4}",
+          "description": "Sets the space between flex items in the Flex Component. 4 * basePxUnit"
+        },
+        "5": {
+          "value": "{spacing.core.5}",
+          "description": "Sets the space between flex items in the Flex Component. 5 * basePxUnit"
+        },
+        "6": {
+          "value": "{spacing.core.6}",
+          "description": "Sets the space between flex items in the Flex Component. 6 * basePxUnit"
+        },
+        "7": {
+          "value": "{spacing.core.7}",
+          "description": "Sets the space between flex items in the Flex Component. 7 * basePxUnit"
+        },
+        "8": {
+          "value": "{spacing.core.8}",
+          "description": "Sets the space between flex items in the Flex Component. 8 * basePxUnit"
+        },
+        "9": {
+          "value": "{spacing.core.9}",
+          "description": "Sets the space between flex items in the Flex Component. 9 * basePxUnit"
+        },
+        "10": {
+          "value": "{spacing.core.10}",
+          "description": "Sets the space between flex items in the Flex Component. 10 * basePxUnit"
+        },
+        "11": {
+          "value": "{spacing.core.11}",
+          "description": "Sets the space between flex items in the Flex Component. 11 * basePxUnit"
+        },
+        "12": {
+          "value": "{spacing.core.12}",
+          "description": "Sets the space between flex items in the Flex Component. 12 * basePxUnit"
+        },
+        "14": {
+          "value": "{spacing.core.14}",
+          "description": "Sets the space between flex items in the Flex Component. 14 * basePxUnit"
+        },
+        "16": {
+          "value": "{spacing.core.16}",
+          "description": "Sets the space between flex items in the Flex Component. 16 * basePxUnit"
+        },
+        "20": {
+          "value": "{spacing.core.20}",
+          "description": "Sets the space between flex items in the Flex Component. 20 * basePxUnit"
+        },
+        "24": {
+          "value": "{spacing.core.24}",
+          "description": "Sets the space between flex items in the Flex Component. 24 * basePxUnit"
+        },
+        "28": {
+          "value": "{spacing.core.28}",
+          "description": "Sets the space between flex items in the Flex Component. 28 * basePxUnit"
+        },
+        "32": {
+          "value": "{spacing.core.32}",
+          "description": "Sets the space between flex items in the Flex Component. 32 * basePxUnit"
+        },
+        "36": {
+          "value": "{spacing.core.36}",
+          "description": "Sets the space between flex items in the Flex Component. 36 * basePxUnit"
+        },
+        "40": {
+          "value": "{spacing.core.40}",
+          "description": "Sets the space between flex items in the Flex Component. 40 * basePxUnit"
+        },
+        "44": {
+          "value": "{spacing.core.44}",
+          "description": "Sets the space between flex items in the Flex Component. 44 * basePxUnit"
+        },
+        "48": {
+          "value": "{spacing.core.48}",
+          "description": "Sets the space between flex items in the Flex Component. 48 * basePxUnit"
+        },
+        "52": {
+          "value": "{spacing.core.52}",
+          "description": "Sets the space between flex items in the Flex Component. 52 * basePxUnit"
+        },
+        "60": {
+          "value": "{spacing.core.60}",
+          "description": "Sets the space between flex items in the Flex Component. 60 * basePxUnit"
+        },
+        "64": {
+          "value": "{spacing.core.64}",
+          "description": "Sets the space between flex items in the Flex Component. 64 * basePxUnit"
+        },
+        "72": {
+          "value": "{spacing.core.72}",
+          "description": "Sets the space between flex items in the Flex Component. 72 * basePxUnit"
+        },
+        "80": {
+          "value": "{spacing.core.80}",
+          "description": "Sets the space between flex items in the Flex Component. 80 * basePxUnit"
+        },
+        "96": {
+          "value": "{spacing.core.96}",
+          "description": "Sets the space between flex items in the Flex Component. 96 * basePxUnit"
+        },
+        "px": {
+          "value": "{spacing.core.px}",
+          "description": "A pixel-defined space between Flex items."
+        },
+        "1,5": {
+          "value": "{spacing.core.1,5}",
+          "description": "1.5 times the base pixel value. Space between Flex items for fine-tuned layouts."
+        },
+        "2,5": {
+          "value": "{spacing.core.2,5}",
+          "description": "2.5 times the base pixel value. Space between Flex items for fine-tuned layouts."
+        },
+        "3,5": {
+          "value": "{spacing.core.3,5}",
+          "description": "3.5 times the base pixel value. Space between Flex items for fine-tuned layouts."
+        }
+      },
+      "asChild": {
+        "true": {
+          "value": {
+            "visibility": "{common-react-props.asChild.true}"
+          },
+          "description": "The boolean 'true' value for the asChild prop. Used to pass a child component to a parent component"
+        },
+        "false": {
+          "value": {
+            "visibility": "{common-react-props.asChild.false}"
+          },
+          "description": "The boolean 'true' value for the asChild prop. Used to pass a child component to a parent component"
+        }
       }
     }
   }

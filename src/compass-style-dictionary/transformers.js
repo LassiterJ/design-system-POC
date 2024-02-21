@@ -1,5 +1,9 @@
 import StyleDictionary from 'style-dictionary-esm';
-import { registerTransforms, transforms, checkAndEvaluateMath } from '@tokens-studio/sd-transforms';
+import {
+  registerTransforms,
+  expandComposites,
+  checkAndEvaluateMath,
+} from '@tokens-studio/sd-transforms';
 import { formatString } from '../utilities/js/formatString.js';
 import isObjectWithValidation from '../utilities/js/isObjectWithValidation.js';
 
@@ -119,30 +123,85 @@ export const customHumanReadableNameTransformer = {
 // do not convert values that are already in rem, em, %, full, auto
 // do not convert single pixel values
 // convert fraction to percentage
+export const isNumericString = (value) => {
+  // Define a regular expression for a valid number (integer or decimal without leading zeros, except for "0" or "0.x").
+  const validNumberRegex = /^(0|([1-9]\d*))(\.\d+)?$/;
+  const valueIsAStringValidNumberString = typeof value === 'string' && validNumberRegex.test(value);
+  // Check if the value is a string that matches the valid number format or a number type.
+  return valueIsAStringValidNumberString;
+};
+export const tokenValueHasANumericString = (value) => {
+  const tokenValueIsAnObject = isObjectWithValidation(value);
+
+  if (!tokenValueIsAnObject && !isNumericString(value)) {
+    return;
+  }
+
+  if (!tokenValueIsAnObject && isNumericString(value)) {
+    return true;
+  }
+
+  return Object.values(value).some((val) => isNumericString(val));
+};
+
 export const customPxToRemTransformer = {
   name: 'size/custom/px-to-rem',
   type: 'value',
   transitive: true,
   matcher: (token) => {
-    const { type, path, attributes } = token;
+    const { type, path, attributes, value, name } = token;
 
     const blacklistedPaths = ['em', 'rem', '%', 'full', 'auto', 'margin'];
     const whitelistedCategories = ['spacing', 'components'];
-    const isBlacklistedPath = !!blacklistedPaths.find((element) =>
-      path.toString().includes(element)
-    );
+    const isBlacklistedPath = !!blacklistedPaths.find((item) => path.toString().includes(item));
+    //
+    // console.group('START_ customPxToRemTransformer _START');
+    // console.log(`Token Name: ${name}`);
+    // console.log('tokenValueHasANumericString(value): ', tokenValueHasANumericString(value));
+    // console.log(
+    //   'whitelistedCategories.includes(attributes?.category): ',
+    //   whitelistedCategories.includes(attributes?.category)
+    // );
+    // console.log('!isBlacklistedPath: ', !isBlacklistedPath);
+    // console.log('END_ customPxToRemTransformer _END');
+    if (attributes.type === 'container') {
+      console.group('Token is container | token: ', token);
+      console.log('tokenValueHasANumericString(value) ', tokenValueHasANumericString(value));
+      console.log(
+        'whitelistedCategories.includes(attributes?.category) ',
+        whitelistedCategories.includes(attributes?.category)
+      );
+      console.log('!isBlacklistedPath', !isBlacklistedPath);
+      console.groupEnd();
+    }
+    const isMatch =
+      tokenValueHasANumericString(value) &&
+      whitelistedCategories.includes(attributes?.category) &&
+      !isBlacklistedPath;
 
-    const isMatch = whitelistedCategories.includes(attributes?.category) && !isBlacklistedPath;
+    // console.log('customPxToRemTransformer | isMatch: ', isMatch);
+    // console.groupEnd();
+
     return isMatch;
   },
   transformer: (token, options) => {
+    if (token.attributes.type === 'container') {
+      console.log('Token is container | token: ', token);
+    }
     if (!token) {
       console.error("customPxToRemTransformer: first argument is required. 'token' is undefined");
       return;
     }
+
+    if (!tokenValueHasANumericString(token.value)) {
+      console.error(
+        'customPxToRemTransformer: tokenValue is not a string or object with a string value'
+      );
+      return;
+    }
+
     const transformValue = (value) => {
       const resolvedValue = checkAndEvaluateMath(value);
-
       if (token.attributes.item === 'px') {
         return `${resolvedValue}px`;
       }
@@ -160,9 +219,7 @@ export const customPxToRemTransformer = {
     if (!isObjectWithValidation(token.value)) {
       return transformValue(token.value);
     }
-    if (!isObjectWithValidation(token.value)) {
-      console.log('customPxToRemTransformer: tokenValue is object: ');
-    }
+
     // return the object with the values transformed
     const transformedObject = {};
     for (const key in token.value) {

@@ -7,29 +7,98 @@ const { sortByReference, sortByName, createPropertyFormatter, fileHeader } =
   StyleDictionary.formatHelpers;
 let count = 0;
 
+const marginProperties = {
+  m: ['margin'],
+  mx: ['margin-left', 'margin-right'],
+  my: ['margin-top', 'margin-bottom'],
+  mt: ['margin-top'],
+  mb: ['margin-bottom'],
+  ms: ['margin-left'], // TODO: implement rtl
+  me: ['margin-right'], // TODO: implement rtl
+};
+const paddingProperties = {
+  p: ['padding'],
+  px: ['padding-left', 'padding-right'],
+  py: ['padding-top', 'padding-bottom'],
+  pt: ['padding-top'],
+  pb: ['padding-bottom'],
+  ps: ['padding-left'], // TODO: implement rtl
+  pe: ['padding-right'], // TODO: implement rtl
+};
+const getCSSPropertiesByType = (token, key) => {
+  const { type, item } = token.attributes;
+  //TODO: I have configSettings for various types in various places. I should consolidate them.
+  if (!key || !type) {
+    console.log('getCSSPropertiesByType: key is undefined | token: ', token);
+    return null;
+  }
+  if (type === 'margin') {
+    return marginProperties[key];
+  }
+  if (type === 'padding') {
+    return paddingProperties[key];
+  }
+  if (type === 'position') {
+    return [type];
+  }
+  if (type === 'inset') {
+    return [type];
+  }
+  if (type === 'top') {
+    return [type];
+  }
+  if (type === 'end') {
+    return ['right'];
+  }
+  if (type === 'bottom') {
+    return [type];
+  }
+  if (type === 'start') {
+    return ['left'];
+  }
+  if (type === 'width') {
+    return [type];
+  }
+  if (type === 'height') {
+    return [type];
+  }
+  if (type === 'flex-shrink') {
+    return [type];
+  }
+  if (type === 'flex-grow') {
+    return [type];
+  }
+  if (type === 'display') {
+    return [type];
+  }
+  if (type === 'flex') {
+    if (item === 'display') {
+      return ['display'];
+    }
+    if (item === 'gap') {
+      return ['gap'];
+    }
+    if (item === 'direction') {
+      return ['flex-direction'];
+    }
+    if (item === 'align') {
+      return ['align-items'];
+    }
+    if (item === 'justify') {
+      return ['justify-content'];
+    }
+    if (item === 'wrap') {
+      return ['flex-wrap'];
+    }
+  }
+  // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
+}; //TODO: try to get the properties from the token itself or config.
+
 export const cssClassFormatter = {
   name: 'custom/css/css-classes',
   formatter: ({ dictionary, options }) => {
     // console.log('custom/css/css-classes | options: ', options);
 
-    const marginProperties = {
-      m: ['margin'],
-      mx: ['margin-left', 'margin-right'],
-      my: ['margin-top', 'margin-bottom'],
-      mt: ['margin-top'],
-      mb: ['margin-bottom'],
-      ms: ['margin-left'], // TODO: implement rtl
-      me: ['margin-right'], // TODO: implement rtl
-    };
-    const paddingProperties = {
-      p: ['padding'],
-      px: ['padding-left', 'padding-right'],
-      py: ['padding-top', 'padding-bottom'],
-      pt: ['padding-top'],
-      pb: ['padding-bottom'],
-      ps: ['padding-left'], // TODO: implement rtl
-      pe: ['padding-right'], // TODO: implement rtl
-    };
     // const insetProperties = {
     //   inset: ['inset'],
     //   insetx: ['left', 'right'],
@@ -39,55 +108,6 @@ export const cssClassFormatter = {
     //   left: ['left'], // TODO: implement rtl
     //   right: ['right'], // TODO: implement rtl
     // };
-
-    const getCSSPropertiesByType = (token, key) => {
-      const { type } = token.attributes;
-      //TODO: I have configSettings for various types in various places. I should consolidate them.
-      if (!key || !type) {
-        console.log('getCSSPropertiesByType: key is undefined | token: ', token);
-        return null;
-      }
-      if (type === 'margin') {
-        return marginProperties[key];
-      }
-      if (type === 'padding') {
-        return paddingProperties[key];
-      }
-      if (type === 'position') {
-        return [type];
-      }
-      if (type === 'inset') {
-        return [type];
-      }
-      if (type === 'top') {
-        return [type];
-      }
-      if (type === 'end') {
-        return ['right'];
-      }
-      if (type === 'bottom') {
-        return [type];
-      }
-      if (type === 'start') {
-        return ['left'];
-      }
-      if (type === 'width') {
-        return [type];
-      }
-      if (type === 'height') {
-        return [type];
-      }
-      if (type === 'flex-shrink') {
-        return [type];
-      }
-      if (type === 'flex-grow') {
-        return [type];
-      }
-      if (type === 'display') {
-        return [type];
-      }
-      // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
-    };
 
     const validateToken = (token) => {
       if (!token.name) {
@@ -270,7 +290,13 @@ export const componentCSSClassFormatter = {
       return token;
     };
     const formatPropertyName = (propertyName) => {
-      return formatString(propertyName, 'formatToCSSPropertyName');
+      const formattedString = formatString(propertyName, 'formatToCSSPropertyName');
+      if (!formattedString)
+        console.error(
+          `ERROR: formatPropertyName failed to format the propertyName: ${propertyName}`,
+          formattedString
+        );
+      return formattedString;
     };
     const formatPropertyValue = (originalPropertyValue, transformedPropertyValue) => {
       if (!originalPropertyValue) {
@@ -280,6 +306,7 @@ export const componentCSSClassFormatter = {
         );
         return;
       }
+
       const propertyValueHasReferences = dictionary.usesReference(originalPropertyValue);
       if (!propertyValueHasReferences) {
         console.log(
@@ -309,6 +336,7 @@ export const componentCSSClassFormatter = {
       const valueString = propertyValueHasReferences
         ? removeQuotesAndCurlyBraces(value)
         : removeQuotes(value);
+      console.log('formatPropertyValue | valueString,reference: ', valueString, reference);
       const trailingMath = valueString.slice(reference.length);
       const formattedValue = !!trailingMath
         ? `calc( var( --${reference} ) ${trailingMath} )`
@@ -320,31 +348,40 @@ export const componentCSSClassFormatter = {
       // console.log('token: ', token);
       const validatedToken = validateToken(token);
       const { value, original, attributes } = validatedToken;
-      const isMultiValue = isObjectWithValidation(value);
-      if (!isMultiValue) {
-        console.log('!isMultiValue | validatedToken.name: ', validatedToken.name);
-      }
-
       const { value: originalValue } = original;
-      // console.log('originalValue: ', originalValue);
+
       // Iterate through the value object, getting the css property and value and returning them formatted
-      const propertyValueTuples = Object.entries(originalValue).map((entry, index) => {
-        // Get the css property from the object key
-        // Get the value from the object value
-        // format both propertyName and value to have correct css syntax
-        const propertyName = formatPropertyName(entry[0]);
-        const propertyValue = formatPropertyValue(entry[1], Object.entries(value)[index][1]);
-        return [propertyName, propertyValue];
-      });
+
+      const propertyValueTuples = (valueObject) => {
+        if (!isObjectWithValidation(valueObject)) {
+          console.error('valueObject is not an object: ', token, typeof token.value);
+          return;
+        }
+
+        const tuples = Object.entries(originalValue).map((entry, index) => {
+          const propertyName = formatPropertyName(entry[0]);
+          const propertyValue = formatPropertyValue(entry[1], Object.entries(value)[index][1]);
+          return [propertyName, propertyValue];
+        });
+        return tuples;
+      };
+
       // If the token has multipleValues
-      // If the token has a single value
-      const propertyValueString = propertyValueTuples
-        .map((tuple) => {
-          return `${tuple[0]}: ${tuple[1]};`;
-        })
-        .join('\n');
-      // get the corresponding css property from the token depending on the type
-      //Get the className from the token
+      const multiValueString = (val) =>
+        propertyValueTuples(val)
+          .map((tuple) => {
+            return `${tuple[0]}: ${tuple[1]};`;
+          })
+          .join('\n');
+      const { item } = attributes;
+
+      // If the token has a single value. //Does not have properties that are objects. TODO: Figure out better way to get properties and names from tokens or config
+      const propertyByType = getCSSPropertiesByType(validatedToken, item);
+      const formattedValueString = formatPropertyValue(originalValue, value);
+      const singleValueString = `${propertyByType}: ${formattedValueString};`;
+      const propertyValueString =
+        typeof value === 'string' ? singleValueString : multiValueString(value);
+
       const { name } = validatedToken;
       const formattedName = name.split('-').slice(1).join('-'); // remove the category from cti name. TODO: find way to specify this for transformers.
       //Build the css class
@@ -353,15 +390,37 @@ export const componentCSSClassFormatter = {
 
     const tokenAttributesFilter = (token) => {
       const { matchAttributes = undefined } = options;
-
       if (!matchAttributes) return true;
+      const shouldMatch = (key, token) => {
+        // if the token has no attribute that matches the key return false
+        // if matchAttributes[key] starts with '!' then the token should be skipped.
+        // if matchAttributes[key] is an array, then try to find the token attribute in the array, if it is there, make sure it is not negated. If not present or negated, return false,
+        const valueIsArray = Array.isArray(matchAttributes[key]);
+        if (!valueIsArray) {
+          return (
+            !matchAttributes[key].startsWith('!') && matchAttributes[key] === token.attributes[key]
+          );
+        }
+        const matchIndex = matchAttributes[key].indexOf(token.attributes[key]);
+        const isNegated = matchAttributes[key][matchIndex].startsWith('!');
+        console.log('isNegated, key, token.name: ', isNegated, key, token.name);
+        return !isNegated;
+      };
+
       let returnValue = false;
       for (const key in matchAttributes) {
+        // const isMatcher = shouldMatch(key, token);
         const valueIsArray = Array.isArray(matchAttributes[key]);
         const isEmptyArray = valueIsArray && matchAttributes[key].length <= 0;
         let tempValue = false;
+        // if (!isMatcher) {
+        //   return false;
+        // }
         if (!matchAttributes[key] || isEmptyArray) {
           tempValue = true;
+        }
+        if (token.attributes.item === 'asChild') {
+          return false;
         }
         if (valueIsArray) {
           tempValue = matchAttributes[key].includes(token.attributes[key]);
