@@ -6,8 +6,8 @@ import { Slot } from '@radix-ui/react-slot';
 import { marginPropDefs } from '../../../../props/marginPropDefs.js';
 import { layoutPropDefs } from '../../../../props/layoutPropDefs.js';
 import { extractProps } from '../../../../utilities/js/extractProps.js';
-import { flexPropDefs } from './FlexPropDef.js';
-import { sizePropValueEnum } from '../container/ContainerPropDef.js';
+import { flexPropDefs } from './Flex.props.js';
+import { sizePropValueEnum } from '../container/Container.props.js';
 
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/flex.tsx
 /*

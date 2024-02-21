@@ -45,6 +45,9 @@ export const extractProps = (props, ...propDefs) => {
     extractedProps[key] = value;
 
     if (!!propDef?.className) {
+      // ClassNames are applied without styles when using module style sheets.
+      // TODO: Add support for module style sheets
+      // Either use a passed`styles` object or don't delete the extractedProps[key] and return a property classProps for the consuming component to use.
       delete extractedProps[key];
 
       const isResponsivePropDef = 'responsive' in propDef;

@@ -309,11 +309,11 @@ export const componentCSSClassFormatter = {
 
       const propertyValueHasReferences = dictionary.usesReference(originalPropertyValue);
       if (!propertyValueHasReferences) {
-        console.log(
-          '!propertyValueHasReferences | originalPropertyValue, transformedPropertyValue: ',
-          originalPropertyValue,
-          transformedPropertyValue
-        );
+        // console.log(
+        //   '!propertyValueHasReferences | originalPropertyValue, transformedPropertyValue: ',
+        //   originalPropertyValue,
+        //   transformedPropertyValue
+        // );
         return transformedPropertyValue;
       }
       const references = dictionary.getReferences(originalPropertyValue);
@@ -336,7 +336,7 @@ export const componentCSSClassFormatter = {
       const valueString = propertyValueHasReferences
         ? removeQuotesAndCurlyBraces(value)
         : removeQuotes(value);
-      console.log('formatPropertyValue | valueString,reference: ', valueString, reference);
+      // console.log('formatPropertyValue | valueString,reference: ', valueString, reference);
       const trailingMath = valueString.slice(reference.length);
       const formattedValue = !!trailingMath
         ? `calc( var( --${reference} ) ${trailingMath} )`

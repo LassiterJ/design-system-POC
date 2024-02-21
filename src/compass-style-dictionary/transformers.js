@@ -149,35 +149,21 @@ export const customPxToRemTransformer = {
   type: 'value',
   transitive: true,
   matcher: (token) => {
-    const { type, path, attributes, value, name } = token;
+    const { type, path, attributes, value, name, original } = token;
 
     const blacklistedPaths = ['em', 'rem', '%', 'full', 'auto', 'margin'];
     const whitelistedCategories = ['spacing', 'components'];
     const isBlacklistedPath = !!blacklistedPaths.find((item) => path.toString().includes(item));
-    //
-    // console.group('START_ customPxToRemTransformer _START');
-    // console.log(`Token Name: ${name}`);
-    // console.log('tokenValueHasANumericString(value): ', tokenValueHasANumericString(value));
-    // console.log(
-    //   'whitelistedCategories.includes(attributes?.category): ',
-    //   whitelistedCategories.includes(attributes?.category)
-    // );
-    // console.log('!isBlacklistedPath: ', !isBlacklistedPath);
-    // console.log('END_ customPxToRemTransformer _END');
-    if (attributes.type === 'container') {
-      console.group('Token is container | token: ', token);
-      console.log('tokenValueHasANumericString(value) ', tokenValueHasANumericString(value));
-      console.log(
-        'whitelistedCategories.includes(attributes?.category) ',
-        whitelistedCategories.includes(attributes?.category)
-      );
-      console.log('!isBlacklistedPath', !isBlacklistedPath);
-      console.groupEnd();
-    }
+    // const isValueANumericString = tokenValueHasANumericString(value);
+    // if (attributes.category === 'spacing') {
+    //   console.group('spacing token: ');
+    //   console.log('token: ', token);
+    //   // console.log('isValueANumericString: ', isValueANumericString);
+    //   console.groupEnd();
+    // }
     const isMatch =
-      tokenValueHasANumericString(value) &&
-      whitelistedCategories.includes(attributes?.category) &&
-      !isBlacklistedPath;
+      // tokenValueHasANumericString(value) &&
+      whitelistedCategories.includes(attributes?.category) && !isBlacklistedPath;
 
     // console.log('customPxToRemTransformer | isMatch: ', isMatch);
     // console.groupEnd();
@@ -185,23 +171,23 @@ export const customPxToRemTransformer = {
     return isMatch;
   },
   transformer: (token, options) => {
-    if (token.attributes.type === 'container') {
-      console.log('Token is container | token: ', token);
-    }
     if (!token) {
       console.error("customPxToRemTransformer: first argument is required. 'token' is undefined");
       return;
     }
 
-    if (!tokenValueHasANumericString(token.value)) {
-      console.error(
-        'customPxToRemTransformer: tokenValue is not a string or object with a string value'
-      );
-      return;
-    }
+    // if (!tokenValueHasANumericString(token.value)) {
+    //   console.error(
+    //     'customPxToRemTransformer: tokenValue is not a string or object with a string value'
+    //   );
+    //   return;
+    // }
 
     const transformValue = (value) => {
       const resolvedValue = checkAndEvaluateMath(value);
+      // if (token.attributes.item === '0') {
+      //   return `${resolvedValue}`;
+      // }
       if (token.attributes.item === 'px') {
         return `${resolvedValue}px`;
       }
@@ -210,13 +196,18 @@ export const customPxToRemTransformer = {
       }
 
       const pixelValue = parseFloat(resolvedValue);
+      if (Number.isNaN(pixelValue)) {
+        return value;
+      }
       const basePxFontSize = 16; //TODO: get this from a token or configuration
 
       const transformedValue = `${pixelValue / basePxFontSize}rem`;
       return transformedValue;
     };
+    console.log('customPxToRemTransformer: token.value: ', token.value);
     // if value is an object, transform the values
     if (!isObjectWithValidation(token.value)) {
+      console.log('!isObjectWithValidation(token.value), token.value: ', token.value);
       return transformValue(token.value);
     }
 

@@ -1,5 +1,5 @@
 import { Container } from './Container.jsx';
-import { sizePropValueEnum } from './ContainerPropDef.js';
+import { sizePropValueEnum } from './Container.props.js';
 import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
 import Box from '../box/Box.jsx';
 

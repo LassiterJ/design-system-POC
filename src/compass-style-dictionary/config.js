@@ -66,7 +66,7 @@ export const config = {
       buildPath: componentsPath,
       files: [
         {
-          destination: '/consuming-app/layout/container/ContainerUtilities.module.css',
+          destination: '/consuming-app/layout/container/ContainerUtilityClasses.module.css',
           format: 'custom/css/component/css-utility-classes',
           // format: 'custom/css/css-classes',
           // filter: (token) => {
@@ -78,7 +78,7 @@ export const config = {
           },
         },
         {
-          destination: '/consuming-app/layout/flex/FlexUtilities.module.scss',
+          destination: '/consuming-app/layout/flex/FlexUtilityClasses.module.scss',
           format: 'custom/css/component/css-utility-classes',
           // format: 'custom/css/css-classes',
           // filter: (token) => {

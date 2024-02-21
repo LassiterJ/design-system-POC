@@ -7,7 +7,7 @@ import { Slot } from '@radix-ui/react-slot';
 import { extractProps } from '../../../../utilities/js/extractProps.js';
 import { layoutPropDefs, widthPropDefs, heightPropDefs } from '../../../../props/layoutPropDefs.js';
 import { getRoot } from '../../../../utilities/js/getRoot.jsx';
-import { containerPropDefs, innerPropDefs, sizePropValueEnum } from './ContainerPropDef.js';
+import { containerPropDefs, innerPropDefs, sizePropValueEnum } from './Container.props.js';
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/container.tsx
 
 export const Container = React.forwardRef((props, forwardedRef) => {

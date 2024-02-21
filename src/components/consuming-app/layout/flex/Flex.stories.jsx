@@ -1,5 +1,5 @@
 import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
-import { flexPropDefs } from './FlexPropDef.js';
+import { flexPropDefs } from './Flex.props.js';
 import { Flex } from './Flex.jsx';
 import { Box } from '../box/Box.jsx';
 
@@ -30,8 +30,33 @@ const singleBoxAsChild = (
     <span>This is a Box inside a Flex component</span>
   </Box>
 );
+const multipleBoxesAsChildren = (
+  <>
+    <Box width="15" height="15" className={'TestBox'} style={{ backgroundColor: 'lightblue' }}>
+      <span>Box1</span>
+    </Box>
+    <Box width="15" height="15" className={'TestBox'} style={{ backgroundColor: 'lightblue' }}>
+      <span>Box2</span>
+    </Box>
+    <Box width="15" height="15" className={'TestBox'} style={{ backgroundColor: 'lightblue' }}>
+      <span>Box3</span>
+    </Box>
+  </>
+);
 export const Basic = {
   args: {
     children: singleBoxAsChild,
   },
+};
+export const MultipleChildren = {
+  args: {
+    children: multipleBoxesAsChildren,
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '100vw', padding: '3rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
