@@ -247,7 +247,7 @@
           "value": "flex",
           "description": "Sets the Flex container to a block-level flex container."
         },
-        "inlineFlex": {
+        "inline-flex": {
           "value": "inline-flex",
           "description": "Sets the Flex container to an inline-level flex container."
         },
@@ -265,11 +265,11 @@
           "value": "column",
           "description": "Lays out the Flex items in a column."
         },
-        "rowReverse": {
+        "row-reverse": {
           "value": "row-reverse",
           "description": "Lays out the Flex items in a row in reverse order."
         },
-        "columnReverse": {
+        "column-reverse": {
           "value": "column-reverse",
           "description": "Lays out the Flex items in a column in reverse order."
         }
@@ -323,7 +323,7 @@
           "value": "wrap",
           "description": "Allows Flex items to wrap as needed."
         },
-        "wrapReverse": {
+        "wrap-reverse": {
           "value": "wrap-reverse",
           "description": "Allows Flex items to wrap in reverse order."
         }

@@ -1,7 +1,7 @@
 .flex-display-flex { 
  display: flex; 
 }
-.flex-display-inlineFlex { 
+.flex-display-inline-flex { 
  display: inline-flex; 
 }
 .flex-display-none { 
@@ -13,10 +13,10 @@
 .flex-direction-column { 
  flex-direction: column; 
 }
-.flex-direction-rowReverse { 
+.flex-direction-row-reverse { 
  flex-direction: row-reverse; 
 }
-.flex-direction-columnReverse { 
+.flex-direction-column-reverse { 
  flex-direction: column-reverse; 
 }
 .flex-align-start { 
@@ -52,7 +52,7 @@
 .flex-wrap-wrap { 
  flex-wrap: wrap; 
 }
-.flex-wrap-wrapReverse { 
+.flex-wrap-wrap-reverse { 
  flex-wrap: wrap-reverse; 
 }
 .flex-gap-0 { 

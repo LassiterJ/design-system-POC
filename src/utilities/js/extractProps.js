@@ -14,11 +14,11 @@ function mergePropDefs(...args) {
 }
 
 export const extractProps = (props, ...propDefs) => {
+  console.log('extractProps | props: ', props);
   let className;
   let style;
   const extractedProps = { ...props };
   const allPropDefs = mergePropDefs(...propDefs);
-  console.log('extractProps | allPropDefs: ', allPropDefs);
   for (const key in allPropDefs) {
     let value = extractedProps[key];
     const propDef = allPropDefs[key];

@@ -1,6 +1,7 @@
-import { Flex } from './Flex.jsx';
 import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
 import { flexPropDefs } from './FlexPropDef.js';
+import { Flex } from './Flex.jsx';
+import { Box } from '../box/Box.jsx';
 
 export default {
   title: 'Layout/Flex',
@@ -15,7 +16,12 @@ export default {
   argTypes: {
     ...marginArgTypes,
     ...layoutArgTypes,
-    display: { control: 'select', options: flexPropDefs.display.options },
+    display: { control: 'select', options: flexPropDefs.display.values },
+    direction: { control: 'select', options: flexPropDefs.direction.values },
+    align: { control: 'select', options: flexPropDefs.align.values },
+    justify: { control: 'select', options: flexPropDefs.justify.values },
+    wrap: { control: 'select', options: flexPropDefs.wrap.values },
+    gap: { control: 'select', options: flexPropDefs.gap.values },
   },
 };
 
@@ -27,6 +33,5 @@ const singleBoxAsChild = (
 export const Basic = {
   args: {
     children: singleBoxAsChild,
-    gap: '4',
   },
 };

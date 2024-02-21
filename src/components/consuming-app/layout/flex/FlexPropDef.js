@@ -6,7 +6,7 @@ export const flexPropDefs = {
   asChild: asChildPropDef,
   display: {
     type: 'enum',
-    className: 'display',
+    className: 'flex-display',
     default: 'flex',
     values: ['flex', 'inline-flex', 'none'],
   },
@@ -17,15 +17,15 @@ export const flexPropDefs = {
   },
   align: {
     type: 'enum',
-    className: 'align-items',
+    className: 'flex-align-items',
     default: undefined,
     values: ['start', 'center', 'end', 'baseline', 'stretch'],
   },
   justify: {
     type: 'enum',
-    className: 'justify-content',
+    className: 'flex-justify-content',
     default: undefined,
-    values: ['start', 'center', 'end', 'between'], //TODO: may add 'around' and 'evenly'
+    values: ['start', 'center', 'end', 'space-between'], //TODO: may add 'around' and 'evenly'
   },
   wrap: {
     type: 'enum',
@@ -35,7 +35,7 @@ export const flexPropDefs = {
   },
   gap: {
     type: 'enum',
-    className: 'gap',
+    className: 'flex-gap',
     default: undefined,
     values: coreKeys,
   },

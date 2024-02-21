@@ -2,7 +2,7 @@ import { Box } from './Box';
 import { layoutArgTypes, marginArgTypes } from '../../../../../.storybook/argTypes';
 
 export default {
-  title: 'Layout/Flex',
+  title: 'Layout/Box',
   component: Box,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
