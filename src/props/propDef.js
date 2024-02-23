@@ -32,17 +32,17 @@ export const propDefPropTypes = {
 // // Works with standalone PropTypes
 // PropTypes.checkPropTypes(propDefPropTypes, props, 'prop', 'MyComponent');
 
-// Utility function to validate prop definitions
-export const validatePropDefinition = (propDef, propDefTemplate = propDefPropTypes) => {
-  //
-  // Object.keys(propDefs).forEach((key) => {
-  //   const propDef = propDefs[key];
-  //   try {
-  //     PropTypes.checkPropTypes(propDefTemplate, propDef, 'prop', `validatePropDefinitions: ${key}`);
-  //   } catch (e) {
-  //     console.error('validatePropDefinitions | error: ', e);
-  //     return false;
-  //   }
-  // });
-  return true;
-};
+// // Utility function to validate prop definitions
+// export const validatePropDefinition = (propDef, propDefTemplate = propDefPropTypes) => {
+//   //
+//   // Object.keys(propDefs).forEach((key) => {
+//   //   const propDef = propDefs[key];
+//   //   try {
+//   //     PropTypes.checkPropTypes(propDefTemplate, propDef, 'prop', `validatePropDefinitions: ${key}`);
+//   //   } catch (e) {
+//   //     console.error('validatePropDefinitions | error: ', e);
+//   //     return false;
+//   //   }
+//   // });
+//   return true;
+// };

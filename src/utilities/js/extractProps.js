@@ -130,21 +130,21 @@ const parsePropValue = (value, propDef) => {
     const hasDefaultValue = propDef.default !== undefined;
     const valueIsSupported = !propDef.values || propDef.values?.includes(value);
     const propDefHasParser = 'parseValue' in propDef;
-
     const parsedValue = propDefHasParser ? propDef.parseValue(value) : value;
     const valueOrDefault =
-      hasDefaultValue && (parsedValue === undefined || !valueIsSupported) ? propDef.default : value;
-    console.group('$$$$ parsePropValue $$$$');
-    console.log(' value, propDef: ', value, propDef);
-    console.log('parsedValue: ', parsedValue);
-    console.log('valueOrDefault: ', valueOrDefault);
-    console.groupEnd();
+      hasDefaultValue && (parsedValue === undefined || !valueIsSupported)
+        ? propDef.default
+        : parsedValue;
+
     return valueOrDefault;
   }
   return value || propDef.default;
 };
 
 const getClassnameData = (propObj, propDef, scopedStyles) => {
+  if (propDef.className === 'm') {
+    console.log('getClassnameData |propObj: ', propObj);
+  }
   const { name, value } = propObj;
   const { type, className, values, default: defaultValue, responsive } = propDef;
   if (!className) {
@@ -183,7 +183,6 @@ const parseProp = (matchedPropObj, propDef, scopedStyles) => {
   // if propDef.responsive && isResponsiveObject(matchedPropObj.value)
   // apply parsePropValue to each value in the responsive object then handle the parsed responsive object somehow
   const parsedValue = parsePropValue(matchedPropObj?.value, propDef);
-  console.log('parseProp | parsedValue: ', parsedValue);
   if (parsedValue === undefined) {
     return;
   }
@@ -209,7 +208,6 @@ const parseProp = (matchedPropObj, propDef, scopedStyles) => {
 };
 
 export const extractProps2 = (props, propDefs, options = {}) => {
-  console.log('extractProps2 | initial props: ', props);
   const { scopedStyles = undefined } = options;
   // const propDefsAreValid = validatePropDefinitions(propDefs); //TODO: Decide if we want to validate propDefs here or validate as they are parsed.
   // Initial Guard checks
@@ -227,20 +225,11 @@ export const extractProps2 = (props, propDefs, options = {}) => {
   }
   const parsePropsReducer = (acc, [key, propDef], index) => {
     const propValue = props[key];
-    // if(!prop && propDef.required) {
-    //   console.error('extractProps | prop is not defined and is required: ', prop);
-    //   return acc;
-    // }
-
-    console.log('parsePropsReducer | key,propDef, propValue: ', key, propDef, propValue);
     const parsedProp = parseProp({ name: key, value: propValue }, propDef, scopedStyles);
     if (!parsedProp) {
       return acc;
     }
     const { className, classProp, processedProp } = parsedProp;
-    if (!processedProp) {
-      console.log('extractProps2 | processedProp is not defined: ', processedProp);
-    }
     const newAcc = {
       className: classNames(acc.className, className),
       classProps: { ...acc.classProps, ...classProp },
@@ -258,12 +247,10 @@ export const extractProps2 = (props, propDefs, options = {}) => {
       processedProps: {},
     }
   );
-  console.log('extractProps2 | processedProps: ', processedProps);
 
   const restProps = Object.fromEntries(
     Object.entries(props).filter(([name]) => !Object.hasOwn(processedProps, name))
   );
-  console.log('extractProps2 | restProps: ', restProps);
 
   return { processedProps, className, classProps, restProps };
 };

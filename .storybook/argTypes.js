@@ -6,17 +6,28 @@ import {
 } from '../src/props/layoutPropDefs.js';
 import { marginPropertiesEnums } from '../src/props/marginPropDefs.js';
 import { formatString } from '../src/utilities/js/formatString.js';
-const createMappingObject = (keysArray) => {
+const createMappingObject = (keysArray, parseKey = (key) => key, parseValue = (key) => key) => {
   const mappingObject = {};
   keysArray.forEach((key) => {
-    mappingObject[key] = key;
+    const formattedKey = parseKey(key);
+    mappingObject[formattedKey] = parseValue(key);
     // mappingObject[key] = formatString(key, 'formatToCustomCSSProperty');
   });
   return mappingObject;
 };
 const fractionalScaleWithCSSPrefix = createMappingObject(fractionalKeys);
 const coreScaleWithCSSPrefix = createMappingObject(coreKeys);
-const keyValueMap = { ...coreScaleWithCSSPrefix, ...fractionalScaleWithCSSPrefix };
+const negativeCoreScaleWithCSSPrefix = createMappingObject(
+  negativeCoreKeys
+  // (key) => `-${key}`,
+  // (key) => `n${key}`
+);
+console.log('negativeCoreScaleWithCSSPrefix: ', negativeCoreScaleWithCSSPrefix);
+const keyValueMap = {
+  ...coreScaleWithCSSPrefix,
+  ...fractionalScaleWithCSSPrefix,
+  ...negativeCoreScaleWithCSSPrefix,
+};
 console.log('keyValueMap: ', keyValueMap);
 export const layoutArgTypes = {
   p: { control: 'select', options: layoutPropertiesEnums.p, mapping: keyValueMap },
@@ -66,12 +77,14 @@ export const layoutArgTypes = {
   flexGrow: { control: 'select', options: layoutPropertiesEnums.flexGrow },
 };
 
+const negativeLabels = createMappingObject(negativeCoreKeys, (key) => `-${key}`);
 export const marginArgTypes = {
   m: { control: 'select', options: marginPropertiesEnums.m },
-  mx: { control: 'select', options: marginPropertiesEnums.mx },
-  my: { control: 'select', options: marginPropertiesEnums.my },
-  mt: { control: 'select', options: marginPropertiesEnums.mt },
-  me: { control: 'select', options: marginPropertiesEnums.me },
-  mb: { control: 'select', options: marginPropertiesEnums.mb },
-  ms: { control: 'select', options: marginPropertiesEnums.ms },
+  mapping: keyValueMap,
+  mx: { control: 'select', options: marginPropertiesEnums.mx, mapping: keyValueMap },
+  my: { control: 'select', options: marginPropertiesEnums.my, mapping: keyValueMap },
+  mt: { control: 'select', options: marginPropertiesEnums.mt, mapping: keyValueMap },
+  me: { control: 'select', options: marginPropertiesEnums.me, mapping: keyValueMap },
+  mb: { control: 'select', options: marginPropertiesEnums.mb, mapping: keyValueMap },
+  ms: { control: 'select', options: marginPropertiesEnums.ms, mapping: keyValueMap },
 };

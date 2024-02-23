@@ -2,6 +2,7 @@ import {
   primitiveCoreScale,
   primitiveFractionalScale,
 } from '../compass-style-dictionary/dist/primitiveScales.js';
+import { formatString } from '../utilities/js/formatString.js';
 export const coreKeys = Object.keys(primitiveCoreScale);
 export const negativeCoreKeys = coreKeys
   .map((value) => `n${value}`)
@@ -103,6 +104,15 @@ export const paddingPropDefs = {
     responsive: true,
   },
 };
+
+const parseValueToCSS = (value) => {
+  if (typeof value === 'string' && value.includes('/')) {
+    const formattedValue = formatString(value, 'formatToCustomCSSClassSyntax');
+    console.log('formattedValue: ', formattedValue);
+    return formattedValue;
+  }
+  return value;
+};
 export const layoutPropDefs = {
   ...paddingPropDefs,
   ...widthPropDefs,
@@ -118,6 +128,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'inset',
     values: layoutPropertiesEnums.inset,
+    parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
   },
@@ -125,6 +136,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'top',
     values: layoutPropertiesEnums.top,
+    parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
   },
@@ -132,6 +144,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'end',
     values: layoutPropertiesEnums.end,
+    parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
   },
@@ -139,6 +152,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'bottom',
     values: layoutPropertiesEnums.bottom,
+    parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
   },
@@ -146,6 +160,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'start',
     values: layoutPropertiesEnums.start,
+    parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
   },
