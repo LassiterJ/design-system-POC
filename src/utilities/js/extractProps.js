@@ -150,13 +150,14 @@ const getClassnameData = (propObj, propDef, scopedStyles) => {
   if (!className) {
     return {};
   }
-
+  //TODO: Even if they have scoped styles, the class might not be in the scoped styles object. Need to handle that.
   const hasScopedStyles = isObjectWithValidation(scopedStyles);
 
-  if (!hasScopedStyles) {
-    return { className: `${className}-${value}`, classProps: { [name]: value } };
+  const scopedClass = hasScopedStyles && scopedStyles[`${className}-${value}`];
+  if (scopedClass) {
+    return { className: scopedClass, classProp: { [name]: value } };
   }
-  return { className: scopedStyles[`${className}-${value}`], classProp: { [name]: value } };
+  return { className: `${className}-${value}`, classProp: { [name]: value } };
 };
 
 const handleResponsiveValue = (valueOrDefault, propDef) => {

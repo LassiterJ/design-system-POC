@@ -31,7 +31,7 @@ export const flexPropDefs = {
   wrap: {
     type: 'enum',
     className: 'flex-wrap',
-    default: 'undefined',
+    default: undefined,
     values: ['nowrap', 'wrap', 'wrap-reverse'],
   },
   gap: {
