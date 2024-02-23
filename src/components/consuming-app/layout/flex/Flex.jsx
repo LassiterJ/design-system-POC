@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './Flex.module.scss';
-import styleUtils from './FlexUtilities.module.scss';
+import styleUtils from './FlexUtilityClasses.module.scss';
 import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 import { marginPropDefs } from '../../../../props/marginPropDefs.js';
 import { layoutPropDefs } from '../../../../props/layoutPropDefs.js';
 import { extractProps } from '../../../../utilities/js/extractProps.js';
 import { flexPropDefs } from './Flex.props.js';
-import { sizePropValueEnum } from '../container/Container.props.js';
 
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/flex.tsx
 /*
@@ -22,13 +21,22 @@ gap enum
 
 export const Flex = React.forwardRef((props, forwardedRef) => {
   console.log('rawProps: ', props);
-  const { gap = '4', display, align, justify, wrap, direction, ...restProps } = props; // currently, extractProps removes props when they have classNames in their propdef. TODO decide if this is the desired behavior
+  const {
+    gap = flexPropDefs.gap.default,
+    display = flexPropDefs.display.default,
+    align,
+    justify,
+    wrap,
+    direction,
+    ...restProps
+  } = props; // currently, extractProps removes props when they have classNames in their propdef. TODO decide if this is the desired behavior
 
   const extractedProps = extractProps(restProps, flexPropDefs, layoutPropDefs, marginPropDefs);
   console.log('extractedProps: ', extractedProps);
   const { className, asChild, as: Tag = 'div', ...flexProps } = extractedProps;
   const Comp = asChild ? Slot : 'div';
-  console.log('flexPropDefs.gap.values: ', flexPropDefs.gap.values);
+
+  // Dynamic Classes
   const gapClass = flexPropDefs.gap.values.includes(gap) ? styleUtils[`flex-gap-${gap}`] : '';
   const displayClass = flexPropDefs.display.values.includes(display)
     ? styleUtils[`flex-display-${display}`]

@@ -4,18 +4,26 @@ import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 import { marginPropDefs } from '../../../../props/marginPropDefs.js';
 import { layoutPropDefs } from '../../../../props/layoutPropDefs.js';
-import { extractProps } from '../../../../utilities/js/extractProps.js';
+import { extractProps, extractProps2 } from '../../../../utilities/js/extractProps.js';
 import { boxPropDefs } from './Box.props.js';
 
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/box.tsx
 
 export const Box = React.forwardRef((props, forwardedRef) => {
-  const extractedProps = extractProps(props, boxPropDefs, layoutPropDefs, marginPropDefs);
-  console.log('extractedProps: ', extractedProps);
-  const { className, asChild, as: Tag = 'div', ...boxProps } = extractedProps;
+  const extractedProps = extractProps2(props, {
+    ...boxPropDefs,
+    ...layoutPropDefs,
+    ...marginPropDefs,
+  });
+  // const extractedProps = extractProps(props, boxPropDefs, layoutPropDefs, marginPropDefs);
+
+  // const { className, asChild, as: Tag = 'div', ...boxProps } = extractedProps;
+  const { processedProps, className, classProps, restProps } = extractedProps;
+  const { asChild, as: Tag = 'div', ...boxProps } = processedProps;
+  console.log('Box | extractedProps: ', extractedProps);
   const Comp = asChild ? Slot : 'div';
   return (
-    <Comp {...boxProps} ref={forwardedRef} className={classNames(`${styles['box']}`, className)} />
+    <Comp {...restProps} ref={forwardedRef} className={classNames(`${styles['box']}`, className)} />
   );
 });
 

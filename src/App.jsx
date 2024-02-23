@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { StrictMode, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { HomePage } from './components/consuming-app/page/home-page/HomePage';
@@ -7,10 +7,12 @@ import LayoutComponentTestPage from './components/consuming-app/page/layout-comp
 
 const App = () => {
   return (
-    <AppStateProvider>
-      {/*<HomePage />*/}
-      <LayoutComponentTestPage />
-    </AppStateProvider>
+    <StrictMode>
+      <AppStateProvider>
+        {/*<HomePage />*/}
+        <LayoutComponentTestPage />
+      </AppStateProvider>
+    </StrictMode>
   );
 };
 

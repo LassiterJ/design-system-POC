@@ -8,13 +8,15 @@ import {
   getResponsiveStyles,
 } from './getResponsiveStyles.js';
 import { formatString } from './formatString.js';
+import isObjectWithValidation from './isObjectWithValidation.js';
+// import { validatePropDefinitions } from '../../props/propDef.js';
 
 function mergePropDefs(...args) {
   return Object.assign({}, ...args);
 }
-
+// TODO: Refactor extractProps. pass in styleUtil module to apply scoped classes from props. Maybe making the first arg an object with the props, styleUtil module and other options. Make much more readable and maintainable.
 export const extractProps = (props, ...propDefs) => {
-  console.log('extractProps | props: ', props);
+  // console.log('extractProps | props: ', props);
   let className;
   let style;
   const extractedProps = { ...props };
@@ -115,4 +117,152 @@ export const extractProps = (props, ...propDefs) => {
   extractedProps.className = classNames(className, props.className);
   extractedProps.style = mergeStyles(style, props.style);
   return extractedProps;
+};
+
+// Utility function to apply defaults and validate enum val//TODO:  add support for other value types than enums
+const parsePropValue = (value, propDef) => {
+  if (!value && !!propDef.required) {
+    console.error('parsePropValue | value is not defined and is required: ', value);
+    return;
+  }
+
+  if (propDef.type === 'enum') {
+    const hasDefaultValue = propDef.default !== undefined;
+    const valueIsSupported = !propDef.values || propDef.values?.includes(value);
+    const propDefHasParser = 'parseValue' in propDef;
+
+    const parsedValue = propDefHasParser ? propDef.parseValue(value) : value;
+    const valueOrDefault =
+      hasDefaultValue && (parsedValue === undefined || !valueIsSupported) ? propDef.default : value;
+    console.group('$$$$ parsePropValue $$$$');
+    console.log(' value, propDef: ', value, propDef);
+    console.log('parsedValue: ', parsedValue);
+    console.log('valueOrDefault: ', valueOrDefault);
+    console.groupEnd();
+    return valueOrDefault;
+  }
+  return value || propDef.default;
+};
+
+const getClassnameData = (propObj, propDef, scopedStyles) => {
+  const { name, value } = propObj;
+  const { type, className, values, default: defaultValue, responsive } = propDef;
+  if (!className) {
+    return {};
+  }
+
+  const hasScopedStyles = isObjectWithValidation(scopedStyles);
+
+  if (!hasScopedStyles) {
+    return { className: `${className}-${value}`, classProps: { [name]: value } };
+  }
+  return { className: scopedStyles[`${className}-${value}`], classProp: { [name]: value } };
+};
+
+const handleResponsiveValue = (valueOrDefault, propDef) => {
+  // iterate through breakpoints and apply parsePropValue to each value
+  // figure out implementation of responsive values
+  return undefined;
+};
+
+const parseProp = (matchedPropObj, propDef, scopedStyles) => {
+  if (!propDef && !isObjectWithValidation(matchedPropObj)) {
+    console.error('Error neither propDef nor matchedPropObj are defined: ');
+    console.trace("The above error occurred in the extractProps function's parseProp function");
+    return;
+  }
+
+  if (!matchedPropObj?.value && propDef.required) {
+    console.error('extractProps | matchedPropObj is not defined and is required: ', matchedPropObj);
+    console.trace("The above error occurred in the extractProps function's parseProp function");
+    return;
+  }
+
+  // handle className and classProp
+  // if propDef.responsive && isResponsiveObject(matchedPropObj.value)
+  // apply parsePropValue to each value in the responsive object then handle the parsed responsive object somehow
+  const parsedValue = parsePropValue(matchedPropObj?.value, propDef);
+  console.log('parseProp | parsedValue: ', parsedValue);
+  if (parsedValue === undefined) {
+    return;
+  }
+  const { className = '', classProp = {} } = getClassnameData(
+    { name: matchedPropObj.name, value: parsedValue },
+    propDef,
+    scopedStyles
+  );
+
+  // handle processedProps
+  const processedProp = isObjectWithValidation(matchedPropObj)
+    ? { name: matchedPropObj.name, value: parsedValue }
+    : {};
+
+  const parsedProp = {
+    className,
+    classProp,
+    processedProp,
+  };
+  // if
+
+  return parsedProp;
+};
+
+export const extractProps2 = (props, propDefs, options = {}) => {
+  console.log('extractProps2 | initial props: ', props);
+  const { scopedStyles = undefined } = options;
+  // const propDefsAreValid = validatePropDefinitions(propDefs); //TODO: Decide if we want to validate propDefs here or validate as they are parsed.
+  // Initial Guard checks
+  if (!isObjectWithValidation(props)) {
+    console.error('extractProps2 | props is not an object: ', props);
+    return;
+  }
+  if (!propDefs && !isObjectWithValidation(propDefs)) {
+    console.error('extractProps2 | propDefs is not defined: ', propDefs);
+    return;
+  }
+  if (!!scopedStyles && !isObjectWithValidation(scopedStyles)) {
+    console.error('extractProps2 | scopedStyles is not an object: ', scopedStyles);
+    return;
+  }
+  const parsePropsReducer = (acc, [key, propDef], index) => {
+    const propValue = props[key];
+    // if(!prop && propDef.required) {
+    //   console.error('extractProps | prop is not defined and is required: ', prop);
+    //   return acc;
+    // }
+
+    console.log('parsePropsReducer | key,propDef, propValue: ', key, propDef, propValue);
+    const parsedProp = parseProp({ name: key, value: propValue }, propDef, scopedStyles);
+    if (!parsedProp) {
+      return acc;
+    }
+    const { className, classProp, processedProp } = parsedProp;
+    if (!processedProp) {
+      console.log('extractProps2 | processedProp is not defined: ', processedProp);
+    }
+    const newAcc = {
+      className: classNames(acc.className, className),
+      classProps: { ...acc.classProps, ...classProp },
+      processedProps: { ...acc.processedProps, [processedProp.name]: processedProp.value },
+    };
+
+    return newAcc;
+  };
+
+  const { processedProps, className, classProps } = Object.entries(propDefs).reduce(
+    parsePropsReducer,
+    {
+      className: '',
+      classProps: {},
+      processedProps: {},
+    }
+  );
+  console.log('extractProps2 | processedProps: ', processedProps);
+
+  const restProps = Object.fromEntries(
+    Object.entries(props).filter(([name]) => !Object.hasOwn(processedProps, name))
+  );
+  console.log('extractProps2 | restProps: ', restProps);
+
+  return { processedProps, className, classProps, restProps };
 };

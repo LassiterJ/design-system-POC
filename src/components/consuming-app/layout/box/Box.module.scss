@@ -1,7 +1,6 @@
 @import "src/styles/breakpoints";
 
 .box {
-  border: 2px solid red;
 
   // An example of Breakpoint usage. Not relevant really here.
   @include compact {

@@ -1,6 +1,7 @@
 import { asChildPropDef } from '../../../../props/asChildPropDef.js';
 import { coreKeys, layoutPropDefs } from '../../../../props/layoutPropDefs.js';
 import { marginPropDefs } from '../../../../props/marginPropDefs.js';
+import { sizePropValueEnum } from '../container/Container.props.js';
 
 export const flexPropDefs = {
   asChild: asChildPropDef,
@@ -36,7 +37,7 @@ export const flexPropDefs = {
   gap: {
     type: 'enum',
     className: 'flex-gap',
-    default: undefined,
+    default: '4',
     values: coreKeys,
   },
   ...layoutPropDefs,

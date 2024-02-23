@@ -1,5 +1,5 @@
 @import "../../../../../src/styles/breakpoints.scss";
-@import './ContainerUtilities.module.css';
+@import './ContainerUtilityClasses.module.css';
 
 /*TODO convert to module.scss*/
 .container {

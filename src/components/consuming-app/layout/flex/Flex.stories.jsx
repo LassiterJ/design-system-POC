@@ -26,7 +26,12 @@ export default {
 };
 
 const singleBoxAsChild = (
-  <Box width="10" height="10" className={'TestBox'} style={{ backgroundColor: 'lightsalmon' }}>
+  <Box
+    width="min-content"
+    height="min-content"
+    className={'TestBox'}
+    style={{ backgroundColor: 'lightsalmon' }}
+  >
     <span>This is a Box inside a Flex component</span>
   </Box>
 );
@@ -47,6 +52,13 @@ export const Basic = {
   args: {
     children: singleBoxAsChild,
   },
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '100vw', padding: '3rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 export const MultipleChildren = {
   args: {
