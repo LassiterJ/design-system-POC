@@ -6,6 +6,9 @@ import { formatString } from '../utilities/js/formatString.js';
 // Created based off of Radix-Theme's margin.props.ts: https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/helpers/props/margin.props.ts
 // prettier-ignore
 
+export const marginPropertiesMap = {
+  m: { ...primitiveCoreScale, auto: 'auto' },
+};
 export const marginPropertiesEnums = {
   m: ['auto', ...coreKeys, ...negativeCoreKeys],
   mx: ['auto', ...coreKeys, ...negativeCoreKeys],

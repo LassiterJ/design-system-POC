@@ -5,7 +5,7 @@ import {
 import { formatString } from '../utilities/js/formatString.js';
 export const coreKeys = Object.keys(primitiveCoreScale);
 export const negativeCoreKeys = coreKeys
-  .map((value) => `n${value}`)
+  .map((value) => `-${value}`)
   .filter((item) => item !== 'n0');
 export const fractionalKeys = Object.keys(primitiveFractionalScale);
 export const layoutPropertiesEnums = {

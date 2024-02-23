@@ -3,8 +3,6 @@
 .flex {
   /* Default values to provide the initial styles in the object syntax, e.g. `<Flex display={{ md: 'none' }} />` */
   //display: flex;
-  justify-content: flex-start;
-
   // An example of Breakpoint usage. Not relevant really here.
   @include compact {
     border: 2px solid blue;
@@ -16,4 +14,60 @@
     border: 2px solid greenyellow;
   }
 }
+
+/* TODO: This is how Radix handles responsive styles.
+ @include compact {
+    &--compact
+}
+@include medium {
+  &--medium
+}
+@include expanded {
+  &--expanded
+}
+
+
+@media (--xs) {
+  .xs\:rt-r-m {
+    --margin-top: var(--margin-xs);
+    --margin-right: var(--margin-xs);
+    --margin-bottom: var(--margin-xs);
+    --margin-left: var(--margin-xs);
+  }
+}
+@media (--sm) {
+  .sm\:rt-r-m {
+    --margin-top: var(--margin-sm);
+    --margin-right: var(--margin-sm);
+    --margin-bottom: var(--margin-sm);
+    --margin-left: var(--margin-sm);
+  }
+}
+@media (--md) {
+  .md\:rt-r-m {
+    --margin-top: var(--margin-md);
+    --margin-right: var(--margin-md);
+    --margin-bottom: var(--margin-md);
+    --margin-left: var(--margin-md);
+  }
+}
+@media (--lg) {
+  .lg\:rt-r-m {
+    --margin-top: var(--margin-lg);
+    --margin-right: var(--margin-lg);
+    --margin-bottom: var(--margin-lg);
+    --margin-left: var(--margin-lg);
+  }
+}
+@media (--xl) {
+  .xl\:rt-r-m {
+    --margin-top: var(--margin-xl);
+    --margin-right: var(--margin-xl);
+    --margin-bottom: var(--margin-xl);
+    --margin-left: var(--margin-xl);
+  }
+}
+*/
+
+
 

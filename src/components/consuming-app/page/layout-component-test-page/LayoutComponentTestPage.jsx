@@ -15,10 +15,9 @@ export const LayoutComponentTestPage = () => {
       {/*  </Container>*/}
       {/*</Box>*/}
       <Flex
-        position="absolute"
-        m={'2'}
-        inset={'1/6'}
+        m={2}
         gap={'4'}
+        justify="between"
         className={'TestFlex'}
         style={{ backgroundColor: 'lightgreen' }}
       >

@@ -6,6 +6,7 @@ import {
 } from '../src/props/layoutPropDefs.js';
 import { marginPropertiesEnums } from '../src/props/marginPropDefs.js';
 import { formatString } from '../src/utilities/js/formatString.js';
+import { primitiveCoreScale } from '../src/compass-style-dictionary/dist/primitiveScales.js';
 const createMappingObject = (keysArray, parseKey = (key) => key, parseValue = (key) => key) => {
   const mappingObject = {};
   keysArray.forEach((key) => {
@@ -19,7 +20,7 @@ const fractionalScaleWithCSSPrefix = createMappingObject(fractionalKeys);
 const coreScaleWithCSSPrefix = createMappingObject(coreKeys);
 const negativeCoreScaleWithCSSPrefix = createMappingObject(
   negativeCoreKeys
-  // (key) => `-${key}`,
+  // (key) => `-${key}`
   // (key) => `n${key}`
 );
 console.log('negativeCoreScaleWithCSSPrefix: ', negativeCoreScaleWithCSSPrefix);
@@ -77,10 +78,12 @@ export const layoutArgTypes = {
   flexGrow: { control: 'select', options: layoutPropertiesEnums.flexGrow },
 };
 
-const negativeLabels = createMappingObject(negativeCoreKeys, (key) => `-${key}`);
 export const marginArgTypes = {
-  m: { control: 'select', options: marginPropertiesEnums.m },
-  mapping: keyValueMap,
+  m: {
+    control: 'select',
+    options: marginPropertiesEnums.m,
+    mapping: keyValueMap,
+  },
   mx: { control: 'select', options: marginPropertiesEnums.mx, mapping: keyValueMap },
   my: { control: 'select', options: marginPropertiesEnums.my, mapping: keyValueMap },
   mt: { control: 'select', options: marginPropertiesEnums.mt, mapping: keyValueMap },

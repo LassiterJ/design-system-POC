@@ -24,8 +24,8 @@ export const flexPropDefs = {
   },
   justify: {
     type: 'enum',
-    className: 'flex-justify-content',
-    default: undefined,
+    className: 'flex-justify',
+    default: 'start',
     values: ['start', 'center', 'end', 'space-between'], //TODO: may add 'around' and 'evenly'
   },
   wrap: {
