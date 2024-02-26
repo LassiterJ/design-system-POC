@@ -9,8 +9,12 @@ export const negativeCoreKeys = coreKeys
   .filter((item) => item !== 'n0');
 export const fractionalKeys = Object.keys(primitiveFractionalScale);
 export const layoutPropertiesEnums = {
-  width: [...coreKeys, 'auto', 'min-content', 'max-content', 'full'],
-  height: [...coreKeys, 'auto', 'min-content', 'max-content'],
+  width: [...coreKeys, ...fractionalKeys, 'auto', 'min-content', 'max-content', 'full'],
+  height: [...coreKeys, ...fractionalKeys, 'auto', 'min-content', 'max-content'],
+  maxWidth: [...coreKeys, ...fractionalKeys, 'auto', 'min-content', 'max-content', 'full'],
+  minWidth: [...coreKeys, ...fractionalKeys, 'auto', 'min-content', 'max-content', 'full'],
+  maxHeight: [...coreKeys, ...fractionalKeys, 'auto', 'min-content', 'max-content'],
+  minHeight: [...coreKeys, ...fractionalKeys, 'auto', 'min-content', 'max-content'],
   position: ['static', 'relative', 'absolute', 'fixed', 'sticky'],
   inset: ['auto', ...fractionalKeys, ...coreKeys],
   top: ['auto', ...fractionalKeys, ...coreKeys],
@@ -41,6 +45,20 @@ export const widthPropDefs = {
     default: undefined,
     responsive: true,
   },
+  maxWidth: {
+    type: 'enum',
+    className: 'max-width',
+    values: layoutPropertiesEnums.maxWidth,
+    default: undefined,
+    responsive: true,
+  },
+  minWidth: {
+    type: 'enum',
+    className: 'min-width',
+    values: layoutPropertiesEnums.minWidth,
+    default: undefined,
+    responsive: true,
+  },
 };
 
 export const heightPropDefs = {
@@ -48,6 +66,20 @@ export const heightPropDefs = {
     type: 'enum',
     className: 'height',
     values: layoutPropertiesEnums.height,
+    default: undefined,
+    responsive: true,
+  },
+  maxHeight: {
+    type: 'enum',
+    className: 'max-height',
+    values: layoutPropertiesEnums.maxHeight,
+    default: undefined,
+    responsive: true,
+  },
+  minHeight: {
+    type: 'enum',
+    className: 'min-height',
+    values: layoutPropertiesEnums.minHeight,
     default: undefined,
     responsive: true,
   },

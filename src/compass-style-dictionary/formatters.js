@@ -59,7 +59,19 @@ const getCSSPropertiesByType = (token, key) => {
   if (type === 'width') {
     return [type];
   }
+  if (type === 'min-width') {
+    return [type];
+  }
+  if (type === 'max-width') {
+    return [type];
+  }
   if (type === 'height') {
+    return [type];
+  }
+  if (type === 'min-height') {
+    return [type];
+  }
+  if (type === 'max-height') {
     return [type];
   }
   if (type === 'flex-shrink') {
@@ -91,6 +103,12 @@ const getCSSPropertiesByType = (token, key) => {
       return ['flex-wrap'];
     }
   }
+  if (type === 'container') {
+    if (item === 'display') {
+      return ['display'];
+    }
+  }
+  return [type];
   // console.log('No type match for getCSSPropertiesByType |  type, key: ', type, key);
 }; //TODO: try to get the properties from the token itself or config.
 
@@ -384,6 +402,7 @@ export const componentCSSClassFormatter = {
 
       const { name } = validatedToken;
       const formattedName = name.split('-').slice(1).join('-'); // remove the category from cti name. TODO: find way to specify this for transformers.
+      // format name to take camelCase items and make them kebab-case
       //Build the css class
       return `.${formattedName} { \n ${propertyValueString} \n}`;
     };

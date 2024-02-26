@@ -12,18 +12,13 @@ const createMappingObject = (keysArray, parseKey = (key) => key, parseValue = (k
   keysArray.forEach((key) => {
     const formattedKey = parseKey(key);
     mappingObject[formattedKey] = parseValue(key);
-    // mappingObject[key] = formatString(key, 'formatToCustomCSSProperty');
   });
   return mappingObject;
 };
 const fractionalScaleWithCSSPrefix = createMappingObject(fractionalKeys);
 const coreScaleWithCSSPrefix = createMappingObject(coreKeys);
-const negativeCoreScaleWithCSSPrefix = createMappingObject(
-  negativeCoreKeys
-  // (key) => `-${key}`
-  // (key) => `n${key}`
-);
-console.log('negativeCoreScaleWithCSSPrefix: ', negativeCoreScaleWithCSSPrefix);
+const negativeCoreScaleWithCSSPrefix = createMappingObject(negativeCoreKeys);
+
 const keyValueMap = {
   ...coreScaleWithCSSPrefix,
   ...fractionalScaleWithCSSPrefix,
@@ -69,9 +64,29 @@ export const layoutArgTypes = {
     options: layoutPropertiesEnums.width,
     mapping: keyValueMap,
   },
+  maxWidth: {
+    control: 'select',
+    options: layoutPropertiesEnums.maxWidth,
+    mapping: keyValueMap,
+  },
+  minWidth: {
+    control: 'select',
+    options: layoutPropertiesEnums.minWidth,
+    mapping: keyValueMap,
+  },
   height: {
     control: 'select',
     options: layoutPropertiesEnums.height,
+    mapping: keyValueMap,
+  },
+  maxHeight: {
+    control: 'select',
+    options: layoutPropertiesEnums.maxHeight,
+    mapping: keyValueMap,
+  },
+  minHeight: {
+    control: 'select',
+    options: layoutPropertiesEnums.minHeight,
     mapping: keyValueMap,
   },
   flexShrink: { control: 'select', options: layoutPropertiesEnums.flexShrink },

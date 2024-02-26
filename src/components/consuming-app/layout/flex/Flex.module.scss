@@ -4,15 +4,15 @@
   /* Default values to provide the initial styles in the object syntax, e.g. `<Flex display={{ md: 'none' }} />` */
   //display: flex;
   // An example of Breakpoint usage. Not relevant really here.
-  @include compact {
-    border: 2px solid blue;
-  }
-  @include medium {
-    border: 2px solid palevioletred;
-  }
-  @include expanded {
-    border: 2px solid greenyellow;
-  }
+  //@include compact {
+  //  border: 2px solid blue;
+  //}
+  //@include medium {
+  //  border: 2px solid palevioletred;
+  //}
+  //@include expanded {
+  //  border: 2px solid greenyellow;
+  //}
 }
 
 /* TODO: This is how Radix handles responsive styles.

@@ -1,16 +1,16 @@
 @import "src/styles/breakpoints";
 
 .box {
-
+  --unused-var: 0;
   // An example of Breakpoint usage. Not relevant really here.
-  @include compact {
-    border: 2px solid blue;
-  }
-  @include medium {
-    border: 2px solid palevioletred;
-  }
-  @include expanded {
-    border: 2px solid greenyellow;
-  }
+  //@include compact {
+  //  border: 2px solid blue;
+  //}
+  //@include medium {
+  //  border: 2px solid palevioletred;
+  //}
+  //@include expanded {
+  //  border: 2px solid greenyellow;
+  //}
 }
 

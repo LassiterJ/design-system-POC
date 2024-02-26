@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 import { marginPropDefs } from '../../../../props/marginPropDefs.js';
 import { layoutPropDefs } from '../../../../props/layoutPropDefs.js';
-import { extractProps, extractProps2 } from '../../../../utilities/js/extractProps.js';
+import { extractProps } from '../../../../utilities/js/extractProps.js';
 import { flexPropDefs } from './Flex.props.js';
 
 //  Component modeled after https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/flex.tsx
@@ -20,7 +20,7 @@ gap enum
 */
 
 export const Flex = React.forwardRef((props, forwardedRef) => {
-  const extractedProps = extractProps2(
+  const extractedProps = extractProps(
     props,
     {
       ...flexPropDefs,

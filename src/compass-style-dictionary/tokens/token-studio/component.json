@@ -2,6 +2,16 @@
   "components": {
     "type": "composition",
     "container": {
+      "display": {
+        "flex": {
+          "value": "flex",
+          "description": "Sets the Container's container to a block level flex container."
+        },
+        "none": {
+          "value": "none",
+          "description": "Sets the Container's 'display' property to 'none'."
+        }
+      },
       "size": {
         "1": {
           "value": {

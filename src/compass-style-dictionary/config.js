@@ -136,7 +136,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            matchAttributes: { category: ['sizing'], type: ['width'] },
+            matchAttributes: { category: ['sizing'], type: ['width', 'max-width', 'min-width'] },
           },
         },
         {
@@ -147,7 +147,7 @@ export const config = {
            */
           options: {
             outputReferences: true,
-            matchAttributes: { category: ['sizing'], type: ['height'] },
+            matchAttributes: { category: ['sizing'], type: ['height', 'max-height', 'min-height'] },
           },
         },
         {

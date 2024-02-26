@@ -1,3 +1,9 @@
+.container-display-flex { 
+ display: flex; 
+}
+.container-display-none { 
+ display: none; 
+}
 .container-size-1 { 
  max-width: 28rem; 
 }

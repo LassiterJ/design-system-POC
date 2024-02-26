@@ -1,4 +1,5 @@
 import { fractionalKeys } from '../../../../props/layoutPropDefs.js';
+import { asChildPropDef } from '../../../../props/asChildPropDef.js';
 
 export const sizePropValueEnum = [
   '1',
@@ -14,12 +15,18 @@ export const sizePropValueEnum = [
   ...fractionalKeys,
 ];
 
+const parseDisplayValue = (value) => {
+  return value === 'initial' ? 'flex' : value;
+};
+
 export const containerPropDefs = {
+  asChild: asChildPropDef,
   display: {
     type: 'enum',
-    className: 'display',
-    default: undefined,
-    values: ['block', 'none'],
+    className: 'container-display',
+    default: 'initial',
+    values: ['initial', 'none'],
+    parseValue: parseDisplayValue,
   },
 };
 

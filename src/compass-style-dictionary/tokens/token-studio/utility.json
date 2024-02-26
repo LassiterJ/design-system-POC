@@ -4318,11 +4318,115 @@
         "value": "{spacing.core.3,5}",
         "description": " The 3,5 width token. width tokens are used to create width utility classes that reference spacing custom properties."
       },
+      "1_2": {
+        "value": "{spacing.fractional.1_2}",
+        "description": "Specifies width as half of the available space."
+      },
+      "1_3": {
+        "value": "{spacing.fractional.1_3}",
+        "description": "Specifies width as a third of the available space."
+      },
+      "2_3": {
+        "value": "{spacing.fractional.2_3}",
+        "description": "Specifies width as two-thirds of the available space."
+      },
+      "1_4": {
+        "value": "{spacing.fractional.1_4}",
+        "description": "Specifies width as a quarter of the available space."
+      },
+      "2_4": {
+        "value": "{spacing.fractional.2_4}",
+        "description": "Specifies width as half of the available space."
+      },
+      "3_4": {
+        "value": "{spacing.fractional.3_4}",
+        "description": "Specifies width as three-quarters of the available space."
+      },
+      "1_5": {
+        "value": "{spacing.fractional.1_5}",
+        "description": "Specifies width as one-fifth of the available space."
+      },
+      "2_5": {
+        "value": "{spacing.fractional.2_5}",
+        "description": "Specifies width as two-fifths of the available space."
+      },
+      "3_5": {
+        "value": "{spacing.fractional.3_5}",
+        "description": "Specifies width as three-fifths of the available space."
+      },
+      "4_5": {
+        "value": "{spacing.fractional.4_5}",
+        "description": "Specifies width as four-fifths of the available space."
+      },
+      "1_6": {
+        "value": "{spacing.fractional.1_6}",
+        "description": "Specifies width as one-sixth of the available space."
+      },
+      "2_6": {
+        "value": "{spacing.fractional.2_6}",
+        "description": "Specifies width as one-third of the available space."
+      },
+      "3_6": {
+        "value": "{spacing.fractional.3_6}",
+        "description": "Specifies width as half of the available space."
+      },
+      "4_6": {
+        "value": "{spacing.fractional.4_6}",
+        "description": "Specifies width as two-thirds of the available space."
+      },
+      "5_6": {
+        "value": "{spacing.fractional.5_6}",
+        "description": "Specifies width as five-sixths of the available space."
+      },
+      "1_12": {
+        "value": "{spacing.fractional.1_12}",
+        "description": "Specifies width as one-twelfth of the available space."
+      },
+      "2_12": {
+        "value": "{spacing.fractional.2_12}",
+        "description": "Specifies width as one-sixth of the available space."
+      },
+      "3_12": {
+        "value": "{spacing.fractional.3_12}",
+        "description": "Specifies width as a quarter of the available space."
+      },
+      "4_12": {
+        "value": "{spacing.fractional.4_12}",
+        "description": "Specifies width as one-third of the available space."
+      },
+      "5_12": {
+        "value": "{spacing.fractional.5_12}",
+        "description": "Specifies width as five-twelfths of the available space."
+      },
+      "6_12": {
+        "value": "{spacing.fractional.6_12}",
+        "description": "Specifies width as half of the available space."
+      },
+      "7_12": {
+        "value": "{spacing.fractional.7_12}",
+        "description": "Specifies width as seven-twelfths of the available space."
+      },
+      "8_12": {
+        "value": "{spacing.fractional.8_12}",
+        "description": "Specifies width as two-thirds of the available space."
+      },
+      "9_12": {
+        "value": "{spacing.fractional.9_12}",
+        "description": "Specifies width as three-quarters of the available space."
+      },
+      "10_12": {
+        "value": "{spacing.fractional.10_12}",
+        "description": "Specifies width as five-sixths of the available space."
+      },
+      "11_12": {
+        "value": "{spacing.fractional.11_12}",
+        "description": "Specifies width as eleven-twelfths of the available space."
+      },
       "full": {
         "value": "{spacing.fractional.full}",
-        "description": " The full width token. width = 100% width tokens are used to create width utility classes that reference spacing custom properties."
+        "description": "Specifies width as the full available space."
       }
-    },
+},
     "height": {
       "0": {
         "value": "{spacing.core.0}",
@@ -4468,9 +4572,1129 @@
         "value": "{spacing.core.3,5}",
         "description": " The 3,5 height token. height tokens are used to create height utility classes that reference spacing custom properties."
       },
+      "1_2": {
+        "value": "{spacing.fractional.1_2}",
+        "description": "Specifies height as half of the available space."
+      },
+      "1_3": {
+        "value": "{spacing.fractional.1_3}",
+        "description": "Specifies height as a third of the available space."
+      },
+      "2_3": {
+        "value": "{spacing.fractional.2_3}",
+        "description": "Specifies height as two-thirds of the available space."
+      },
+      "1_4": {
+        "value": "{spacing.fractional.1_4}",
+        "description": "Specifies height as a quarter of the available space."
+      },
+      "2_4": {
+        "value": "{spacing.fractional.2_4}",
+        "description": "Specifies height as half of the available space."
+      },
+      "3_4": {
+        "value": "{spacing.fractional.3_4}",
+        "description": "Specifies height as three-quarters of the available space."
+      },
+      "1_5": {
+        "value": "{spacing.fractional.1_5}",
+        "description": "Specifies height as one-fifth of the available space."
+      },
+      "2_5": {
+        "value": "{spacing.fractional.2_5}",
+        "description": "Specifies height as two-fifths of the available space."
+      },
+      "3_5": {
+        "value": "{spacing.fractional.3_5}",
+        "description": "Specifies height as three-fifths of the available space."
+      },
+      "4_5": {
+        "value": "{spacing.fractional.4_5}",
+        "description": "Specifies height as four-fifths of the available space."
+      },
+      "1_6": {
+        "value": "{spacing.fractional.1_6}",
+        "description": "Specifies height as one-sixth of the available space."
+      },
+      "2_6": {
+        "value": "{spacing.fractional.2_6}",
+        "description": "Specifies height as one-third of the available space."
+      },
+      "3_6": {
+        "value": "{spacing.fractional.3_6}",
+        "description": "Specifies height as half of the available space."
+      },
+      "4_6": {
+        "value": "{spacing.fractional.4_6}",
+        "description": "Specifies height as two-thirds of the available space."
+      },
+      "5_6": {
+        "value": "{spacing.fractional.5_6}",
+        "description": "Specifies height as five-sixths of the available space."
+      },
+      "1_12": {
+        "value": "{spacing.fractional.1_12}",
+        "description": "Specifies height as one-twelfth of the available space."
+      },
+      "2_12": {
+        "value": "{spacing.fractional.2_12}",
+        "description": "Specifies height as one-sixth of the available space."
+      },
+      "3_12": {
+        "value": "{spacing.fractional.3_12}",
+        "description": "Specifies height as a quarter of the available space."
+      },
+      "4_12": {
+        "value": "{spacing.fractional.4_12}",
+        "description": "Specifies height as one-third of the available space."
+      },
+      "5_12": {
+        "value": "{spacing.fractional.5_12}",
+        "description": "Specifies height as five-twelfths of the available space."
+      },
+      "6_12": {
+        "value": "{spacing.fractional.6_12}",
+        "description": "Specifies height as half of the available space."
+      },
+      "7_12": {
+        "value": "{spacing.fractional.7_12}",
+        "description": "Specifies height as seven-twelfths of the available space."
+      },
+      "8_12": {
+        "value": "{spacing.fractional.8_12}",
+        "description": "Specifies height as two-thirds of the available space."
+      },
+      "9_12": {
+        "value": "{spacing.fractional.9_12}",
+        "description": "Specifies height as three-quarters of the available space."
+      },
+      "10_12": {
+        "value": "{spacing.fractional.10_12}",
+        "description": "Specifies height as five-sixths of the available space."
+      },
+      "11_12": {
+        "value": "{spacing.fractional.11_12}",
+        "description": "Specifies height as eleven-twelfths of the available space."
+      },
       "full": {
         "value": "{spacing.fractional.full}",
-        "description": " The full height token. height = 100%. Height tokens are used to create height utility classes that reference spacing custom properties."
+        "description": "Specifies height as the full available space."
+      }
+},
+    "min-width": {
+      "0": {
+        "value": "{spacing.core.0}",
+        "description": "Specifies minWidth as 0."
+      },
+      "1": {
+        "value": "{spacing.core.1}",
+        "description": "Specifies minWidth as the preset value of 1."
+      },
+      "2": {
+        "value": "{spacing.core.2}",
+        "description": "Specifies minWidth as the preset value of 2."
+      },
+      "3": {
+        "value": "{spacing.core.3}",
+        "description": "Specifies minWidth as the preset value of 3."
+      },
+      "4": {
+        "value": "{spacing.core.4}",
+        "description": "Specifies minWidth as the preset value of 4."
+      },
+      "5": {
+        "value": "{spacing.core.5}",
+        "description": "Specifies minWidth as the preset value of 5."
+      },
+      "6": {
+        "value": "{spacing.core.6}",
+        "description": "Specifies minWidth as the preset value of 6."
+      },
+      "7": {
+        "value": "{spacing.core.7}",
+        "description": "Specifies minWidth as the preset value of 7."
+      },
+      "8": {
+        "value": "{spacing.core.8}",
+        "description": "Specifies minWidth as the preset value of 8."
+      },
+      "9": {
+        "value": "{spacing.core.9}",
+        "description": "Specifies minWidth as the preset value of 9."
+      },
+      "10": {
+        "value": "{spacing.core.10}",
+        "description": "Specifies minWidth as the preset value of 10."
+      },
+      "11": {
+        "value": "{spacing.core.11}",
+        "description": "Specifies minWidth as the preset value of 11."
+      },
+      "12": {
+        "value": "{spacing.core.12}",
+        "description": "Specifies minWidth as the preset value of 12."
+      },
+      "14": {
+        "value": "{spacing.core.14}",
+        "description": "Specifies minWidth as the preset value of 14."
+      },
+      "16": {
+        "value": "{spacing.core.16}",
+        "description": "Specifies minWidth as the preset value of 16."
+      },
+      "20": {
+        "value": "{spacing.core.20}",
+        "description": "Specifies minWidth as the preset value of 20."
+      },
+      "24": {
+        "value": "{spacing.core.24}",
+        "description": "Specifies minWidth as the preset value of 24."
+      },
+      "28": {
+        "value": "{spacing.core.28}",
+        "description": "Specifies minWidth as the preset value of 28."
+      },
+      "32": {
+        "value": "{spacing.core.32}",
+        "description": "Specifies minWidth as the preset value of 32."
+      },
+      "36": {
+        "value": "{spacing.core.36}",
+        "description": "Specifies minWidth as the preset value of 36."
+      },
+      "40": {
+        "value": "{spacing.core.40}",
+        "description": "Specifies minWidth as the preset value of 40."
+      },
+      "44": {
+        "value": "{spacing.core.44}",
+        "description": "Specifies minWidth as the preset value of 44."
+      },
+      "48": {
+        "value": "{spacing.core.48}",
+        "description": "Specifies minWidth as the preset value of 48."
+      },
+      "52": {
+        "value": "{spacing.core.52}",
+        "description": "Specifies minWidth as the preset value of 52."
+      },
+      "60": {
+        "value": "{spacing.core.60}",
+        "description": "Specifies minWidth as the preset value of 60."
+      },
+      "64": {
+        "value": "{spacing.core.64}",
+        "description": "Specifies minWidth as the preset value of 64."
+      },
+      "72": {
+        "value": "{spacing.core.72}",
+        "description": "Specifies minWidth as the preset value of 72."
+      },
+      "80": {
+        "value": "{spacing.core.80}",
+        "description": "Specifies minWidth as the preset value of 80."
+      },
+      "96": {
+        "value": "{spacing.core.96}",
+        "description": "Specifies minWidth as the preset value of 96."
+      },
+      "max-content": {
+        "value": "{css-properties.max-content}",
+        "description": "Specifies minWidth as max-content."
+      },
+      "min-content": {
+        "value": "{css-properties.min-content}",
+        "description": "Specifies minWidth as min-content."
+      },
+      "auto": {
+        "value": "{spacing.special.auto}",
+        "description": "Specifies minWidth as auto."
+      },
+      "px": {
+        "value": "{spacing.core.px}",
+        "description": "Specifies minWidth in pixels."
+      },
+      "1,5": {
+        "value": "{spacing.core.1,5}",
+        "description": "Specifies minWidth as the preset value of 1.5."
+      },
+      "2,5": {
+        "value": "{spacing.core.2,5}",
+        "description": "Specifies minWidth as the preset value of 2.5."
+      },
+      "3,5": {
+        "value": "{spacing.core.3,5}",
+        "description": "Specifies minWidth as the preset value of 3.5."
+      },
+      "1_2": {
+        "value": "{spacing.fractional.1_2}",
+        "description": "Specifies min-width as half of the available space."
+      },
+      "1_3": {
+        "value": "{spacing.fractional.1_3}",
+        "description": "Specifies min-width as a third of the available space."
+      },
+      "2_3": {
+        "value": "{spacing.fractional.2_3}",
+        "description": "Specifies min-width as two-thirds of the available space."
+      },
+      "1_4": {
+        "value": "{spacing.fractional.1_4}",
+        "description": "Specifies min-width as a quarter of the available space."
+      },
+      "2_4": {
+        "value": "{spacing.fractional.2_4}",
+        "description": "Specifies min-width as half of the available space."
+      },
+      "3_4": {
+        "value": "{spacing.fractional.3_4}",
+        "description": "Specifies min-width as three-quarters of the available space."
+      },
+      "1_5": {
+        "value": "{spacing.fractional.1_5}",
+        "description": "Specifies min-width as one-fifth of the available space."
+      },
+      "2_5": {
+        "value": "{spacing.fractional.2_5}",
+        "description": "Specifies min-width as two-fifths of the available space."
+      },
+      "3_5": {
+        "value": "{spacing.fractional.3_5}",
+        "description": "Specifies min-width as three-fifths of the available space."
+      },
+      "4_5": {
+        "value": "{spacing.fractional.4_5}",
+        "description": "Specifies min-width as four-fifths of the available space."
+      },
+      "1_6": {
+        "value": "{spacing.fractional.1_6}",
+        "description": "Specifies min-width as one-sixth of the available space."
+      },
+      "2_6": {
+        "value": "{spacing.fractional.2_6}",
+        "description": "Specifies min-width as one-third of the available space."
+      },
+      "3_6": {
+        "value": "{spacing.fractional.3_6}",
+        "description": "Specifies min-width as half of the available space."
+      },
+      "4_6": {
+        "value": "{spacing.fractional.4_6}",
+        "description": "Specifies min-width as two-thirds of the available space."
+      },
+      "5_6": {
+        "value": "{spacing.fractional.5_6}",
+        "description": "Specifies min-width as five-sixths of the available space."
+      },
+      "1_12": {
+        "value": "{spacing.fractional.1_12}",
+        "description": "Specifies min-width as one-twelfth of the available space."
+      },
+      "2_12": {
+        "value": "{spacing.fractional.2_12}",
+        "description": "Specifies min-width as one-sixth of the available space."
+      },
+      "3_12": {
+        "value": "{spacing.fractional.3_12}",
+        "description": "Specifies min-width as a quarter of the available space."
+      },
+      "4_12": {
+        "value": "{spacing.fractional.4_12}",
+        "description": "Specifies min-width as one-third of the available space."
+      },
+      "5_12": {
+        "value": "{spacing.fractional.5_12}",
+        "description": "Specifies min-width as five-twelfths of the available space."
+      },
+      "6_12": {
+        "value": "{spacing.fractional.6_12}",
+        "description": "Specifies min-width as half of the available space."
+      },
+      "7_12": {
+        "value": "{spacing.fractional.7_12}",
+        "description": "Specifies min-width as seven-twelfths of the available space."
+      },
+      "8_12": {
+        "value": "{spacing.fractional.8_12}",
+        "description": "Specifies min-width as two-thirds of the available space."
+      },
+      "9_12": {
+        "value": "{spacing.fractional.9_12}",
+        "description": "Specifies min-width as three-quarters of the available space."
+      },
+      "10_12": {
+        "value": "{spacing.fractional.10_12}",
+        "description": "Specifies min-width as five-sixths of the available space."
+      },
+      "11_12": {
+        "value": "{spacing.fractional.11_12}",
+        "description": "Specifies min-width as eleven-twelfths of the available space."
+      },
+      "full": {
+        "value": "{spacing.fractional.full}",
+        "description": "Specifies min-width as the full available space."
+      }
+    },
+    "max-width": {
+      "0": {
+        "value": "{spacing.core.0}",
+        "description": "Specifies max-width as 0."
+      },
+      "1": {
+        "value": "{spacing.core.1}",
+        "description": "Specifies max-width as the preset value of 1."
+      },
+      "2": {
+        "value": "{spacing.core.2}",
+        "description": "Specifies max-width as the preset value of 2."
+      },
+      "3": {
+        "value": "{spacing.core.3}",
+        "description": "Specifies max-width as the preset value of 3."
+      },
+      "4": {
+        "value": "{spacing.core.4}",
+        "description": "Specifies max-width as the preset value of 4."
+      },
+      "5": {
+        "value": "{spacing.core.5}",
+        "description": "Specifies max-width as the preset value of 5."
+      },
+      "6": {
+        "value": "{spacing.core.6}",
+        "description": "Specifies max-width as the preset value of 6."
+      },
+      "7": {
+        "value": "{spacing.core.7}",
+        "description": "Specifies max-width as the preset value of 7."
+      },
+      "8": {
+        "value": "{spacing.core.8}",
+        "description": "Specifies max-width as the preset value of 8."
+      },
+      "9": {
+        "value": "{spacing.core.9}",
+        "description": "Specifies max-width as the preset value of 9."
+      },
+      "10": {
+        "value": "{spacing.core.10}",
+        "description": "Specifies max-width as the preset value of 10."
+      },
+      "11": {
+        "value": "{spacing.core.11}",
+        "description": "Specifies max-width as the preset value of 11."
+      },
+      "12": {
+        "value": "{spacing.core.12}",
+        "description": "Specifies max-width as the preset value of 12."
+      },
+      "14": {
+        "value": "{spacing.core.14}",
+        "description": "Specifies max-width as the preset value of 14."
+      },
+      "16": {
+        "value": "{spacing.core.16}",
+        "description": "Specifies max-width as the preset value of 16."
+      },
+      "20": {
+        "value": "{spacing.core.20}",
+        "description": "Specifies max-width as the preset value of 20."
+      },
+      "24": {
+        "value": "{spacing.core.24}",
+        "description": "Specifies max-width as the preset value of 24."
+      },
+      "28": {
+        "value": "{spacing.core.28}",
+        "description": "Specifies max-width as the preset value of 28."
+      },
+      "32": {
+        "value": "{spacing.core.32}",
+        "description": "Specifies max-width as the preset value of 32."
+      },
+      "36": {
+        "value": "{spacing.core.36}",
+        "description": "Specifies max-width as the preset value of 36."
+      },
+      "40": {
+        "value": "{spacing.core.40}",
+        "description": "Specifies max-width as the preset value of 40."
+      },
+      "44": {
+        "value": "{spacing.core.44}",
+        "description": "Specifies max-width as the preset value of 44."
+      },
+      "48": {
+        "value": "{spacing.core.48}",
+        "description": "Specifies max-width as the preset value of 48."
+      },
+      "52": {
+        "value": "{spacing.core.52}",
+        "description": "Specifies max-width as the preset value of 52."
+      },
+      "60": {
+        "value": "{spacing.core.60}",
+        "description": "Specifies max-width as the preset value of 60."
+      },
+      "64": {
+        "value": "{spacing.core.64}",
+        "description": "Specifies max-width as the preset value of 64."
+      },
+      "72": {
+        "value": "{spacing.core.72}",
+        "description": "Specifies max-width as the preset value of 72."
+      },
+      "80": {
+        "value": "{spacing.core.80}",
+        "description": "Specifies max-width as the preset value of 80."
+      },
+      "96": {
+        "value": "{spacing.core.96}",
+        "description": "Specifies max-width as the preset value of 96."
+      },
+      "max-content": {
+        "value": "{css-properties.max-content}",
+        "description": "Specifies max-width as max-content."
+      },
+      "min-content": {
+        "value": "{css-properties.min-content}",
+        "description": "Specifies max-width as min-content."
+      },
+      "auto": {
+        "value": "{spacing.special.auto}",
+        "description": "Specifies max-width as auto."
+      },
+      "px": {
+        "value": "{spacing.core.px}",
+        "description": "Specifies max-width in pixels."
+      },
+      "1,5": {
+        "value": "{spacing.core.1,5}",
+        "description": "Specifies max-width as the preset value of 1.5."
+      },
+      "2,5": {
+        "value": "{spacing.core.2,5}",
+        "description": "Specifies max-width as the preset value of 2.5."
+      },
+      "3,5": {
+        "value": "{spacing.core.3,5}",
+        "description": "Specifies max-width as the preset value of 3.5."
+      },
+      "1_2": {
+        "value": "{spacing.fractional.1_2}",
+        "description": "Specifies max-width as half of the available space."
+      },
+      "1_3": {
+        "value": "{spacing.fractional.1_3}",
+        "description": "Specifies max-width as a third of the available space."
+      },
+      "2_3": {
+        "value": "{spacing.fractional.2_3}",
+        "description": "Specifies max-width as two-thirds of the available space."
+      },
+      "1_4": {
+        "value": "{spacing.fractional.1_4}",
+        "description": "Specifies max-width as a quarter of the available space."
+      },
+      "2_4": {
+        "value": "{spacing.fractional.2_4}",
+        "description": "Specifies max-width as half of the available space."
+      },
+      "3_4": {
+        "value": "{spacing.fractional.3_4}",
+        "description": "Specifies max-width as three-quarters of the available space."
+      },
+      "1_5": {
+        "value": "{spacing.fractional.1_5}",
+        "description": "Specifies max-width as one-fifth of the available space."
+      },
+      "2_5": {
+        "value": "{spacing.fractional.2_5}",
+        "description": "Specifies max-width as two-fifths of the available space."
+      },
+      "3_5": {
+        "value": "{spacing.fractional.3_5}",
+        "description": "Specifies max-width as three-fifths of the available space."
+      },
+      "4_5": {
+        "value": "{spacing.fractional.4_5}",
+        "description": "Specifies max-width as four-fifths of the available space."
+      },
+      "1_6": {
+        "value": "{spacing.fractional.1_6}",
+        "description": "Specifies max-width as one-sixth of the available space."
+      },
+      "2_6": {
+        "value": "{spacing.fractional.2_6}",
+        "description": "Specifies max-width as one-third of the available space."
+      },
+      "3_6": {
+        "value": "{spacing.fractional.3_6}",
+        "description": "Specifies max-width as half of the available space."
+      },
+      "4_6": {
+        "value": "{spacing.fractional.4_6}",
+        "description": "Specifies max-width as two-thirds of the available space."
+      },
+      "5_6": {
+        "value": "{spacing.fractional.5_6}",
+        "description": "Specifies max-width as five-sixths of the available space."
+      },
+      "1_12": {
+        "value": "{spacing.fractional.1_12}",
+        "description": "Specifies max-width as one-twelfth of the available space."
+      },
+      "2_12": {
+        "value": "{spacing.fractional.2_12}",
+        "description": "Specifies max-width as one-sixth of the available space."
+      },
+      "3_12": {
+        "value": "{spacing.fractional.3_12}",
+        "description": "Specifies max-width as a quarter of the available space."
+      },
+      "4_12": {
+        "value": "{spacing.fractional.4_12}",
+        "description": "Specifies max-width as one-third of the available space."
+      },
+      "5_12": {
+        "value": "{spacing.fractional.5_12}",
+        "description": "Specifies max-width as five-twelfths of the available space."
+      },
+      "6_12": {
+        "value": "{spacing.fractional.6_12}",
+        "description": "Specifies max-width as half of the available space."
+      },
+      "7_12": {
+        "value": "{spacing.fractional.7_12}",
+        "description": "Specifies max-width as seven-twelfths of the available space."
+      },
+      "8_12": {
+        "value": "{spacing.fractional.8_12}",
+        "description": "Specifies max-width as two-thirds of the available space."
+      },
+      "9_12": {
+        "value": "{spacing.fractional.9_12}",
+        "description": "Specifies max-width as three-quarters of the available space."
+      },
+      "10_12": {
+        "value": "{spacing.fractional.10_12}",
+        "description": "Specifies max-width as five-sixths of the available space."
+      },
+      "11_12": {
+        "value": "{spacing.fractional.11_12}",
+        "description": "Specifies max-width as eleven-twelfths of the available space."
+      },
+      "full": {
+        "value": "{spacing.fractional.full}",
+        "description": "Specifies max-width as the full available space."
+      }
+    },
+    "min-height": {
+      "0": {
+        "value": "{spacing.core.0}",
+        "description": "Specifies min-height as 0."
+      },
+      "1": {
+        "value": "{spacing.core.1}",
+        "description": "Specifies min-height as the preset value of 1."
+      },
+      "2": {
+        "value": "{spacing.core.2}",
+        "description": "Specifies min-height as the preset value of 2."
+      },
+      "3": {
+        "value": "{spacing.core.3}",
+        "description": "Specifies min-height as the preset value of 3."
+      },
+      "4": {
+        "value": "{spacing.core.4}",
+        "description": "Specifies min-height as the preset value of 4."
+      },
+      "5": {
+        "value": "{spacing.core.5}",
+        "description": "Specifies min-height as the preset value of 5."
+      },
+      "6": {
+        "value": "{spacing.core.6}",
+        "description": "Specifies min-height as the preset value of 6."
+      },
+      "7": {
+        "value": "{spacing.core.7}",
+        "description": "Specifies min-height as the preset value of 7."
+      },
+      "8": {
+        "value": "{spacing.core.8}",
+        "description": "Specifies min-height as the preset value of 8."
+      },
+      "9": {
+        "value": "{spacing.core.9}",
+        "description": "Specifies min-height as the preset value of 9."
+      },
+      "10": {
+        "value": "{spacing.core.10}",
+        "description": "Specifies min-height as the preset value of 10."
+      },
+      "11": {
+        "value": "{spacing.core.11}",
+        "description": "Specifies min-height as the preset value of 11."
+      },
+      "12": {
+        "value": "{spacing.core.12}",
+        "description": "Specifies min-height as the preset value of 12."
+      },
+      "14": {
+        "value": "{spacing.core.14}",
+        "description": "Specifies min-height as the preset value of 14."
+      },
+      "16": {
+        "value": "{spacing.core.16}",
+        "description": "Specifies min-height as the preset value of 16."
+      },
+      "20": {
+        "value": "{spacing.core.20}",
+        "description": "Specifies min-height as the preset value of 20."
+      },
+      "24": {
+        "value": "{spacing.core.24}",
+        "description": "Specifies min-height as the preset value of 24."
+      },
+      "28": {
+        "value": "{spacing.core.28}",
+        "description": "Specifies min-height as the preset value of 28."
+      },
+      "32": {
+        "value": "{spacing.core.32}",
+        "description": "Specifies min-height as the preset value of 32."
+      },
+      "36": {
+        "value": "{spacing.core.36}",
+        "description": "Specifies min-height as the preset value of 36."
+      },
+      "40": {
+        "value": "{spacing.core.40}",
+        "description": "Specifies min-height as the preset value of 40."
+      },
+      "44": {
+        "value": "{spacing.core.44}",
+        "description": "Specifies min-height as the preset value of 44."
+      },
+      "48": {
+        "value": "{spacing.core.48}",
+        "description": "Specifies min-height as the preset value of 48."
+      },
+      "52": {
+        "value": "{spacing.core.52}",
+        "description": "Specifies min-height as the preset value of 52."
+      },
+      "60": {
+        "value": "{spacing.core.60}",
+        "description": "Specifies min-height as the preset value of 60."
+      },
+      "64": {
+        "value": "{spacing.core.64}",
+        "description": "Specifies min-height as the preset value of 64."
+      },
+      "72": {
+        "value": "{spacing.core.72}",
+        "description": "Specifies min-height as the preset value of 72."
+      },
+      "80": {
+        "value": "{spacing.core.80}",
+        "description": "Specifies min-height as the preset value of 80."
+      },
+      "96": {
+        "value": "{spacing.core.96}",
+        "description": "Specifies min-height as the preset value of 96."
+      },
+      "max-content": {
+        "value": "{css-properties.max-content}",
+        "description": "Specifies min-height as max-content."
+      },
+      "min-content": {
+        "value": "{css-properties.min-content}",
+        "description": "Specifies min-height as min-content."
+      },
+      "auto": {
+        "value": "{spacing.special.auto}",
+        "description": "Specifies min-height as auto."
+      },
+      "px": {
+        "value": "{spacing.core.px}",
+        "description": "Specifies min-height in pixels."
+      },
+      "1,5": {
+        "value": "{spacing.core.1,5}",
+        "description": "Specifies min-height as the preset value of 1.5."
+      },
+      "2,5": {
+        "value": "{spacing.core.2,5}",
+        "description": "Specifies min-height as the preset value of 2.5."
+      },
+      "3,5": {
+        "value": "{spacing.core.3,5}",
+        "description": "Specifies min-height as the preset value of 3.5."
+      },
+      "1_2": {
+        "value": "{spacing.fractional.1_2}",
+        "description": "Specifies min-height as half of the available space."
+      },
+      "1_3": {
+        "value": "{spacing.fractional.1_3}",
+        "description": "Specifies min-height as a third of the available space."
+      },
+      "2_3": {
+        "value": "{spacing.fractional.2_3}",
+        "description": "Specifies min-height as two-thirds of the available space."
+      },
+      "1_4": {
+        "value": "{spacing.fractional.1_4}",
+        "description": "Specifies min-height as a quarter of the available space."
+      },
+      "2_4": {
+        "value": "{spacing.fractional.2_4}",
+        "description": "Specifies min-height as half of the available space."
+      },
+      "3_4": {
+        "value": "{spacing.fractional.3_4}",
+        "description": "Specifies min-height as three-quarters of the available space."
+      },
+      "1_5": {
+        "value": "{spacing.fractional.1_5}",
+        "description": "Specifies min-height as one-fifth of the available space."
+      },
+      "2_5": {
+        "value": "{spacing.fractional.2_5}",
+        "description": "Specifies min-height as two-fifths of the available space."
+      },
+      "3_5": {
+        "value": "{spacing.fractional.3_5}",
+        "description": "Specifies min-height as three-fifths of the available space."
+      },
+      "4_5": {
+        "value": "{spacing.fractional.4_5}",
+        "description": "Specifies min-height as four-fifths of the available space."
+      },
+      "1_6": {
+        "value": "{spacing.fractional.1_6}",
+        "description": "Specifies min-height as one-sixth of the available space."
+      },
+      "2_6": {
+        "value": "{spacing.fractional.2_6}",
+        "description": "Specifies min-height as one-third of the available space."
+      },
+      "3_6": {
+        "value": "{spacing.fractional.3_6}",
+        "description": "Specifies min-height as half of the available space."
+      },
+      "4_6": {
+        "value": "{spacing.fractional.4_6}",
+        "description": "Specifies min-height as two-thirds of the available space."
+      },
+      "5_6": {
+        "value": "{spacing.fractional.5_6}",
+        "description": "Specifies min-height as five-sixths of the available space."
+      },
+      "1_12": {
+        "value": "{spacing.fractional.1_12}",
+        "description": "Specifies min-height as one-twelfth of the available space."
+      },
+      "2_12": {
+        "value": "{spacing.fractional.2_12}",
+        "description": "Specifies min-height as one-sixth of the available space."
+      },
+      "3_12": {
+        "value": "{spacing.fractional.3_12}",
+        "description": "Specifies min-height as a quarter of the available space."
+      },
+      "4_12": {
+        "value": "{spacing.fractional.4_12}",
+        "description": "Specifies min-height as one-third of the available space."
+      },
+      "5_12": {
+        "value": "{spacing.fractional.5_12}",
+        "description": "Specifies min-height as five-twelfths of the available space."
+      },
+      "6_12": {
+        "value": "{spacing.fractional.6_12}",
+        "description": "Specifies min-height as half of the available space."
+      },
+      "7_12": {
+        "value": "{spacing.fractional.7_12}",
+        "description": "Specifies min-height as seven-twelfths of the available space."
+      },
+      "8_12": {
+        "value": "{spacing.fractional.8_12}",
+        "description": "Specifies min-height as two-thirds of the available space."
+      },
+      "9_12": {
+        "value": "{spacing.fractional.9_12}",
+        "description": "Specifies min-height as three-quarters of the available space."
+      },
+      "10_12": {
+        "value": "{spacing.fractional.10_12}",
+        "description": "Specifies min-height as five-sixths of the available space."
+      },
+      "11_12": {
+        "value": "{spacing.fractional.11_12}",
+        "description": "Specifies min-height as eleven-twelfths of the available space."
+      },
+      "full": {
+        "value": "{spacing.fractional.full}",
+        "description": "Specifies min-height as the full available space."
+      }
+    },
+    "max-height": {
+      "0": {
+        "value": "{spacing.core.0}",
+        "description": "Specifies max-height as 0."
+      },
+      "1": {
+        "value": "{spacing.core.1}",
+        "description": "Specifies max-height as the preset value of 1."
+      },
+      "2": {
+        "value": "{spacing.core.2}",
+        "description": "Specifies max-height as the preset value of 2."
+      },
+      "3": {
+        "value": "{spacing.core.3}",
+        "description": "Specifies max-height as the preset value of 3."
+      },
+      "4": {
+        "value": "{spacing.core.4}",
+        "description": "Specifies max-height as the preset value of 4."
+      },
+      "5": {
+        "value": "{spacing.core.5}",
+        "description": "Specifies max-height as the preset value of 5."
+      },
+      "6": {
+        "value": "{spacing.core.6}",
+        "description": "Specifies max-height as the preset value of 6."
+      },
+      "7": {
+        "value": "{spacing.core.7}",
+        "description": "Specifies max-height as the preset value of 7."
+      },
+      "8": {
+        "value": "{spacing.core.8}",
+        "description": "Specifies max-height as the preset value of 8."
+      },
+      "9": {
+        "value": "{spacing.core.9}",
+        "description": "Specifies max-height as the preset value of 9."
+      },
+      "10": {
+        "value": "{spacing.core.10}",
+        "description": "Specifies max-height as the preset value of 10."
+      },
+      "11": {
+        "value": "{spacing.core.11}",
+        "description": "Specifies max-height as the preset value of 11."
+      },
+      "12": {
+        "value": "{spacing.core.12}",
+        "description": "Specifies max-height as the preset value of 12."
+      },
+      "14": {
+        "value": "{spacing.core.14}",
+        "description": "Specifies max-height as the preset value of 14."
+      },
+      "16": {
+        "value": "{spacing.core.16}",
+        "description": "Specifies max-height as the preset value of 16."
+      },
+      "20": {
+        "value": "{spacing.core.20}",
+        "description": "Specifies max-height as the preset value of 20."
+      },
+      "24": {
+        "value": "{spacing.core.24}",
+        "description": "Specifies max-height as the preset value of 24."
+      },
+      "28": {
+        "value": "{spacing.core.28}",
+        "description": "Specifies max-height as the preset value of 28."
+      },
+      "32": {
+        "value": "{spacing.core.32}",
+        "description": "Specifies max-height as the preset value of 32."
+      },
+      "36": {
+        "value": "{spacing.core.36}",
+        "description": "Specifies max-height as the preset value of 36."
+      },
+      "40": {
+        "value": "{spacing.core.40}",
+        "description": "Specifies max-height as the preset value of 40."
+      },
+      "44": {
+        "value": "{spacing.core.44}",
+        "description": "Specifies max-height as the preset value of 44."
+      },
+      "48": {
+        "value": "{spacing.core.48}",
+        "description": "Specifies max-height as the preset value of 48."
+      },
+      "52": {
+        "value": "{spacing.core.52}",
+        "description": "Specifies max-height as the preset value of 52."
+      },
+      "60": {
+        "value": "{spacing.core.60}",
+        "description": "Specifies max-height as the preset value of 60."
+      },
+      "64": {
+        "value": "{spacing.core.64}",
+        "description": "Specifies max-height as the preset value of 64."
+      },
+      "72": {
+        "value": "{spacing.core.72}",
+        "description": "Specifies max-height as the preset value of 72."
+      },
+      "80": {
+        "value": "{spacing.core.80}",
+        "description": "Specifies max-height as the preset value of 80."
+      },
+      "96": {
+        "value": "{spacing.core.96}",
+        "description": "Specifies max-height as the preset value of 96."
+      },
+      "max-content": {
+        "value": "{css-properties.max-content}",
+        "description": "Specifies max-height as max-content."
+      },
+      "min-content": {
+        "value": "{css-properties.min-content}",
+        "description": "Specifies max-height as min-content."
+      },
+      "auto": {
+        "value": "{spacing.special.auto}",
+        "description": "Specifies max-height as auto."
+      },
+      "px": {
+        "value": "{spacing.core.px}",
+        "description": "Specifies max-height in pixels."
+      },
+      "1,5": {
+        "value": "{spacing.core.1,5}",
+        "description": "Specifies max-height as the preset value of 1.5."
+      },
+      "2,5": {
+        "value": "{spacing.core.2,5}",
+        "description": "Specifies max-height as the preset value of 2.5."
+      },
+      "3,5": {
+        "value": "{spacing.core.3,5}",
+        "description": "Specifies max-height as the preset value of 3.5."
+      },
+      "1_2": {
+        "value": "{spacing.fractional.1_2}",
+        "description": "Specifies max-height as half of the available space."
+      },
+      "1_3": {
+        "value": "{spacing.fractional.1_3}",
+        "description": "Specifies max-height as a third of the available space."
+      },
+      "2_3": {
+        "value": "{spacing.fractional.2_3}",
+        "description": "Specifies max-height as two-thirds of the available space."
+      },
+      "1_4": {
+        "value": "{spacing.fractional.1_4}",
+        "description": "Specifies max-height as a quarter of the available space."
+      },
+      "2_4": {
+        "value": "{spacing.fractional.2_4}",
+        "description": "Specifies max-height as half of the available space."
+      },
+      "3_4": {
+        "value": "{spacing.fractional.3_4}",
+        "description": "Specifies max-height as three-quarters of the available space."
+      },
+      "1_5": {
+        "value": "{spacing.fractional.1_5}",
+        "description": "Specifies max-height as one-fifth of the available space."
+      },
+      "2_5": {
+        "value": "{spacing.fractional.2_5}",
+        "description": "Specifies max-height as two-fifths of the available space."
+      },
+      "3_5": {
+        "value": "{spacing.fractional.3_5}",
+        "description": "Specifies max-height as three-fifths of the available space."
+      },
+      "4_5": {
+        "value": "{spacing.fractional.4_5}",
+        "description": "Specifies max-height as four-fifths of the available space."
+      },
+      "1_6": {
+        "value": "{spacing.fractional.1_6}",
+        "description": "Specifies max-height as one-sixth of the available space."
+      },
+      "2_6": {
+        "value": "{spacing.fractional.2_6}",
+        "description": "Specifies max-height as one-third of the available space."
+      },
+      "3_6": {
+        "value": "{spacing.fractional.3_6}",
+        "description": "Specifies max-height as half of the available space."
+      },
+      "4_6": {
+        "value": "{spacing.fractional.4_6}",
+        "description": "Specifies max-height as two-thirds of the available space."
+      },
+      "5_6": {
+        "value": "{spacing.fractional.5_6}",
+        "description": "Specifies max-height as five-sixths of the available space."
+      },
+      "1_12": {
+        "value": "{spacing.fractional.1_12}",
+        "description": "Specifies max-height as one-twelfth of the available space."
+      },
+      "2_12": {
+        "value": "{spacing.fractional.2_12}",
+        "description": "Specifies max-height as one-sixth of the available space."
+      },
+      "3_12": {
+        "value": "{spacing.fractional.3_12}",
+        "description": "Specifies max-height as a quarter of the available space."
+      },
+      "4_12": {
+        "value": "{spacing.fractional.4_12}",
+        "description": "Specifies max-height as one-third of the available space."
+      },
+      "5_12": {
+        "value": "{spacing.fractional.5_12}",
+        "description": "Specifies max-height as five-twelfths of the available space."
+      },
+      "6_12": {
+        "value": "{spacing.fractional.6_12}",
+        "description": "Specifies max-height as half of the available space."
+      },
+      "7_12": {
+        "value": "{spacing.fractional.7_12}",
+        "description": "Specifies max-height as seven-twelfths of the available space."
+      },
+      "8_12": {
+        "value": "{spacing.fractional.8_12}",
+        "description": "Specifies max-height as two-thirds of the available space."
+      },
+      "9_12": {
+        "value": "{spacing.fractional.9_12}",
+        "description": "Specifies max-height as three-quarters of the available space."
+      },
+      "10_12": {
+        "value": "{spacing.fractional.10_12}",
+        "description": "Specifies max-height as five-sixths of the available space."
+      },
+      "11_12": {
+        "value": "{spacing.fractional.11_12}",
+        "description": "Specifies max-height as eleven-twelfths of the available space."
+      },
+      "full": {
+        "value": "{spacing.fractional.full}",
+        "description": "Specifies max-height as the full available space."
       }
     }
   },

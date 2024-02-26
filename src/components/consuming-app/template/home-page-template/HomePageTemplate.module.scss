@@ -4,7 +4,11 @@
   flex-grow: 1;
 };
 
-.HeroContainer{
-  padding: var(--spacing-4);
-  background-color: yellowgreen;
+
+.cta{
+  margin-top: var(--spacing-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-4) var(--spacing-6);
 }
