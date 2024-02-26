@@ -39,6 +39,7 @@ export const LayoutComponentTestPage = (props) => {
       </Flex>
     </Container>
   );
+
   const windowClassCSS = (
     <Flex wrap="wrap" gap="4">
       <Box
@@ -71,6 +72,31 @@ export const LayoutComponentTestPage = (props) => {
       </Flex>
     </Flex>
   );
+  const windowClassWithOriginalExample = (
+    <Container size="3" height="full" py="8">
+      <Flex gap="4" direction="column">
+        <Flex wrap="wrap">
+          <Box
+            width="20"
+            flexShrink="false"
+            height="20"
+            style={{ backgroundColor: 'lightblue' }}
+          ></Box>
+          <Box
+            flexGrow="true"
+            minWidth="20"
+            height="20"
+            style={{ backgroundColor: '#87c1c1' }}
+          ></Box>
+        </Flex>
+        <Flex wrap="wrap">
+          <Box width="20" height="20" style={{ backgroundColor: 'lightblue' }}></Box>
+          <Box width="20" height="20" style={{ backgroundColor: 'lightblue' }}></Box>
+          <Box width="20" height="20" style={{ backgroundColor: 'lightblue' }}></Box>
+        </Flex>
+      </Flex>
+    </Container>
+  );
   // <Container size="3" height="full" py="16">
   //   <Flex gap="4" justify="center" align="middle">
   //     <Box width="60" height="40" p="12" className={styles['window-class-css']} align="center">
@@ -83,6 +109,7 @@ export const LayoutComponentTestPage = (props) => {
   const examples = {
     basic: basicExample,
     windowClassCSS,
+    windowClassWithOriginalExample,
     windowClassHero: HomePageHero,
   };
 
@@ -92,12 +119,12 @@ export const LayoutComponentTestPage = (props) => {
   return (
     <div className={styles.test}>
       <h2>LayoutComponentTestPage</h2>
-      <Box width={'full'} p="4" className={'outerdiv'} style={{ backgroundColor: 'lightgray' }}>
+      <Box width={'full'} p="4" style={{ backgroundColor: 'lightgray' }}>
         <Container size="4">
           <Box
             p={'4'}
-            w={'40'}
-            h={'20'}
+            width={'40'}
+            height={'20'}
             className={'TestBox'}
             style={{ backgroundColor: 'indigo' }}
           >

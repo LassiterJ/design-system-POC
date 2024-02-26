@@ -140,18 +140,13 @@ export const extractProps = (props, propDefs, options = {}) => {
     }
   );
 
-  const {
-    className: passedClassName,
-    style,
-    ...restProps
-  } = Object.fromEntries(
+  const { className: passedClassName, ...restProps } = Object.fromEntries(
     Object.entries(props).filter(([name]) => !Object.hasOwn(processedProps, name))
   );
 
   return {
     processedProps,
-    className: classNames(className, passedClassName),
-    style, // TODO: merge styles if necessary
+    className: classNames(className, passedClassName), // TODO: merge styles if necessary
     classProps,
     restProps,
   };

@@ -15,6 +15,13 @@ export default {
 };
 
 export const Basic = {
+  decorators: [
+    (Story) => (
+      <AppStateProvider>
+        <Story />
+      </AppStateProvider>
+    ),
+  ],
   args: {
     example: 'basic',
   },
@@ -35,6 +42,18 @@ export const windowClassCSS = {
   ],
 };
 
+export const windowClassWithOriginalExample = {
+  args: {
+    example: 'windowClassWithOriginalExample',
+  },
+  decorators: [
+    (Story) => (
+      <AppStateProvider>
+        <Story />
+      </AppStateProvider>
+    ),
+  ],
+};
 export const windowClassHero = {
   args: {
     example: 'windowClassHero',
