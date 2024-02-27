@@ -54,6 +54,7 @@ export const windowClassWithOriginalExample = {
     ),
   ],
 };
+
 export const windowClassHero = {
   args: {
     example: 'windowClassHero',

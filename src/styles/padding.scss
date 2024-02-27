@@ -4,6 +4,39 @@ $paddingValues: $coreSpacingScale;
 :root{
   border: 2px solid red;
 }
+
+//@import "../../../src/styles/breakpoints";
+//:root {
+//  --padding-compact: 0;
+//  --padding-medium: 0;
+//  --padding-expanded: 0;
+//
+//
+//  @include compact {
+//    --padding-top: --padding-compact;
+//    --padding-right: --padding-compact;
+//    --padding-bottom: --padding-compact;
+//    --padding-left: --padding-compact;
+//  }
+//
+//  @include medium {
+//    --padding-top: --padding-medium;
+//    --padding-right: --padding-medium;
+//    --padding-bottom: --padding-medium;
+//    --padding-left: --padding-medium;
+//  }
+//  @include expanded {
+//    --padding-top: --padding-expanded;
+//    --padding-right: --padding-expanded;
+//    --padding-bottom: --padding-expanded;
+//    --padding-left: --padding-expanded;
+//  }
+//
+//}
+//.p{
+//  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+//}
+
 @each $size in $paddingValues {
   // Set Initial Values
   .compass-p-#{$size} {

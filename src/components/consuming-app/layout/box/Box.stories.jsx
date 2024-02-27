@@ -17,7 +17,12 @@ export default {
     display: { control: 'select', options: ['none', 'inline', 'inline-block', 'block'] },
   },
 };
-export const Basic = {};
+export const Basic = {
+  args: {
+    p: { compact: '2', medium: '4', expanded: '6' },
+    style: { border: '2px solid black' },
+  },
+};
 export const InFlexBox = {
   decorators: [
     (Story) => (

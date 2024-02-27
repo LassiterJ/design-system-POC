@@ -21,12 +21,17 @@ export const Box = React.forwardRef((props, forwardedRef) => {
   // const extractedProps = extractProps(props, boxPropDefs, layoutPropDefs, marginPropDefs);
 
   // const { className, asChild, as: Tag = 'div', ...boxProps } = extractedProps;
-  const { processedProps, className, classProps, restProps } = extractedProps;
+  const { processedProps, className, classProps, style, restProps } = extractedProps;
   const { asChild, as: Tag = 'div', ...boxProps } = processedProps;
 
   const Comp = asChild ? Slot : 'div';
   return (
-    <Comp {...restProps} ref={forwardedRef} className={classNames(`${styles['box']}`, className)} />
+    <Comp
+      {...restProps}
+      ref={forwardedRef}
+      className={classNames(`${styles['box']}`, className)}
+      style={style}
+    />
   );
 });
 

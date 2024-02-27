@@ -15,8 +15,6 @@ const parsePropValue = (value, propDef) => {
     console.error('parsePropValue | value is not defined and is required: ', value);
     return;
   }
-  const isContainerDisplay = propDef.className === 'container-display';
-  isContainerDisplay && console.log('parsePropValue | container-display value: ', value);
 
   if (propDef.type === 'enum') {
     const hasDefaultValue = propDef.default !== undefined;
@@ -33,9 +31,6 @@ const parsePropValue = (value, propDef) => {
 };
 
 const getClassnameData = (propObj, propDef, scopedStyles) => {
-  if (propDef.className === 'm') {
-    console.log('getClassnameData |propObj: ', propObj);
-  }
   const { name, value } = propObj;
   const { type, className, values, default: defaultValue, responsive } = propDef;
 
@@ -51,12 +46,22 @@ const getClassnameData = (propObj, propDef, scopedStyles) => {
   return { className: `${className}-${value}`, classProp: { [name]: value } };
 };
 
-const handleResponsiveValue = (valueOrDefault, propDef) => {
+const handleResponsiveValue = (prop, propDef) => {
   // iterate through breakpoints and apply parsePropValue to each value
-  // figure out implementation of responsive values
-  return undefined;
-};
+  console.log('handleResponsiveValue: prop', prop);
+  const { value } = prop;
+  const { customProperties, className, values: propValueEnum, ...restPropDef } = propDef;
 
+  const responsiveStyles = getResponsiveStyles({
+    className,
+    customProperties,
+    value,
+    propValueEnum,
+    ...restPropDef,
+  });
+  console.log('handleResponsiveValue | responsiveStyles: ', responsiveStyles);
+  return responsiveStyles;
+};
 const parseProp = (matchedPropObj, propDef, scopedStyles) => {
   if (!propDef && !isObjectWithValidation(matchedPropObj)) {
     console.error('Error neither propDef nor matchedPropObj are defined: ');
@@ -69,28 +74,70 @@ const parseProp = (matchedPropObj, propDef, scopedStyles) => {
     console.trace("The above error occurred in the extractProps function's parseProp function");
     return;
   }
+  matchedPropObj.name === 'width' &&
+    console.log("matchedPropObj.name === 'width': ", matchedPropObj.name) &&
+    console.log('propDef: ', propDef);
+  const isResponsiveObj =
+    typeof matchedPropObj.value === 'object' && isResponsiveObject(matchedPropObj.value);
+  const canHaveResponsiveValues = propDef.responsive;
 
-  // handle className and classProp
-  // if propDef.responsive && isResponsiveObject(matchedPropObj.value)
-  // apply parsePropValue to each value in the responsive object then handle the parsed responsive object somehow
-  const parsedValue = parsePropValue(matchedPropObj?.value, propDef);
-  if (parsedValue === undefined) {
-    return;
+  if (isResponsiveObj && !canHaveResponsiveValues) {
+    console.error(
+      'extractProps | matchedPropObj is a responsive object but propDef.responsive is not defined: ',
+      matchedPropObj
+    );
+    console.trace("The above error occurred in the extractProps function's parseProp function");
   }
-  const { className = '', classProp = {} } = getClassnameData(
-    { name: matchedPropObj.name, value: parsedValue },
-    propDef,
-    scopedStyles
-  );
+
+  let className = '';
+  let classProp = {};
+  let processedProp = {};
+  let styles = {};
+
+  if (isResponsiveObj && canHaveResponsiveValues) {
+    const { responsiveClassNames, responsiveCustomProperties } = handleResponsiveValue(
+      matchedPropObj,
+      propDef
+    );
+    console.group('parseProp | isResponsiveObj && canHaveResponsiveValues');
+    console.log('responsiveClasses: ', responsiveClassNames);
+    console.log('responsiveCustomProperties: ', responsiveCustomProperties);
+    console.log('existing className: ', className);
+    console.log('existing classProp: ', classProp);
+    console.log('existing processedProp: ', processedProp);
+    console.log('existing styles: ', styles);
+    console.log('matchedPropObj: ', matchedPropObj);
+    console.groupEnd();
+    className = classNames(className, responsiveClassNames);
+    classProp = { [matchedPropObj.name]: matchedPropObj.value };
+    processedProp = { [matchedPropObj.name]: matchedPropObj.value };
+    styles = responsiveCustomProperties;
+  }
+
+  if (!isResponsiveObj) {
+    // handle className and classProp
+    // if propDef.responsive && isResponsiveObj(matchedPropObj.value)
+    // apply parsePropValue to each value in the responsive object then handle the parsed responsive object somehow
+    const parsedValue = parsePropValue(matchedPropObj?.value, propDef);
+    if (parsedValue === undefined) {
+      return;
+    }
+
+    const { className: nonResponsiveClassName, classProp: nonResponsiveClassProp = {} } =
+      getClassnameData({ name: matchedPropObj.name, value: parsedValue }, propDef, scopedStyles);
+    className = nonResponsiveClassName;
+    classProp = nonResponsiveClassProp;
+    processedProp = isObjectWithValidation(matchedPropObj)
+      ? { [matchedPropObj.name]: parsedValue }
+      : {};
+  }
 
   // handle processedProps
-  const processedProp = isObjectWithValidation(matchedPropObj)
-    ? { name: matchedPropObj.name, value: parsedValue }
-    : {};
 
   const parsedProp = {
     className,
     classProp,
+    styles,
     processedProp,
   };
   // if
@@ -115,38 +162,45 @@ export const extractProps = (props, propDefs, options = {}) => {
     return;
   }
 
-  const { processedProps, className, classProps } = Object.entries(propDefs).reduce(
+  const { processedProps, className, classProps, styles } = Object.entries(propDefs).reduce(
     (acc, [key, propDef], index) => {
       const propValue = props[key];
+      if (typeof propValue === 'object') {
+        console.log('extractProps | propValue is object: ', propValue);
+      }
       const parsedProp = parseProp({ name: key, value: propValue }, propDef, scopedStyles);
-
       if (!parsedProp) {
         return acc;
       }
-
-      const { className, classProp, processedProp } = parsedProp;
-      const newAcc = {
+      // console.log('parsedProp: ', parsedProp);
+      const { className, classProp, processedProp, styles } = parsedProp;
+      return {
         className: classNames(acc.className, className),
         classProps: { ...acc.classProps, ...classProp },
-        processedProps: { ...acc.processedProps, [processedProp.name]: processedProp.value },
+        processedProps: { ...acc.processedProps, ...processedProp },
+        styles: mergeStyles(acc.styles, styles),
       };
-
-      return newAcc;
     },
     {
       className: '',
       classProps: {},
       processedProps: {},
+      styles: {},
     }
   );
 
-  const { className: passedClassName, ...restProps } = Object.fromEntries(
+  const {
+    className: passedClassName,
+    style,
+    ...restProps
+  } = Object.fromEntries(
     Object.entries(props).filter(([name]) => !Object.hasOwn(processedProps, name))
   );
 
   return {
     processedProps,
     className: classNames(className, passedClassName), // TODO: merge styles if necessary
+    style: mergeStyles(style, styles),
     classProps,
     restProps,
   };

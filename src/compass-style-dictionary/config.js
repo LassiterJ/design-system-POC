@@ -107,7 +107,7 @@ export const config = {
           },
         },
         {
-          destination: 'padding.module.css',
+          destination: 'padding.module.scss',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.

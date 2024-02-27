@@ -32,7 +32,12 @@ export const LayoutComponentTestPage = (props) => {
           ></Box>
         </Flex>
         <Flex wrap="wrap">
-          <Box width="20" height="20" style={{ backgroundColor: 'lightblue' }}></Box>
+          <Box
+            p={{ compact: '20', medium: '24', expanded: '32' }}
+            width="20"
+            height="20"
+            style={{ backgroundColor: 'magenta' }}
+          ></Box>
           <Box width="20" height="20" style={{ backgroundColor: 'lightblue' }}></Box>
           <Box width="20" height="20" style={{ backgroundColor: 'lightblue' }}></Box>
         </Flex>

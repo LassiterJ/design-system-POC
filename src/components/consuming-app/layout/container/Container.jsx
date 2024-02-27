@@ -46,7 +46,7 @@ export const Container = React.forwardRef((props, forwardedRef) => {
   console.log('Container | extractedProps: ', extractedProps);
   console.log('Container | innerExtractedProps: ', innerExtractedProps);
 
-  const { processedProps, className, restProps: restRootProps } = extractedProps;
+  const { processedProps, className, style, restProps: restRootProps } = extractedProps;
   const { className: innerClassName, restProps: restInnerProps } = innerExtractedProps;
   const { asChild, as: Tag = 'div' } = processedProps;
   const { children } = restRootProps;
@@ -59,6 +59,7 @@ export const Container = React.forwardRef((props, forwardedRef) => {
       {...restRootProps}
       ref={forwardedRef}
       className={classNames(`${styles['container']}`, className)}
+      style={style}
     >
       {conditionallyWrapChildren({ asChild, children }, (children) => (
         <div {...restInnerProps} className={classNames(styles['container-inner'], innerClassName)}>

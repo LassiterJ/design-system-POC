@@ -8,63 +8,70 @@ export const isResponsiveObject = (obj) => {
   );
 };
 
-export const getResponsiveStyles = ({ className, customProperties, ...args }) => {
+export const getResponsiveStyles = ({
+  className,
+  customProperties,
+  value,
+  propValueEnum,
+  ...args
+}) => {
   //
   const responsiveClassNames = getResponsiveClassNames({
-    allowArbitraryValues: true,
+    allowArbitraryValues: false,
     className,
+    customProperties,
+    value,
+    propValueEnum,
     ...args,
   });
 
-  const responsiveCustomProperties = getResponsiveCustomProperties({ customProperties, ...args });
-  return [responsiveClassNames, responsiveCustomProperties];
+  const responsiveCustomProperties = getResponsiveCustomProperties({
+    customProperties,
+    value,
+    propValueEnum,
+    ...args,
+  });
+  return { responsiveClassNames, responsiveCustomProperties };
 };
 
 export const getResponsiveClassNames = ({
   allowArbitraryValues,
   value,
   className,
-  propValues,
+  propValueEnum,
   parseValue = (value) => value,
 }) => {
   const classNames = [];
-  console.log('getResponsiveClassNames: value: ', value);
   if (!value) {
     return undefined;
   }
 
-  if (className === 'inset') {
-    console.log(
-      'getResponsiveClassNames | className === inset | classname, value, proValues: ',
-      className,
-      value,
-      propValues
-    );
-  }
-
-  if (typeof value === 'string' && propValues.includes(value)) {
+  if (typeof value === 'string' && propValueEnum.includes(value)) {
     return getBaseClassName(className, value, parseValue);
   }
 
   if (isResponsiveObject(value)) {
     for (const bp in value) {
+      console.log('bp: ', bp);
       const valueHasOwnProperty = Object.hasOwn(value, bp);
       // Make sure we are not iterating over keys that aren't breakpoints
       if (!valueHasOwnProperty || !breakpoints.includes(bp)) {
         continue;
       }
-
       const bpValue = value[bp];
-
+      console.log('bpValue: ', bpValue);
+      console.log('className: ', className);
       if (bpValue !== undefined) {
-        if (propValues.includes(bpValue)) {
+        if (propValueEnum.includes(bpValue)) {
           const baseClassName = getBaseClassName(className, bpValue, parseValue);
-          const bpClassName = bp === 'initial' ? baseClassName : `${bp}:${baseClassName}`;
-          classNames.push(bpClassName);
-        } else if (allowArbitraryValues) {
+          console.log('baseClassName: ', baseClassName);
           const bpClassName = bp === 'initial' ? className : `${bp}:${className}`;
           classNames.push(bpClassName);
         }
+        // else if (allowArbitraryValues) {
+        //   const bpClassName = bp === 'initial' ? className : `${bp}:${className}`;
+        //   classNames.push(bpClassName);
+        // }
       }
     }
 
@@ -89,45 +96,45 @@ const getBaseClassName = (className, value, parseValue) => {
 export const getResponsiveCustomProperties = ({
   customProperties,
   value,
-  propValues,
+  propValueEnum,
   parseValue = (value) => value,
 }) => {
   let styles = {};
 
-  if (!value || (typeof value === 'string' && propValues.includes(value))) {
-    return undefined;
+  console.log('value: ', value);
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return;
   }
+  for (const breakpoint in value) {
+    if (!Object.hasOwn(value, breakpoint) || !breakpoints.includes(breakpoint)) {
+      continue;
+    }
 
-  if (typeof value === 'string') {
-    styles = Object.fromEntries(customProperties.map((prop) => [prop, value]));
-  }
+    const breakpointValue = value[breakpoint];
+    console.log('breakpointValue: ', breakpointValue);
 
-  if (isResponsiveObject(value)) {
-    for (const bp in value) {
-      if (!Object.hasOwn(value, bp) || !breakpoints.includes(bp)) {
-        continue;
-      }
+    // if (propValueEnum.includes(breakpointValue)) {
+    //   console.log('continue??');
+    //   continue; // why continue?
+    // }
 
-      const bpValue = value[bp];
+    for (const customProperty of customProperties) {
+      const bpProperty =
+        breakpoint === 'initial' ? customProperty : `${customProperty}-${breakpoint}`;
 
-      if (propValues.includes(bpValue)) {
-        continue;
-      }
-
-      for (const customProperty of customProperties) {
-        const bpProperty = bp === 'initial' ? customProperty : `${customProperty}-${bp}`;
-
-        styles[bpProperty] = bpValue;
-      }
+      const parsedValue = parseValue(breakpointValue);
+      const formattedValue = `var(--spacing-core-${parsedValue})`; //TODO: figure out better way. I just want it to work for now.
+      const removeQuotes = (str) => str.replace(/['"]+/g, '');
+      styles[bpProperty] = removeQuotes(formattedValue); //remove quotes from string
     }
   }
 
-  for (const key in styles) {
-    const styleValue = styles[key];
-    if (styleValue !== undefined) {
-      styles[key] = parseValue(styleValue);
-    }
-  }
+  // for (const key in styles) {
+  //   const styleValue = styles[key];
+  //   if (styleValue !== undefined) {
+  //     styles[key] = parseValue(styleValue);
+  //   }
+  // }
 
   return styles;
 };

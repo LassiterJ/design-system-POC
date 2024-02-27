@@ -91,6 +91,7 @@ export const paddingPropDefs = {
     className: 'p',
     values: layoutPropertiesEnums.p,
     default: undefined,
+    customProperties: ['--padding'],
     responsive: true,
   },
   px: {
@@ -98,6 +99,7 @@ export const paddingPropDefs = {
     className: 'px',
     values: layoutPropertiesEnums.px,
     default: undefined,
+    customProperties: ['--padding-left', '--padding-right'],
     responsive: true,
   },
   py: {
@@ -105,6 +107,7 @@ export const paddingPropDefs = {
     className: 'py',
     values: layoutPropertiesEnums.py,
     default: undefined,
+    customProperties: ['--padding-top', '--padding-bottom'],
     responsive: true,
   },
   pt: {
@@ -112,6 +115,7 @@ export const paddingPropDefs = {
     className: 'pt',
     values: layoutPropertiesEnums.pt,
     default: undefined,
+    customProperties: ['--padding-top'],
     responsive: true,
   },
   pe: {
@@ -119,6 +123,7 @@ export const paddingPropDefs = {
     className: 'pe',
     values: layoutPropertiesEnums.pe,
     default: undefined,
+    customProperties: ['--padding-right'],
     responsive: true,
   },
   pb: {
@@ -126,6 +131,7 @@ export const paddingPropDefs = {
     className: 'pb',
     values: layoutPropertiesEnums.pb,
     default: undefined,
+    customProperties: ['--padding-bottom'],
     responsive: true,
   },
   ps: {
@@ -133,6 +139,7 @@ export const paddingPropDefs = {
     className: 'ps',
     values: layoutPropertiesEnums.ps,
     default: undefined,
+    customProperties: ['--padding-left'],
     responsive: true,
   },
 };
