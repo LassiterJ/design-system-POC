@@ -4,8 +4,10 @@ export const boxPropDefs = {
   asChild: asChildPropDef,
   display: {
     type: 'enum',
-    className: 'display',
+    className: 'box-display',
+    customProperties: ['--box-display'],
     default: undefined,
     values: ['block', 'inline-block', 'inline', 'none'],
+    responsive: true,
   },
 };

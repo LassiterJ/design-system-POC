@@ -19,7 +19,7 @@ export default {
 };
 export const Basic = {
   args: {
-    p: { compact: '2', medium: '4', expanded: '6' },
+    // p: { compact: '2', medium: '4', expanded: '6' },
     style: { border: '2px solid black' },
   },
 };

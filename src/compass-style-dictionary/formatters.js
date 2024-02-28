@@ -173,6 +173,77 @@ export const cssClassFormatter = {
 
       return formattedValue;
     };
+    const generateResponsiveStyles = (token) => {
+      const { name, attributes } = token;
+      const ctiToUse = [
+        'width',
+        'min-width',
+        'max-width',
+        'height',
+        'min-height',
+        'max-height',
+        'flex-grow',
+        'flex-shrink',
+        'display',
+        'flex',
+        'container',
+        'inset',
+        'top',
+        'end',
+        'bottom',
+        'start',
+        'position',
+      ].includes(attributes.type)
+        ? attributes.type
+        : attributes.item;
+      const properties = getCSSPropertiesByType(token, ctiToUse);
+      const rootCustomProperties = properties
+        .map((property) => {
+          return [
+            `--${property}-compact:0;`,
+            `--${property}-medium:0;`,
+            `--${property}-expanded:0;`,
+          ].join('\n  ');
+        })
+        .join('');
+      const baseClassPropertiesDefinition = properties
+        .map((property) => {
+          return `${property}: var(--${property});`;
+        })
+        .join('\n          ');
+      const responsiveDefinition = (breakpoint) =>
+        properties
+          .map((property) => {
+            return `${property}: var(--${property}-${breakpoint});`;
+          })
+          .join('\n            ');
+      const propertyClassName = ctiToUse;
+      const responsiveStyles = `:root {
+  ${rootCustomProperties}
+}
+.${propertyClassName}{
+  ${baseClassPropertiesDefinition}
+}
+
+@include compact {
+  .compact\\:${propertyClassName} {
+    ${responsiveDefinition('compact')}
+  }
+}
+
+@include medium {
+  .medium\\:${propertyClassName} {
+    ${responsiveDefinition('medium')}
+  }
+}
+
+@include expanded {
+  .expanded\\:${propertyClassName} {
+    ${responsiveDefinition('expanded')}
+  }
+}`;
+      return responsiveStyles;
+    };
 
     // Map through tokens and format them
     const formatToken = (token) => {
@@ -202,7 +273,6 @@ export const cssClassFormatter = {
       const { name } = validatedToken;
       // Finally building the class
       const formattedClass = `.${name} { \n ${formattedProperties} \n}`;
-
       return formattedClass;
     };
     // Get Tokens
@@ -247,8 +317,47 @@ export const cssClassFormatter = {
     //   console.error('Error writing marginTokens to file: ', error);
     // }
     // console.log('tokens.length: ', tokens.length);
+    const generateResponsiveClasses = (tokens) => {
+      const responsiveStyles = {};
+      tokens.forEach((token) => {
+        const { name, attributes } = token;
+        // const { category, type, item } = attributes;
+        const ctiToUse = [
+          'width',
+          'min-width',
+          'max-width',
+          'height',
+          'min-height',
+          'max-height',
+          'flex-grow',
+          'flex-shrink',
+          'display',
+          'flex',
+          'container',
+          'inset',
+          'top',
+          'end',
+          'bottom',
+          'start',
+          'position',
+        ].includes(attributes.type)
+          ? attributes.type
+          : attributes.item;
+        if (attributes.type === 'height') {
+          console.log('ctiToUse for height: ', ctiToUse);
+        }
+        if (!responsiveStyles[ctiToUse]) {
+          responsiveStyles[ctiToUse] = generateResponsiveStyles(token);
+        }
+      });
+      return Object.values(responsiveStyles).join('\n');
+    };
+
     const formattedTokens = tokens.map(formatToken);
-    return formattedTokens.join('\n');
+    const responsiveStyles = generateResponsiveClasses(tokens);
+    return `@import "../../styles/breakpoints.scss";\n ${responsiveStyles}\n${formattedTokens.join(
+      '\n'
+    )}`;
   },
 };
 

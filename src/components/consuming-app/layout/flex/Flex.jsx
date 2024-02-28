@@ -29,7 +29,7 @@ export const Flex = React.forwardRef((props, forwardedRef) => {
     },
     { scopedStyles: styleUtils }
   );
-  console.log('Flex | extractedProps: ', extractedProps);
+
   const { processedProps, className, classProps, style, restProps } = extractedProps;
   const { asChild, as: Tag = 'div' } = processedProps;
   const Comp = asChild ? Slot : 'div';

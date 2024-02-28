@@ -42,6 +42,7 @@ export const widthPropDefs = {
     type: 'enum',
     className: 'width',
     values: layoutPropertiesEnums.width,
+    customProperties: ['--width'],
     default: undefined,
     responsive: true,
   },
@@ -49,6 +50,7 @@ export const widthPropDefs = {
     type: 'enum',
     className: 'max-width',
     values: layoutPropertiesEnums.maxWidth,
+    customProperties: ['--max-width'],
     default: undefined,
     responsive: true,
   },
@@ -56,6 +58,7 @@ export const widthPropDefs = {
     type: 'enum',
     className: 'min-width',
     values: layoutPropertiesEnums.minWidth,
+    customProperties: ['--min-width'],
     default: undefined,
     responsive: true,
   },
@@ -66,6 +69,7 @@ export const heightPropDefs = {
     type: 'enum',
     className: 'height',
     values: layoutPropertiesEnums.height,
+    customProperties: ['--height'],
     default: undefined,
     responsive: true,
   },
@@ -73,6 +77,7 @@ export const heightPropDefs = {
     type: 'enum',
     className: 'max-height',
     values: layoutPropertiesEnums.maxHeight,
+    customProperties: ['--max-height'],
     default: undefined,
     responsive: true,
   },
@@ -80,6 +85,7 @@ export const heightPropDefs = {
     type: 'enum',
     className: 'min-height',
     values: layoutPropertiesEnums.minHeight,
+    customProperties: ['--min-height'],
     default: undefined,
     responsive: true,
   },
@@ -147,7 +153,6 @@ export const paddingPropDefs = {
 const parseValueToCSS = (value) => {
   if (typeof value === 'string' && value.includes('/')) {
     const formattedValue = formatString(value, 'formatToCustomCSSClassSyntax');
-    console.log('formattedValue: ', formattedValue);
     return formattedValue;
   }
   return value;
@@ -160,6 +165,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'position',
     values: layoutPropertiesEnums.position,
+    customProperties: ['--position'],
     default: undefined,
     responsive: true,
   },
@@ -167,6 +173,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'inset',
     values: layoutPropertiesEnums.inset,
+    customProperties: ['--inset'],
     parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
@@ -175,6 +182,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'top',
     values: layoutPropertiesEnums.top,
+    customProperties: ['--top'],
     parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
@@ -183,6 +191,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'end',
     values: layoutPropertiesEnums.end,
+    customProperties: ['--right'],
     parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
@@ -191,6 +200,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'bottom',
     values: layoutPropertiesEnums.bottom,
+    customProperties: ['--bottom'],
     parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
@@ -199,6 +209,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'start',
     values: layoutPropertiesEnums.start,
+    customProperties: ['--left'],
     parseValue: parseValueToCSS,
     default: undefined,
     responsive: true,
@@ -207,7 +218,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'flex-shrink',
     values: layoutPropertiesEnums.flexShrink,
-    // customProperties: []
+    customProperties: ['--flex-shrink'],
     default: undefined,
     responsive: true,
   },
@@ -215,6 +226,7 @@ export const layoutPropDefs = {
     type: 'enum',
     className: 'flex-grow',
     values: layoutPropertiesEnums.flexGrow,
+    customProperties: ['--flex-grow'],
     default: undefined,
     responsive: true,
   },
@@ -225,4 +237,3 @@ export const layoutPropDefs = {
   // gridRowStart: { type: 'string', default: undefined, responsive: true },
   // gridRowEnd: { type: 'string', default: undefined, responsive: true },
 };
-console.log('layoutPropDefs: ', layoutPropDefs);

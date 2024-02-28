@@ -96,7 +96,7 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'margin.module.css',
+          destination: 'margin.module.scss',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -118,7 +118,7 @@ export const config = {
           },
         },
         {
-          destination: 'inset.module.css',
+          destination: 'inset.module.scss',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -129,7 +129,7 @@ export const config = {
           },
         },
         {
-          destination: 'width.module.css',
+          destination: 'width.module.scss',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -140,7 +140,7 @@ export const config = {
           },
         },
         {
-          destination: 'height.module.css',
+          destination: 'height.module.scss',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -151,7 +151,7 @@ export const config = {
           },
         },
         {
-          destination: 'layout.module.css',
+          destination: 'layout.module.scss',
           format: 'custom/css/css-classes',
           /* Filtering throws error because Style Dictionary needs the
            referenced tokens even though they are not included in the output.
@@ -169,7 +169,7 @@ export const config = {
       buildPath,
       files: [
         {
-          destination: 'testingTokens.json',
+          destination: 'transformedTokens.json',
           format: 'json',
           options: {
             outputReferences: true,

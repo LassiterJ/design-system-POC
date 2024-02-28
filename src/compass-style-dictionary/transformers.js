@@ -208,10 +208,9 @@ export const customPxToRemTransformer = {
       const transformedValue = `${pixelValue / basePxFontSize}rem`;
       return transformedValue;
     };
-    console.log('customPxToRemTransformer: token.value: ', token.value);
     // if value is an object, transform the values
     if (!isObjectWithValidation(token.value)) {
-      console.log('!isObjectWithValidation(token.value), token.value: ', token.value);
+      // console.log('!isObjectWithValidation(token.value), token.value: ', token.value);
       return transformValue(token.value);
     }
 

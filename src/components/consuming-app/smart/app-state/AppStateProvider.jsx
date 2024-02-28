@@ -3,6 +3,7 @@ import { debounce } from '../../../../utilities/js/debounce';
 import { getCurrentWindowClass } from '../../../../utilities/js/windowClass.js';
 import { isTouchDevice } from './deviceData';
 import { DirectionProvider } from '@radix-ui/react-direction';
+import throttle from '../../../../utilities/js/throttle.js';
 
 const AppStateContext = createContext({});
 export const AppStateProvider = ({ children }) => {
@@ -12,7 +13,7 @@ export const AppStateProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    const debouncedHandleResize = debounce(() => {
+    const debouncedHandleResize = throttle(() => {
       setAppData((prevData) => ({
         ...prevData,
         windowClass: getCurrentWindowClass(),

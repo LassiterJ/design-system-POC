@@ -24,7 +24,6 @@ const keyValueMap = {
   ...fractionalScaleWithCSSPrefix,
   ...negativeCoreScaleWithCSSPrefix,
 };
-console.log('keyValueMap: ', keyValueMap);
 export const layoutArgTypes = {
   p: { control: 'select', options: layoutPropertiesEnums.p, mapping: keyValueMap },
   px: { control: 'select', options: layoutPropertiesEnums.px, mapping: keyValueMap },

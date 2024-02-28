@@ -10,7 +10,6 @@ export const conditionallyWrapChildren = (options, content) => {
   const { asChild, children } = options;
   if (!asChild) return typeof content === 'function' ? content(children) : content;
 
-  console.log('children: ', children);
   const firstChild = React.Children.only(children);
   return React.cloneElement(firstChild, {
     children: typeof content === 'function' ? content(firstChild.props.children) : content,

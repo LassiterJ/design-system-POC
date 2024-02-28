@@ -14,19 +14,24 @@ export const HomePageHero = () => {
     : {};
 
   return (
-    <Flex p="20" style={heroStyle} direction="column">
-      <Box>
-        <h1>Find your next adventure</h1>
-      </Box>
-      <Box>
-        <p>Search for a location or activity</p>
-      </Box>
-      <Box>
-        <input type="text" placeholder="Search" />
-        <button type="submit" className={styles.cta}>
-          Search
-        </button>
-      </Box>
+    <Flex position="relative" className={styles.Hero} style={heroStyle} direction="column">
+      <Box
+        position="absolute"
+        width="full"
+        height="full"
+        top="0"
+        start="0"
+        end="0"
+        bottom="0"
+        className={styles.HeroImage}
+      ></Box>
+      <Flex className={styles.HeroContent} p="20" gap="16" direction="column" position="relative">
+        <Box>
+          <h1 className={styles.HeroHeadline}>
+            Wash Your Way <span className={styles.HeroSubHead}>or something...</span>
+          </h1>
+        </Box>
+      </Flex>
     </Flex>
   );
 };

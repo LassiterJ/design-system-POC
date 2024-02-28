@@ -1,4 +1,5 @@
 import { breakpoints } from '../../props/breakpointsPropDef.js';
+import { formatString } from './formatString.js';
 
 export const isResponsiveObject = (obj) => {
   return (
@@ -8,39 +9,29 @@ export const isResponsiveObject = (obj) => {
   );
 };
 
-export const getResponsiveStyles = ({
-  className,
-  customProperties,
-  value,
-  propValueEnum,
-  ...args
-}) => {
-  //
+export const getResponsiveStyles = ({ propDef, prop }) => {
   const responsiveClassNames = getResponsiveClassNames({
     allowArbitraryValues: false,
-    className,
-    customProperties,
-    value,
-    propValueEnum,
-    ...args,
+    prop,
+    propDef,
   });
 
   const responsiveCustomProperties = getResponsiveCustomProperties({
-    customProperties,
-    value,
-    propValueEnum,
-    ...args,
+    prop,
+    propDef,
   });
   return { responsiveClassNames, responsiveCustomProperties };
 };
 
-export const getResponsiveClassNames = ({
-  allowArbitraryValues,
-  value,
-  className,
-  propValueEnum,
-  parseValue = (value) => value,
-}) => {
+export const getResponsiveClassNames = ({ allowArbitraryValues, prop, propDef }) => {
+  const { name, value } = prop;
+  const {
+    customProperties,
+    className,
+    values: propValueEnum,
+    parseValue = (value) => value,
+  } = propDef;
+
   const classNames = [];
   if (!value) {
     return undefined;
@@ -52,19 +43,19 @@ export const getResponsiveClassNames = ({
 
   if (isResponsiveObject(value)) {
     for (const bp in value) {
-      console.log('bp: ', bp);
+      // console.log('bp: ', bp);
       const valueHasOwnProperty = Object.hasOwn(value, bp);
       // Make sure we are not iterating over keys that aren't breakpoints
       if (!valueHasOwnProperty || !breakpoints.includes(bp)) {
         continue;
       }
       const bpValue = value[bp];
-      console.log('bpValue: ', bpValue);
-      console.log('className: ', className);
+      // console.log('bpValue: ', bpValue);
+      // console.log('className: ', className);
       if (bpValue !== undefined) {
         if (propValueEnum.includes(bpValue)) {
           const baseClassName = getBaseClassName(className, bpValue, parseValue);
-          console.log('baseClassName: ', baseClassName);
+          // console.log('baseClassName: ', baseClassName);
           const bpClassName = bp === 'initial' ? className : `${bp}:${className}`;
           classNames.push(bpClassName);
         }
@@ -93,15 +84,18 @@ const getBaseClassName = (className, value, parseValue) => {
   return `${minus}${className}${delimiter}${absoluteValue}`;
 };
 
-export const getResponsiveCustomProperties = ({
-  customProperties,
-  value,
-  propValueEnum,
-  parseValue = (value) => value,
-}) => {
+// const matchValue = (prop, propDef) => {
+//   // check if value  is one of the spacing core values,
+//   // check if value is fractional and is one of the spacing fractional values,
+//   // check if value is a custom utility class
+// };
+export const getResponsiveCustomProperties = ({ prop, propDef }) => {
+  const { value } = prop;
+  const { customProperties, parseValue = (value) => value } = propDef;
+
+  // const matchingToken = matchValue(prop, propDef);
   let styles = {};
 
-  console.log('value: ', value);
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
     return;
   }
@@ -111,7 +105,7 @@ export const getResponsiveCustomProperties = ({
     }
 
     const breakpointValue = value[breakpoint];
-    console.log('breakpointValue: ', breakpointValue);
+    // console.log('breakpointValue: ', breakpointValue);
 
     // if (propValueEnum.includes(breakpointValue)) {
     //   console.log('continue??');
@@ -123,7 +117,26 @@ export const getResponsiveCustomProperties = ({
         breakpoint === 'initial' ? customProperty : `${customProperty}-${breakpoint}`;
 
       const parsedValue = parseValue(breakpointValue);
-      const formattedValue = `var(--spacing-core-${parsedValue})`; //TODO: figure out better way. I just want it to work for now.
+      const isFraction =
+        parsedValue.includes('/') || breakpointValue.includes('/') || parsedValue === 'full';
+      const isSpecial = parsedValue === 'auto';
+      const isBoolean = parsedValue === 'true' || parsedValue === 'false';
+      // const getValueType = () => {
+      //   if(breakpointValue)
+      // };
+      let spacingScale = 'spacing-core';
+      if (isFraction) {
+        spacingScale = 'spacing-fractional';
+      }
+      if (isSpecial) {
+        spacingScale = 'spacing-special';
+      }
+      if (isBoolean) {
+        spacingScale = 'boolean';
+      }
+      const formattedString = formatString(parsedValue, 'formatToCustomCSSClassSyntax');
+      // console.log('formattedString: ', formattedString);
+      const formattedValue = `var(--${spacingScale}-${formattedString})`; //TODO: figure out better way. I just want it to work for now.
       const removeQuotes = (str) => str.replace(/['"]+/g, '');
       styles[bpProperty] = removeQuotes(formattedValue); //remove quotes from string
     }

@@ -31,13 +31,13 @@ const parsePropValue = (value, propDef) => {
 };
 
 const getClassnameData = (propObj, propDef, scopedStyles) => {
-  const { name, value } = propObj;
+  const { name, value: rawValue } = propObj;
   const { type, className, values, default: defaultValue, responsive } = propDef;
 
   if (!className) {
     return {};
   }
-
+  const value = formatString(rawValue, 'formatToCustomCSSClassSyntax');
   const hasScopedStyles = isObjectWithValidation(scopedStyles);
   const scopedClass = hasScopedStyles && scopedStyles[`${className}-${value}`];
   if (scopedClass) {
@@ -48,18 +48,15 @@ const getClassnameData = (propObj, propDef, scopedStyles) => {
 
 const handleResponsiveValue = (prop, propDef) => {
   // iterate through breakpoints and apply parsePropValue to each value
-  console.log('handleResponsiveValue: prop', prop);
+  // console.log('handleResponsiveValue: prop', prop);
   const { value } = prop;
-  const { customProperties, className, values: propValueEnum, ...restPropDef } = propDef;
+  // const { customProperties, className, values: propValueEnum, ...restPropDef } = propDef;
 
   const responsiveStyles = getResponsiveStyles({
-    className,
-    customProperties,
-    value,
-    propValueEnum,
-    ...restPropDef,
+    prop,
+    propDef,
   });
-  console.log('handleResponsiveValue | responsiveStyles: ', responsiveStyles);
+  // console.log('handleResponsiveValue | responsiveStyles: ', responsiveStyles);
   return responsiveStyles;
 };
 const parseProp = (matchedPropObj, propDef, scopedStyles) => {
@@ -74,9 +71,9 @@ const parseProp = (matchedPropObj, propDef, scopedStyles) => {
     console.trace("The above error occurred in the extractProps function's parseProp function");
     return;
   }
-  matchedPropObj.name === 'width' &&
-    console.log("matchedPropObj.name === 'width': ", matchedPropObj.name) &&
-    console.log('propDef: ', propDef);
+  // matchedPropObj.name === 'width' &&
+  //   console.log("matchedPropObj.name === 'width': ", matchedPropObj.name) &&
+  //   console.log('propDef: ', propDef);
   const isResponsiveObj =
     typeof matchedPropObj.value === 'object' && isResponsiveObject(matchedPropObj.value);
   const canHaveResponsiveValues = propDef.responsive;
@@ -99,15 +96,15 @@ const parseProp = (matchedPropObj, propDef, scopedStyles) => {
       matchedPropObj,
       propDef
     );
-    console.group('parseProp | isResponsiveObj && canHaveResponsiveValues');
-    console.log('responsiveClasses: ', responsiveClassNames);
-    console.log('responsiveCustomProperties: ', responsiveCustomProperties);
-    console.log('existing className: ', className);
-    console.log('existing classProp: ', classProp);
-    console.log('existing processedProp: ', processedProp);
-    console.log('existing styles: ', styles);
-    console.log('matchedPropObj: ', matchedPropObj);
-    console.groupEnd();
+    // console.group('parseProp | isResponsiveObj && canHaveResponsiveValues');
+    // console.log('responsiveClasses: ', responsiveClassNames);
+    // console.log('responsiveCustomProperties: ', responsiveCustomProperties);
+    // console.log('existing className: ', className);
+    // console.log('existing classProp: ', classProp);
+    // console.log('existing processedProp: ', processedProp);
+    // console.log('existing styles: ', styles);
+    // console.log('matchedPropObj: ', matchedPropObj);
+    // console.groupEnd();
     className = classNames(className, responsiveClassNames);
     classProp = { [matchedPropObj.name]: matchedPropObj.value };
     processedProp = { [matchedPropObj.name]: matchedPropObj.value };
@@ -165,9 +162,9 @@ export const extractProps = (props, propDefs, options = {}) => {
   const { processedProps, className, classProps, styles } = Object.entries(propDefs).reduce(
     (acc, [key, propDef], index) => {
       const propValue = props[key];
-      if (typeof propValue === 'object') {
-        console.log('extractProps | propValue is object: ', propValue);
-      }
+      // if (typeof propValue === 'object') {
+      //   console.log('extractProps | propValue is object: ', propValue);
+      // }
       const parsedProp = parseProp({ name: key, value: propValue }, propDef, scopedStyles);
       if (!parsedProp) {
         return acc;

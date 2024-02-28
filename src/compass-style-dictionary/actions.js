@@ -10,9 +10,16 @@ export const generateIndexBarrelAction = {
     const files = fs.readdirSync(buildPath);
 
     const exportEntries = files
-      .filter((file) => file.endsWith('.css') || file.endsWith('.module.css'))
+      .filter((file) => {
+        return (
+          file.endsWith('.css') ||
+          file.endsWith('.module.css') ||
+          file.endsWith('.scss') ||
+          file.endsWith('.module.scss')
+        );
+      })
       .map((file) => `@import './${file}';`);
-
+    console.log('exportEntries: ', exportEntries);
     const indexContent = exportEntries.join('\n');
     fs.writeFileSync(path.join(buildPath, 'index.css'), indexContent, 'utf-8');
 

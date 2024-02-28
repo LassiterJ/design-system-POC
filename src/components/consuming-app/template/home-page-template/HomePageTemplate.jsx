@@ -8,13 +8,9 @@ import { CommunitySection } from '../../concrete/community-section/CommunitySect
 import { ReviewsSection } from '../../concrete/reviews-section/ReviewsSection';
 import { Flex } from '../../layout/flex/Flex';
 export const HomePageTemplate = ({ children }) => {
-  const { appData } = useAppData();
-  const { windowClass, isPrimarilyATouchDevice } = appData;
-  const isTouchDevice = isPrimarilyATouchDevice ? 'true' : 'false';
-
   return (
-    <Flex>
-      <section className={styles.HeroSection}>
+    <Flex direction={'column'}>
+      <section>
         <HomePageHero />
       </section>
       <section>

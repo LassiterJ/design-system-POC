@@ -1,5 +1,30 @@
 @import "src/styles/breakpoints";
+:root {
+  --box-display-compact:0;
+  --box-display-medium:0;
+  --box-display-expanded:0;
+}
+.box-display{
+  display: var(--box-display);
+}
 
+@include compact {
+  .compact\:box-display {
+    display: var(--box-display-compact);
+  }
+}
+
+@include medium {
+  .medium\:box-display {
+    display: var(--box-display-medium);
+  }
+}
+
+@include expanded {
+  .expanded\:box-display {
+    display: var(--box-display-expanded);
+  }
+}
 .box {
   --unused-var: 0;
   // An example of Breakpoint usage. Not relevant really here.

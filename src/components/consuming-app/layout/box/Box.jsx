@@ -15,16 +15,11 @@ export const Box = React.forwardRef((props, forwardedRef) => {
     ...layoutPropDefs,
     ...marginPropDefs,
   });
-  console.log('Box | rawProps: ', props);
-  console.log('Box | extractedProps: ', extractedProps);
 
-  // const extractedProps = extractProps(props, boxPropDefs, layoutPropDefs, marginPropDefs);
-
-  // const { className, asChild, as: Tag = 'div', ...boxProps } = extractedProps;
   const { processedProps, className, classProps, style, restProps } = extractedProps;
   const { asChild, as: Tag = 'div', ...boxProps } = processedProps;
-
   const Comp = asChild ? Slot : 'div';
+
   return (
     <Comp
       {...restProps}

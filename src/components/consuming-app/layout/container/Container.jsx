@@ -13,8 +13,6 @@ import { conditionallyWrapChildren } from '../../../../utilities/js/conditionall
 
 export const Container = React.forwardRef((props, forwardedRef) => {
   const { width = 'full', minWidth, maxWidth, size = '4', ...restRawProps } = props;
-  console.group('Container Component');
-  console.log('Container | init props', props);
   const extractedProps = extractProps(
     { flexGrow: 'true', ...restRawProps },
     {
@@ -35,25 +33,12 @@ export const Container = React.forwardRef((props, forwardedRef) => {
     { scopedStyles: scopedStyleUtils }
   );
 
-  if (!isObjectWithValidation(extractedProps)) {
-    console.error('Container DOES NOT contain extractedProps');
-  }
-
-  if (!isObjectWithValidation(innerExtractedProps)) {
-    console.log('Container DOES NOT contain innerExtractedProps');
-  }
-
-  console.log('Container | extractedProps: ', extractedProps);
-  console.log('Container | innerExtractedProps: ', innerExtractedProps);
-
   const { processedProps, className, style, restProps: restRootProps } = extractedProps;
   const { className: innerClassName, restProps: restInnerProps } = innerExtractedProps;
   const { asChild, as: Tag = 'div' } = processedProps;
   const { children } = restRootProps;
-  console.log('Container | children: ', children);
-  console.groupEnd();
-
   const Comp = asChild ? Slot : Tag; //TODO: not sure about allowing the 'as' prop yet.
+
   return (
     <Comp
       {...restRootProps}
