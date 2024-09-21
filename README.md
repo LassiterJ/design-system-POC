@@ -1,3 +1,14 @@
+## Intro
+This project is a proof of concept to demonstrate a flexible design system with a rich developer experience. There is a strong focus in component architecture and standardization. 
+
+### Use storybook to see the demos
+```
+yarn
+yarn storybook
+```
+ Development of this project is on hold.
+
+
 ## Folder Structure
 
 No configuration or complicated folder structures, just the files you need to build your app:
