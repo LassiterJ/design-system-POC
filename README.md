@@ -29,6 +29,7 @@ Although development is currently on hold, future plans include:
 ## Credits
 
 This project is built on the **Vite Template React**, which is maintained by [Safdar Jamal](https://safdarjamal.github.io).
+The project has heavy influence from [Radix-Themes](https://github.com/radix-ui/themes) for their developer experience.  
 
 ## License
 
